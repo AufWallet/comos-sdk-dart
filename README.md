@@ -6,7 +6,6 @@ Cosmos SDK Proto files generation for Dart
 - v0.50.x
 - v0.47.x
 - v0.46.x
-- v0.45.x
 
 
 ## Usage

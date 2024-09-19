@@ -41,7 +41,11 @@ cd - || exit
 rm -rf "$TMP/cosmos-sdk-$VERSION"
 
 # Fix proto/cosmos/nft/v1beta1/query.pbgrpc.dart keyword conflict, rename rpc QueryClient.class to QueryClient.clazz
-sed -i "" "s/class(/clazz(/g" lib/proto/cosmos/nft/v1beta1/query.pbgrpc.dart
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  sed -i "" "s/class(/clazz(/g" lib/proto/cosmos/nft/v1beta1/query.pbgrpc.dart
+else
+  sed -i "s/class(/clazz(/g" lib/proto/cosmos/nft/v1beta1/query.pbgrpc.dart
+fi
 
 # Add google protobuf dependency
 protoc --dart_out=grpc:lib/ proto/google/protobuf/*.proto
