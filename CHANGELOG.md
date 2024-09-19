@@ -1,3 +1,3 @@
-## 1.0.0
+## 0.46.16
 
-- Initial version.
+- Add support for cosmos sdk 0.46.16
