@@ -1,6 +1,6 @@
 name: cosmos_sdk_proto
 description: A dart library for Cosmos SDK protobuf files.
-version: 0.47.13
+version: 0.50.9
 repository: https://github.com/AufWallet/cosmos-sdk-proto
 
 environment:
