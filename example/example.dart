@@ -13,5 +13,7 @@ void main() async {
 
   final bankResponse = await bankClient.balance(request);
   print("Bank Response: ${bankResponse.balance}");
+
+  await channel.shutdown();
 }
 
