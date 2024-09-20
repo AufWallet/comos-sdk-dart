@@ -13,6 +13,28 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use queryConstitutionRequestDescriptor instead')
+const QueryConstitutionRequest$json = {
+  '1': 'QueryConstitutionRequest',
+};
+
+/// Descriptor for `QueryConstitutionRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List queryConstitutionRequestDescriptor = $convert.base64Decode(
+    'ChhRdWVyeUNvbnN0aXR1dGlvblJlcXVlc3Q=');
+
+@$core.Deprecated('Use queryConstitutionResponseDescriptor instead')
+const QueryConstitutionResponse$json = {
+  '1': 'QueryConstitutionResponse',
+  '2': [
+    {'1': 'constitution', '3': 1, '4': 1, '5': 9, '10': 'constitution'},
+  ],
+};
+
+/// Descriptor for `QueryConstitutionResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List queryConstitutionResponseDescriptor = $convert.base64Decode(
+    'ChlRdWVyeUNvbnN0aXR1dGlvblJlc3BvbnNlEiIKDGNvbnN0aXR1dGlvbhgBIAEoCVIMY29uc3'
+    'RpdHV0aW9u');
+
 @$core.Deprecated('Use queryProposalRequestDescriptor instead')
 const QueryProposalRequest$json = {
   '1': 'QueryProposalRequest',

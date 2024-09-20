@@ -21,6 +21,7 @@ const ConsensusParams$json = {
     {'1': 'evidence', '3': 2, '4': 1, '5': 11, '6': '.tendermint.types.EvidenceParams', '10': 'evidence'},
     {'1': 'validator', '3': 3, '4': 1, '5': 11, '6': '.tendermint.types.ValidatorParams', '10': 'validator'},
     {'1': 'version', '3': 4, '4': 1, '5': 11, '6': '.tendermint.types.VersionParams', '10': 'version'},
+    {'1': 'abci', '3': 5, '4': 1, '5': 11, '6': '.tendermint.types.ABCIParams', '10': 'abci'},
   ],
 };
 
@@ -30,7 +31,8 @@ final $typed_data.Uint8List consensusParamsDescriptor = $convert.base64Decode(
     'NrUGFyYW1zUgVibG9jaxI8CghldmlkZW5jZRgCIAEoCzIgLnRlbmRlcm1pbnQudHlwZXMuRXZp'
     'ZGVuY2VQYXJhbXNSCGV2aWRlbmNlEj8KCXZhbGlkYXRvchgDIAEoCzIhLnRlbmRlcm1pbnQudH'
     'lwZXMuVmFsaWRhdG9yUGFyYW1zUgl2YWxpZGF0b3ISOQoHdmVyc2lvbhgEIAEoCzIfLnRlbmRl'
-    'cm1pbnQudHlwZXMuVmVyc2lvblBhcmFtc1IHdmVyc2lvbg==');
+    'cm1pbnQudHlwZXMuVmVyc2lvblBhcmFtc1IHdmVyc2lvbhIwCgRhYmNpGAUgASgLMhwudGVuZG'
+    'VybWludC50eXBlcy5BQkNJUGFyYW1zUgRhYmNp');
 
 @$core.Deprecated('Use blockParamsDescriptor instead')
 const BlockParams$json = {
@@ -106,4 +108,17 @@ const HashedParams$json = {
 final $typed_data.Uint8List hashedParamsDescriptor = $convert.base64Decode(
     'CgxIYXNoZWRQYXJhbXMSJgoPYmxvY2tfbWF4X2J5dGVzGAEgASgDUg1ibG9ja01heEJ5dGVzEi'
     'IKDWJsb2NrX21heF9nYXMYAiABKANSC2Jsb2NrTWF4R2Fz');
+
+@$core.Deprecated('Use aBCIParamsDescriptor instead')
+const ABCIParams$json = {
+  '1': 'ABCIParams',
+  '2': [
+    {'1': 'vote_extensions_enable_height', '3': 1, '4': 1, '5': 3, '10': 'voteExtensionsEnableHeight'},
+  ],
+};
+
+/// Descriptor for `ABCIParams`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List aBCIParamsDescriptor = $convert.base64Decode(
+    'CgpBQkNJUGFyYW1zEkEKHXZvdGVfZXh0ZW5zaW9uc19lbmFibGVfaGVpZ2h0GAEgASgDUhp2b3'
+    'RlRXh0ZW5zaW9uc0VuYWJsZUhlaWdodA==');
 

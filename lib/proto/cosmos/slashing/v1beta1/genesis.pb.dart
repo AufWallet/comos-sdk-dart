@@ -14,12 +14,12 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'slashing.pb.dart' as $74;
+import 'slashing.pb.dart' as $77;
 
 /// GenesisState defines the slashing module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $74.Params? params,
+    $77.Params? params,
     $core.Iterable<SigningInfo>? signingInfos,
     $core.Iterable<ValidatorMissedBlocks>? missedBlocks,
   }) {
@@ -40,7 +40,7 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.slashing.v1beta1'), createEmptyInstance: create)
-    ..aOM<$74.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $74.Params.create)
+    ..aOM<$77.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $77.Params.create)
     ..pc<SigningInfo>(2, _omitFieldNames ? '' : 'signingInfos', $pb.PbFieldType.PM, subBuilder: SigningInfo.create)
     ..pc<ValidatorMissedBlocks>(3, _omitFieldNames ? '' : 'missedBlocks', $pb.PbFieldType.PM, subBuilder: ValidatorMissedBlocks.create)
     ..hasRequiredFields = false
@@ -69,15 +69,15 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// params defines all the parameters of the module.
   @$pb.TagNumber(1)
-  $74.Params get params => $_getN(0);
+  $77.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($74.Params v) { setField(1, v); }
+  set params($77.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $74.Params ensureParams() => $_ensure(0);
+  $77.Params ensureParams() => $_ensure(0);
 
   /// signing_infos represents a map between validator addresses and their
   /// signing infos.
@@ -94,7 +94,7 @@ class GenesisState extends $pb.GeneratedMessage {
 class SigningInfo extends $pb.GeneratedMessage {
   factory SigningInfo({
     $core.String? address,
-    $74.ValidatorSigningInfo? validatorSigningInfo,
+    $77.ValidatorSigningInfo? validatorSigningInfo,
   }) {
     final $result = create();
     if (address != null) {
@@ -111,7 +111,7 @@ class SigningInfo extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SigningInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.slashing.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$74.ValidatorSigningInfo>(2, _omitFieldNames ? '' : 'validatorSigningInfo', subBuilder: $74.ValidatorSigningInfo.create)
+    ..aOM<$77.ValidatorSigningInfo>(2, _omitFieldNames ? '' : 'validatorSigningInfo', subBuilder: $77.ValidatorSigningInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -148,15 +148,15 @@ class SigningInfo extends $pb.GeneratedMessage {
 
   /// validator_signing_info represents the signing info of this validator.
   @$pb.TagNumber(2)
-  $74.ValidatorSigningInfo get validatorSigningInfo => $_getN(1);
+  $77.ValidatorSigningInfo get validatorSigningInfo => $_getN(1);
   @$pb.TagNumber(2)
-  set validatorSigningInfo($74.ValidatorSigningInfo v) { setField(2, v); }
+  set validatorSigningInfo($77.ValidatorSigningInfo v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasValidatorSigningInfo() => $_has(1);
   @$pb.TagNumber(2)
   void clearValidatorSigningInfo() => clearField(2);
   @$pb.TagNumber(2)
-  $74.ValidatorSigningInfo ensureValidatorSigningInfo() => $_ensure(1);
+  $77.ValidatorSigningInfo ensureValidatorSigningInfo() => $_ensure(1);
 }
 
 /// ValidatorMissedBlocks contains array of missed blocks of corresponding

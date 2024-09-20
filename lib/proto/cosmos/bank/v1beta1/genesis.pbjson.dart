@@ -29,12 +29,12 @@ const GenesisState$json = {
 final $typed_data.Uint8List genesisStateDescriptor = $convert.base64Decode(
     'CgxHZW5lc2lzU3RhdGUSPgoGcGFyYW1zGAEgASgLMhsuY29zbW9zLmJhbmsudjFiZXRhMS5QYX'
     'JhbXNCCcjeHwCo57AqAVIGcGFyYW1zEkMKCGJhbGFuY2VzGAIgAygLMhwuY29zbW9zLmJhbmsu'
-    'djFiZXRhMS5CYWxhbmNlQgnI3h8AqOewKgFSCGJhbGFuY2VzEmgKBnN1cHBseRgDIAMoCzIZLm'
-    'Nvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkI1yN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Nt'
-    'b3Mtc2RrL3R5cGVzLkNvaW5zqOewKgFSBnN1cHBseRJPCg5kZW5vbV9tZXRhZGF0YRgEIAMoCz'
-    'IdLmNvc21vcy5iYW5rLnYxYmV0YTEuTWV0YWRhdGFCCcjeHwCo57AqAVINZGVub21NZXRhZGF0'
-    'YRJOCgxzZW5kX2VuYWJsZWQYBSADKAsyIC5jb3Ntb3MuYmFuay52MWJldGExLlNlbmRFbmFibG'
-    'VkQgnI3h8AqOewKgFSC3NlbmRFbmFibGVk');
+    'djFiZXRhMS5CYWxhbmNlQgnI3h8AqOewKgFSCGJhbGFuY2VzEnkKBnN1cHBseRgDIAMoCzIZLm'
+    'Nvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkJGyN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Nt'
+    'b3Mtc2RrL3R5cGVzLkNvaW5zmuewKgxsZWdhY3lfY29pbnOo57AqAVIGc3VwcGx5Ek8KDmRlbm'
+    '9tX21ldGFkYXRhGAQgAygLMh0uY29zbW9zLmJhbmsudjFiZXRhMS5NZXRhZGF0YUIJyN4fAKjn'
+    'sCoBUg1kZW5vbU1ldGFkYXRhEk4KDHNlbmRfZW5hYmxlZBgFIAMoCzIgLmNvc21vcy5iYW5rLn'
+    'YxYmV0YTEuU2VuZEVuYWJsZWRCCcjeHwCo57AqAVILc2VuZEVuYWJsZWQ=');
 
 @$core.Deprecated('Use balanceDescriptor instead')
 const Balance$json = {
@@ -49,7 +49,7 @@ const Balance$json = {
 /// Descriptor for `Balance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List balanceDescriptor = $convert.base64Decode(
     'CgdCYWxhbmNlEjIKB2FkZHJlc3MYASABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZ1IHYW'
-    'RkcmVzcxJmCgVjb2lucxgCIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkI1yN4fAKrf'
-    'HyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zqOewKgFSBWNvaW5zOg'
-    'iIoB8A6KAfAA==');
+    'RkcmVzcxJ3CgVjb2lucxgCIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkJGyN4fAKrf'
+    'HyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zmuewKgxsZWdhY3lfY2'
+    '9pbnOo57AqAVIFY29pbnM6CIigHwDooB8A');
 

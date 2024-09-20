@@ -47,6 +47,7 @@ const QueryAllBalancesRequest$json = {
   '2': [
     {'1': 'address', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'address'},
     {'1': 'pagination', '3': 2, '4': 1, '5': 11, '6': '.cosmos.base.query.v1beta1.PageRequest', '10': 'pagination'},
+    {'1': 'resolve_denom', '3': 3, '4': 1, '5': 8, '10': 'resolveDenom'},
   ],
   '7': {},
 };
@@ -55,7 +56,8 @@ const QueryAllBalancesRequest$json = {
 final $typed_data.Uint8List queryAllBalancesRequestDescriptor = $convert.base64Decode(
     'ChdRdWVyeUFsbEJhbGFuY2VzUmVxdWVzdBIyCgdhZGRyZXNzGAEgASgJQhjStC0UY29zbW9zLk'
     'FkZHJlc3NTdHJpbmdSB2FkZHJlc3MSRgoKcGFnaW5hdGlvbhgCIAEoCzImLmNvc21vcy5iYXNl'
-    'LnF1ZXJ5LnYxYmV0YTEuUGFnZVJlcXVlc3RSCnBhZ2luYXRpb246CIigHwDooB8A');
+    'LnF1ZXJ5LnYxYmV0YTEuUGFnZVJlcXVlc3RSCnBhZ2luYXRpb24SIwoNcmVzb2x2ZV9kZW5vbR'
+    'gDIAEoCFIMcmVzb2x2ZURlbm9tOgiIoB8A6KAfAA==');
 
 @$core.Deprecated('Use queryAllBalancesResponseDescriptor instead')
 const QueryAllBalancesResponse$json = {
@@ -68,10 +70,11 @@ const QueryAllBalancesResponse$json = {
 
 /// Descriptor for `QueryAllBalancesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryAllBalancesResponseDescriptor = $convert.base64Decode(
-    'ChhRdWVyeUFsbEJhbGFuY2VzUmVzcG9uc2USbAoIYmFsYW5jZXMYASADKAsyGS5jb3Ntb3MuYm'
-    'FzZS52MWJldGExLkNvaW5CNcjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90'
-    'eXBlcy5Db2luc6jnsCoBUghiYWxhbmNlcxJHCgpwYWdpbmF0aW9uGAIgASgLMicuY29zbW9zLm'
-    'Jhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2VSCnBhZ2luYXRpb24=');
+    'ChhRdWVyeUFsbEJhbGFuY2VzUmVzcG9uc2USfQoIYmFsYW5jZXMYASADKAsyGS5jb3Ntb3MuYm'
+    'FzZS52MWJldGExLkNvaW5CRsjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90'
+    'eXBlcy5Db2luc5rnsCoMbGVnYWN5X2NvaW5zqOewKgFSCGJhbGFuY2VzEkcKCnBhZ2luYXRpb2'
+    '4YAiABKAsyJy5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXNwb25zZVIKcGFnaW5h'
+    'dGlvbg==');
 
 @$core.Deprecated('Use querySpendableBalancesRequestDescriptor instead')
 const QuerySpendableBalancesRequest$json = {
@@ -100,10 +103,11 @@ const QuerySpendableBalancesResponse$json = {
 
 /// Descriptor for `QuerySpendableBalancesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List querySpendableBalancesResponseDescriptor = $convert.base64Decode(
-    'Ch5RdWVyeVNwZW5kYWJsZUJhbGFuY2VzUmVzcG9uc2USbAoIYmFsYW5jZXMYASADKAsyGS5jb3'
-    'Ntb3MuYmFzZS52MWJldGExLkNvaW5CNcjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9z'
-    'LXNkay90eXBlcy5Db2luc6jnsCoBUghiYWxhbmNlcxJHCgpwYWdpbmF0aW9uGAIgASgLMicuY2'
-    '9zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2VSCnBhZ2luYXRpb24=');
+    'Ch5RdWVyeVNwZW5kYWJsZUJhbGFuY2VzUmVzcG9uc2USfQoIYmFsYW5jZXMYASADKAsyGS5jb3'
+    'Ntb3MuYmFzZS52MWJldGExLkNvaW5CRsjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9z'
+    'LXNkay90eXBlcy5Db2luc5rnsCoMbGVnYWN5X2NvaW5zqOewKgFSCGJhbGFuY2VzEkcKCnBhZ2'
+    'luYXRpb24YAiABKAsyJy5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXNwb25zZVIK'
+    'cGFnaW5hdGlvbg==');
 
 @$core.Deprecated('Use querySpendableBalanceByDenomRequestDescriptor instead')
 const QuerySpendableBalanceByDenomRequest$json = {
@@ -159,10 +163,10 @@ const QueryTotalSupplyResponse$json = {
 
 /// Descriptor for `QueryTotalSupplyResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryTotalSupplyResponseDescriptor = $convert.base64Decode(
-    'ChhRdWVyeVRvdGFsU3VwcGx5UmVzcG9uc2USaAoGc3VwcGx5GAEgAygLMhkuY29zbW9zLmJhc2'
-    'UudjFiZXRhMS5Db2luQjXI3h8Aqt8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlw'
-    'ZXMuQ29pbnOo57AqAVIGc3VwcGx5EkcKCnBhZ2luYXRpb24YAiABKAsyJy5jb3Ntb3MuYmFzZS'
-    '5xdWVyeS52MWJldGExLlBhZ2VSZXNwb25zZVIKcGFnaW5hdGlvbg==');
+    'ChhRdWVyeVRvdGFsU3VwcGx5UmVzcG9uc2USeQoGc3VwcGx5GAEgAygLMhkuY29zbW9zLmJhc2'
+    'UudjFiZXRhMS5Db2luQkbI3h8Aqt8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlw'
+    'ZXMuQ29pbnOa57AqDGxlZ2FjeV9jb2luc6jnsCoBUgZzdXBwbHkSRwoKcGFnaW5hdGlvbhgCIA'
+    'EoCzInLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlc3BvbnNlUgpwYWdpbmF0aW9u');
 
 @$core.Deprecated('Use querySupplyOfRequestDescriptor instead')
 const QuerySupplyOfRequest$json = {
@@ -265,6 +269,32 @@ final $typed_data.Uint8List queryDenomMetadataResponseDescriptor = $convert.base
     'ChpRdWVyeURlbm9tTWV0YWRhdGFSZXNwb25zZRJECghtZXRhZGF0YRgBIAEoCzIdLmNvc21vcy'
     '5iYW5rLnYxYmV0YTEuTWV0YWRhdGFCCcjeHwCo57AqAVIIbWV0YWRhdGE=');
 
+@$core.Deprecated('Use queryDenomMetadataByQueryStringRequestDescriptor instead')
+const QueryDenomMetadataByQueryStringRequest$json = {
+  '1': 'QueryDenomMetadataByQueryStringRequest',
+  '2': [
+    {'1': 'denom', '3': 1, '4': 1, '5': 9, '10': 'denom'},
+  ],
+};
+
+/// Descriptor for `QueryDenomMetadataByQueryStringRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List queryDenomMetadataByQueryStringRequestDescriptor = $convert.base64Decode(
+    'CiZRdWVyeURlbm9tTWV0YWRhdGFCeVF1ZXJ5U3RyaW5nUmVxdWVzdBIUCgVkZW5vbRgBIAEoCV'
+    'IFZGVub20=');
+
+@$core.Deprecated('Use queryDenomMetadataByQueryStringResponseDescriptor instead')
+const QueryDenomMetadataByQueryStringResponse$json = {
+  '1': 'QueryDenomMetadataByQueryStringResponse',
+  '2': [
+    {'1': 'metadata', '3': 1, '4': 1, '5': 11, '6': '.cosmos.bank.v1beta1.Metadata', '8': {}, '10': 'metadata'},
+  ],
+};
+
+/// Descriptor for `QueryDenomMetadataByQueryStringResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List queryDenomMetadataByQueryStringResponseDescriptor = $convert.base64Decode(
+    'CidRdWVyeURlbm9tTWV0YWRhdGFCeVF1ZXJ5U3RyaW5nUmVzcG9uc2USRAoIbWV0YWRhdGEYAS'
+    'ABKAsyHS5jb3Ntb3MuYmFuay52MWJldGExLk1ldGFkYXRhQgnI3h8AqOewKgFSCG1ldGFkYXRh');
+
 @$core.Deprecated('Use queryDenomOwnersRequestDescriptor instead')
 const QueryDenomOwnersRequest$json = {
   '1': 'QueryDenomOwnersRequest',
@@ -310,6 +340,37 @@ final $typed_data.Uint8List queryDenomOwnersResponseDescriptor = $convert.base64
     '9zLmJhbmsudjFiZXRhMS5EZW5vbU93bmVyUgtkZW5vbU93bmVycxJHCgpwYWdpbmF0aW9uGAIg'
     'ASgLMicuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2VSCnBhZ2luYXRpb2'
     '4=');
+
+@$core.Deprecated('Use queryDenomOwnersByQueryRequestDescriptor instead')
+const QueryDenomOwnersByQueryRequest$json = {
+  '1': 'QueryDenomOwnersByQueryRequest',
+  '2': [
+    {'1': 'denom', '3': 1, '4': 1, '5': 9, '10': 'denom'},
+    {'1': 'pagination', '3': 2, '4': 1, '5': 11, '6': '.cosmos.base.query.v1beta1.PageRequest', '10': 'pagination'},
+  ],
+};
+
+/// Descriptor for `QueryDenomOwnersByQueryRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List queryDenomOwnersByQueryRequestDescriptor = $convert.base64Decode(
+    'Ch5RdWVyeURlbm9tT3duZXJzQnlRdWVyeVJlcXVlc3QSFAoFZGVub20YASABKAlSBWRlbm9tEk'
+    'YKCnBhZ2luYXRpb24YAiABKAsyJi5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXF1'
+    'ZXN0UgpwYWdpbmF0aW9u');
+
+@$core.Deprecated('Use queryDenomOwnersByQueryResponseDescriptor instead')
+const QueryDenomOwnersByQueryResponse$json = {
+  '1': 'QueryDenomOwnersByQueryResponse',
+  '2': [
+    {'1': 'denom_owners', '3': 1, '4': 3, '5': 11, '6': '.cosmos.bank.v1beta1.DenomOwner', '10': 'denomOwners'},
+    {'1': 'pagination', '3': 2, '4': 1, '5': 11, '6': '.cosmos.base.query.v1beta1.PageResponse', '10': 'pagination'},
+  ],
+};
+
+/// Descriptor for `QueryDenomOwnersByQueryResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List queryDenomOwnersByQueryResponseDescriptor = $convert.base64Decode(
+    'Ch9RdWVyeURlbm9tT3duZXJzQnlRdWVyeVJlc3BvbnNlEkIKDGRlbm9tX293bmVycxgBIAMoCz'
+    'IfLmNvc21vcy5iYW5rLnYxYmV0YTEuRGVub21Pd25lclILZGVub21Pd25lcnMSRwoKcGFnaW5h'
+    'dGlvbhgCIAEoCzInLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlc3BvbnNlUgpwYW'
+    'dpbmF0aW9u');
 
 @$core.Deprecated('Use querySendEnabledRequestDescriptor instead')
 const QuerySendEnabledRequest$json = {

@@ -49,6 +49,7 @@ const GenesisState$json = {
       '10': 'tallyParams',
     },
     {'1': 'params', '3': 8, '4': 1, '5': 11, '6': '.cosmos.gov.v1.Params', '10': 'params'},
+    {'1': 'constitution', '3': 9, '4': 1, '5': 9, '10': 'constitution'},
   ],
 };
 
@@ -62,5 +63,6 @@ final $typed_data.Uint8List genesisStateDescriptor = $convert.base64Decode(
     '9zaXRQYXJhbXMSRAoNdm90aW5nX3BhcmFtcxgGIAEoCzIbLmNvc21vcy5nb3YudjEuVm90aW5n'
     'UGFyYW1zQgIYAVIMdm90aW5nUGFyYW1zEkEKDHRhbGx5X3BhcmFtcxgHIAEoCzIaLmNvc21vcy'
     '5nb3YudjEuVGFsbHlQYXJhbXNCAhgBUgt0YWxseVBhcmFtcxItCgZwYXJhbXMYCCABKAsyFS5j'
-    'b3Ntb3MuZ292LnYxLlBhcmFtc1IGcGFyYW1z');
+    'b3Ntb3MuZ292LnYxLlBhcmFtc1IGcGFyYW1zEiIKDGNvbnN0aXR1dGlvbhgJIAEoCVIMY29uc3'
+    'RpdHV0aW9u');
 

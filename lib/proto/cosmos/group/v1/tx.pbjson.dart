@@ -402,8 +402,8 @@ const MsgExec$json = {
 /// Descriptor for `MsgExec`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List msgExecDescriptor = $convert.base64Decode(
     'CgdNc2dFeGVjEh8KC3Byb3Bvc2FsX2lkGAEgASgEUgpwcm9wb3NhbElkEjQKCGV4ZWN1dG9yGA'
-    'IgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmdSCGV4ZWN1dG9yOiiC57AqBnNpZ25lcorn'
-    'sCoYY29zbW9zLXNkay9ncm91cC9Nc2dFeGVj');
+    'IgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmdSCGV4ZWN1dG9yOiqC57AqCGV4ZWN1dG9y'
+    'iuewKhhjb3Ntb3Mtc2RrL2dyb3VwL01zZ0V4ZWM=');
 
 @$core.Deprecated('Use msgExecResponseDescriptor instead')
 const MsgExecResponse$json = {

@@ -15,16 +15,16 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $14;
+import 'tx.pb.dart' as $16;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.consensus.v1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$updateParams = $grpc.ClientMethod<$14.MsgUpdateParams, $14.MsgUpdateParamsResponse>(
+  static final _$updateParams = $grpc.ClientMethod<$16.MsgUpdateParams, $16.MsgUpdateParamsResponse>(
       '/cosmos.consensus.v1.Msg/UpdateParams',
-      ($14.MsgUpdateParams value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $14.MsgUpdateParamsResponse.fromBuffer(value));
+      ($16.MsgUpdateParams value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $16.MsgUpdateParamsResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$14.MsgUpdateParamsResponse> updateParams($14.MsgUpdateParams request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$16.MsgUpdateParamsResponse> updateParams($16.MsgUpdateParams request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateParams, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.consensus.v1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$14.MsgUpdateParams, $14.MsgUpdateParamsResponse>(
+    $addMethod($grpc.ServiceMethod<$16.MsgUpdateParams, $16.MsgUpdateParamsResponse>(
         'UpdateParams',
         updateParams_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $14.MsgUpdateParams.fromBuffer(value),
-        ($14.MsgUpdateParamsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $16.MsgUpdateParams.fromBuffer(value),
+        ($16.MsgUpdateParamsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$14.MsgUpdateParamsResponse> updateParams_Pre($grpc.ServiceCall call, $async.Future<$14.MsgUpdateParams> request) async {
+  $async.Future<$16.MsgUpdateParamsResponse> updateParams_Pre($grpc.ServiceCall call, $async.Future<$16.MsgUpdateParams> request) async {
     return updateParams(call, await request);
   }
 
-  $async.Future<$14.MsgUpdateParamsResponse> updateParams($grpc.ServiceCall call, $14.MsgUpdateParams request);
+  $async.Future<$16.MsgUpdateParamsResponse> updateParams($grpc.ServiceCall call, $16.MsgUpdateParams request);
 }

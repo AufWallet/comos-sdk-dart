@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/duration.pb.dart' as $56;
-import '../../../google/protobuf/timestamp.pb.dart' as $47;
+import '../../../google/protobuf/duration.pb.dart' as $55;
+import '../../../google/protobuf/timestamp.pb.dart' as $50;
 
 /// ValidatorSigningInfo defines a validator's signing info for monitoring their
 /// liveness activity.
@@ -24,7 +24,7 @@ class ValidatorSigningInfo extends $pb.GeneratedMessage {
     $core.String? address,
     $fixnum.Int64? startHeight,
     $fixnum.Int64? indexOffset,
-    $47.Timestamp? jailedUntil,
+    $50.Timestamp? jailedUntil,
     $core.bool? tombstoned,
     $fixnum.Int64? missedBlocksCounter,
   }) {
@@ -57,7 +57,7 @@ class ValidatorSigningInfo extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'address')
     ..aInt64(2, _omitFieldNames ? '' : 'startHeight')
     ..aInt64(3, _omitFieldNames ? '' : 'indexOffset')
-    ..aOM<$47.Timestamp>(4, _omitFieldNames ? '' : 'jailedUntil', subBuilder: $47.Timestamp.create)
+    ..aOM<$50.Timestamp>(4, _omitFieldNames ? '' : 'jailedUntil', subBuilder: $50.Timestamp.create)
     ..aOB(5, _omitFieldNames ? '' : 'tombstoned')
     ..aInt64(6, _omitFieldNames ? '' : 'missedBlocksCounter')
     ..hasRequiredFields = false
@@ -93,7 +93,7 @@ class ValidatorSigningInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAddress() => clearField(1);
 
-  /// Height at which validator was first a candidate OR was unjailed
+  /// Height at which validator was first a candidate OR was un-jailed
   @$pb.TagNumber(2)
   $fixnum.Int64 get startHeight => $_getI64(1);
   @$pb.TagNumber(2)
@@ -103,9 +103,9 @@ class ValidatorSigningInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStartHeight() => clearField(2);
 
-  /// Index which is incremented each time the validator was a bonded
-  /// in a block and may have signed a precommit or not. This in conjunction with the
-  /// `SignedBlocksWindow` param determines the index in the `MissedBlocksBitArray`.
+  /// Index which is incremented every time a validator is bonded in a block and
+  /// _may_ have signed a pre-commit or not. This in conjunction with the
+  /// signed_blocks_window param determines the index in the missed block bitmap.
   @$pb.TagNumber(3)
   $fixnum.Int64 get indexOffset => $_getI64(2);
   @$pb.TagNumber(3)
@@ -117,18 +117,19 @@ class ValidatorSigningInfo extends $pb.GeneratedMessage {
 
   /// Timestamp until which the validator is jailed due to liveness downtime.
   @$pb.TagNumber(4)
-  $47.Timestamp get jailedUntil => $_getN(3);
+  $50.Timestamp get jailedUntil => $_getN(3);
   @$pb.TagNumber(4)
-  set jailedUntil($47.Timestamp v) { setField(4, v); }
+  set jailedUntil($50.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasJailedUntil() => $_has(3);
   @$pb.TagNumber(4)
   void clearJailedUntil() => clearField(4);
   @$pb.TagNumber(4)
-  $47.Timestamp ensureJailedUntil() => $_ensure(3);
+  $50.Timestamp ensureJailedUntil() => $_ensure(3);
 
-  /// Whether or not a validator has been tombstoned (killed out of validator set). It is set
-  /// once the validator commits an equivocation or for any other configured misbehiavor.
+  /// Whether or not a validator has been tombstoned (killed out of validator
+  /// set). It is set once the validator commits an equivocation or for any other
+  /// configured misbehavior.
   @$pb.TagNumber(5)
   $core.bool get tombstoned => $_getBF(4);
   @$pb.TagNumber(5)
@@ -138,8 +139,8 @@ class ValidatorSigningInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearTombstoned() => clearField(5);
 
-  /// A counter kept to avoid unnecessary array reads.
-  /// Note that `Sum(MissedBlocksBitArray)` always equals `MissedBlocksCounter`.
+  /// A counter of missed (unsigned) blocks. It is used to avoid unnecessary
+  /// reads in the missed block bitmap.
   @$pb.TagNumber(6)
   $fixnum.Int64 get missedBlocksCounter => $_getI64(5);
   @$pb.TagNumber(6)
@@ -155,7 +156,7 @@ class Params extends $pb.GeneratedMessage {
   factory Params({
     $fixnum.Int64? signedBlocksWindow,
     $core.List<$core.int>? minSignedPerWindow,
-    $56.Duration? downtimeJailDuration,
+    $55.Duration? downtimeJailDuration,
     $core.List<$core.int>? slashFractionDoubleSign,
     $core.List<$core.int>? slashFractionDowntime,
   }) {
@@ -184,7 +185,7 @@ class Params extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Params', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.slashing.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'signedBlocksWindow')
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'minSignedPerWindow', $pb.PbFieldType.OY)
-    ..aOM<$56.Duration>(3, _omitFieldNames ? '' : 'downtimeJailDuration', subBuilder: $56.Duration.create)
+    ..aOM<$55.Duration>(3, _omitFieldNames ? '' : 'downtimeJailDuration', subBuilder: $55.Duration.create)
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'slashFractionDoubleSign', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(5, _omitFieldNames ? '' : 'slashFractionDowntime', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
@@ -230,15 +231,15 @@ class Params extends $pb.GeneratedMessage {
   void clearMinSignedPerWindow() => clearField(2);
 
   @$pb.TagNumber(3)
-  $56.Duration get downtimeJailDuration => $_getN(2);
+  $55.Duration get downtimeJailDuration => $_getN(2);
   @$pb.TagNumber(3)
-  set downtimeJailDuration($56.Duration v) { setField(3, v); }
+  set downtimeJailDuration($55.Duration v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasDowntimeJailDuration() => $_has(2);
   @$pb.TagNumber(3)
   void clearDowntimeJailDuration() => clearField(3);
   @$pb.TagNumber(3)
-  $56.Duration ensureDowntimeJailDuration() => $_ensure(2);
+  $55.Duration ensureDowntimeJailDuration() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get slashFractionDoubleSign => $_getN(3);

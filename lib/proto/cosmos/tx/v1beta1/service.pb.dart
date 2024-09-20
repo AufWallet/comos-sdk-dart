@@ -14,12 +14,12 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../tendermint/types/block.pb.dart' as $60;
-import '../../../tendermint/types/types.pb.dart' as $58;
-import '../../base/abci/v1beta1/abci.pb.dart' as $79;
-import '../../base/query/v1beta1/pagination.pb.dart' as $46;
+import '../../../tendermint/types/block.pb.dart' as $63;
+import '../../../tendermint/types/types.pb.dart' as $61;
+import '../../base/abci/v1beta1/abci.pb.dart' as $83;
+import '../../base/query/v1beta1/pagination.pb.dart' as $49;
 import 'service.pbenum.dart';
-import 'tx.pb.dart' as $78;
+import 'tx.pb.dart' as $82;
 
 export 'service.pbenum.dart';
 
@@ -27,15 +27,18 @@ export 'service.pbenum.dart';
 /// RPC method.
 class GetTxsEventRequest extends $pb.GeneratedMessage {
   factory GetTxsEventRequest({
+  @$core.Deprecated('This field is deprecated.')
     $core.Iterable<$core.String>? events,
   @$core.Deprecated('This field is deprecated.')
-    $46.PageRequest? pagination,
+    $49.PageRequest? pagination,
     OrderBy? orderBy,
     $fixnum.Int64? page,
     $fixnum.Int64? limit,
+    $core.String? query,
   }) {
     final $result = create();
     if (events != null) {
+      // ignore: deprecated_member_use_from_same_package
       $result.events.addAll(events);
     }
     if (pagination != null) {
@@ -51,6 +54,9 @@ class GetTxsEventRequest extends $pb.GeneratedMessage {
     if (limit != null) {
       $result.limit = limit;
     }
+    if (query != null) {
+      $result.query = query;
+    }
     return $result;
   }
   GetTxsEventRequest._() : super();
@@ -59,10 +65,11 @@ class GetTxsEventRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetTxsEventRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'events')
-    ..aOM<$46.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
+    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
     ..e<OrderBy>(3, _omitFieldNames ? '' : 'orderBy', $pb.PbFieldType.OE, defaultOrMaker: OrderBy.ORDER_BY_UNSPECIFIED, valueOf: OrderBy.valueOf, enumValues: OrderBy.values)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'page', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'limit', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(6, _omitFieldNames ? '' : 'query')
     ..hasRequiredFields = false
   ;
 
@@ -88,6 +95,9 @@ class GetTxsEventRequest extends $pb.GeneratedMessage {
   static GetTxsEventRequest? _defaultInstance;
 
   /// events is the list of transaction event type.
+  /// Deprecated post v0.47.x: use query instead, which should contain a valid
+  /// events query.
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.List<$core.String> get events => $_getList(0);
 
@@ -95,10 +105,10 @@ class GetTxsEventRequest extends $pb.GeneratedMessage {
   /// Deprecated post v0.46.x: use page and limit instead.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
-  $46.PageRequest get pagination => $_getN(1);
+  $49.PageRequest get pagination => $_getN(1);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
-  set pagination($46.PageRequest v) { setField(2, v); }
+  set pagination($49.PageRequest v) { setField(2, v); }
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
@@ -107,7 +117,7 @@ class GetTxsEventRequest extends $pb.GeneratedMessage {
   void clearPagination() => clearField(2);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
-  $46.PageRequest ensurePagination() => $_ensure(1);
+  $49.PageRequest ensurePagination() => $_ensure(1);
 
   @$pb.TagNumber(3)
   OrderBy get orderBy => $_getN(2);
@@ -118,7 +128,8 @@ class GetTxsEventRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOrderBy() => clearField(3);
 
-  /// page is the page number to query, starts at 1. If not provided, will default to first page.
+  /// page is the page number to query, starts at 1. If not provided, will
+  /// default to first page.
   @$pb.TagNumber(4)
   $fixnum.Int64 get page => $_getI64(3);
   @$pb.TagNumber(4)
@@ -138,16 +149,29 @@ class GetTxsEventRequest extends $pb.GeneratedMessage {
   $core.bool hasLimit() => $_has(4);
   @$pb.TagNumber(5)
   void clearLimit() => clearField(5);
+
+  ///  query defines the transaction event query that is proxied to Tendermint's
+  ///  TxSearch RPC method. The query must be valid.
+  ///
+  ///  Since cosmos-sdk 0.50
+  @$pb.TagNumber(6)
+  $core.String get query => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set query($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasQuery() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearQuery() => clearField(6);
 }
 
 /// GetTxsEventResponse is the response type for the Service.TxsByEvents
 /// RPC method.
 class GetTxsEventResponse extends $pb.GeneratedMessage {
   factory GetTxsEventResponse({
-    $core.Iterable<$78.Tx>? txs,
-    $core.Iterable<$79.TxResponse>? txResponses,
+    $core.Iterable<$82.Tx>? txs,
+    $core.Iterable<$83.TxResponse>? txResponses,
   @$core.Deprecated('This field is deprecated.')
-    $46.PageResponse? pagination,
+    $49.PageResponse? pagination,
     $fixnum.Int64? total,
   }) {
     final $result = create();
@@ -171,9 +195,9 @@ class GetTxsEventResponse extends $pb.GeneratedMessage {
   factory GetTxsEventResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetTxsEventResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
-    ..pc<$78.Tx>(1, _omitFieldNames ? '' : 'txs', $pb.PbFieldType.PM, subBuilder: $78.Tx.create)
-    ..pc<$79.TxResponse>(2, _omitFieldNames ? '' : 'txResponses', $pb.PbFieldType.PM, subBuilder: $79.TxResponse.create)
-    ..aOM<$46.PageResponse>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
+    ..pc<$82.Tx>(1, _omitFieldNames ? '' : 'txs', $pb.PbFieldType.PM, subBuilder: $82.Tx.create)
+    ..pc<$83.TxResponse>(2, _omitFieldNames ? '' : 'txResponses', $pb.PbFieldType.PM, subBuilder: $83.TxResponse.create)
+    ..aOM<$49.PageResponse>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'total', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -201,20 +225,20 @@ class GetTxsEventResponse extends $pb.GeneratedMessage {
 
   /// txs is the list of queried transactions.
   @$pb.TagNumber(1)
-  $core.List<$78.Tx> get txs => $_getList(0);
+  $core.List<$82.Tx> get txs => $_getList(0);
 
   /// tx_responses is the list of queried TxResponses.
   @$pb.TagNumber(2)
-  $core.List<$79.TxResponse> get txResponses => $_getList(1);
+  $core.List<$83.TxResponse> get txResponses => $_getList(1);
 
   /// pagination defines a pagination for the response.
   /// Deprecated post v0.46.x: use total instead.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
-  $46.PageResponse get pagination => $_getN(2);
+  $49.PageResponse get pagination => $_getN(2);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
-  set pagination($46.PageResponse v) { setField(3, v); }
+  set pagination($49.PageResponse v) { setField(3, v); }
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   $core.bool hasPagination() => $_has(2);
@@ -223,7 +247,7 @@ class GetTxsEventResponse extends $pb.GeneratedMessage {
   void clearPagination() => clearField(3);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
-  $46.PageResponse ensurePagination() => $_ensure(2);
+  $49.PageResponse ensurePagination() => $_ensure(2);
 
   /// total is total number of results available
   @$pb.TagNumber(4)
@@ -307,7 +331,7 @@ class BroadcastTxRequest extends $pb.GeneratedMessage {
 /// Service.BroadcastTx method.
 class BroadcastTxResponse extends $pb.GeneratedMessage {
   factory BroadcastTxResponse({
-    $79.TxResponse? txResponse,
+    $83.TxResponse? txResponse,
   }) {
     final $result = create();
     if (txResponse != null) {
@@ -320,7 +344,7 @@ class BroadcastTxResponse extends $pb.GeneratedMessage {
   factory BroadcastTxResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BroadcastTxResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
-    ..aOM<$79.TxResponse>(1, _omitFieldNames ? '' : 'txResponse', subBuilder: $79.TxResponse.create)
+    ..aOM<$83.TxResponse>(1, _omitFieldNames ? '' : 'txResponse', subBuilder: $83.TxResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -347,15 +371,15 @@ class BroadcastTxResponse extends $pb.GeneratedMessage {
 
   /// tx_response is the queried TxResponses.
   @$pb.TagNumber(1)
-  $79.TxResponse get txResponse => $_getN(0);
+  $83.TxResponse get txResponse => $_getN(0);
   @$pb.TagNumber(1)
-  set txResponse($79.TxResponse v) { setField(1, v); }
+  set txResponse($83.TxResponse v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTxResponse() => $_has(0);
   @$pb.TagNumber(1)
   void clearTxResponse() => clearField(1);
   @$pb.TagNumber(1)
-  $79.TxResponse ensureTxResponse() => $_ensure(0);
+  $83.TxResponse ensureTxResponse() => $_ensure(0);
 }
 
 /// SimulateRequest is the request type for the Service.Simulate
@@ -363,7 +387,7 @@ class BroadcastTxResponse extends $pb.GeneratedMessage {
 class SimulateRequest extends $pb.GeneratedMessage {
   factory SimulateRequest({
   @$core.Deprecated('This field is deprecated.')
-    $78.Tx? tx,
+    $82.Tx? tx,
     $core.List<$core.int>? txBytes,
   }) {
     final $result = create();
@@ -381,7 +405,7 @@ class SimulateRequest extends $pb.GeneratedMessage {
   factory SimulateRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SimulateRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.Tx>(1, _omitFieldNames ? '' : 'tx', subBuilder: $78.Tx.create)
+    ..aOM<$82.Tx>(1, _omitFieldNames ? '' : 'tx', subBuilder: $82.Tx.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'txBytes', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
@@ -411,10 +435,10 @@ class SimulateRequest extends $pb.GeneratedMessage {
   /// Deprecated. Send raw tx bytes instead.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
-  $78.Tx get tx => $_getN(0);
+  $82.Tx get tx => $_getN(0);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
-  set tx($78.Tx v) { setField(1, v); }
+  set tx($82.Tx v) { setField(1, v); }
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.bool hasTx() => $_has(0);
@@ -423,7 +447,7 @@ class SimulateRequest extends $pb.GeneratedMessage {
   void clearTx() => clearField(1);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
-  $78.Tx ensureTx() => $_ensure(0);
+  $82.Tx ensureTx() => $_ensure(0);
 
   ///  tx_bytes is the raw transaction.
   ///
@@ -442,8 +466,8 @@ class SimulateRequest extends $pb.GeneratedMessage {
 /// Service.SimulateRPC method.
 class SimulateResponse extends $pb.GeneratedMessage {
   factory SimulateResponse({
-    $79.GasInfo? gasInfo,
-    $79.Result? result,
+    $83.GasInfo? gasInfo,
+    $83.Result? result,
   }) {
     final $result = create();
     if (gasInfo != null) {
@@ -459,8 +483,8 @@ class SimulateResponse extends $pb.GeneratedMessage {
   factory SimulateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SimulateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
-    ..aOM<$79.GasInfo>(1, _omitFieldNames ? '' : 'gasInfo', subBuilder: $79.GasInfo.create)
-    ..aOM<$79.Result>(2, _omitFieldNames ? '' : 'result', subBuilder: $79.Result.create)
+    ..aOM<$83.GasInfo>(1, _omitFieldNames ? '' : 'gasInfo', subBuilder: $83.GasInfo.create)
+    ..aOM<$83.Result>(2, _omitFieldNames ? '' : 'result', subBuilder: $83.Result.create)
     ..hasRequiredFields = false
   ;
 
@@ -487,27 +511,27 @@ class SimulateResponse extends $pb.GeneratedMessage {
 
   /// gas_info is the information about gas used in the simulation.
   @$pb.TagNumber(1)
-  $79.GasInfo get gasInfo => $_getN(0);
+  $83.GasInfo get gasInfo => $_getN(0);
   @$pb.TagNumber(1)
-  set gasInfo($79.GasInfo v) { setField(1, v); }
+  set gasInfo($83.GasInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasGasInfo() => $_has(0);
   @$pb.TagNumber(1)
   void clearGasInfo() => clearField(1);
   @$pb.TagNumber(1)
-  $79.GasInfo ensureGasInfo() => $_ensure(0);
+  $83.GasInfo ensureGasInfo() => $_ensure(0);
 
   /// result is the result of the simulation.
   @$pb.TagNumber(2)
-  $79.Result get result => $_getN(1);
+  $83.Result get result => $_getN(1);
   @$pb.TagNumber(2)
-  set result($79.Result v) { setField(2, v); }
+  set result($83.Result v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasResult() => $_has(1);
   @$pb.TagNumber(2)
   void clearResult() => clearField(2);
   @$pb.TagNumber(2)
-  $79.Result ensureResult() => $_ensure(1);
+  $83.Result ensureResult() => $_ensure(1);
 }
 
 /// GetTxRequest is the request type for the Service.GetTx
@@ -566,8 +590,8 @@ class GetTxRequest extends $pb.GeneratedMessage {
 /// GetTxResponse is the response type for the Service.GetTx method.
 class GetTxResponse extends $pb.GeneratedMessage {
   factory GetTxResponse({
-    $78.Tx? tx,
-    $79.TxResponse? txResponse,
+    $82.Tx? tx,
+    $83.TxResponse? txResponse,
   }) {
     final $result = create();
     if (tx != null) {
@@ -583,8 +607,8 @@ class GetTxResponse extends $pb.GeneratedMessage {
   factory GetTxResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetTxResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.Tx>(1, _omitFieldNames ? '' : 'tx', subBuilder: $78.Tx.create)
-    ..aOM<$79.TxResponse>(2, _omitFieldNames ? '' : 'txResponse', subBuilder: $79.TxResponse.create)
+    ..aOM<$82.Tx>(1, _omitFieldNames ? '' : 'tx', subBuilder: $82.Tx.create)
+    ..aOM<$83.TxResponse>(2, _omitFieldNames ? '' : 'txResponse', subBuilder: $83.TxResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -611,27 +635,27 @@ class GetTxResponse extends $pb.GeneratedMessage {
 
   /// tx is the queried transaction.
   @$pb.TagNumber(1)
-  $78.Tx get tx => $_getN(0);
+  $82.Tx get tx => $_getN(0);
   @$pb.TagNumber(1)
-  set tx($78.Tx v) { setField(1, v); }
+  set tx($82.Tx v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTx() => $_has(0);
   @$pb.TagNumber(1)
   void clearTx() => clearField(1);
   @$pb.TagNumber(1)
-  $78.Tx ensureTx() => $_ensure(0);
+  $82.Tx ensureTx() => $_ensure(0);
 
   /// tx_response is the queried TxResponses.
   @$pb.TagNumber(2)
-  $79.TxResponse get txResponse => $_getN(1);
+  $83.TxResponse get txResponse => $_getN(1);
   @$pb.TagNumber(2)
-  set txResponse($79.TxResponse v) { setField(2, v); }
+  set txResponse($83.TxResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasTxResponse() => $_has(1);
   @$pb.TagNumber(2)
   void clearTxResponse() => clearField(2);
   @$pb.TagNumber(2)
-  $79.TxResponse ensureTxResponse() => $_ensure(1);
+  $83.TxResponse ensureTxResponse() => $_ensure(1);
 }
 
 ///  GetBlockWithTxsRequest is the request type for the Service.GetBlockWithTxs
@@ -641,7 +665,7 @@ class GetTxResponse extends $pb.GeneratedMessage {
 class GetBlockWithTxsRequest extends $pb.GeneratedMessage {
   factory GetBlockWithTxsRequest({
     $fixnum.Int64? height,
-    $46.PageRequest? pagination,
+    $49.PageRequest? pagination,
   }) {
     final $result = create();
     if (height != null) {
@@ -658,7 +682,7 @@ class GetBlockWithTxsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBlockWithTxsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'height')
-    ..aOM<$46.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
+    ..aOM<$49.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -695,26 +719,27 @@ class GetBlockWithTxsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines a pagination for the request.
   @$pb.TagNumber(2)
-  $46.PageRequest get pagination => $_getN(1);
+  $49.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($46.PageRequest v) { setField(2, v); }
+  set pagination($49.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $46.PageRequest ensurePagination() => $_ensure(1);
+  $49.PageRequest ensurePagination() => $_ensure(1);
 }
 
-///  GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs method.
+///  GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs
+///  method.
 ///
 ///  Since: cosmos-sdk 0.45.2
 class GetBlockWithTxsResponse extends $pb.GeneratedMessage {
   factory GetBlockWithTxsResponse({
-    $core.Iterable<$78.Tx>? txs,
-    $58.BlockID? blockId,
-    $60.Block? block,
-    $46.PageResponse? pagination,
+    $core.Iterable<$82.Tx>? txs,
+    $61.BlockID? blockId,
+    $63.Block? block,
+    $49.PageResponse? pagination,
   }) {
     final $result = create();
     if (txs != null) {
@@ -736,10 +761,10 @@ class GetBlockWithTxsResponse extends $pb.GeneratedMessage {
   factory GetBlockWithTxsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBlockWithTxsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
-    ..pc<$78.Tx>(1, _omitFieldNames ? '' : 'txs', $pb.PbFieldType.PM, subBuilder: $78.Tx.create)
-    ..aOM<$58.BlockID>(2, _omitFieldNames ? '' : 'blockId', subBuilder: $58.BlockID.create)
-    ..aOM<$60.Block>(3, _omitFieldNames ? '' : 'block', subBuilder: $60.Block.create)
-    ..aOM<$46.PageResponse>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
+    ..pc<$82.Tx>(1, _omitFieldNames ? '' : 'txs', $pb.PbFieldType.PM, subBuilder: $82.Tx.create)
+    ..aOM<$61.BlockID>(2, _omitFieldNames ? '' : 'blockId', subBuilder: $61.BlockID.create)
+    ..aOM<$63.Block>(3, _omitFieldNames ? '' : 'block', subBuilder: $63.Block.create)
+    ..aOM<$49.PageResponse>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $49.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -766,41 +791,41 @@ class GetBlockWithTxsResponse extends $pb.GeneratedMessage {
 
   /// txs are the transactions in the block.
   @$pb.TagNumber(1)
-  $core.List<$78.Tx> get txs => $_getList(0);
+  $core.List<$82.Tx> get txs => $_getList(0);
 
   @$pb.TagNumber(2)
-  $58.BlockID get blockId => $_getN(1);
+  $61.BlockID get blockId => $_getN(1);
   @$pb.TagNumber(2)
-  set blockId($58.BlockID v) { setField(2, v); }
+  set blockId($61.BlockID v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBlockId() => $_has(1);
   @$pb.TagNumber(2)
   void clearBlockId() => clearField(2);
   @$pb.TagNumber(2)
-  $58.BlockID ensureBlockId() => $_ensure(1);
+  $61.BlockID ensureBlockId() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $60.Block get block => $_getN(2);
+  $63.Block get block => $_getN(2);
   @$pb.TagNumber(3)
-  set block($60.Block v) { setField(3, v); }
+  set block($63.Block v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasBlock() => $_has(2);
   @$pb.TagNumber(3)
   void clearBlock() => clearField(3);
   @$pb.TagNumber(3)
-  $60.Block ensureBlock() => $_ensure(2);
+  $63.Block ensureBlock() => $_ensure(2);
 
   /// pagination defines a pagination for the response.
   @$pb.TagNumber(4)
-  $46.PageResponse get pagination => $_getN(3);
+  $49.PageResponse get pagination => $_getN(3);
   @$pb.TagNumber(4)
-  set pagination($46.PageResponse v) { setField(4, v); }
+  set pagination($49.PageResponse v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasPagination() => $_has(3);
   @$pb.TagNumber(4)
   void clearPagination() => clearField(4);
   @$pb.TagNumber(4)
-  $46.PageResponse ensurePagination() => $_ensure(3);
+  $49.PageResponse ensurePagination() => $_ensure(3);
 }
 
 ///  TxDecodeRequest is the request type for the Service.TxDecode
@@ -864,7 +889,7 @@ class TxDecodeRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.47
 class TxDecodeResponse extends $pb.GeneratedMessage {
   factory TxDecodeResponse({
-    $78.Tx? tx,
+    $82.Tx? tx,
   }) {
     final $result = create();
     if (tx != null) {
@@ -877,7 +902,7 @@ class TxDecodeResponse extends $pb.GeneratedMessage {
   factory TxDecodeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TxDecodeResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.Tx>(1, _omitFieldNames ? '' : 'tx', subBuilder: $78.Tx.create)
+    ..aOM<$82.Tx>(1, _omitFieldNames ? '' : 'tx', subBuilder: $82.Tx.create)
     ..hasRequiredFields = false
   ;
 
@@ -904,15 +929,15 @@ class TxDecodeResponse extends $pb.GeneratedMessage {
 
   /// tx is the decoded transaction.
   @$pb.TagNumber(1)
-  $78.Tx get tx => $_getN(0);
+  $82.Tx get tx => $_getN(0);
   @$pb.TagNumber(1)
-  set tx($78.Tx v) { setField(1, v); }
+  set tx($82.Tx v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTx() => $_has(0);
   @$pb.TagNumber(1)
   void clearTx() => clearField(1);
   @$pb.TagNumber(1)
-  $78.Tx ensureTx() => $_ensure(0);
+  $82.Tx ensureTx() => $_ensure(0);
 }
 
 ///  TxEncodeRequest is the request type for the Service.TxEncode
@@ -921,7 +946,7 @@ class TxDecodeResponse extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.47
 class TxEncodeRequest extends $pb.GeneratedMessage {
   factory TxEncodeRequest({
-    $78.Tx? tx,
+    $82.Tx? tx,
   }) {
     final $result = create();
     if (tx != null) {
@@ -934,7 +959,7 @@ class TxEncodeRequest extends $pb.GeneratedMessage {
   factory TxEncodeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TxEncodeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.tx.v1beta1'), createEmptyInstance: create)
-    ..aOM<$78.Tx>(1, _omitFieldNames ? '' : 'tx', subBuilder: $78.Tx.create)
+    ..aOM<$82.Tx>(1, _omitFieldNames ? '' : 'tx', subBuilder: $82.Tx.create)
     ..hasRequiredFields = false
   ;
 
@@ -961,15 +986,15 @@ class TxEncodeRequest extends $pb.GeneratedMessage {
 
   /// tx is the transaction to encode.
   @$pb.TagNumber(1)
-  $78.Tx get tx => $_getN(0);
+  $82.Tx get tx => $_getN(0);
   @$pb.TagNumber(1)
-  set tx($78.Tx v) { setField(1, v); }
+  set tx($82.Tx v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTx() => $_has(0);
   @$pb.TagNumber(1)
   void clearTx() => clearField(1);
   @$pb.TagNumber(1)
-  $78.Tx ensureTx() => $_ensure(0);
+  $82.Tx ensureTx() => $_ensure(0);
 }
 
 ///  TxEncodeResponse is the response type for the

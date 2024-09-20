@@ -31,7 +31,8 @@ class OrderBy extends $pb.ProtobufEnum {
   const OrderBy._($core.int v, $core.String n) : super(v, n);
 }
 
-/// BroadcastMode specifies the broadcast mode for the TxService.Broadcast RPC method.
+/// BroadcastMode specifies the broadcast mode for the TxService.Broadcast RPC
+/// method.
 class BroadcastMode extends $pb.ProtobufEnum {
   static const BroadcastMode BROADCAST_MODE_UNSPECIFIED = BroadcastMode._(0, _omitEnumNames ? '' : 'BROADCAST_MODE_UNSPECIFIED');
   static const BroadcastMode BROADCAST_MODE_BLOCK = BroadcastMode._(1, _omitEnumNames ? '' : 'BROADCAST_MODE_BLOCK');

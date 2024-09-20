@@ -24,6 +24,6 @@ const Module$json = {
 
 /// Descriptor for `Module`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List moduleDescriptor = $convert.base64Decode(
-    'CgZNb2R1bGUSHAoJYXV0aG9yaXR5GAEgASgJUglhdXRob3JpdHk6LrrAltoBKAomZ2l0aHViLm'
-    'NvbS9jb3Ntb3MvY29zbW9zLXNkay94L3VwZ3JhZGU=');
+    'CgZNb2R1bGUSHAoJYXV0aG9yaXR5GAEgASgJUglhdXRob3JpdHk6HrrAltoBGAoWY29zbW9zc2'
+    'RrLmlvL3gvdXBncmFkZQ==');
 

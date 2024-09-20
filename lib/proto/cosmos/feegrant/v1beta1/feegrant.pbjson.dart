@@ -25,11 +25,12 @@ const BasicAllowance$json = {
 
 /// Descriptor for `BasicAllowance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List basicAllowanceDescriptor = $convert.base64Decode(
-    'Cg5CYXNpY0FsbG93YW5jZRJxCgtzcGVuZF9saW1pdBgBIAMoCzIZLmNvc21vcy5iYXNlLnYxYm'
-    'V0YTEuQ29pbkI1yN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNv'
-    'aW5zqOewKgFSCnNwZW5kTGltaXQSQAoKZXhwaXJhdGlvbhgCIAEoCzIaLmdvb2dsZS5wcm90b2'
-    'J1Zi5UaW1lc3RhbXBCBJDfHwFSCmV4cGlyYXRpb246R8q0LSVjb3Ntb3MuZmVlZ3JhbnQudjFi'
-    'ZXRhMS5GZWVBbGxvd2FuY2VJiuewKhljb3Ntb3Mtc2RrL0Jhc2ljQWxsb3dhbmNl');
+    'Cg5CYXNpY0FsbG93YW5jZRKCAQoLc3BlbmRfbGltaXQYASADKAsyGS5jb3Ntb3MuYmFzZS52MW'
+    'JldGExLkNvaW5CRsjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5D'
+    'b2luc5rnsCoMbGVnYWN5X2NvaW5zqOewKgFSCnNwZW5kTGltaXQSQAoKZXhwaXJhdGlvbhgCIA'
+    'EoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBJDfHwFSCmV4cGlyYXRpb246R8q0LSVj'
+    'b3Ntb3MuZmVlZ3JhbnQudjFiZXRhMS5GZWVBbGxvd2FuY2VJiuewKhljb3Ntb3Mtc2RrL0Jhc2'
+    'ljQWxsb3dhbmNl');
 
 @$core.Deprecated('Use periodicAllowanceDescriptor instead')
 const PeriodicAllowance$json = {
@@ -48,15 +49,15 @@ const PeriodicAllowance$json = {
 final $typed_data.Uint8List periodicAllowanceDescriptor = $convert.base64Decode(
     'ChFQZXJpb2RpY0FsbG93YW5jZRJICgViYXNpYxgBIAEoCzInLmNvc21vcy5mZWVncmFudC52MW'
     'JldGExLkJhc2ljQWxsb3dhbmNlQgnI3h8AqOewKgFSBWJhc2ljEkAKBnBlcmlvZBgCIAEoCzIZ'
-    'Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkINyN4fAJjfHwGo57AqAVIGcGVyaW9kEn4KEnBlcm'
-    'lvZF9zcGVuZF9saW1pdBgDIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkI1yN4fAKrf'
-    'HyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zqOewKgFSEHBlcmlvZF'
-    'NwZW5kTGltaXQSegoQcGVyaW9kX2Nhbl9zcGVuZBgEIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0'
-    'YTEuQ29pbkI1yN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW'
-    '5zqOewKgFSDnBlcmlvZENhblNwZW5kEkwKDHBlcmlvZF9yZXNldBgFIAEoCzIaLmdvb2dsZS5w'
-    'cm90b2J1Zi5UaW1lc3RhbXBCDcjeHwCQ3x8BqOewKgFSC3BlcmlvZFJlc2V0OkrKtC0lY29zbW'
-    '9zLmZlZWdyYW50LnYxYmV0YTEuRmVlQWxsb3dhbmNlSYrnsCocY29zbW9zLXNkay9QZXJpb2Rp'
-    'Y0FsbG93YW5jZQ==');
+    'Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkINyN4fAJjfHwGo57AqAVIGcGVyaW9kEo8BChJwZX'
+    'Jpb2Rfc3BlbmRfbGltaXQYAyADKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CRsjeHwCq'
+    '3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5Db2luc5rnsCoMbGVnYWN5X2'
+    'NvaW5zqOewKgFSEHBlcmlvZFNwZW5kTGltaXQSiwEKEHBlcmlvZF9jYW5fc3BlbmQYBCADKAsy'
+    'GS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CRsjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY2'
+    '9zbW9zLXNkay90eXBlcy5Db2luc5rnsCoMbGVnYWN5X2NvaW5zqOewKgFSDnBlcmlvZENhblNw'
+    'ZW5kEkwKDHBlcmlvZF9yZXNldBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCDc'
+    'jeHwCQ3x8BqOewKgFSC3BlcmlvZFJlc2V0OkrKtC0lY29zbW9zLmZlZWdyYW50LnYxYmV0YTEu'
+    'RmVlQWxsb3dhbmNlSYrnsCocY29zbW9zLXNkay9QZXJpb2RpY0FsbG93YW5jZQ==');
 
 @$core.Deprecated('Use allowedMsgAllowanceDescriptor instead')
 const AllowedMsgAllowance$json = {

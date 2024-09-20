@@ -53,7 +53,14 @@ final $typed_data.Uint8List broadcastModeDescriptor = $convert.base64Decode(
 const GetTxsEventRequest$json = {
   '1': 'GetTxsEventRequest',
   '2': [
-    {'1': 'events', '3': 1, '4': 3, '5': 9, '10': 'events'},
+    {
+      '1': 'events',
+      '3': 1,
+      '4': 3,
+      '5': 9,
+      '8': {'3': true},
+      '10': 'events',
+    },
     {
       '1': 'pagination',
       '3': 2,
@@ -66,15 +73,17 @@ const GetTxsEventRequest$json = {
     {'1': 'order_by', '3': 3, '4': 1, '5': 14, '6': '.cosmos.tx.v1beta1.OrderBy', '10': 'orderBy'},
     {'1': 'page', '3': 4, '4': 1, '5': 4, '10': 'page'},
     {'1': 'limit', '3': 5, '4': 1, '5': 4, '10': 'limit'},
+    {'1': 'query', '3': 6, '4': 1, '5': 9, '10': 'query'},
   ],
 };
 
 /// Descriptor for `GetTxsEventRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getTxsEventRequestDescriptor = $convert.base64Decode(
-    'ChJHZXRUeHNFdmVudFJlcXVlc3QSFgoGZXZlbnRzGAEgAygJUgZldmVudHMSSgoKcGFnaW5hdG'
-    'lvbhgCIAEoCzImLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJlcXVlc3RCAhgBUgpw'
-    'YWdpbmF0aW9uEjUKCG9yZGVyX2J5GAMgASgOMhouY29zbW9zLnR4LnYxYmV0YTEuT3JkZXJCeV'
-    'IHb3JkZXJCeRISCgRwYWdlGAQgASgEUgRwYWdlEhQKBWxpbWl0GAUgASgEUgVsaW1pdA==');
+    'ChJHZXRUeHNFdmVudFJlcXVlc3QSGgoGZXZlbnRzGAEgAygJQgIYAVIGZXZlbnRzEkoKCnBhZ2'
+    'luYXRpb24YAiABKAsyJi5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXF1ZXN0QgIY'
+    'AVIKcGFnaW5hdGlvbhI1CghvcmRlcl9ieRgDIAEoDjIaLmNvc21vcy50eC52MWJldGExLk9yZG'
+    'VyQnlSB29yZGVyQnkSEgoEcGFnZRgEIAEoBFIEcGFnZRIUCgVsaW1pdBgFIAEoBFIFbGltaXQS'
+    'FAoFcXVlcnkYBiABKAlSBXF1ZXJ5');
 
 @$core.Deprecated('Use getTxsEventResponseDescriptor instead')
 const GetTxsEventResponse$json = {

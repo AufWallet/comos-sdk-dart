@@ -28,9 +28,9 @@ const ParameterChangeProposal$json = {
 final $typed_data.Uint8List parameterChangeProposalDescriptor = $convert.base64Decode(
     'ChdQYXJhbWV0ZXJDaGFuZ2VQcm9wb3NhbBIUCgV0aXRsZRgBIAEoCVIFdGl0bGUSIAoLZGVzY3'
     'JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEkcKB2NoYW5nZXMYAyADKAsyIi5jb3Ntb3MucGFy'
-    'YW1zLnYxYmV0YTEuUGFyYW1DaGFuZ2VCCcjeHwCo57AqAVIHY2hhbmdlczpNiKAfAJigHwDKtC'
-    '0aY29zbW9zLmdvdi52MWJldGExLkNvbnRlbnSK57AqImNvc21vcy1zZGsvUGFyYW1ldGVyQ2hh'
-    'bmdlUHJvcG9zYWw=');
+    'YW1zLnYxYmV0YTEuUGFyYW1DaGFuZ2VCCcjeHwCo57AqAVIHY2hhbmdlczpJiKAfAMq0LRpjb3'
+    'Ntb3MuZ292LnYxYmV0YTEuQ29udGVudIrnsCoiY29zbW9zLXNkay9QYXJhbWV0ZXJDaGFuZ2VQ'
+    'cm9wb3NhbA==');
 
 @$core.Deprecated('Use paramChangeDescriptor instead')
 const ParamChange$json = {
@@ -40,11 +40,10 @@ const ParamChange$json = {
     {'1': 'key', '3': 2, '4': 1, '5': 9, '10': 'key'},
     {'1': 'value', '3': 3, '4': 1, '5': 9, '10': 'value'},
   ],
-  '7': {},
 };
 
 /// Descriptor for `ParamChange`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List paramChangeDescriptor = $convert.base64Decode(
     'CgtQYXJhbUNoYW5nZRIaCghzdWJzcGFjZRgBIAEoCVIIc3Vic3BhY2USEAoDa2V5GAIgASgJUg'
-    'NrZXkSFAoFdmFsdWUYAyABKAlSBXZhbHVlOgSYoB8A');
+    'NrZXkSFAoFdmFsdWUYAyABKAlSBXZhbHVl');
 

@@ -22,6 +22,9 @@ class Module extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? initGenesis,
     $core.Iterable<$core.String>? exportGenesis,
     $core.Iterable<StoreKeyConfig>? overrideStoreKeys,
+    $core.Iterable<$core.String>? orderMigrations,
+    $core.Iterable<$core.String>? precommiters,
+    $core.Iterable<$core.String>? prepareCheckStaters,
   }) {
     final $result = create();
     if (appName != null) {
@@ -42,6 +45,15 @@ class Module extends $pb.GeneratedMessage {
     if (overrideStoreKeys != null) {
       $result.overrideStoreKeys.addAll(overrideStoreKeys);
     }
+    if (orderMigrations != null) {
+      $result.orderMigrations.addAll(orderMigrations);
+    }
+    if (precommiters != null) {
+      $result.precommiters.addAll(precommiters);
+    }
+    if (prepareCheckStaters != null) {
+      $result.prepareCheckStaters.addAll(prepareCheckStaters);
+    }
     return $result;
   }
   Module._() : super();
@@ -55,6 +67,9 @@ class Module extends $pb.GeneratedMessage {
     ..pPS(4, _omitFieldNames ? '' : 'initGenesis')
     ..pPS(5, _omitFieldNames ? '' : 'exportGenesis')
     ..pc<StoreKeyConfig>(6, _omitFieldNames ? '' : 'overrideStoreKeys', $pb.PbFieldType.PM, subBuilder: StoreKeyConfig.create)
+    ..pPS(7, _omitFieldNames ? '' : 'orderMigrations')
+    ..pPS(8, _omitFieldNames ? '' : 'precommiters')
+    ..pPS(9, _omitFieldNames ? '' : 'prepareCheckStaters')
     ..hasRequiredFields = false
   ;
 
@@ -117,6 +132,24 @@ class Module extends $pb.GeneratedMessage {
   /// to be used in keeper construction.
   @$pb.TagNumber(6)
   $core.List<StoreKeyConfig> get overrideStoreKeys => $_getList(5);
+
+  /// order_migrations defines the order in which module migrations are performed.
+  /// If this is left empty, it uses the default migration order.
+  /// https://pkg.go.dev/github.com/cosmos/cosmos-sdk@v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+  @$pb.TagNumber(7)
+  $core.List<$core.String> get orderMigrations => $_getList(6);
+
+  /// precommiters specifies the module names of the precommiters
+  /// to call in the order in which they should be called. If this is left empty
+  /// no precommit function will be registered.
+  @$pb.TagNumber(8)
+  $core.List<$core.String> get precommiters => $_getList(7);
+
+  /// prepare_check_staters specifies the module names of the prepare_check_staters
+  /// to call in the order in which they should be called. If this is left empty
+  /// no preparecheckstate function will be registered.
+  @$pb.TagNumber(9)
+  $core.List<$core.String> get prepareCheckStaters => $_getList(8);
 }
 
 /// StoreKeyConfig may be supplied to override the default module store key, which

@@ -19,12 +19,14 @@ class Amino {
   static final encoding = $pb.Extension<$core.String>(_omitMessageNames ? '' : 'google.protobuf.FieldOptions', _omitFieldNames ? '' : 'encoding', 11110003, $pb.PbFieldType.OS);
   static final fieldName = $pb.Extension<$core.String>(_omitMessageNames ? '' : 'google.protobuf.FieldOptions', _omitFieldNames ? '' : 'fieldName', 11110004, $pb.PbFieldType.OS);
   static final dontOmitempty = $pb.Extension<$core.bool>(_omitMessageNames ? '' : 'google.protobuf.FieldOptions', _omitFieldNames ? '' : 'dontOmitempty', 11110005, $pb.PbFieldType.OB);
+  static final oneofName = $pb.Extension<$core.String>(_omitMessageNames ? '' : 'google.protobuf.FieldOptions', _omitFieldNames ? '' : 'oneofName', 11110006, $pb.PbFieldType.OS);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(name);
     registry.add(messageEncoding);
     registry.add(encoding);
     registry.add(fieldName);
     registry.add(dontOmitempty);
+    registry.add(oneofName);
   }
 }
 

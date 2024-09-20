@@ -41,14 +41,14 @@ const Params$json = {
 
 /// Descriptor for `Params`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List paramsDescriptor = $convert.base64Decode(
-    'CgZQYXJhbXMSYQoNY29tbXVuaXR5X3RheBgBIAEoCUI8yN4fANreHyZnaXRodWIuY29tL2Nvc2'
-    '1vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY9K0LQpjb3Ntb3MuRGVjUgxjb21tdW5pdHlUYXgScAoU'
-    'YmFzZV9wcm9wb3Nlcl9yZXdhcmQYAiABKAlCPhgByN4fANreHyZnaXRodWIuY29tL2Nvc21vcy'
-    '9jb3Ntb3Mtc2RrL3R5cGVzLkRlY9K0LQpjb3Ntb3MuRGVjUhJiYXNlUHJvcG9zZXJSZXdhcmQS'
-    'cgoVYm9udXNfcHJvcG9zZXJfcmV3YXJkGAMgASgJQj4YAcjeHwDa3h8mZ2l0aHViLmNvbS9jb3'
-    'Ntb3MvY29zbW9zLXNkay90eXBlcy5EZWPStC0KY29zbW9zLkRlY1ITYm9udXNQcm9wb3NlclJl'
-    'd2FyZBIyChV3aXRoZHJhd19hZGRyX2VuYWJsZWQYBCABKAhSE3dpdGhkcmF3QWRkckVuYWJsZW'
-    'Q6KZigHwCK57AqIGNvc21vcy1zZGsveC9kaXN0cmlidXRpb24vUGFyYW1z');
+    'CgZQYXJhbXMSWwoNY29tbXVuaXR5X3RheBgBIAEoCUI2yN4fANreHxtjb3Ntb3NzZGsuaW8vbW'
+    'F0aC5MZWdhY3lEZWPStC0KY29zbW9zLkRlY6jnsCoBUgxjb21tdW5pdHlUYXgSagoUYmFzZV9w'
+    'cm9wb3Nlcl9yZXdhcmQYAiABKAlCOBgByN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC5MZWdhY3'
+    'lEZWPStC0KY29zbW9zLkRlY6jnsCoBUhJiYXNlUHJvcG9zZXJSZXdhcmQSbAoVYm9udXNfcHJv'
+    'cG9zZXJfcmV3YXJkGAMgASgJQjgYAcjeHwDa3h8bY29zbW9zc2RrLmlvL21hdGguTGVnYWN5RG'
+    'Vj0rQtCmNvc21vcy5EZWOo57AqAVITYm9udXNQcm9wb3NlclJld2FyZBIyChV3aXRoZHJhd19h'
+    'ZGRyX2VuYWJsZWQYBCABKAhSE3dpdGhkcmF3QWRkckVuYWJsZWQ6JYrnsCogY29zbW9zLXNkay'
+    '94L2Rpc3RyaWJ1dGlvbi9QYXJhbXM=');
 
 @$core.Deprecated('Use validatorHistoricalRewardsDescriptor instead')
 const ValidatorHistoricalRewards$json = {
@@ -121,8 +121,8 @@ const ValidatorSlashEvent$json = {
 /// Descriptor for `ValidatorSlashEvent`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List validatorSlashEventDescriptor = $convert.base64Decode(
     'ChNWYWxpZGF0b3JTbGFzaEV2ZW50EikKEHZhbGlkYXRvcl9wZXJpb2QYASABKARSD3ZhbGlkYX'
-    'RvclBlcmlvZBJYCghmcmFjdGlvbhgCIAEoCUI8yN4fANreHyZnaXRodWIuY29tL2Nvc21vcy9j'
-    'b3Ntb3Mtc2RrL3R5cGVzLkRlY9K0LQpjb3Ntb3MuRGVjUghmcmFjdGlvbg==');
+    'RvclBlcmlvZBJNCghmcmFjdGlvbhgCIAEoCUIxyN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC5M'
+    'ZWdhY3lEZWPStC0KY29zbW9zLkRlY1IIZnJhY3Rpb24=');
 
 @$core.Deprecated('Use validatorSlashEventsDescriptor instead')
 const ValidatorSlashEvents$json = {
@@ -130,14 +130,13 @@ const ValidatorSlashEvents$json = {
   '2': [
     {'1': 'validator_slash_events', '3': 1, '4': 3, '5': 11, '6': '.cosmos.distribution.v1beta1.ValidatorSlashEvent', '8': {}, '10': 'validatorSlashEvents'},
   ],
-  '7': {},
 };
 
 /// Descriptor for `ValidatorSlashEvents`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List validatorSlashEventsDescriptor = $convert.base64Decode(
     'ChRWYWxpZGF0b3JTbGFzaEV2ZW50cxJxChZ2YWxpZGF0b3Jfc2xhc2hfZXZlbnRzGAEgAygLMj'
     'AuY29zbW9zLmRpc3RyaWJ1dGlvbi52MWJldGExLlZhbGlkYXRvclNsYXNoRXZlbnRCCcjeHwCo'
-    '57AqAVIUdmFsaWRhdG9yU2xhc2hFdmVudHM6BJigHwA=');
+    '57AqAVIUdmFsaWRhdG9yU2xhc2hFdmVudHM=');
 
 @$core.Deprecated('Use feePoolDescriptor instead')
 const FeePool$json = {
@@ -169,9 +168,10 @@ const CommunityPoolSpendProposal$json = {
 final $typed_data.Uint8List communityPoolSpendProposalDescriptor = $convert.base64Decode(
     'ChpDb21tdW5pdHlQb29sU3BlbmRQcm9wb3NhbBIUCgV0aXRsZRgBIAEoCVIFdGl0bGUSIAoLZG'
     'VzY3JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEhwKCXJlY2lwaWVudBgDIAEoCVIJcmVjaXBp'
-    'ZW50EmgKBmFtb3VudBgEIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkI1yN4fAKrfHy'
-    'hnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zqOewKgFSBmFtb3VudDos'
-    'GAGIoB8AmKAfAOigHwDKtC0aY29zbW9zLmdvdi52MWJldGExLkNvbnRlbnQ=');
+    'ZW50EnkKBmFtb3VudBgEIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkJGyN4fAKrfHy'
+    'hnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zmuewKgxsZWdhY3lfY29p'
+    'bnOo57AqAVIGYW1vdW50OigYAYigHwDooB8AyrQtGmNvc21vcy5nb3YudjFiZXRhMS5Db250ZW'
+    '50');
 
 @$core.Deprecated('Use delegatorStartingInfoDescriptor instead')
 const DelegatorStartingInfo$json = {
@@ -186,9 +186,9 @@ const DelegatorStartingInfo$json = {
 /// Descriptor for `DelegatorStartingInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List delegatorStartingInfoDescriptor = $convert.base64Decode(
     'ChVEZWxlZ2F0b3JTdGFydGluZ0luZm8SJwoPcHJldmlvdXNfcGVyaW9kGAEgASgEUg5wcmV2aW'
-    '91c1BlcmlvZBJSCgVzdGFrZRgCIAEoCUI8yN4fANreHyZnaXRodWIuY29tL2Nvc21vcy9jb3Nt'
-    'b3Mtc2RrL3R5cGVzLkRlY9K0LQpjb3Ntb3MuRGVjUgVzdGFrZRJECgZoZWlnaHQYAyABKARCLO'
-    'reHw9jcmVhdGlvbl9oZWlnaHSi57AqD2NyZWF0aW9uX2hlaWdodKjnsCoBUgZoZWlnaHQ=');
+    '91c1BlcmlvZBJMCgVzdGFrZRgCIAEoCUI2yN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC5MZWdh'
+    'Y3lEZWPStC0KY29zbW9zLkRlY6jnsCoBUgVzdGFrZRJECgZoZWlnaHQYAyABKARCLOreHw9jcm'
+    'VhdGlvbl9oZWlnaHSi57AqD2NyZWF0aW9uX2hlaWdodKjnsCoBUgZoZWlnaHQ=');
 
 @$core.Deprecated('Use delegationDelegatorRewardDescriptor instead')
 const DelegationDelegatorReward$json = {
@@ -202,10 +202,11 @@ const DelegationDelegatorReward$json = {
 
 /// Descriptor for `DelegationDelegatorReward`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List delegationDelegatorRewardDescriptor = $convert.base64Decode(
-    'ChlEZWxlZ2F0aW9uRGVsZWdhdG9yUmV3YXJkEkUKEXZhbGlkYXRvcl9hZGRyZXNzGAEgASgJQh'
-    'jStC0UY29zbW9zLkFkZHJlc3NTdHJpbmdSEHZhbGlkYXRvckFkZHJlc3MSbgoGcmV3YXJkGAIg'
-    'AygLMhwuY29zbW9zLmJhc2UudjFiZXRhMS5EZWNDb2luQjjI3h8Aqt8fK2dpdGh1Yi5jb20vY2'
-    '9zbW9zL2Nvc21vcy1zZGsvdHlwZXMuRGVjQ29pbnOo57AqAVIGcmV3YXJkOgiIoB8AmKAfAQ==');
+    'ChlEZWxlZ2F0aW9uRGVsZWdhdG9yUmV3YXJkEk4KEXZhbGlkYXRvcl9hZGRyZXNzGAEgASgJQi'
+    'HStC0dY29zbW9zLlZhbGlkYXRvckFkZHJlc3NTdHJpbmdSEHZhbGlkYXRvckFkZHJlc3MSbgoG'
+    'cmV3YXJkGAIgAygLMhwuY29zbW9zLmJhc2UudjFiZXRhMS5EZWNDb2luQjjI3h8Aqt8fK2dpdG'
+    'h1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuRGVjQ29pbnOo57AqAVIGcmV3YXJkOgSI'
+    'oB8A');
 
 @$core.Deprecated('Use communityPoolSpendProposalWithDepositDescriptor instead')
 const CommunityPoolSpendProposalWithDeposit$json = {
@@ -225,5 +226,5 @@ final $typed_data.Uint8List communityPoolSpendProposalWithDepositDescriptor = $c
     'CiVDb21tdW5pdHlQb29sU3BlbmRQcm9wb3NhbFdpdGhEZXBvc2l0EhQKBXRpdGxlGAEgASgJUg'
     'V0aXRsZRIgCgtkZXNjcmlwdGlvbhgCIAEoCVILZGVzY3JpcHRpb24SHAoJcmVjaXBpZW50GAMg'
     'ASgJUglyZWNpcGllbnQSFgoGYW1vdW50GAQgASgJUgZhbW91bnQSGAoHZGVwb3NpdBgFIAEoCV'
-    'IHZGVwb3NpdDomiKAfAJigHwHKtC0aY29zbW9zLmdvdi52MWJldGExLkNvbnRlbnQ=');
+    'IHZGVwb3NpdDoiiKAfAMq0LRpjb3Ntb3MuZ292LnYxYmV0YTEuQ29udGVudA==');
 

@@ -45,8 +45,8 @@ const QuerySigningInfoRequest$json = {
 
 /// Descriptor for `QuerySigningInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List querySigningInfoRequestDescriptor = $convert.base64Decode(
-    'ChdRdWVyeVNpZ25pbmdJbmZvUmVxdWVzdBI7Cgxjb25zX2FkZHJlc3MYASABKAlCGNK0LRRjb3'
-    'Ntb3MuQWRkcmVzc1N0cmluZ1ILY29uc0FkZHJlc3M=');
+    'ChdRdWVyeVNpZ25pbmdJbmZvUmVxdWVzdBJECgxjb25zX2FkZHJlc3MYASABKAlCIdK0LR1jb3'
+    'Ntb3MuQ29uc2Vuc3VzQWRkcmVzc1N0cmluZ1ILY29uc0FkZHJlc3M=');
 
 @$core.Deprecated('Use querySigningInfoResponseDescriptor instead')
 const QuerySigningInfoResponse$json = {

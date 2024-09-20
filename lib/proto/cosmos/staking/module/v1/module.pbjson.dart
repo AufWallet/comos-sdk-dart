@@ -19,6 +19,8 @@ const Module$json = {
   '2': [
     {'1': 'hooks_order', '3': 1, '4': 3, '5': 9, '10': 'hooksOrder'},
     {'1': 'authority', '3': 2, '4': 1, '5': 9, '10': 'authority'},
+    {'1': 'bech32_prefix_validator', '3': 3, '4': 1, '5': 9, '10': 'bech32PrefixValidator'},
+    {'1': 'bech32_prefix_consensus', '3': 4, '4': 1, '5': 9, '10': 'bech32PrefixConsensus'},
   ],
   '7': {},
 };
@@ -26,6 +28,8 @@ const Module$json = {
 /// Descriptor for `Module`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List moduleDescriptor = $convert.base64Decode(
     'CgZNb2R1bGUSHwoLaG9va3Nfb3JkZXIYASADKAlSCmhvb2tzT3JkZXISHAoJYXV0aG9yaXR5GA'
-    'IgASgJUglhdXRob3JpdHk6LrrAltoBKAomZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay94'
-    'L3N0YWtpbmc=');
+    'IgASgJUglhdXRob3JpdHkSNgoXYmVjaDMyX3ByZWZpeF92YWxpZGF0b3IYAyABKAlSFWJlY2gz'
+    'MlByZWZpeFZhbGlkYXRvchI2ChdiZWNoMzJfcHJlZml4X2NvbnNlbnN1cxgEIAEoCVIVYmVjaD'
+    'MyUHJlZml4Q29uc2Vuc3VzOi66wJbaASgKJmdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsv'
+    'eC9zdGFraW5n');
 

@@ -19,6 +19,7 @@ const Module$json = {
   '2': [
     {'1': 'blocked_module_accounts_override', '3': 1, '4': 3, '5': 9, '10': 'blockedModuleAccountsOverride'},
     {'1': 'authority', '3': 2, '4': 1, '5': 9, '10': 'authority'},
+    {'1': 'restrictions_order', '3': 3, '4': 3, '5': 9, '10': 'restrictionsOrder'},
   ],
   '7': {},
 };
@@ -27,5 +28,6 @@ const Module$json = {
 final $typed_data.Uint8List moduleDescriptor = $convert.base64Decode(
     'CgZNb2R1bGUSRwogYmxvY2tlZF9tb2R1bGVfYWNjb3VudHNfb3ZlcnJpZGUYASADKAlSHWJsb2'
     'NrZWRNb2R1bGVBY2NvdW50c092ZXJyaWRlEhwKCWF1dGhvcml0eRgCIAEoCVIJYXV0aG9yaXR5'
-    'Oiu6wJbaASUKI2dpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsveC9iYW5r');
+    'Ei0KEnJlc3RyaWN0aW9uc19vcmRlchgDIAMoCVIRcmVzdHJpY3Rpb25zT3JkZXI6K7rAltoBJQ'
+    'ojZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay94L2Jhbms=');
 

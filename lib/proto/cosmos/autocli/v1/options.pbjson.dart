@@ -110,7 +110,6 @@ const FlagOptions$json = {
     {'1': 'shorthand', '3': 2, '4': 1, '5': 9, '10': 'shorthand'},
     {'1': 'usage', '3': 3, '4': 1, '5': 9, '10': 'usage'},
     {'1': 'default_value', '3': 4, '4': 1, '5': 9, '10': 'defaultValue'},
-    {'1': 'no_opt_default_value', '3': 5, '4': 1, '5': 9, '10': 'noOptDefaultValue'},
     {'1': 'deprecated', '3': 6, '4': 1, '5': 9, '10': 'deprecated'},
     {'1': 'shorthand_deprecated', '3': 7, '4': 1, '5': 9, '10': 'shorthandDeprecated'},
     {'1': 'hidden', '3': 8, '4': 1, '5': 8, '10': 'hidden'},
@@ -121,10 +120,9 @@ const FlagOptions$json = {
 final $typed_data.Uint8List flagOptionsDescriptor = $convert.base64Decode(
     'CgtGbGFnT3B0aW9ucxISCgRuYW1lGAEgASgJUgRuYW1lEhwKCXNob3J0aGFuZBgCIAEoCVIJc2'
     'hvcnRoYW5kEhQKBXVzYWdlGAMgASgJUgV1c2FnZRIjCg1kZWZhdWx0X3ZhbHVlGAQgASgJUgxk'
-    'ZWZhdWx0VmFsdWUSLwoUbm9fb3B0X2RlZmF1bHRfdmFsdWUYBSABKAlSEW5vT3B0RGVmYXVsdF'
-    'ZhbHVlEh4KCmRlcHJlY2F0ZWQYBiABKAlSCmRlcHJlY2F0ZWQSMQoUc2hvcnRoYW5kX2RlcHJl'
-    'Y2F0ZWQYByABKAlSE3Nob3J0aGFuZERlcHJlY2F0ZWQSFgoGaGlkZGVuGAggASgIUgZoaWRkZW'
-    '4=');
+    'ZWZhdWx0VmFsdWUSHgoKZGVwcmVjYXRlZBgGIAEoCVIKZGVwcmVjYXRlZBIxChRzaG9ydGhhbm'
+    'RfZGVwcmVjYXRlZBgHIAEoCVITc2hvcnRoYW5kRGVwcmVjYXRlZBIWCgZoaWRkZW4YCCABKAhS'
+    'BmhpZGRlbg==');
 
 @$core.Deprecated('Use positionalArgDescriptorDescriptor instead')
 const PositionalArgDescriptor$json = {

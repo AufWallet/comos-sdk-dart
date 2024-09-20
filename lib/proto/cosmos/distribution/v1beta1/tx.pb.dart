@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $50;
-import 'distribution.pb.dart' as $65;
+import '../../base/v1beta1/coin.pb.dart' as $53;
+import 'distribution.pb.dart' as $68;
 
 /// MsgSetWithdrawAddress sets the withdraw address for
 /// a delegator (or validator self-delegation).
@@ -186,7 +186,7 @@ class MsgWithdrawDelegatorReward extends $pb.GeneratedMessage {
 /// response type.
 class MsgWithdrawDelegatorRewardResponse extends $pb.GeneratedMessage {
   factory MsgWithdrawDelegatorRewardResponse({
-    $core.Iterable<$50.Coin>? amount,
+    $core.Iterable<$53.Coin>? amount,
   }) {
     final $result = create();
     if (amount != null) {
@@ -199,7 +199,7 @@ class MsgWithdrawDelegatorRewardResponse extends $pb.GeneratedMessage {
   factory MsgWithdrawDelegatorRewardResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgWithdrawDelegatorRewardResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$50.Coin>(1, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
+    ..pc<$53.Coin>(1, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -226,7 +226,7 @@ class MsgWithdrawDelegatorRewardResponse extends $pb.GeneratedMessage {
 
   /// Since: cosmos-sdk 0.46
   @$pb.TagNumber(1)
-  $core.List<$50.Coin> get amount => $_getList(0);
+  $core.List<$53.Coin> get amount => $_getList(0);
 }
 
 /// MsgWithdrawValidatorCommission withdraws the full commission to the validator
@@ -285,7 +285,7 @@ class MsgWithdrawValidatorCommission extends $pb.GeneratedMessage {
 /// Msg/WithdrawValidatorCommission response type.
 class MsgWithdrawValidatorCommissionResponse extends $pb.GeneratedMessage {
   factory MsgWithdrawValidatorCommissionResponse({
-    $core.Iterable<$50.Coin>? amount,
+    $core.Iterable<$53.Coin>? amount,
   }) {
     final $result = create();
     if (amount != null) {
@@ -298,7 +298,7 @@ class MsgWithdrawValidatorCommissionResponse extends $pb.GeneratedMessage {
   factory MsgWithdrawValidatorCommissionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgWithdrawValidatorCommissionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$50.Coin>(1, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
+    ..pc<$53.Coin>(1, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -325,14 +325,14 @@ class MsgWithdrawValidatorCommissionResponse extends $pb.GeneratedMessage {
 
   /// Since: cosmos-sdk 0.46
   @$pb.TagNumber(1)
-  $core.List<$50.Coin> get amount => $_getList(0);
+  $core.List<$53.Coin> get amount => $_getList(0);
 }
 
 /// MsgFundCommunityPool allows an account to directly
 /// fund the community pool.
 class MsgFundCommunityPool extends $pb.GeneratedMessage {
   factory MsgFundCommunityPool({
-    $core.Iterable<$50.Coin>? amount,
+    $core.Iterable<$53.Coin>? amount,
     $core.String? depositor,
   }) {
     final $result = create();
@@ -349,7 +349,7 @@ class MsgFundCommunityPool extends $pb.GeneratedMessage {
   factory MsgFundCommunityPool.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgFundCommunityPool', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$50.Coin>(1, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
+    ..pc<$53.Coin>(1, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
     ..aOS(2, _omitFieldNames ? '' : 'depositor')
     ..hasRequiredFields = false
   ;
@@ -376,7 +376,7 @@ class MsgFundCommunityPool extends $pb.GeneratedMessage {
   static MsgFundCommunityPool? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$50.Coin> get amount => $_getList(0);
+  $core.List<$53.Coin> get amount => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.String get depositor => $_getSZ(1);
@@ -427,7 +427,7 @@ class MsgFundCommunityPoolResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? authority,
-    $65.Params? params,
+    $68.Params? params,
   }) {
     final $result = create();
     if (authority != null) {
@@ -444,7 +444,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$65.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $65.Params.create)
+    ..aOM<$68.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $68.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -483,15 +483,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $65.Params get params => $_getN(1);
+  $68.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($65.Params v) { setField(2, v); }
+  set params($68.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $65.Params ensureParams() => $_ensure(1);
+  $68.Params ensureParams() => $_ensure(1);
 }
 
 ///  MsgUpdateParamsResponse defines the response structure for executing a
@@ -539,7 +539,7 @@ class MsgCommunityPoolSpend extends $pb.GeneratedMessage {
   factory MsgCommunityPoolSpend({
     $core.String? authority,
     $core.String? recipient,
-    $core.Iterable<$50.Coin>? amount,
+    $core.Iterable<$53.Coin>? amount,
   }) {
     final $result = create();
     if (authority != null) {
@@ -560,7 +560,7 @@ class MsgCommunityPoolSpend extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgCommunityPoolSpend', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
     ..aOS(2, _omitFieldNames ? '' : 'recipient')
-    ..pc<$50.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
+    ..pc<$53.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -605,7 +605,7 @@ class MsgCommunityPoolSpend extends $pb.GeneratedMessage {
   void clearRecipient() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<$50.Coin> get amount => $_getList(2);
+  $core.List<$53.Coin> get amount => $_getList(2);
 }
 
 ///  MsgCommunityPoolSpendResponse defines the response to executing a
@@ -642,6 +642,118 @@ class MsgCommunityPoolSpendResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static MsgCommunityPoolSpendResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MsgCommunityPoolSpendResponse>(create);
   static MsgCommunityPoolSpendResponse? _defaultInstance;
+}
+
+///  DepositValidatorRewardsPool defines the request structure to provide
+///  additional rewards to delegators from a specific validator.
+///
+///  Since: cosmos-sdk 0.50
+class MsgDepositValidatorRewardsPool extends $pb.GeneratedMessage {
+  factory MsgDepositValidatorRewardsPool({
+    $core.String? depositor,
+    $core.String? validatorAddress,
+    $core.Iterable<$53.Coin>? amount,
+  }) {
+    final $result = create();
+    if (depositor != null) {
+      $result.depositor = depositor;
+    }
+    if (validatorAddress != null) {
+      $result.validatorAddress = validatorAddress;
+    }
+    if (amount != null) {
+      $result.amount.addAll(amount);
+    }
+    return $result;
+  }
+  MsgDepositValidatorRewardsPool._() : super();
+  factory MsgDepositValidatorRewardsPool.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MsgDepositValidatorRewardsPool.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgDepositValidatorRewardsPool', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'depositor')
+    ..aOS(2, _omitFieldNames ? '' : 'validatorAddress')
+    ..pc<$53.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $53.Coin.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MsgDepositValidatorRewardsPool clone() => MsgDepositValidatorRewardsPool()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MsgDepositValidatorRewardsPool copyWith(void Function(MsgDepositValidatorRewardsPool) updates) => super.copyWith((message) => updates(message as MsgDepositValidatorRewardsPool)) as MsgDepositValidatorRewardsPool;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MsgDepositValidatorRewardsPool create() => MsgDepositValidatorRewardsPool._();
+  MsgDepositValidatorRewardsPool createEmptyInstance() => create();
+  static $pb.PbList<MsgDepositValidatorRewardsPool> createRepeated() => $pb.PbList<MsgDepositValidatorRewardsPool>();
+  @$core.pragma('dart2js:noInline')
+  static MsgDepositValidatorRewardsPool getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MsgDepositValidatorRewardsPool>(create);
+  static MsgDepositValidatorRewardsPool? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get depositor => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set depositor($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDepositor() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDepositor() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get validatorAddress => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set validatorAddress($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasValidatorAddress() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValidatorAddress() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<$53.Coin> get amount => $_getList(2);
+}
+
+///  MsgDepositValidatorRewardsPoolResponse defines the response to executing a
+///  MsgDepositValidatorRewardsPool message.
+///
+///  Since: cosmos-sdk 0.50
+class MsgDepositValidatorRewardsPoolResponse extends $pb.GeneratedMessage {
+  factory MsgDepositValidatorRewardsPoolResponse() => create();
+  MsgDepositValidatorRewardsPoolResponse._() : super();
+  factory MsgDepositValidatorRewardsPoolResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MsgDepositValidatorRewardsPoolResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgDepositValidatorRewardsPoolResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MsgDepositValidatorRewardsPoolResponse clone() => MsgDepositValidatorRewardsPoolResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MsgDepositValidatorRewardsPoolResponse copyWith(void Function(MsgDepositValidatorRewardsPoolResponse) updates) => super.copyWith((message) => updates(message as MsgDepositValidatorRewardsPoolResponse)) as MsgDepositValidatorRewardsPoolResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MsgDepositValidatorRewardsPoolResponse create() => MsgDepositValidatorRewardsPoolResponse._();
+  MsgDepositValidatorRewardsPoolResponse createEmptyInstance() => create();
+  static $pb.PbList<MsgDepositValidatorRewardsPoolResponse> createRepeated() => $pb.PbList<MsgDepositValidatorRewardsPoolResponse>();
+  @$core.pragma('dart2js:noInline')
+  static MsgDepositValidatorRewardsPoolResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MsgDepositValidatorRewardsPoolResponse>(create);
+  static MsgDepositValidatorRewardsPoolResponse? _defaultInstance;
 }
 
 

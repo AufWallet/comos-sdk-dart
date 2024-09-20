@@ -15,68 +15,68 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $37;
+import 'query.pb.dart' as $39;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.staking.v1beta1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$validators = $grpc.ClientMethod<$37.QueryValidatorsRequest, $37.QueryValidatorsResponse>(
+  static final _$validators = $grpc.ClientMethod<$39.QueryValidatorsRequest, $39.QueryValidatorsResponse>(
       '/cosmos.staking.v1beta1.Query/Validators',
-      ($37.QueryValidatorsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryValidatorsResponse.fromBuffer(value));
-  static final _$validator = $grpc.ClientMethod<$37.QueryValidatorRequest, $37.QueryValidatorResponse>(
+      ($39.QueryValidatorsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryValidatorsResponse.fromBuffer(value));
+  static final _$validator = $grpc.ClientMethod<$39.QueryValidatorRequest, $39.QueryValidatorResponse>(
       '/cosmos.staking.v1beta1.Query/Validator',
-      ($37.QueryValidatorRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryValidatorResponse.fromBuffer(value));
-  static final _$validatorDelegations = $grpc.ClientMethod<$37.QueryValidatorDelegationsRequest, $37.QueryValidatorDelegationsResponse>(
+      ($39.QueryValidatorRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryValidatorResponse.fromBuffer(value));
+  static final _$validatorDelegations = $grpc.ClientMethod<$39.QueryValidatorDelegationsRequest, $39.QueryValidatorDelegationsResponse>(
       '/cosmos.staking.v1beta1.Query/ValidatorDelegations',
-      ($37.QueryValidatorDelegationsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryValidatorDelegationsResponse.fromBuffer(value));
-  static final _$validatorUnbondingDelegations = $grpc.ClientMethod<$37.QueryValidatorUnbondingDelegationsRequest, $37.QueryValidatorUnbondingDelegationsResponse>(
+      ($39.QueryValidatorDelegationsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryValidatorDelegationsResponse.fromBuffer(value));
+  static final _$validatorUnbondingDelegations = $grpc.ClientMethod<$39.QueryValidatorUnbondingDelegationsRequest, $39.QueryValidatorUnbondingDelegationsResponse>(
       '/cosmos.staking.v1beta1.Query/ValidatorUnbondingDelegations',
-      ($37.QueryValidatorUnbondingDelegationsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryValidatorUnbondingDelegationsResponse.fromBuffer(value));
-  static final _$delegation = $grpc.ClientMethod<$37.QueryDelegationRequest, $37.QueryDelegationResponse>(
+      ($39.QueryValidatorUnbondingDelegationsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryValidatorUnbondingDelegationsResponse.fromBuffer(value));
+  static final _$delegation = $grpc.ClientMethod<$39.QueryDelegationRequest, $39.QueryDelegationResponse>(
       '/cosmos.staking.v1beta1.Query/Delegation',
-      ($37.QueryDelegationRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryDelegationResponse.fromBuffer(value));
-  static final _$unbondingDelegation = $grpc.ClientMethod<$37.QueryUnbondingDelegationRequest, $37.QueryUnbondingDelegationResponse>(
+      ($39.QueryDelegationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryDelegationResponse.fromBuffer(value));
+  static final _$unbondingDelegation = $grpc.ClientMethod<$39.QueryUnbondingDelegationRequest, $39.QueryUnbondingDelegationResponse>(
       '/cosmos.staking.v1beta1.Query/UnbondingDelegation',
-      ($37.QueryUnbondingDelegationRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryUnbondingDelegationResponse.fromBuffer(value));
-  static final _$delegatorDelegations = $grpc.ClientMethod<$37.QueryDelegatorDelegationsRequest, $37.QueryDelegatorDelegationsResponse>(
+      ($39.QueryUnbondingDelegationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryUnbondingDelegationResponse.fromBuffer(value));
+  static final _$delegatorDelegations = $grpc.ClientMethod<$39.QueryDelegatorDelegationsRequest, $39.QueryDelegatorDelegationsResponse>(
       '/cosmos.staking.v1beta1.Query/DelegatorDelegations',
-      ($37.QueryDelegatorDelegationsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryDelegatorDelegationsResponse.fromBuffer(value));
-  static final _$delegatorUnbondingDelegations = $grpc.ClientMethod<$37.QueryDelegatorUnbondingDelegationsRequest, $37.QueryDelegatorUnbondingDelegationsResponse>(
+      ($39.QueryDelegatorDelegationsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryDelegatorDelegationsResponse.fromBuffer(value));
+  static final _$delegatorUnbondingDelegations = $grpc.ClientMethod<$39.QueryDelegatorUnbondingDelegationsRequest, $39.QueryDelegatorUnbondingDelegationsResponse>(
       '/cosmos.staking.v1beta1.Query/DelegatorUnbondingDelegations',
-      ($37.QueryDelegatorUnbondingDelegationsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryDelegatorUnbondingDelegationsResponse.fromBuffer(value));
-  static final _$redelegations = $grpc.ClientMethod<$37.QueryRedelegationsRequest, $37.QueryRedelegationsResponse>(
+      ($39.QueryDelegatorUnbondingDelegationsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryDelegatorUnbondingDelegationsResponse.fromBuffer(value));
+  static final _$redelegations = $grpc.ClientMethod<$39.QueryRedelegationsRequest, $39.QueryRedelegationsResponse>(
       '/cosmos.staking.v1beta1.Query/Redelegations',
-      ($37.QueryRedelegationsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryRedelegationsResponse.fromBuffer(value));
-  static final _$delegatorValidators = $grpc.ClientMethod<$37.QueryDelegatorValidatorsRequest, $37.QueryDelegatorValidatorsResponse>(
+      ($39.QueryRedelegationsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryRedelegationsResponse.fromBuffer(value));
+  static final _$delegatorValidators = $grpc.ClientMethod<$39.QueryDelegatorValidatorsRequest, $39.QueryDelegatorValidatorsResponse>(
       '/cosmos.staking.v1beta1.Query/DelegatorValidators',
-      ($37.QueryDelegatorValidatorsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryDelegatorValidatorsResponse.fromBuffer(value));
-  static final _$delegatorValidator = $grpc.ClientMethod<$37.QueryDelegatorValidatorRequest, $37.QueryDelegatorValidatorResponse>(
+      ($39.QueryDelegatorValidatorsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryDelegatorValidatorsResponse.fromBuffer(value));
+  static final _$delegatorValidator = $grpc.ClientMethod<$39.QueryDelegatorValidatorRequest, $39.QueryDelegatorValidatorResponse>(
       '/cosmos.staking.v1beta1.Query/DelegatorValidator',
-      ($37.QueryDelegatorValidatorRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryDelegatorValidatorResponse.fromBuffer(value));
-  static final _$historicalInfo = $grpc.ClientMethod<$37.QueryHistoricalInfoRequest, $37.QueryHistoricalInfoResponse>(
+      ($39.QueryDelegatorValidatorRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryDelegatorValidatorResponse.fromBuffer(value));
+  static final _$historicalInfo = $grpc.ClientMethod<$39.QueryHistoricalInfoRequest, $39.QueryHistoricalInfoResponse>(
       '/cosmos.staking.v1beta1.Query/HistoricalInfo',
-      ($37.QueryHistoricalInfoRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryHistoricalInfoResponse.fromBuffer(value));
-  static final _$pool = $grpc.ClientMethod<$37.QueryPoolRequest, $37.QueryPoolResponse>(
+      ($39.QueryHistoricalInfoRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryHistoricalInfoResponse.fromBuffer(value));
+  static final _$pool = $grpc.ClientMethod<$39.QueryPoolRequest, $39.QueryPoolResponse>(
       '/cosmos.staking.v1beta1.Query/Pool',
-      ($37.QueryPoolRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryPoolResponse.fromBuffer(value));
-  static final _$params = $grpc.ClientMethod<$37.QueryParamsRequest, $37.QueryParamsResponse>(
+      ($39.QueryPoolRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryPoolResponse.fromBuffer(value));
+  static final _$params = $grpc.ClientMethod<$39.QueryParamsRequest, $39.QueryParamsResponse>(
       '/cosmos.staking.v1beta1.Query/Params',
-      ($37.QueryParamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $37.QueryParamsResponse.fromBuffer(value));
+      ($39.QueryParamsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $39.QueryParamsResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -84,59 +84,59 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$37.QueryValidatorsResponse> validators($37.QueryValidatorsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryValidatorsResponse> validators($39.QueryValidatorsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$validators, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryValidatorResponse> validator($37.QueryValidatorRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryValidatorResponse> validator($39.QueryValidatorRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$validator, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryValidatorDelegationsResponse> validatorDelegations($37.QueryValidatorDelegationsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryValidatorDelegationsResponse> validatorDelegations($39.QueryValidatorDelegationsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$validatorDelegations, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryValidatorUnbondingDelegationsResponse> validatorUnbondingDelegations($37.QueryValidatorUnbondingDelegationsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryValidatorUnbondingDelegationsResponse> validatorUnbondingDelegations($39.QueryValidatorUnbondingDelegationsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$validatorUnbondingDelegations, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryDelegationResponse> delegation($37.QueryDelegationRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryDelegationResponse> delegation($39.QueryDelegationRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delegation, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryUnbondingDelegationResponse> unbondingDelegation($37.QueryUnbondingDelegationRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryUnbondingDelegationResponse> unbondingDelegation($39.QueryUnbondingDelegationRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$unbondingDelegation, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryDelegatorDelegationsResponse> delegatorDelegations($37.QueryDelegatorDelegationsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryDelegatorDelegationsResponse> delegatorDelegations($39.QueryDelegatorDelegationsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delegatorDelegations, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryDelegatorUnbondingDelegationsResponse> delegatorUnbondingDelegations($37.QueryDelegatorUnbondingDelegationsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryDelegatorUnbondingDelegationsResponse> delegatorUnbondingDelegations($39.QueryDelegatorUnbondingDelegationsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delegatorUnbondingDelegations, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryRedelegationsResponse> redelegations($37.QueryRedelegationsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryRedelegationsResponse> redelegations($39.QueryRedelegationsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$redelegations, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryDelegatorValidatorsResponse> delegatorValidators($37.QueryDelegatorValidatorsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryDelegatorValidatorsResponse> delegatorValidators($39.QueryDelegatorValidatorsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delegatorValidators, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryDelegatorValidatorResponse> delegatorValidator($37.QueryDelegatorValidatorRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryDelegatorValidatorResponse> delegatorValidator($39.QueryDelegatorValidatorRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delegatorValidator, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryHistoricalInfoResponse> historicalInfo($37.QueryHistoricalInfoRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryHistoricalInfoResponse> historicalInfo($39.QueryHistoricalInfoRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$historicalInfo, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryPoolResponse> pool($37.QueryPoolRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryPoolResponse> pool($39.QueryPoolRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$pool, request, options: options);
   }
 
-  $grpc.ResponseFuture<$37.QueryParamsResponse> params($37.QueryParamsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$39.QueryParamsResponse> params($39.QueryParamsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$params, request, options: options);
   }
 }
@@ -146,174 +146,174 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.staking.v1beta1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$37.QueryValidatorsRequest, $37.QueryValidatorsResponse>(
+    $addMethod($grpc.ServiceMethod<$39.QueryValidatorsRequest, $39.QueryValidatorsResponse>(
         'Validators',
         validators_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryValidatorsRequest.fromBuffer(value),
-        ($37.QueryValidatorsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryValidatorRequest, $37.QueryValidatorResponse>(
+        ($core.List<$core.int> value) => $39.QueryValidatorsRequest.fromBuffer(value),
+        ($39.QueryValidatorsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryValidatorRequest, $39.QueryValidatorResponse>(
         'Validator',
         validator_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryValidatorRequest.fromBuffer(value),
-        ($37.QueryValidatorResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryValidatorDelegationsRequest, $37.QueryValidatorDelegationsResponse>(
+        ($core.List<$core.int> value) => $39.QueryValidatorRequest.fromBuffer(value),
+        ($39.QueryValidatorResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryValidatorDelegationsRequest, $39.QueryValidatorDelegationsResponse>(
         'ValidatorDelegations',
         validatorDelegations_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryValidatorDelegationsRequest.fromBuffer(value),
-        ($37.QueryValidatorDelegationsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryValidatorUnbondingDelegationsRequest, $37.QueryValidatorUnbondingDelegationsResponse>(
+        ($core.List<$core.int> value) => $39.QueryValidatorDelegationsRequest.fromBuffer(value),
+        ($39.QueryValidatorDelegationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryValidatorUnbondingDelegationsRequest, $39.QueryValidatorUnbondingDelegationsResponse>(
         'ValidatorUnbondingDelegations',
         validatorUnbondingDelegations_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryValidatorUnbondingDelegationsRequest.fromBuffer(value),
-        ($37.QueryValidatorUnbondingDelegationsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryDelegationRequest, $37.QueryDelegationResponse>(
+        ($core.List<$core.int> value) => $39.QueryValidatorUnbondingDelegationsRequest.fromBuffer(value),
+        ($39.QueryValidatorUnbondingDelegationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryDelegationRequest, $39.QueryDelegationResponse>(
         'Delegation',
         delegation_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryDelegationRequest.fromBuffer(value),
-        ($37.QueryDelegationResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryUnbondingDelegationRequest, $37.QueryUnbondingDelegationResponse>(
+        ($core.List<$core.int> value) => $39.QueryDelegationRequest.fromBuffer(value),
+        ($39.QueryDelegationResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryUnbondingDelegationRequest, $39.QueryUnbondingDelegationResponse>(
         'UnbondingDelegation',
         unbondingDelegation_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryUnbondingDelegationRequest.fromBuffer(value),
-        ($37.QueryUnbondingDelegationResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryDelegatorDelegationsRequest, $37.QueryDelegatorDelegationsResponse>(
+        ($core.List<$core.int> value) => $39.QueryUnbondingDelegationRequest.fromBuffer(value),
+        ($39.QueryUnbondingDelegationResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryDelegatorDelegationsRequest, $39.QueryDelegatorDelegationsResponse>(
         'DelegatorDelegations',
         delegatorDelegations_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryDelegatorDelegationsRequest.fromBuffer(value),
-        ($37.QueryDelegatorDelegationsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryDelegatorUnbondingDelegationsRequest, $37.QueryDelegatorUnbondingDelegationsResponse>(
+        ($core.List<$core.int> value) => $39.QueryDelegatorDelegationsRequest.fromBuffer(value),
+        ($39.QueryDelegatorDelegationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryDelegatorUnbondingDelegationsRequest, $39.QueryDelegatorUnbondingDelegationsResponse>(
         'DelegatorUnbondingDelegations',
         delegatorUnbondingDelegations_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryDelegatorUnbondingDelegationsRequest.fromBuffer(value),
-        ($37.QueryDelegatorUnbondingDelegationsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryRedelegationsRequest, $37.QueryRedelegationsResponse>(
+        ($core.List<$core.int> value) => $39.QueryDelegatorUnbondingDelegationsRequest.fromBuffer(value),
+        ($39.QueryDelegatorUnbondingDelegationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryRedelegationsRequest, $39.QueryRedelegationsResponse>(
         'Redelegations',
         redelegations_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryRedelegationsRequest.fromBuffer(value),
-        ($37.QueryRedelegationsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryDelegatorValidatorsRequest, $37.QueryDelegatorValidatorsResponse>(
+        ($core.List<$core.int> value) => $39.QueryRedelegationsRequest.fromBuffer(value),
+        ($39.QueryRedelegationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryDelegatorValidatorsRequest, $39.QueryDelegatorValidatorsResponse>(
         'DelegatorValidators',
         delegatorValidators_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryDelegatorValidatorsRequest.fromBuffer(value),
-        ($37.QueryDelegatorValidatorsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryDelegatorValidatorRequest, $37.QueryDelegatorValidatorResponse>(
+        ($core.List<$core.int> value) => $39.QueryDelegatorValidatorsRequest.fromBuffer(value),
+        ($39.QueryDelegatorValidatorsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryDelegatorValidatorRequest, $39.QueryDelegatorValidatorResponse>(
         'DelegatorValidator',
         delegatorValidator_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryDelegatorValidatorRequest.fromBuffer(value),
-        ($37.QueryDelegatorValidatorResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryHistoricalInfoRequest, $37.QueryHistoricalInfoResponse>(
+        ($core.List<$core.int> value) => $39.QueryDelegatorValidatorRequest.fromBuffer(value),
+        ($39.QueryDelegatorValidatorResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryHistoricalInfoRequest, $39.QueryHistoricalInfoResponse>(
         'HistoricalInfo',
         historicalInfo_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryHistoricalInfoRequest.fromBuffer(value),
-        ($37.QueryHistoricalInfoResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryPoolRequest, $37.QueryPoolResponse>(
+        ($core.List<$core.int> value) => $39.QueryHistoricalInfoRequest.fromBuffer(value),
+        ($39.QueryHistoricalInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryPoolRequest, $39.QueryPoolResponse>(
         'Pool',
         pool_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryPoolRequest.fromBuffer(value),
-        ($37.QueryPoolResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$37.QueryParamsRequest, $37.QueryParamsResponse>(
+        ($core.List<$core.int> value) => $39.QueryPoolRequest.fromBuffer(value),
+        ($39.QueryPoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$39.QueryParamsRequest, $39.QueryParamsResponse>(
         'Params',
         params_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $37.QueryParamsRequest.fromBuffer(value),
-        ($37.QueryParamsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $39.QueryParamsRequest.fromBuffer(value),
+        ($39.QueryParamsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$37.QueryValidatorsResponse> validators_Pre($grpc.ServiceCall call, $async.Future<$37.QueryValidatorsRequest> request) async {
+  $async.Future<$39.QueryValidatorsResponse> validators_Pre($grpc.ServiceCall call, $async.Future<$39.QueryValidatorsRequest> request) async {
     return validators(call, await request);
   }
 
-  $async.Future<$37.QueryValidatorResponse> validator_Pre($grpc.ServiceCall call, $async.Future<$37.QueryValidatorRequest> request) async {
+  $async.Future<$39.QueryValidatorResponse> validator_Pre($grpc.ServiceCall call, $async.Future<$39.QueryValidatorRequest> request) async {
     return validator(call, await request);
   }
 
-  $async.Future<$37.QueryValidatorDelegationsResponse> validatorDelegations_Pre($grpc.ServiceCall call, $async.Future<$37.QueryValidatorDelegationsRequest> request) async {
+  $async.Future<$39.QueryValidatorDelegationsResponse> validatorDelegations_Pre($grpc.ServiceCall call, $async.Future<$39.QueryValidatorDelegationsRequest> request) async {
     return validatorDelegations(call, await request);
   }
 
-  $async.Future<$37.QueryValidatorUnbondingDelegationsResponse> validatorUnbondingDelegations_Pre($grpc.ServiceCall call, $async.Future<$37.QueryValidatorUnbondingDelegationsRequest> request) async {
+  $async.Future<$39.QueryValidatorUnbondingDelegationsResponse> validatorUnbondingDelegations_Pre($grpc.ServiceCall call, $async.Future<$39.QueryValidatorUnbondingDelegationsRequest> request) async {
     return validatorUnbondingDelegations(call, await request);
   }
 
-  $async.Future<$37.QueryDelegationResponse> delegation_Pre($grpc.ServiceCall call, $async.Future<$37.QueryDelegationRequest> request) async {
+  $async.Future<$39.QueryDelegationResponse> delegation_Pre($grpc.ServiceCall call, $async.Future<$39.QueryDelegationRequest> request) async {
     return delegation(call, await request);
   }
 
-  $async.Future<$37.QueryUnbondingDelegationResponse> unbondingDelegation_Pre($grpc.ServiceCall call, $async.Future<$37.QueryUnbondingDelegationRequest> request) async {
+  $async.Future<$39.QueryUnbondingDelegationResponse> unbondingDelegation_Pre($grpc.ServiceCall call, $async.Future<$39.QueryUnbondingDelegationRequest> request) async {
     return unbondingDelegation(call, await request);
   }
 
-  $async.Future<$37.QueryDelegatorDelegationsResponse> delegatorDelegations_Pre($grpc.ServiceCall call, $async.Future<$37.QueryDelegatorDelegationsRequest> request) async {
+  $async.Future<$39.QueryDelegatorDelegationsResponse> delegatorDelegations_Pre($grpc.ServiceCall call, $async.Future<$39.QueryDelegatorDelegationsRequest> request) async {
     return delegatorDelegations(call, await request);
   }
 
-  $async.Future<$37.QueryDelegatorUnbondingDelegationsResponse> delegatorUnbondingDelegations_Pre($grpc.ServiceCall call, $async.Future<$37.QueryDelegatorUnbondingDelegationsRequest> request) async {
+  $async.Future<$39.QueryDelegatorUnbondingDelegationsResponse> delegatorUnbondingDelegations_Pre($grpc.ServiceCall call, $async.Future<$39.QueryDelegatorUnbondingDelegationsRequest> request) async {
     return delegatorUnbondingDelegations(call, await request);
   }
 
-  $async.Future<$37.QueryRedelegationsResponse> redelegations_Pre($grpc.ServiceCall call, $async.Future<$37.QueryRedelegationsRequest> request) async {
+  $async.Future<$39.QueryRedelegationsResponse> redelegations_Pre($grpc.ServiceCall call, $async.Future<$39.QueryRedelegationsRequest> request) async {
     return redelegations(call, await request);
   }
 
-  $async.Future<$37.QueryDelegatorValidatorsResponse> delegatorValidators_Pre($grpc.ServiceCall call, $async.Future<$37.QueryDelegatorValidatorsRequest> request) async {
+  $async.Future<$39.QueryDelegatorValidatorsResponse> delegatorValidators_Pre($grpc.ServiceCall call, $async.Future<$39.QueryDelegatorValidatorsRequest> request) async {
     return delegatorValidators(call, await request);
   }
 
-  $async.Future<$37.QueryDelegatorValidatorResponse> delegatorValidator_Pre($grpc.ServiceCall call, $async.Future<$37.QueryDelegatorValidatorRequest> request) async {
+  $async.Future<$39.QueryDelegatorValidatorResponse> delegatorValidator_Pre($grpc.ServiceCall call, $async.Future<$39.QueryDelegatorValidatorRequest> request) async {
     return delegatorValidator(call, await request);
   }
 
-  $async.Future<$37.QueryHistoricalInfoResponse> historicalInfo_Pre($grpc.ServiceCall call, $async.Future<$37.QueryHistoricalInfoRequest> request) async {
+  $async.Future<$39.QueryHistoricalInfoResponse> historicalInfo_Pre($grpc.ServiceCall call, $async.Future<$39.QueryHistoricalInfoRequest> request) async {
     return historicalInfo(call, await request);
   }
 
-  $async.Future<$37.QueryPoolResponse> pool_Pre($grpc.ServiceCall call, $async.Future<$37.QueryPoolRequest> request) async {
+  $async.Future<$39.QueryPoolResponse> pool_Pre($grpc.ServiceCall call, $async.Future<$39.QueryPoolRequest> request) async {
     return pool(call, await request);
   }
 
-  $async.Future<$37.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$37.QueryParamsRequest> request) async {
+  $async.Future<$39.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$39.QueryParamsRequest> request) async {
     return params(call, await request);
   }
 
-  $async.Future<$37.QueryValidatorsResponse> validators($grpc.ServiceCall call, $37.QueryValidatorsRequest request);
-  $async.Future<$37.QueryValidatorResponse> validator($grpc.ServiceCall call, $37.QueryValidatorRequest request);
-  $async.Future<$37.QueryValidatorDelegationsResponse> validatorDelegations($grpc.ServiceCall call, $37.QueryValidatorDelegationsRequest request);
-  $async.Future<$37.QueryValidatorUnbondingDelegationsResponse> validatorUnbondingDelegations($grpc.ServiceCall call, $37.QueryValidatorUnbondingDelegationsRequest request);
-  $async.Future<$37.QueryDelegationResponse> delegation($grpc.ServiceCall call, $37.QueryDelegationRequest request);
-  $async.Future<$37.QueryUnbondingDelegationResponse> unbondingDelegation($grpc.ServiceCall call, $37.QueryUnbondingDelegationRequest request);
-  $async.Future<$37.QueryDelegatorDelegationsResponse> delegatorDelegations($grpc.ServiceCall call, $37.QueryDelegatorDelegationsRequest request);
-  $async.Future<$37.QueryDelegatorUnbondingDelegationsResponse> delegatorUnbondingDelegations($grpc.ServiceCall call, $37.QueryDelegatorUnbondingDelegationsRequest request);
-  $async.Future<$37.QueryRedelegationsResponse> redelegations($grpc.ServiceCall call, $37.QueryRedelegationsRequest request);
-  $async.Future<$37.QueryDelegatorValidatorsResponse> delegatorValidators($grpc.ServiceCall call, $37.QueryDelegatorValidatorsRequest request);
-  $async.Future<$37.QueryDelegatorValidatorResponse> delegatorValidator($grpc.ServiceCall call, $37.QueryDelegatorValidatorRequest request);
-  $async.Future<$37.QueryHistoricalInfoResponse> historicalInfo($grpc.ServiceCall call, $37.QueryHistoricalInfoRequest request);
-  $async.Future<$37.QueryPoolResponse> pool($grpc.ServiceCall call, $37.QueryPoolRequest request);
-  $async.Future<$37.QueryParamsResponse> params($grpc.ServiceCall call, $37.QueryParamsRequest request);
+  $async.Future<$39.QueryValidatorsResponse> validators($grpc.ServiceCall call, $39.QueryValidatorsRequest request);
+  $async.Future<$39.QueryValidatorResponse> validator($grpc.ServiceCall call, $39.QueryValidatorRequest request);
+  $async.Future<$39.QueryValidatorDelegationsResponse> validatorDelegations($grpc.ServiceCall call, $39.QueryValidatorDelegationsRequest request);
+  $async.Future<$39.QueryValidatorUnbondingDelegationsResponse> validatorUnbondingDelegations($grpc.ServiceCall call, $39.QueryValidatorUnbondingDelegationsRequest request);
+  $async.Future<$39.QueryDelegationResponse> delegation($grpc.ServiceCall call, $39.QueryDelegationRequest request);
+  $async.Future<$39.QueryUnbondingDelegationResponse> unbondingDelegation($grpc.ServiceCall call, $39.QueryUnbondingDelegationRequest request);
+  $async.Future<$39.QueryDelegatorDelegationsResponse> delegatorDelegations($grpc.ServiceCall call, $39.QueryDelegatorDelegationsRequest request);
+  $async.Future<$39.QueryDelegatorUnbondingDelegationsResponse> delegatorUnbondingDelegations($grpc.ServiceCall call, $39.QueryDelegatorUnbondingDelegationsRequest request);
+  $async.Future<$39.QueryRedelegationsResponse> redelegations($grpc.ServiceCall call, $39.QueryRedelegationsRequest request);
+  $async.Future<$39.QueryDelegatorValidatorsResponse> delegatorValidators($grpc.ServiceCall call, $39.QueryDelegatorValidatorsRequest request);
+  $async.Future<$39.QueryDelegatorValidatorResponse> delegatorValidator($grpc.ServiceCall call, $39.QueryDelegatorValidatorRequest request);
+  $async.Future<$39.QueryHistoricalInfoResponse> historicalInfo($grpc.ServiceCall call, $39.QueryHistoricalInfoRequest request);
+  $async.Future<$39.QueryPoolResponse> pool($grpc.ServiceCall call, $39.QueryPoolRequest request);
+  $async.Future<$39.QueryParamsResponse> params($grpc.ServiceCall call, $39.QueryParamsRequest request);
 }

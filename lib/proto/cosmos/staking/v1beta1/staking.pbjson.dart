@@ -75,12 +75,12 @@ const CommissionRates$json = {
 
 /// Descriptor for `CommissionRates`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List commissionRatesDescriptor = $convert.base64Decode(
-    'Cg9Db21taXNzaW9uUmF0ZXMSUAoEcmF0ZRgBIAEoCUI8yN4fANreHyZnaXRodWIuY29tL2Nvc2'
-    '1vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY9K0LQpjb3Ntb3MuRGVjUgRyYXRlElcKCG1heF9yYXRl'
-    'GAIgASgJQjzI3h8A2t4fJmdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuRGVj0r'
-    'QtCmNvc21vcy5EZWNSB21heFJhdGUSZAoPbWF4X2NoYW5nZV9yYXRlGAMgASgJQjzI3h8A2t4f'
-    'JmdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuRGVj0rQtCmNvc21vcy5EZWNSDW'
-    '1heENoYW5nZVJhdGU6CJigHwDooB8B');
+    'Cg9Db21taXNzaW9uUmF0ZXMSSgoEcmF0ZRgBIAEoCUI2yN4fANreHxtjb3Ntb3NzZGsuaW8vbW'
+    'F0aC5MZWdhY3lEZWPStC0KY29zbW9zLkRlY6jnsCoBUgRyYXRlElEKCG1heF9yYXRlGAIgASgJ'
+    'QjbI3h8A2t4fG2Nvc21vc3Nkay5pby9tYXRoLkxlZ2FjeURlY9K0LQpjb3Ntb3MuRGVjqOewKg'
+    'FSB21heFJhdGUSXgoPbWF4X2NoYW5nZV9yYXRlGAMgASgJQjbI3h8A2t4fG2Nvc21vc3Nkay5p'
+    'by9tYXRoLkxlZ2FjeURlY9K0LQpjb3Ntb3MuRGVjqOewKgFSDW1heENoYW5nZVJhdGU6BOigHw'
+    'E=');
 
 @$core.Deprecated('Use commissionDescriptor instead')
 const Commission$json = {
@@ -97,7 +97,7 @@ final $typed_data.Uint8List commissionDescriptor = $convert.base64Decode(
     'CgpDb21taXNzaW9uEmEKEGNvbW1pc3Npb25fcmF0ZXMYASABKAsyJy5jb3Ntb3Muc3Rha2luZy'
     '52MWJldGExLkNvbW1pc3Npb25SYXRlc0INyN4fANDeHwGo57AqAVIPY29tbWlzc2lvblJhdGVz'
     'EkoKC3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEINyN4fAJ'
-    'DfHwGo57AqAVIKdXBkYXRlVGltZToImKAfAOigHwE=');
+    'DfHwGo57AqAVIKdXBkYXRlVGltZToE6KAfAQ==');
 
 @$core.Deprecated('Use descriptionDescriptor instead')
 const Description$json = {
@@ -116,8 +116,8 @@ const Description$json = {
 final $typed_data.Uint8List descriptionDescriptor = $convert.base64Decode(
     'CgtEZXNjcmlwdGlvbhIYCgdtb25pa2VyGAEgASgJUgdtb25pa2VyEhoKCGlkZW50aXR5GAIgAS'
     'gJUghpZGVudGl0eRIYCgd3ZWJzaXRlGAMgASgJUgd3ZWJzaXRlEikKEHNlY3VyaXR5X2NvbnRh'
-    'Y3QYBCABKAlSD3NlY3VyaXR5Q29udGFjdBIYCgdkZXRhaWxzGAUgASgJUgdkZXRhaWxzOgiYoB'
-    '8A6KAfAQ==');
+    'Y3QYBCABKAlSD3NlY3VyaXR5Q29udGFjdBIYCgdkZXRhaWxzGAUgASgJUgdkZXRhaWxzOgTooB'
+    '8B');
 
 @$core.Deprecated('Use validatorDescriptor instead')
 const Validator$json = {
@@ -146,20 +146,19 @@ final $typed_data.Uint8List validatorDescriptor = $convert.base64Decode(
     'NzU3RyaW5nUg9vcGVyYXRvckFkZHJlc3MSWQoQY29uc2Vuc3VzX3B1YmtleRgCIAEoCzIULmdv'
     'b2dsZS5wcm90b2J1Zi5BbnlCGMq0LRRjb3Ntb3MuY3J5cHRvLlB1YktleVIPY29uc2Vuc3VzUH'
     'Via2V5EhYKBmphaWxlZBgDIAEoCFIGamFpbGVkEjoKBnN0YXR1cxgEIAEoDjIiLmNvc21vcy5z'
-    'dGFraW5nLnYxYmV0YTEuQm9uZFN0YXR1c1IGc3RhdHVzElQKBnRva2VucxgFIAEoCUI8yN4fAN'
-    'reHyZnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkludNK0LQpjb3Ntb3MuSW50'
-    'UgZ0b2tlbnMSZwoQZGVsZWdhdG9yX3NoYXJlcxgGIAEoCUI8yN4fANreHyZnaXRodWIuY29tL2'
-    'Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY9K0LQpjb3Ntb3MuRGVjUg9kZWxlZ2F0b3JTaGFy'
-    'ZXMSUAoLZGVzY3JpcHRpb24YByABKAsyIy5jb3Ntb3Muc3Rha2luZy52MWJldGExLkRlc2NyaX'
-    'B0aW9uQgnI3h8AqOewKgFSC2Rlc2NyaXB0aW9uEikKEHVuYm9uZGluZ19oZWlnaHQYCCABKANS'
-    'D3VuYm9uZGluZ0hlaWdodBJQCg51bmJvbmRpbmdfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2'
-    'J1Zi5UaW1lc3RhbXBCDcjeHwCQ3x8BqOewKgFSDXVuYm9uZGluZ1RpbWUSTQoKY29tbWlzc2lv'
-    'bhgKIAEoCzIiLmNvc21vcy5zdGFraW5nLnYxYmV0YTEuQ29tbWlzc2lvbkIJyN4fAKjnsCoBUg'
-    'pjb21taXNzaW9uEmwKE21pbl9zZWxmX2RlbGVnYXRpb24YCyABKAlCPMjeHwDa3h8mZ2l0aHVi'
-    'LmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5JbnTStC0KY29zbW9zLkludFIRbWluU2VsZk'
-    'RlbGVnYXRpb24SPAobdW5ib25kaW5nX29uX2hvbGRfcmVmX2NvdW50GAwgASgDUhd1bmJvbmRp'
-    'bmdPbkhvbGRSZWZDb3VudBIjCg11bmJvbmRpbmdfaWRzGA0gAygEUgx1bmJvbmRpbmdJZHM6DI'
-    'igHwCYoB8A6KAfAA==');
+    'dGFraW5nLnYxYmV0YTEuQm9uZFN0YXR1c1IGc3RhdHVzEkMKBnRva2VucxgFIAEoCUIryN4fAN'
+    'reHxVjb3Ntb3NzZGsuaW8vbWF0aC5JbnTStC0KY29zbW9zLkludFIGdG9rZW5zElwKEGRlbGVn'
+    'YXRvcl9zaGFyZXMYBiABKAlCMcjeHwDa3h8bY29zbW9zc2RrLmlvL21hdGguTGVnYWN5RGVj0r'
+    'QtCmNvc21vcy5EZWNSD2RlbGVnYXRvclNoYXJlcxJQCgtkZXNjcmlwdGlvbhgHIAEoCzIjLmNv'
+    'c21vcy5zdGFraW5nLnYxYmV0YTEuRGVzY3JpcHRpb25CCcjeHwCo57AqAVILZGVzY3JpcHRpb2'
+    '4SKQoQdW5ib25kaW5nX2hlaWdodBgIIAEoA1IPdW5ib25kaW5nSGVpZ2h0ElAKDnVuYm9uZGlu'
+    'Z190aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEINyN4fAJDfHwGo57AqAV'
+    'INdW5ib25kaW5nVGltZRJNCgpjb21taXNzaW9uGAogASgLMiIuY29zbW9zLnN0YWtpbmcudjFi'
+    'ZXRhMS5Db21taXNzaW9uQgnI3h8AqOewKgFSCmNvbW1pc3Npb24SWwoTbWluX3NlbGZfZGVsZW'
+    'dhdGlvbhgLIAEoCUIryN4fANreHxVjb3Ntb3NzZGsuaW8vbWF0aC5JbnTStC0KY29zbW9zLklu'
+    'dFIRbWluU2VsZkRlbGVnYXRpb24SPAobdW5ib25kaW5nX29uX2hvbGRfcmVmX2NvdW50GAwgAS'
+    'gDUhd1bmJvbmRpbmdPbkhvbGRSZWZDb3VudBIjCg11bmJvbmRpbmdfaWRzGA0gAygEUgx1bmJv'
+    'bmRpbmdJZHM6CIigHwDooB8A');
 
 @$core.Deprecated('Use valAddressesDescriptor instead')
 const ValAddresses$json = {
@@ -167,13 +166,12 @@ const ValAddresses$json = {
   '2': [
     {'1': 'addresses', '3': 1, '4': 3, '5': 9, '8': {}, '10': 'addresses'},
   ],
-  '7': {},
 };
 
 /// Descriptor for `ValAddresses`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List valAddressesDescriptor = $convert.base64Decode(
     'CgxWYWxBZGRyZXNzZXMSNgoJYWRkcmVzc2VzGAEgAygJQhjStC0UY29zbW9zLkFkZHJlc3NTdH'
-    'JpbmdSCWFkZHJlc3NlczoImKAfAIDcIAE=');
+    'JpbmdSCWFkZHJlc3Nlcw==');
 
 @$core.Deprecated('Use dVPairDescriptor instead')
 const DVPair$json = {
@@ -188,8 +186,9 @@ const DVPair$json = {
 /// Descriptor for `DVPair`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List dVPairDescriptor = $convert.base64Decode(
     'CgZEVlBhaXISRQoRZGVsZWdhdG9yX2FkZHJlc3MYASABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1'
-    'N0cmluZ1IQZGVsZWdhdG9yQWRkcmVzcxJFChF2YWxpZGF0b3JfYWRkcmVzcxgCIAEoCUIY0rQt'
-    'FGNvc21vcy5BZGRyZXNzU3RyaW5nUhB2YWxpZGF0b3JBZGRyZXNzOgyIoB8AmKAfAOigHwA=');
+    'N0cmluZ1IQZGVsZWdhdG9yQWRkcmVzcxJOChF2YWxpZGF0b3JfYWRkcmVzcxgCIAEoCUIh0rQt'
+    'HWNvc21vcy5WYWxpZGF0b3JBZGRyZXNzU3RyaW5nUhB2YWxpZGF0b3JBZGRyZXNzOgiIoB8A6K'
+    'AfAA==');
 
 @$core.Deprecated('Use dVPairsDescriptor instead')
 const DVPairs$json = {
@@ -218,10 +217,10 @@ const DVVTriplet$json = {
 /// Descriptor for `DVVTriplet`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List dVVTripletDescriptor = $convert.base64Decode(
     'CgpEVlZUcmlwbGV0EkUKEWRlbGVnYXRvcl9hZGRyZXNzGAEgASgJQhjStC0UY29zbW9zLkFkZH'
-    'Jlc3NTdHJpbmdSEGRlbGVnYXRvckFkZHJlc3MSTAoVdmFsaWRhdG9yX3NyY19hZGRyZXNzGAIg'
-    'ASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmdSE3ZhbGlkYXRvclNyY0FkZHJlc3MSTAoVdm'
-    'FsaWRhdG9yX2RzdF9hZGRyZXNzGAMgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmdSE3Zh'
-    'bGlkYXRvckRzdEFkZHJlc3M6DIigHwCYoB8A6KAfAA==');
+    'Jlc3NTdHJpbmdSEGRlbGVnYXRvckFkZHJlc3MSVQoVdmFsaWRhdG9yX3NyY19hZGRyZXNzGAIg'
+    'ASgJQiHStC0dY29zbW9zLlZhbGlkYXRvckFkZHJlc3NTdHJpbmdSE3ZhbGlkYXRvclNyY0FkZH'
+    'Jlc3MSVQoVdmFsaWRhdG9yX2RzdF9hZGRyZXNzGAMgASgJQiHStC0dY29zbW9zLlZhbGlkYXRv'
+    'ckFkZHJlc3NTdHJpbmdSE3ZhbGlkYXRvckRzdEFkZHJlc3M6CIigHwDooB8A');
 
 @$core.Deprecated('Use dVVTripletsDescriptor instead')
 const DVVTriplets$json = {
@@ -250,10 +249,10 @@ const Delegation$json = {
 /// Descriptor for `Delegation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List delegationDescriptor = $convert.base64Decode(
     'CgpEZWxlZ2F0aW9uEkUKEWRlbGVnYXRvcl9hZGRyZXNzGAEgASgJQhjStC0UY29zbW9zLkFkZH'
-    'Jlc3NTdHJpbmdSEGRlbGVnYXRvckFkZHJlc3MSRQoRdmFsaWRhdG9yX2FkZHJlc3MYAiABKAlC'
-    'GNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZ1IQdmFsaWRhdG9yQWRkcmVzcxJUCgZzaGFyZXMYAy'
-    'ABKAlCPMjeHwDa3h8mZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5EZWPStC0K'
-    'Y29zbW9zLkRlY1IGc2hhcmVzOgyIoB8AmKAfAOigHwA=');
+    'Jlc3NTdHJpbmdSEGRlbGVnYXRvckFkZHJlc3MSTgoRdmFsaWRhdG9yX2FkZHJlc3MYAiABKAlC'
+    'IdK0LR1jb3Ntb3MuVmFsaWRhdG9yQWRkcmVzc1N0cmluZ1IQdmFsaWRhdG9yQWRkcmVzcxJJCg'
+    'ZzaGFyZXMYAyABKAlCMcjeHwDa3h8bY29zbW9zc2RrLmlvL21hdGguTGVnYWN5RGVj0rQtCmNv'
+    'c21vcy5EZWNSBnNoYXJlczoIiKAfAOigHwA=');
 
 @$core.Deprecated('Use unbondingDelegationDescriptor instead')
 const UnbondingDelegation$json = {
@@ -269,10 +268,10 @@ const UnbondingDelegation$json = {
 /// Descriptor for `UnbondingDelegation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List unbondingDelegationDescriptor = $convert.base64Decode(
     'ChNVbmJvbmRpbmdEZWxlZ2F0aW9uEkUKEWRlbGVnYXRvcl9hZGRyZXNzGAEgASgJQhjStC0UY2'
-    '9zbW9zLkFkZHJlc3NTdHJpbmdSEGRlbGVnYXRvckFkZHJlc3MSRQoRdmFsaWRhdG9yX2FkZHJl'
-    'c3MYAiABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZ1IQdmFsaWRhdG9yQWRkcmVzcxJVCg'
-    'dlbnRyaWVzGAMgAygLMjAuY29zbW9zLnN0YWtpbmcudjFiZXRhMS5VbmJvbmRpbmdEZWxlZ2F0'
-    'aW9uRW50cnlCCcjeHwCo57AqAVIHZW50cmllczoMiKAfAJigHwDooB8A');
+    '9zbW9zLkFkZHJlc3NTdHJpbmdSEGRlbGVnYXRvckFkZHJlc3MSTgoRdmFsaWRhdG9yX2FkZHJl'
+    'c3MYAiABKAlCIdK0LR1jb3Ntb3MuVmFsaWRhdG9yQWRkcmVzc1N0cmluZ1IQdmFsaWRhdG9yQW'
+    'RkcmVzcxJVCgdlbnRyaWVzGAMgAygLMjAuY29zbW9zLnN0YWtpbmcudjFiZXRhMS5VbmJvbmRp'
+    'bmdEZWxlZ2F0aW9uRW50cnlCCcjeHwCo57AqAVIHZW50cmllczoIiKAfAOigHwA=');
 
 @$core.Deprecated('Use unbondingDelegationEntryDescriptor instead')
 const UnbondingDelegationEntry$json = {
@@ -292,13 +291,12 @@ const UnbondingDelegationEntry$json = {
 final $typed_data.Uint8List unbondingDelegationEntryDescriptor = $convert.base64Decode(
     'ChhVbmJvbmRpbmdEZWxlZ2F0aW9uRW50cnkSJwoPY3JlYXRpb25faGVpZ2h0GAEgASgDUg5jcm'
     'VhdGlvbkhlaWdodBJSCg9jb21wbGV0aW9uX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu'
-    'VGltZXN0YW1wQg3I3h8AkN8fAajnsCoBUg5jb21wbGV0aW9uVGltZRJlCg9pbml0aWFsX2JhbG'
-    'FuY2UYAyABKAlCPMjeHwDa3h8mZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5J'
-    'bnTStC0KY29zbW9zLkludFIOaW5pdGlhbEJhbGFuY2USVgoHYmFsYW5jZRgEIAEoCUI8yN4fAN'
-    'reHyZnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkludNK0LQpjb3Ntb3MuSW50'
-    'UgdiYWxhbmNlEiEKDHVuYm9uZGluZ19pZBgFIAEoBFILdW5ib25kaW5nSWQSPAobdW5ib25kaW'
-    '5nX29uX2hvbGRfcmVmX2NvdW50GAYgASgDUhd1bmJvbmRpbmdPbkhvbGRSZWZDb3VudDoImKAf'
-    'AOigHwE=');
+    'VGltZXN0YW1wQg3I3h8AkN8fAajnsCoBUg5jb21wbGV0aW9uVGltZRJUCg9pbml0aWFsX2JhbG'
+    'FuY2UYAyABKAlCK8jeHwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnRS'
+    'DmluaXRpYWxCYWxhbmNlEkUKB2JhbGFuY2UYBCABKAlCK8jeHwDa3h8VY29zbW9zc2RrLmlvL2'
+    '1hdGguSW500rQtCmNvc21vcy5JbnRSB2JhbGFuY2USIQoMdW5ib25kaW5nX2lkGAUgASgEUgt1'
+    'bmJvbmRpbmdJZBI8Cht1bmJvbmRpbmdfb25faG9sZF9yZWZfY291bnQYBiABKANSF3VuYm9uZG'
+    'luZ09uSG9sZFJlZkNvdW50OgTooB8B');
 
 @$core.Deprecated('Use redelegationEntryDescriptor instead')
 const RedelegationEntry$json = {
@@ -318,13 +316,12 @@ const RedelegationEntry$json = {
 final $typed_data.Uint8List redelegationEntryDescriptor = $convert.base64Decode(
     'ChFSZWRlbGVnYXRpb25FbnRyeRInCg9jcmVhdGlvbl9oZWlnaHQYASABKANSDmNyZWF0aW9uSG'
     'VpZ2h0ElIKD2NvbXBsZXRpb25fdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh'
-    'bXBCDcjeHwCQ3x8BqOewKgFSDmNvbXBsZXRpb25UaW1lEmUKD2luaXRpYWxfYmFsYW5jZRgDIA'
-    'EoCUI8yN4fANreHyZnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkludNK0LQpj'
-    'b3Ntb3MuSW50Ug5pbml0aWFsQmFsYW5jZRJbCgpzaGFyZXNfZHN0GAQgASgJQjzI3h8A2t4fJm'
-    'dpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuRGVj0rQtCmNvc21vcy5EZWNSCXNo'
-    'YXJlc0RzdBIhCgx1bmJvbmRpbmdfaWQYBSABKARSC3VuYm9uZGluZ0lkEjwKG3VuYm9uZGluZ1'
-    '9vbl9ob2xkX3JlZl9jb3VudBgGIAEoA1IXdW5ib25kaW5nT25Ib2xkUmVmQ291bnQ6CJigHwDo'
-    'oB8B');
+    'bXBCDcjeHwCQ3x8BqOewKgFSDmNvbXBsZXRpb25UaW1lElQKD2luaXRpYWxfYmFsYW5jZRgDIA'
+    'EoCUIryN4fANreHxVjb3Ntb3NzZGsuaW8vbWF0aC5JbnTStC0KY29zbW9zLkludFIOaW5pdGlh'
+    'bEJhbGFuY2USUAoKc2hhcmVzX2RzdBgEIAEoCUIxyN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC'
+    '5MZWdhY3lEZWPStC0KY29zbW9zLkRlY1IJc2hhcmVzRHN0EiEKDHVuYm9uZGluZ19pZBgFIAEo'
+    'BFILdW5ib25kaW5nSWQSPAobdW5ib25kaW5nX29uX2hvbGRfcmVmX2NvdW50GAYgASgDUhd1bm'
+    'JvbmRpbmdPbkhvbGRSZWZDb3VudDoE6KAfAQ==');
 
 @$core.Deprecated('Use redelegationDescriptor instead')
 const Redelegation$json = {
@@ -341,12 +338,12 @@ const Redelegation$json = {
 /// Descriptor for `Redelegation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List redelegationDescriptor = $convert.base64Decode(
     'CgxSZWRlbGVnYXRpb24SRQoRZGVsZWdhdG9yX2FkZHJlc3MYASABKAlCGNK0LRRjb3Ntb3MuQW'
-    'RkcmVzc1N0cmluZ1IQZGVsZWdhdG9yQWRkcmVzcxJMChV2YWxpZGF0b3Jfc3JjX2FkZHJlc3MY'
-    'AiABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZ1ITdmFsaWRhdG9yU3JjQWRkcmVzcxJMCh'
-    'V2YWxpZGF0b3JfZHN0X2FkZHJlc3MYAyABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZ1IT'
-    'dmFsaWRhdG9yRHN0QWRkcmVzcxJOCgdlbnRyaWVzGAQgAygLMikuY29zbW9zLnN0YWtpbmcudj'
-    'FiZXRhMS5SZWRlbGVnYXRpb25FbnRyeUIJyN4fAKjnsCoBUgdlbnRyaWVzOgyIoB8AmKAfAOig'
-    'HwA=');
+    'RkcmVzc1N0cmluZ1IQZGVsZWdhdG9yQWRkcmVzcxJVChV2YWxpZGF0b3Jfc3JjX2FkZHJlc3MY'
+    'AiABKAlCIdK0LR1jb3Ntb3MuVmFsaWRhdG9yQWRkcmVzc1N0cmluZ1ITdmFsaWRhdG9yU3JjQW'
+    'RkcmVzcxJVChV2YWxpZGF0b3JfZHN0X2FkZHJlc3MYAyABKAlCIdK0LR1jb3Ntb3MuVmFsaWRh'
+    'dG9yQWRkcmVzc1N0cmluZ1ITdmFsaWRhdG9yRHN0QWRkcmVzcxJOCgdlbnRyaWVzGAQgAygLMi'
+    'kuY29zbW9zLnN0YWtpbmcudjFiZXRhMS5SZWRlbGVnYXRpb25FbnRyeUIJyN4fAKjnsCoBUgdl'
+    'bnRyaWVzOgiIoB8A6KAfAA==');
 
 @$core.Deprecated('Use paramsDescriptor instead')
 const Params$json = {
@@ -368,10 +365,10 @@ final $typed_data.Uint8List paramsDescriptor = $convert.base64Decode(
     'Rpb25CDcjeHwCY3x8BqOewKgFSDXVuYm9uZGluZ1RpbWUSJQoObWF4X3ZhbGlkYXRvcnMYAiAB'
     'KA1SDW1heFZhbGlkYXRvcnMSHwoLbWF4X2VudHJpZXMYAyABKA1SCm1heEVudHJpZXMSLQoSaG'
     'lzdG9yaWNhbF9lbnRyaWVzGAQgASgNUhFoaXN0b3JpY2FsRW50cmllcxIdCgpib25kX2Rlbm9t'
-    'GAUgASgJUglib25kRGVub20SfAoTbWluX2NvbW1pc3Npb25fcmF0ZRgGIAEoCUJMyN4fANreHy'
-    'ZnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY/LeHxp5YW1sOiJtaW5fY29t'
-    'bWlzc2lvbl9yYXRlIlIRbWluQ29tbWlzc2lvblJhdGU6KJigHwDooB8BiuewKhtjb3Ntb3Mtc2'
-    'RrL3gvc3Rha2luZy9QYXJhbXM=');
+    'GAUgASgJUglib25kRGVub20ShAEKE21pbl9jb21taXNzaW9uX3JhdGUYBiABKAlCVMjeHwDa3h'
+    '8bY29zbW9zc2RrLmlvL21hdGguTGVnYWN5RGVj8t4fGnlhbWw6Im1pbl9jb21taXNzaW9uX3Jh'
+    'dGUi0rQtCmNvc21vcy5EZWOo57AqAVIRbWluQ29tbWlzc2lvblJhdGU6JOigHwGK57AqG2Nvc2'
+    '1vcy1zZGsveC9zdGFraW5nL1BhcmFtcw==');
 
 @$core.Deprecated('Use delegationResponseDescriptor instead')
 const DelegationResponse$json = {
@@ -387,8 +384,8 @@ const DelegationResponse$json = {
 final $typed_data.Uint8List delegationResponseDescriptor = $convert.base64Decode(
     'ChJEZWxlZ2F0aW9uUmVzcG9uc2USTQoKZGVsZWdhdGlvbhgBIAEoCzIiLmNvc21vcy5zdGFraW'
     '5nLnYxYmV0YTEuRGVsZWdhdGlvbkIJyN4fAKjnsCoBUgpkZWxlZ2F0aW9uEj4KB2JhbGFuY2UY'
-    'AiABKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CCcjeHwCo57AqAVIHYmFsYW5jZToImK'
-    'AfAOigHwA=');
+    'AiABKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CCcjeHwCo57AqAVIHYmFsYW5jZToE6K'
+    'AfAA==');
 
 @$core.Deprecated('Use redelegationEntryResponseDescriptor instead')
 const RedelegationEntryResponse$json = {
@@ -404,8 +401,8 @@ const RedelegationEntryResponse$json = {
 final $typed_data.Uint8List redelegationEntryResponseDescriptor = $convert.base64Decode(
     'ChlSZWRlbGVnYXRpb25FbnRyeVJlc3BvbnNlEmMKEnJlZGVsZWdhdGlvbl9lbnRyeRgBIAEoCz'
     'IpLmNvc21vcy5zdGFraW5nLnYxYmV0YTEuUmVkZWxlZ2F0aW9uRW50cnlCCcjeHwCo57AqAVIR'
-    'cmVkZWxlZ2F0aW9uRW50cnkSVgoHYmFsYW5jZRgEIAEoCUI8yN4fANreHyZnaXRodWIuY29tL2'
-    'Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkludNK0LQpjb3Ntb3MuSW50UgdiYWxhbmNlOgTooB8B');
+    'cmVkZWxlZ2F0aW9uRW50cnkSRQoHYmFsYW5jZRgEIAEoCUIryN4fANreHxVjb3Ntb3NzZGsuaW'
+    '8vbWF0aC5JbnTStC0KY29zbW9zLkludFIHYmFsYW5jZToE6KAfAQ==');
 
 @$core.Deprecated('Use redelegationResponseDescriptor instead')
 const RedelegationResponse$json = {
@@ -436,11 +433,11 @@ const Pool$json = {
 
 /// Descriptor for `Pool`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List poolDescriptor = $convert.base64Decode(
-    'CgRQb29sEoIBChFub3RfYm9uZGVkX3Rva2VucxgBIAEoCUJWyN4fANreHyZnaXRodWIuY29tL2'
-    'Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkludOreHxFub3RfYm9uZGVkX3Rva2Vuc9K0LQpjb3Nt'
-    'b3MuSW50qOewKgFSD25vdEJvbmRlZFRva2VucxJ3Cg1ib25kZWRfdG9rZW5zGAIgASgJQlLI3h'
-    '8A2t4fJmdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuSW506t4fDWJvbmRlZF90'
-    'b2tlbnPStC0KY29zbW9zLkludKjnsCoBUgxib25kZWRUb2tlbnM6COigHwHwoB8B');
+    'CgRQb29sEnEKEW5vdF9ib25kZWRfdG9rZW5zGAEgASgJQkXI3h8A2t4fFWNvc21vc3Nkay5pby'
+    '9tYXRoLkludOreHxFub3RfYm9uZGVkX3Rva2Vuc9K0LQpjb3Ntb3MuSW50qOewKgFSD25vdEJv'
+    'bmRlZFRva2VucxJmCg1ib25kZWRfdG9rZW5zGAIgASgJQkHI3h8A2t4fFWNvc21vc3Nkay5pby'
+    '9tYXRoLkludOreHw1ib25kZWRfdG9rZW5z0rQtCmNvc21vcy5JbnSo57AqAVIMYm9uZGVkVG9r'
+    'ZW5zOgjooB8B8KAfAQ==');
 
 @$core.Deprecated('Use validatorUpdatesDescriptor instead')
 const ValidatorUpdates$json = {

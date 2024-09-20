@@ -14,22 +14,23 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'gov.pb.dart' as $67;
+import 'gov.pb.dart' as $70;
 
 /// GenesisState defines the gov module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
     $fixnum.Int64? startingProposalId,
-    $core.Iterable<$67.Deposit>? deposits,
-    $core.Iterable<$67.Vote>? votes,
-    $core.Iterable<$67.Proposal>? proposals,
+    $core.Iterable<$70.Deposit>? deposits,
+    $core.Iterable<$70.Vote>? votes,
+    $core.Iterable<$70.Proposal>? proposals,
   @$core.Deprecated('This field is deprecated.')
-    $67.DepositParams? depositParams,
+    $70.DepositParams? depositParams,
   @$core.Deprecated('This field is deprecated.')
-    $67.VotingParams? votingParams,
+    $70.VotingParams? votingParams,
   @$core.Deprecated('This field is deprecated.')
-    $67.TallyParams? tallyParams,
-    $67.Params? params,
+    $70.TallyParams? tallyParams,
+    $70.Params? params,
+    $core.String? constitution,
   }) {
     final $result = create();
     if (startingProposalId != null) {
@@ -59,6 +60,9 @@ class GenesisState extends $pb.GeneratedMessage {
     if (params != null) {
       $result.params = params;
     }
+    if (constitution != null) {
+      $result.constitution = constitution;
+    }
     return $result;
   }
   GenesisState._() : super();
@@ -67,13 +71,14 @@ class GenesisState extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'startingProposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..pc<$67.Deposit>(2, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM, subBuilder: $67.Deposit.create)
-    ..pc<$67.Vote>(3, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $67.Vote.create)
-    ..pc<$67.Proposal>(4, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $67.Proposal.create)
-    ..aOM<$67.DepositParams>(5, _omitFieldNames ? '' : 'depositParams', subBuilder: $67.DepositParams.create)
-    ..aOM<$67.VotingParams>(6, _omitFieldNames ? '' : 'votingParams', subBuilder: $67.VotingParams.create)
-    ..aOM<$67.TallyParams>(7, _omitFieldNames ? '' : 'tallyParams', subBuilder: $67.TallyParams.create)
-    ..aOM<$67.Params>(8, _omitFieldNames ? '' : 'params', subBuilder: $67.Params.create)
+    ..pc<$70.Deposit>(2, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM, subBuilder: $70.Deposit.create)
+    ..pc<$70.Vote>(3, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $70.Vote.create)
+    ..pc<$70.Proposal>(4, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $70.Proposal.create)
+    ..aOM<$70.DepositParams>(5, _omitFieldNames ? '' : 'depositParams', subBuilder: $70.DepositParams.create)
+    ..aOM<$70.VotingParams>(6, _omitFieldNames ? '' : 'votingParams', subBuilder: $70.VotingParams.create)
+    ..aOM<$70.TallyParams>(7, _omitFieldNames ? '' : 'tallyParams', subBuilder: $70.TallyParams.create)
+    ..aOM<$70.Params>(8, _omitFieldNames ? '' : 'params', subBuilder: $70.Params.create)
+    ..aOS(9, _omitFieldNames ? '' : 'constitution')
     ..hasRequiredFields = false
   ;
 
@@ -110,24 +115,24 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// deposits defines all the deposits present at genesis.
   @$pb.TagNumber(2)
-  $core.List<$67.Deposit> get deposits => $_getList(1);
+  $core.List<$70.Deposit> get deposits => $_getList(1);
 
   /// votes defines all the votes present at genesis.
   @$pb.TagNumber(3)
-  $core.List<$67.Vote> get votes => $_getList(2);
+  $core.List<$70.Vote> get votes => $_getList(2);
 
   /// proposals defines all the proposals present at genesis.
   @$pb.TagNumber(4)
-  $core.List<$67.Proposal> get proposals => $_getList(3);
+  $core.List<$70.Proposal> get proposals => $_getList(3);
 
   /// Deprecated: Prefer to use `params` instead.
   /// deposit_params defines all the paramaters of related to deposit.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  $67.DepositParams get depositParams => $_getN(4);
+  $70.DepositParams get depositParams => $_getN(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  set depositParams($67.DepositParams v) { setField(5, v); }
+  set depositParams($70.DepositParams v) { setField(5, v); }
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.bool hasDepositParams() => $_has(4);
@@ -136,16 +141,16 @@ class GenesisState extends $pb.GeneratedMessage {
   void clearDepositParams() => clearField(5);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  $67.DepositParams ensureDepositParams() => $_ensure(4);
+  $70.DepositParams ensureDepositParams() => $_ensure(4);
 
   /// Deprecated: Prefer to use `params` instead.
   /// voting_params defines all the paramaters of related to voting.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
-  $67.VotingParams get votingParams => $_getN(5);
+  $70.VotingParams get votingParams => $_getN(5);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
-  set votingParams($67.VotingParams v) { setField(6, v); }
+  set votingParams($70.VotingParams v) { setField(6, v); }
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   $core.bool hasVotingParams() => $_has(5);
@@ -154,16 +159,16 @@ class GenesisState extends $pb.GeneratedMessage {
   void clearVotingParams() => clearField(6);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
-  $67.VotingParams ensureVotingParams() => $_ensure(5);
+  $70.VotingParams ensureVotingParams() => $_ensure(5);
 
   /// Deprecated: Prefer to use `params` instead.
   /// tally_params defines all the paramaters of related to tally.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(7)
-  $67.TallyParams get tallyParams => $_getN(6);
+  $70.TallyParams get tallyParams => $_getN(6);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(7)
-  set tallyParams($67.TallyParams v) { setField(7, v); }
+  set tallyParams($70.TallyParams v) { setField(7, v); }
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(7)
   $core.bool hasTallyParams() => $_has(6);
@@ -172,21 +177,36 @@ class GenesisState extends $pb.GeneratedMessage {
   void clearTallyParams() => clearField(7);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(7)
-  $67.TallyParams ensureTallyParams() => $_ensure(6);
+  $70.TallyParams ensureTallyParams() => $_ensure(6);
 
   ///  params defines all the paramaters of x/gov module.
   ///
   ///  Since: cosmos-sdk 0.47
   @$pb.TagNumber(8)
-  $67.Params get params => $_getN(7);
+  $70.Params get params => $_getN(7);
   @$pb.TagNumber(8)
-  set params($67.Params v) { setField(8, v); }
+  set params($70.Params v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasParams() => $_has(7);
   @$pb.TagNumber(8)
   void clearParams() => clearField(8);
   @$pb.TagNumber(8)
-  $67.Params ensureParams() => $_ensure(7);
+  $70.Params ensureParams() => $_ensure(7);
+
+  ///  The constitution allows builders to lay a foundation and define purpose.
+  ///  This is an immutable string set in genesis.
+  ///  There are no amendments, to go outside of scope, just fork.
+  ///  constitution is an immutable string in genesis for a chain builder to lay out their vision, ideas and ideals.
+  ///
+  ///  Since: cosmos-sdk 0.50
+  @$pb.TagNumber(9)
+  $core.String get constitution => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set constitution($core.String v) { $_setString(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasConstitution() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearConstitution() => clearField(9);
 }
 
 

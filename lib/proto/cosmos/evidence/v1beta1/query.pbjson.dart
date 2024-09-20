@@ -31,9 +31,8 @@ const QueryEvidenceRequest$json = {
 
 /// Descriptor for `QueryEvidenceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryEvidenceRequestDescriptor = $convert.base64Decode(
-    'ChRRdWVyeUV2aWRlbmNlUmVxdWVzdBJbCg1ldmlkZW5jZV9oYXNoGAEgASgMQjYYAfreHzBnaX'
-    'RodWIuY29tL2NvbWV0YmZ0L2NvbWV0YmZ0L2xpYnMvYnl0ZXMuSGV4Qnl0ZXNSDGV2aWRlbmNl'
-    'SGFzaBISCgRoYXNoGAIgASgJUgRoYXNo');
+    'ChRRdWVyeUV2aWRlbmNlUmVxdWVzdBInCg1ldmlkZW5jZV9oYXNoGAEgASgMQgIYAVIMZXZpZG'
+    'VuY2VIYXNoEhIKBGhhc2gYAiABKAlSBGhhc2g=');
 
 @$core.Deprecated('Use queryEvidenceResponseDescriptor instead')
 const QueryEvidenceResponse$json = {

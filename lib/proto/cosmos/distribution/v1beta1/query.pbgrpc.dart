@@ -15,52 +15,52 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $16;
+import 'query.pb.dart' as $18;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.distribution.v1beta1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$params = $grpc.ClientMethod<$16.QueryParamsRequest, $16.QueryParamsResponse>(
+  static final _$params = $grpc.ClientMethod<$18.QueryParamsRequest, $18.QueryParamsResponse>(
       '/cosmos.distribution.v1beta1.Query/Params',
-      ($16.QueryParamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryParamsResponse.fromBuffer(value));
-  static final _$validatorDistributionInfo = $grpc.ClientMethod<$16.QueryValidatorDistributionInfoRequest, $16.QueryValidatorDistributionInfoResponse>(
+      ($18.QueryParamsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryParamsResponse.fromBuffer(value));
+  static final _$validatorDistributionInfo = $grpc.ClientMethod<$18.QueryValidatorDistributionInfoRequest, $18.QueryValidatorDistributionInfoResponse>(
       '/cosmos.distribution.v1beta1.Query/ValidatorDistributionInfo',
-      ($16.QueryValidatorDistributionInfoRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryValidatorDistributionInfoResponse.fromBuffer(value));
-  static final _$validatorOutstandingRewards = $grpc.ClientMethod<$16.QueryValidatorOutstandingRewardsRequest, $16.QueryValidatorOutstandingRewardsResponse>(
+      ($18.QueryValidatorDistributionInfoRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryValidatorDistributionInfoResponse.fromBuffer(value));
+  static final _$validatorOutstandingRewards = $grpc.ClientMethod<$18.QueryValidatorOutstandingRewardsRequest, $18.QueryValidatorOutstandingRewardsResponse>(
       '/cosmos.distribution.v1beta1.Query/ValidatorOutstandingRewards',
-      ($16.QueryValidatorOutstandingRewardsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryValidatorOutstandingRewardsResponse.fromBuffer(value));
-  static final _$validatorCommission = $grpc.ClientMethod<$16.QueryValidatorCommissionRequest, $16.QueryValidatorCommissionResponse>(
+      ($18.QueryValidatorOutstandingRewardsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryValidatorOutstandingRewardsResponse.fromBuffer(value));
+  static final _$validatorCommission = $grpc.ClientMethod<$18.QueryValidatorCommissionRequest, $18.QueryValidatorCommissionResponse>(
       '/cosmos.distribution.v1beta1.Query/ValidatorCommission',
-      ($16.QueryValidatorCommissionRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryValidatorCommissionResponse.fromBuffer(value));
-  static final _$validatorSlashes = $grpc.ClientMethod<$16.QueryValidatorSlashesRequest, $16.QueryValidatorSlashesResponse>(
+      ($18.QueryValidatorCommissionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryValidatorCommissionResponse.fromBuffer(value));
+  static final _$validatorSlashes = $grpc.ClientMethod<$18.QueryValidatorSlashesRequest, $18.QueryValidatorSlashesResponse>(
       '/cosmos.distribution.v1beta1.Query/ValidatorSlashes',
-      ($16.QueryValidatorSlashesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryValidatorSlashesResponse.fromBuffer(value));
-  static final _$delegationRewards = $grpc.ClientMethod<$16.QueryDelegationRewardsRequest, $16.QueryDelegationRewardsResponse>(
+      ($18.QueryValidatorSlashesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryValidatorSlashesResponse.fromBuffer(value));
+  static final _$delegationRewards = $grpc.ClientMethod<$18.QueryDelegationRewardsRequest, $18.QueryDelegationRewardsResponse>(
       '/cosmos.distribution.v1beta1.Query/DelegationRewards',
-      ($16.QueryDelegationRewardsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryDelegationRewardsResponse.fromBuffer(value));
-  static final _$delegationTotalRewards = $grpc.ClientMethod<$16.QueryDelegationTotalRewardsRequest, $16.QueryDelegationTotalRewardsResponse>(
+      ($18.QueryDelegationRewardsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryDelegationRewardsResponse.fromBuffer(value));
+  static final _$delegationTotalRewards = $grpc.ClientMethod<$18.QueryDelegationTotalRewardsRequest, $18.QueryDelegationTotalRewardsResponse>(
       '/cosmos.distribution.v1beta1.Query/DelegationTotalRewards',
-      ($16.QueryDelegationTotalRewardsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryDelegationTotalRewardsResponse.fromBuffer(value));
-  static final _$delegatorValidators = $grpc.ClientMethod<$16.QueryDelegatorValidatorsRequest, $16.QueryDelegatorValidatorsResponse>(
+      ($18.QueryDelegationTotalRewardsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryDelegationTotalRewardsResponse.fromBuffer(value));
+  static final _$delegatorValidators = $grpc.ClientMethod<$18.QueryDelegatorValidatorsRequest, $18.QueryDelegatorValidatorsResponse>(
       '/cosmos.distribution.v1beta1.Query/DelegatorValidators',
-      ($16.QueryDelegatorValidatorsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryDelegatorValidatorsResponse.fromBuffer(value));
-  static final _$delegatorWithdrawAddress = $grpc.ClientMethod<$16.QueryDelegatorWithdrawAddressRequest, $16.QueryDelegatorWithdrawAddressResponse>(
+      ($18.QueryDelegatorValidatorsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryDelegatorValidatorsResponse.fromBuffer(value));
+  static final _$delegatorWithdrawAddress = $grpc.ClientMethod<$18.QueryDelegatorWithdrawAddressRequest, $18.QueryDelegatorWithdrawAddressResponse>(
       '/cosmos.distribution.v1beta1.Query/DelegatorWithdrawAddress',
-      ($16.QueryDelegatorWithdrawAddressRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryDelegatorWithdrawAddressResponse.fromBuffer(value));
-  static final _$communityPool = $grpc.ClientMethod<$16.QueryCommunityPoolRequest, $16.QueryCommunityPoolResponse>(
+      ($18.QueryDelegatorWithdrawAddressRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryDelegatorWithdrawAddressResponse.fromBuffer(value));
+  static final _$communityPool = $grpc.ClientMethod<$18.QueryCommunityPoolRequest, $18.QueryCommunityPoolResponse>(
       '/cosmos.distribution.v1beta1.Query/CommunityPool',
-      ($16.QueryCommunityPoolRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $16.QueryCommunityPoolResponse.fromBuffer(value));
+      ($18.QueryCommunityPoolRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.QueryCommunityPoolResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -68,43 +68,43 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$16.QueryParamsResponse> params($16.QueryParamsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryParamsResponse> params($18.QueryParamsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$params, request, options: options);
   }
 
-  $grpc.ResponseFuture<$16.QueryValidatorDistributionInfoResponse> validatorDistributionInfo($16.QueryValidatorDistributionInfoRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryValidatorDistributionInfoResponse> validatorDistributionInfo($18.QueryValidatorDistributionInfoRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$validatorDistributionInfo, request, options: options);
   }
 
-  $grpc.ResponseFuture<$16.QueryValidatorOutstandingRewardsResponse> validatorOutstandingRewards($16.QueryValidatorOutstandingRewardsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryValidatorOutstandingRewardsResponse> validatorOutstandingRewards($18.QueryValidatorOutstandingRewardsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$validatorOutstandingRewards, request, options: options);
   }
 
-  $grpc.ResponseFuture<$16.QueryValidatorCommissionResponse> validatorCommission($16.QueryValidatorCommissionRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryValidatorCommissionResponse> validatorCommission($18.QueryValidatorCommissionRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$validatorCommission, request, options: options);
   }
 
-  $grpc.ResponseFuture<$16.QueryValidatorSlashesResponse> validatorSlashes($16.QueryValidatorSlashesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryValidatorSlashesResponse> validatorSlashes($18.QueryValidatorSlashesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$validatorSlashes, request, options: options);
   }
 
-  $grpc.ResponseFuture<$16.QueryDelegationRewardsResponse> delegationRewards($16.QueryDelegationRewardsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryDelegationRewardsResponse> delegationRewards($18.QueryDelegationRewardsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delegationRewards, request, options: options);
   }
 
-  $grpc.ResponseFuture<$16.QueryDelegationTotalRewardsResponse> delegationTotalRewards($16.QueryDelegationTotalRewardsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryDelegationTotalRewardsResponse> delegationTotalRewards($18.QueryDelegationTotalRewardsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delegationTotalRewards, request, options: options);
   }
 
-  $grpc.ResponseFuture<$16.QueryDelegatorValidatorsResponse> delegatorValidators($16.QueryDelegatorValidatorsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryDelegatorValidatorsResponse> delegatorValidators($18.QueryDelegatorValidatorsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delegatorValidators, request, options: options);
   }
 
-  $grpc.ResponseFuture<$16.QueryDelegatorWithdrawAddressResponse> delegatorWithdrawAddress($16.QueryDelegatorWithdrawAddressRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryDelegatorWithdrawAddressResponse> delegatorWithdrawAddress($18.QueryDelegatorWithdrawAddressRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$delegatorWithdrawAddress, request, options: options);
   }
 
-  $grpc.ResponseFuture<$16.QueryCommunityPoolResponse> communityPool($16.QueryCommunityPoolRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.QueryCommunityPoolResponse> communityPool($18.QueryCommunityPoolRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$communityPool, request, options: options);
   }
 }
@@ -114,126 +114,126 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.distribution.v1beta1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$16.QueryParamsRequest, $16.QueryParamsResponse>(
+    $addMethod($grpc.ServiceMethod<$18.QueryParamsRequest, $18.QueryParamsResponse>(
         'Params',
         params_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryParamsRequest.fromBuffer(value),
-        ($16.QueryParamsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$16.QueryValidatorDistributionInfoRequest, $16.QueryValidatorDistributionInfoResponse>(
+        ($core.List<$core.int> value) => $18.QueryParamsRequest.fromBuffer(value),
+        ($18.QueryParamsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.QueryValidatorDistributionInfoRequest, $18.QueryValidatorDistributionInfoResponse>(
         'ValidatorDistributionInfo',
         validatorDistributionInfo_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryValidatorDistributionInfoRequest.fromBuffer(value),
-        ($16.QueryValidatorDistributionInfoResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$16.QueryValidatorOutstandingRewardsRequest, $16.QueryValidatorOutstandingRewardsResponse>(
+        ($core.List<$core.int> value) => $18.QueryValidatorDistributionInfoRequest.fromBuffer(value),
+        ($18.QueryValidatorDistributionInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.QueryValidatorOutstandingRewardsRequest, $18.QueryValidatorOutstandingRewardsResponse>(
         'ValidatorOutstandingRewards',
         validatorOutstandingRewards_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryValidatorOutstandingRewardsRequest.fromBuffer(value),
-        ($16.QueryValidatorOutstandingRewardsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$16.QueryValidatorCommissionRequest, $16.QueryValidatorCommissionResponse>(
+        ($core.List<$core.int> value) => $18.QueryValidatorOutstandingRewardsRequest.fromBuffer(value),
+        ($18.QueryValidatorOutstandingRewardsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.QueryValidatorCommissionRequest, $18.QueryValidatorCommissionResponse>(
         'ValidatorCommission',
         validatorCommission_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryValidatorCommissionRequest.fromBuffer(value),
-        ($16.QueryValidatorCommissionResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$16.QueryValidatorSlashesRequest, $16.QueryValidatorSlashesResponse>(
+        ($core.List<$core.int> value) => $18.QueryValidatorCommissionRequest.fromBuffer(value),
+        ($18.QueryValidatorCommissionResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.QueryValidatorSlashesRequest, $18.QueryValidatorSlashesResponse>(
         'ValidatorSlashes',
         validatorSlashes_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryValidatorSlashesRequest.fromBuffer(value),
-        ($16.QueryValidatorSlashesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$16.QueryDelegationRewardsRequest, $16.QueryDelegationRewardsResponse>(
+        ($core.List<$core.int> value) => $18.QueryValidatorSlashesRequest.fromBuffer(value),
+        ($18.QueryValidatorSlashesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.QueryDelegationRewardsRequest, $18.QueryDelegationRewardsResponse>(
         'DelegationRewards',
         delegationRewards_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryDelegationRewardsRequest.fromBuffer(value),
-        ($16.QueryDelegationRewardsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$16.QueryDelegationTotalRewardsRequest, $16.QueryDelegationTotalRewardsResponse>(
+        ($core.List<$core.int> value) => $18.QueryDelegationRewardsRequest.fromBuffer(value),
+        ($18.QueryDelegationRewardsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.QueryDelegationTotalRewardsRequest, $18.QueryDelegationTotalRewardsResponse>(
         'DelegationTotalRewards',
         delegationTotalRewards_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryDelegationTotalRewardsRequest.fromBuffer(value),
-        ($16.QueryDelegationTotalRewardsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$16.QueryDelegatorValidatorsRequest, $16.QueryDelegatorValidatorsResponse>(
+        ($core.List<$core.int> value) => $18.QueryDelegationTotalRewardsRequest.fromBuffer(value),
+        ($18.QueryDelegationTotalRewardsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.QueryDelegatorValidatorsRequest, $18.QueryDelegatorValidatorsResponse>(
         'DelegatorValidators',
         delegatorValidators_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryDelegatorValidatorsRequest.fromBuffer(value),
-        ($16.QueryDelegatorValidatorsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$16.QueryDelegatorWithdrawAddressRequest, $16.QueryDelegatorWithdrawAddressResponse>(
+        ($core.List<$core.int> value) => $18.QueryDelegatorValidatorsRequest.fromBuffer(value),
+        ($18.QueryDelegatorValidatorsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.QueryDelegatorWithdrawAddressRequest, $18.QueryDelegatorWithdrawAddressResponse>(
         'DelegatorWithdrawAddress',
         delegatorWithdrawAddress_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryDelegatorWithdrawAddressRequest.fromBuffer(value),
-        ($16.QueryDelegatorWithdrawAddressResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$16.QueryCommunityPoolRequest, $16.QueryCommunityPoolResponse>(
+        ($core.List<$core.int> value) => $18.QueryDelegatorWithdrawAddressRequest.fromBuffer(value),
+        ($18.QueryDelegatorWithdrawAddressResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.QueryCommunityPoolRequest, $18.QueryCommunityPoolResponse>(
         'CommunityPool',
         communityPool_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $16.QueryCommunityPoolRequest.fromBuffer(value),
-        ($16.QueryCommunityPoolResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $18.QueryCommunityPoolRequest.fromBuffer(value),
+        ($18.QueryCommunityPoolResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$16.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$16.QueryParamsRequest> request) async {
+  $async.Future<$18.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$18.QueryParamsRequest> request) async {
     return params(call, await request);
   }
 
-  $async.Future<$16.QueryValidatorDistributionInfoResponse> validatorDistributionInfo_Pre($grpc.ServiceCall call, $async.Future<$16.QueryValidatorDistributionInfoRequest> request) async {
+  $async.Future<$18.QueryValidatorDistributionInfoResponse> validatorDistributionInfo_Pre($grpc.ServiceCall call, $async.Future<$18.QueryValidatorDistributionInfoRequest> request) async {
     return validatorDistributionInfo(call, await request);
   }
 
-  $async.Future<$16.QueryValidatorOutstandingRewardsResponse> validatorOutstandingRewards_Pre($grpc.ServiceCall call, $async.Future<$16.QueryValidatorOutstandingRewardsRequest> request) async {
+  $async.Future<$18.QueryValidatorOutstandingRewardsResponse> validatorOutstandingRewards_Pre($grpc.ServiceCall call, $async.Future<$18.QueryValidatorOutstandingRewardsRequest> request) async {
     return validatorOutstandingRewards(call, await request);
   }
 
-  $async.Future<$16.QueryValidatorCommissionResponse> validatorCommission_Pre($grpc.ServiceCall call, $async.Future<$16.QueryValidatorCommissionRequest> request) async {
+  $async.Future<$18.QueryValidatorCommissionResponse> validatorCommission_Pre($grpc.ServiceCall call, $async.Future<$18.QueryValidatorCommissionRequest> request) async {
     return validatorCommission(call, await request);
   }
 
-  $async.Future<$16.QueryValidatorSlashesResponse> validatorSlashes_Pre($grpc.ServiceCall call, $async.Future<$16.QueryValidatorSlashesRequest> request) async {
+  $async.Future<$18.QueryValidatorSlashesResponse> validatorSlashes_Pre($grpc.ServiceCall call, $async.Future<$18.QueryValidatorSlashesRequest> request) async {
     return validatorSlashes(call, await request);
   }
 
-  $async.Future<$16.QueryDelegationRewardsResponse> delegationRewards_Pre($grpc.ServiceCall call, $async.Future<$16.QueryDelegationRewardsRequest> request) async {
+  $async.Future<$18.QueryDelegationRewardsResponse> delegationRewards_Pre($grpc.ServiceCall call, $async.Future<$18.QueryDelegationRewardsRequest> request) async {
     return delegationRewards(call, await request);
   }
 
-  $async.Future<$16.QueryDelegationTotalRewardsResponse> delegationTotalRewards_Pre($grpc.ServiceCall call, $async.Future<$16.QueryDelegationTotalRewardsRequest> request) async {
+  $async.Future<$18.QueryDelegationTotalRewardsResponse> delegationTotalRewards_Pre($grpc.ServiceCall call, $async.Future<$18.QueryDelegationTotalRewardsRequest> request) async {
     return delegationTotalRewards(call, await request);
   }
 
-  $async.Future<$16.QueryDelegatorValidatorsResponse> delegatorValidators_Pre($grpc.ServiceCall call, $async.Future<$16.QueryDelegatorValidatorsRequest> request) async {
+  $async.Future<$18.QueryDelegatorValidatorsResponse> delegatorValidators_Pre($grpc.ServiceCall call, $async.Future<$18.QueryDelegatorValidatorsRequest> request) async {
     return delegatorValidators(call, await request);
   }
 
-  $async.Future<$16.QueryDelegatorWithdrawAddressResponse> delegatorWithdrawAddress_Pre($grpc.ServiceCall call, $async.Future<$16.QueryDelegatorWithdrawAddressRequest> request) async {
+  $async.Future<$18.QueryDelegatorWithdrawAddressResponse> delegatorWithdrawAddress_Pre($grpc.ServiceCall call, $async.Future<$18.QueryDelegatorWithdrawAddressRequest> request) async {
     return delegatorWithdrawAddress(call, await request);
   }
 
-  $async.Future<$16.QueryCommunityPoolResponse> communityPool_Pre($grpc.ServiceCall call, $async.Future<$16.QueryCommunityPoolRequest> request) async {
+  $async.Future<$18.QueryCommunityPoolResponse> communityPool_Pre($grpc.ServiceCall call, $async.Future<$18.QueryCommunityPoolRequest> request) async {
     return communityPool(call, await request);
   }
 
-  $async.Future<$16.QueryParamsResponse> params($grpc.ServiceCall call, $16.QueryParamsRequest request);
-  $async.Future<$16.QueryValidatorDistributionInfoResponse> validatorDistributionInfo($grpc.ServiceCall call, $16.QueryValidatorDistributionInfoRequest request);
-  $async.Future<$16.QueryValidatorOutstandingRewardsResponse> validatorOutstandingRewards($grpc.ServiceCall call, $16.QueryValidatorOutstandingRewardsRequest request);
-  $async.Future<$16.QueryValidatorCommissionResponse> validatorCommission($grpc.ServiceCall call, $16.QueryValidatorCommissionRequest request);
-  $async.Future<$16.QueryValidatorSlashesResponse> validatorSlashes($grpc.ServiceCall call, $16.QueryValidatorSlashesRequest request);
-  $async.Future<$16.QueryDelegationRewardsResponse> delegationRewards($grpc.ServiceCall call, $16.QueryDelegationRewardsRequest request);
-  $async.Future<$16.QueryDelegationTotalRewardsResponse> delegationTotalRewards($grpc.ServiceCall call, $16.QueryDelegationTotalRewardsRequest request);
-  $async.Future<$16.QueryDelegatorValidatorsResponse> delegatorValidators($grpc.ServiceCall call, $16.QueryDelegatorValidatorsRequest request);
-  $async.Future<$16.QueryDelegatorWithdrawAddressResponse> delegatorWithdrawAddress($grpc.ServiceCall call, $16.QueryDelegatorWithdrawAddressRequest request);
-  $async.Future<$16.QueryCommunityPoolResponse> communityPool($grpc.ServiceCall call, $16.QueryCommunityPoolRequest request);
+  $async.Future<$18.QueryParamsResponse> params($grpc.ServiceCall call, $18.QueryParamsRequest request);
+  $async.Future<$18.QueryValidatorDistributionInfoResponse> validatorDistributionInfo($grpc.ServiceCall call, $18.QueryValidatorDistributionInfoRequest request);
+  $async.Future<$18.QueryValidatorOutstandingRewardsResponse> validatorOutstandingRewards($grpc.ServiceCall call, $18.QueryValidatorOutstandingRewardsRequest request);
+  $async.Future<$18.QueryValidatorCommissionResponse> validatorCommission($grpc.ServiceCall call, $18.QueryValidatorCommissionRequest request);
+  $async.Future<$18.QueryValidatorSlashesResponse> validatorSlashes($grpc.ServiceCall call, $18.QueryValidatorSlashesRequest request);
+  $async.Future<$18.QueryDelegationRewardsResponse> delegationRewards($grpc.ServiceCall call, $18.QueryDelegationRewardsRequest request);
+  $async.Future<$18.QueryDelegationTotalRewardsResponse> delegationTotalRewards($grpc.ServiceCall call, $18.QueryDelegationTotalRewardsRequest request);
+  $async.Future<$18.QueryDelegatorValidatorsResponse> delegatorValidators($grpc.ServiceCall call, $18.QueryDelegatorValidatorsRequest request);
+  $async.Future<$18.QueryDelegatorWithdrawAddressResponse> delegatorWithdrawAddress($grpc.ServiceCall call, $18.QueryDelegatorWithdrawAddressRequest request);
+  $async.Future<$18.QueryCommunityPoolResponse> communityPool($grpc.ServiceCall call, $18.QueryCommunityPoolRequest request);
 }

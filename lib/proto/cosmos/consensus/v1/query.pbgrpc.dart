@@ -15,16 +15,16 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $13;
+import 'query.pb.dart' as $15;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.consensus.v1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$params = $grpc.ClientMethod<$13.QueryParamsRequest, $13.QueryParamsResponse>(
+  static final _$params = $grpc.ClientMethod<$15.QueryParamsRequest, $15.QueryParamsResponse>(
       '/cosmos.consensus.v1.Query/Params',
-      ($13.QueryParamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $13.QueryParamsResponse.fromBuffer(value));
+      ($15.QueryParamsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $15.QueryParamsResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$13.QueryParamsResponse> params($13.QueryParamsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$15.QueryParamsResponse> params($15.QueryParamsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$params, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.consensus.v1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$13.QueryParamsRequest, $13.QueryParamsResponse>(
+    $addMethod($grpc.ServiceMethod<$15.QueryParamsRequest, $15.QueryParamsResponse>(
         'Params',
         params_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $13.QueryParamsRequest.fromBuffer(value),
-        ($13.QueryParamsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $15.QueryParamsRequest.fromBuffer(value),
+        ($15.QueryParamsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$13.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$13.QueryParamsRequest> request) async {
+  $async.Future<$15.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$15.QueryParamsRequest> request) async {
     return params(call, await request);
   }
 
-  $async.Future<$13.QueryParamsResponse> params($grpc.ServiceCall call, $13.QueryParamsRequest request);
+  $async.Future<$15.QueryParamsResponse> params($grpc.ServiceCall call, $15.QueryParamsRequest request);
 }

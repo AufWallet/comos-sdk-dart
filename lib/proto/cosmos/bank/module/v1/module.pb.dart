@@ -18,6 +18,7 @@ class Module extends $pb.GeneratedMessage {
   factory Module({
     $core.Iterable<$core.String>? blockedModuleAccountsOverride,
     $core.String? authority,
+    $core.Iterable<$core.String>? restrictionsOrder,
   }) {
     final $result = create();
     if (blockedModuleAccountsOverride != null) {
@@ -25,6 +26,9 @@ class Module extends $pb.GeneratedMessage {
     }
     if (authority != null) {
       $result.authority = authority;
+    }
+    if (restrictionsOrder != null) {
+      $result.restrictionsOrder.addAll(restrictionsOrder);
     }
     return $result;
   }
@@ -35,6 +39,7 @@ class Module extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Module', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.bank.module.v1'), createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'blockedModuleAccountsOverride')
     ..aOS(2, _omitFieldNames ? '' : 'authority')
+    ..pPS(3, _omitFieldNames ? '' : 'restrictionsOrder')
     ..hasRequiredFields = false
   ;
 
@@ -59,8 +64,8 @@ class Module extends $pb.GeneratedMessage {
   static Module getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Module>(create);
   static Module? _defaultInstance;
 
-  /// blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-  /// If left empty it defaults to the list of account names supplied in the auth module configuration as
+  /// blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+  /// funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
   /// module_account_permissions
   @$pb.TagNumber(1)
   $core.List<$core.String> get blockedModuleAccountsOverride => $_getList(0);
@@ -74,6 +79,13 @@ class Module extends $pb.GeneratedMessage {
   $core.bool hasAuthority() => $_has(1);
   @$pb.TagNumber(2)
   void clearAuthority() => clearField(2);
+
+  /// restrictions_order specifies the order of send restrictions and should be
+  /// a list of module names which provide a send restriction instance. If no
+  /// order is provided, then restrictions will be applied in alphabetical order
+  /// of module names.
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get restrictionsOrder => $_getList(2);
 }
 
 

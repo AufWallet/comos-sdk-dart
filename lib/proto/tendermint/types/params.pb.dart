@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/protobuf/duration.pb.dart' as $56;
+import '../../google/protobuf/duration.pb.dart' as $55;
 
 /// ConsensusParams contains consensus critical parameters that determine the
 /// validity of blocks.
@@ -24,6 +24,7 @@ class ConsensusParams extends $pb.GeneratedMessage {
     EvidenceParams? evidence,
     ValidatorParams? validator,
     VersionParams? version,
+    ABCIParams? abci,
   }) {
     final $result = create();
     if (block != null) {
@@ -38,6 +39,9 @@ class ConsensusParams extends $pb.GeneratedMessage {
     if (version != null) {
       $result.version = version;
     }
+    if (abci != null) {
+      $result.abci = abci;
+    }
     return $result;
   }
   ConsensusParams._() : super();
@@ -49,6 +53,7 @@ class ConsensusParams extends $pb.GeneratedMessage {
     ..aOM<EvidenceParams>(2, _omitFieldNames ? '' : 'evidence', subBuilder: EvidenceParams.create)
     ..aOM<ValidatorParams>(3, _omitFieldNames ? '' : 'validator', subBuilder: ValidatorParams.create)
     ..aOM<VersionParams>(4, _omitFieldNames ? '' : 'version', subBuilder: VersionParams.create)
+    ..aOM<ABCIParams>(5, _omitFieldNames ? '' : 'abci', subBuilder: ABCIParams.create)
     ..hasRequiredFields = false
   ;
 
@@ -116,6 +121,17 @@ class ConsensusParams extends $pb.GeneratedMessage {
   void clearVersion() => clearField(4);
   @$pb.TagNumber(4)
   VersionParams ensureVersion() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  ABCIParams get abci => $_getN(4);
+  @$pb.TagNumber(5)
+  set abci(ABCIParams v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasAbci() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearAbci() => clearField(5);
+  @$pb.TagNumber(5)
+  ABCIParams ensureAbci() => $_ensure(4);
 }
 
 /// BlockParams contains limits on the block size.
@@ -191,7 +207,7 @@ class BlockParams extends $pb.GeneratedMessage {
 class EvidenceParams extends $pb.GeneratedMessage {
   factory EvidenceParams({
     $fixnum.Int64? maxAgeNumBlocks,
-    $56.Duration? maxAgeDuration,
+    $55.Duration? maxAgeDuration,
     $fixnum.Int64? maxBytes,
   }) {
     final $result = create();
@@ -212,7 +228,7 @@ class EvidenceParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EvidenceParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'maxAgeNumBlocks')
-    ..aOM<$56.Duration>(2, _omitFieldNames ? '' : 'maxAgeDuration', subBuilder: $56.Duration.create)
+    ..aOM<$55.Duration>(2, _omitFieldNames ? '' : 'maxAgeDuration', subBuilder: $55.Duration.create)
     ..aInt64(3, _omitFieldNames ? '' : 'maxBytes')
     ..hasRequiredFields = false
   ;
@@ -257,15 +273,15 @@ class EvidenceParams extends $pb.GeneratedMessage {
   ///  mechanism for handling [Nothing-At-Stake
   ///  attacks](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed).
   @$pb.TagNumber(2)
-  $56.Duration get maxAgeDuration => $_getN(1);
+  $55.Duration get maxAgeDuration => $_getN(1);
   @$pb.TagNumber(2)
-  set maxAgeDuration($56.Duration v) { setField(2, v); }
+  set maxAgeDuration($55.Duration v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMaxAgeDuration() => $_has(1);
   @$pb.TagNumber(2)
   void clearMaxAgeDuration() => clearField(2);
   @$pb.TagNumber(2)
-  $56.Duration ensureMaxAgeDuration() => $_ensure(1);
+  $55.Duration ensureMaxAgeDuration() => $_ensure(1);
 
   /// This sets the maximum size of total evidence in bytes that can be committed in a single block.
   /// and should fall comfortably under the max block bytes.
@@ -442,6 +458,66 @@ class HashedParams extends $pb.GeneratedMessage {
   $core.bool hasBlockMaxGas() => $_has(1);
   @$pb.TagNumber(2)
   void clearBlockMaxGas() => clearField(2);
+}
+
+/// ABCIParams configure functionality specific to the Application Blockchain Interface.
+class ABCIParams extends $pb.GeneratedMessage {
+  factory ABCIParams({
+    $fixnum.Int64? voteExtensionsEnableHeight,
+  }) {
+    final $result = create();
+    if (voteExtensionsEnableHeight != null) {
+      $result.voteExtensionsEnableHeight = voteExtensionsEnableHeight;
+    }
+    return $result;
+  }
+  ABCIParams._() : super();
+  factory ABCIParams.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ABCIParams.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ABCIParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'voteExtensionsEnableHeight')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ABCIParams clone() => ABCIParams()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ABCIParams copyWith(void Function(ABCIParams) updates) => super.copyWith((message) => updates(message as ABCIParams)) as ABCIParams;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ABCIParams create() => ABCIParams._();
+  ABCIParams createEmptyInstance() => create();
+  static $pb.PbList<ABCIParams> createRepeated() => $pb.PbList<ABCIParams>();
+  @$core.pragma('dart2js:noInline')
+  static ABCIParams getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ABCIParams>(create);
+  static ABCIParams? _defaultInstance;
+
+  ///  vote_extensions_enable_height configures the first height during which
+  ///  vote extensions will be enabled. During this specified height, and for all
+  ///  subsequent heights, precommit messages that do not contain valid extension data
+  ///  will be considered invalid. Prior to this height, vote extensions will not
+  ///  be used or accepted by validators on the network.
+  ///
+  ///  Once enabled, vote extensions will be created by the application in ExtendVote,
+  ///  passed to the application for validation in VerifyVoteExtension and given
+  ///  to the application to use when proposing a block during PrepareProposal.
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get voteExtensionsEnableHeight => $_getI64(0);
+  @$pb.TagNumber(1)
+  set voteExtensionsEnableHeight($fixnum.Int64 v) { $_setInt64(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasVoteExtensionsEnableHeight() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearVoteExtensionsEnableHeight() => clearField(1);
 }
 
 

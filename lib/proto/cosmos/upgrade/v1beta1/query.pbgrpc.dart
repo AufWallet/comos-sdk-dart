@@ -15,32 +15,32 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $40;
+import 'query.pb.dart' as $43;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.upgrade.v1beta1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$currentPlan = $grpc.ClientMethod<$40.QueryCurrentPlanRequest, $40.QueryCurrentPlanResponse>(
+  static final _$currentPlan = $grpc.ClientMethod<$43.QueryCurrentPlanRequest, $43.QueryCurrentPlanResponse>(
       '/cosmos.upgrade.v1beta1.Query/CurrentPlan',
-      ($40.QueryCurrentPlanRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $40.QueryCurrentPlanResponse.fromBuffer(value));
-  static final _$appliedPlan = $grpc.ClientMethod<$40.QueryAppliedPlanRequest, $40.QueryAppliedPlanResponse>(
+      ($43.QueryCurrentPlanRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $43.QueryCurrentPlanResponse.fromBuffer(value));
+  static final _$appliedPlan = $grpc.ClientMethod<$43.QueryAppliedPlanRequest, $43.QueryAppliedPlanResponse>(
       '/cosmos.upgrade.v1beta1.Query/AppliedPlan',
-      ($40.QueryAppliedPlanRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $40.QueryAppliedPlanResponse.fromBuffer(value));
-  static final _$upgradedConsensusState = $grpc.ClientMethod<$40.QueryUpgradedConsensusStateRequest, $40.QueryUpgradedConsensusStateResponse>(
+      ($43.QueryAppliedPlanRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $43.QueryAppliedPlanResponse.fromBuffer(value));
+  static final _$upgradedConsensusState = $grpc.ClientMethod<$43.QueryUpgradedConsensusStateRequest, $43.QueryUpgradedConsensusStateResponse>(
       '/cosmos.upgrade.v1beta1.Query/UpgradedConsensusState',
-      ($40.QueryUpgradedConsensusStateRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $40.QueryUpgradedConsensusStateResponse.fromBuffer(value));
-  static final _$moduleVersions = $grpc.ClientMethod<$40.QueryModuleVersionsRequest, $40.QueryModuleVersionsResponse>(
+      ($43.QueryUpgradedConsensusStateRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $43.QueryUpgradedConsensusStateResponse.fromBuffer(value));
+  static final _$moduleVersions = $grpc.ClientMethod<$43.QueryModuleVersionsRequest, $43.QueryModuleVersionsResponse>(
       '/cosmos.upgrade.v1beta1.Query/ModuleVersions',
-      ($40.QueryModuleVersionsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $40.QueryModuleVersionsResponse.fromBuffer(value));
-  static final _$authority = $grpc.ClientMethod<$40.QueryAuthorityRequest, $40.QueryAuthorityResponse>(
+      ($43.QueryModuleVersionsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $43.QueryModuleVersionsResponse.fromBuffer(value));
+  static final _$authority = $grpc.ClientMethod<$43.QueryAuthorityRequest, $43.QueryAuthorityResponse>(
       '/cosmos.upgrade.v1beta1.Query/Authority',
-      ($40.QueryAuthorityRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $40.QueryAuthorityResponse.fromBuffer(value));
+      ($43.QueryAuthorityRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $43.QueryAuthorityResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -48,23 +48,23 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$40.QueryCurrentPlanResponse> currentPlan($40.QueryCurrentPlanRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$43.QueryCurrentPlanResponse> currentPlan($43.QueryCurrentPlanRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$currentPlan, request, options: options);
   }
 
-  $grpc.ResponseFuture<$40.QueryAppliedPlanResponse> appliedPlan($40.QueryAppliedPlanRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$43.QueryAppliedPlanResponse> appliedPlan($43.QueryAppliedPlanRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$appliedPlan, request, options: options);
   }
 
-  $grpc.ResponseFuture<$40.QueryUpgradedConsensusStateResponse> upgradedConsensusState($40.QueryUpgradedConsensusStateRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$43.QueryUpgradedConsensusStateResponse> upgradedConsensusState($43.QueryUpgradedConsensusStateRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$upgradedConsensusState, request, options: options);
   }
 
-  $grpc.ResponseFuture<$40.QueryModuleVersionsResponse> moduleVersions($40.QueryModuleVersionsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$43.QueryModuleVersionsResponse> moduleVersions($43.QueryModuleVersionsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$moduleVersions, request, options: options);
   }
 
-  $grpc.ResponseFuture<$40.QueryAuthorityResponse> authority($40.QueryAuthorityRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$43.QueryAuthorityResponse> authority($43.QueryAuthorityRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$authority, request, options: options);
   }
 }
@@ -74,66 +74,66 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.upgrade.v1beta1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$40.QueryCurrentPlanRequest, $40.QueryCurrentPlanResponse>(
+    $addMethod($grpc.ServiceMethod<$43.QueryCurrentPlanRequest, $43.QueryCurrentPlanResponse>(
         'CurrentPlan',
         currentPlan_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $40.QueryCurrentPlanRequest.fromBuffer(value),
-        ($40.QueryCurrentPlanResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$40.QueryAppliedPlanRequest, $40.QueryAppliedPlanResponse>(
+        ($core.List<$core.int> value) => $43.QueryCurrentPlanRequest.fromBuffer(value),
+        ($43.QueryCurrentPlanResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$43.QueryAppliedPlanRequest, $43.QueryAppliedPlanResponse>(
         'AppliedPlan',
         appliedPlan_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $40.QueryAppliedPlanRequest.fromBuffer(value),
-        ($40.QueryAppliedPlanResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$40.QueryUpgradedConsensusStateRequest, $40.QueryUpgradedConsensusStateResponse>(
+        ($core.List<$core.int> value) => $43.QueryAppliedPlanRequest.fromBuffer(value),
+        ($43.QueryAppliedPlanResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$43.QueryUpgradedConsensusStateRequest, $43.QueryUpgradedConsensusStateResponse>(
         'UpgradedConsensusState',
         upgradedConsensusState_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $40.QueryUpgradedConsensusStateRequest.fromBuffer(value),
-        ($40.QueryUpgradedConsensusStateResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$40.QueryModuleVersionsRequest, $40.QueryModuleVersionsResponse>(
+        ($core.List<$core.int> value) => $43.QueryUpgradedConsensusStateRequest.fromBuffer(value),
+        ($43.QueryUpgradedConsensusStateResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$43.QueryModuleVersionsRequest, $43.QueryModuleVersionsResponse>(
         'ModuleVersions',
         moduleVersions_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $40.QueryModuleVersionsRequest.fromBuffer(value),
-        ($40.QueryModuleVersionsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$40.QueryAuthorityRequest, $40.QueryAuthorityResponse>(
+        ($core.List<$core.int> value) => $43.QueryModuleVersionsRequest.fromBuffer(value),
+        ($43.QueryModuleVersionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$43.QueryAuthorityRequest, $43.QueryAuthorityResponse>(
         'Authority',
         authority_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $40.QueryAuthorityRequest.fromBuffer(value),
-        ($40.QueryAuthorityResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $43.QueryAuthorityRequest.fromBuffer(value),
+        ($43.QueryAuthorityResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$40.QueryCurrentPlanResponse> currentPlan_Pre($grpc.ServiceCall call, $async.Future<$40.QueryCurrentPlanRequest> request) async {
+  $async.Future<$43.QueryCurrentPlanResponse> currentPlan_Pre($grpc.ServiceCall call, $async.Future<$43.QueryCurrentPlanRequest> request) async {
     return currentPlan(call, await request);
   }
 
-  $async.Future<$40.QueryAppliedPlanResponse> appliedPlan_Pre($grpc.ServiceCall call, $async.Future<$40.QueryAppliedPlanRequest> request) async {
+  $async.Future<$43.QueryAppliedPlanResponse> appliedPlan_Pre($grpc.ServiceCall call, $async.Future<$43.QueryAppliedPlanRequest> request) async {
     return appliedPlan(call, await request);
   }
 
-  $async.Future<$40.QueryUpgradedConsensusStateResponse> upgradedConsensusState_Pre($grpc.ServiceCall call, $async.Future<$40.QueryUpgradedConsensusStateRequest> request) async {
+  $async.Future<$43.QueryUpgradedConsensusStateResponse> upgradedConsensusState_Pre($grpc.ServiceCall call, $async.Future<$43.QueryUpgradedConsensusStateRequest> request) async {
     return upgradedConsensusState(call, await request);
   }
 
-  $async.Future<$40.QueryModuleVersionsResponse> moduleVersions_Pre($grpc.ServiceCall call, $async.Future<$40.QueryModuleVersionsRequest> request) async {
+  $async.Future<$43.QueryModuleVersionsResponse> moduleVersions_Pre($grpc.ServiceCall call, $async.Future<$43.QueryModuleVersionsRequest> request) async {
     return moduleVersions(call, await request);
   }
 
-  $async.Future<$40.QueryAuthorityResponse> authority_Pre($grpc.ServiceCall call, $async.Future<$40.QueryAuthorityRequest> request) async {
+  $async.Future<$43.QueryAuthorityResponse> authority_Pre($grpc.ServiceCall call, $async.Future<$43.QueryAuthorityRequest> request) async {
     return authority(call, await request);
   }
 
-  $async.Future<$40.QueryCurrentPlanResponse> currentPlan($grpc.ServiceCall call, $40.QueryCurrentPlanRequest request);
-  $async.Future<$40.QueryAppliedPlanResponse> appliedPlan($grpc.ServiceCall call, $40.QueryAppliedPlanRequest request);
-  $async.Future<$40.QueryUpgradedConsensusStateResponse> upgradedConsensusState($grpc.ServiceCall call, $40.QueryUpgradedConsensusStateRequest request);
-  $async.Future<$40.QueryModuleVersionsResponse> moduleVersions($grpc.ServiceCall call, $40.QueryModuleVersionsRequest request);
-  $async.Future<$40.QueryAuthorityResponse> authority($grpc.ServiceCall call, $40.QueryAuthorityRequest request);
+  $async.Future<$43.QueryCurrentPlanResponse> currentPlan($grpc.ServiceCall call, $43.QueryCurrentPlanRequest request);
+  $async.Future<$43.QueryAppliedPlanResponse> appliedPlan($grpc.ServiceCall call, $43.QueryAppliedPlanRequest request);
+  $async.Future<$43.QueryUpgradedConsensusStateResponse> upgradedConsensusState($grpc.ServiceCall call, $43.QueryUpgradedConsensusStateRequest request);
+  $async.Future<$43.QueryModuleVersionsResponse> moduleVersions($grpc.ServiceCall call, $43.QueryModuleVersionsRequest request);
+  $async.Future<$43.QueryAuthorityResponse> authority($grpc.ServiceCall call, $43.QueryAuthorityRequest request);
 }

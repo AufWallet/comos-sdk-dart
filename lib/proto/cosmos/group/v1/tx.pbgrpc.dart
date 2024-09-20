@@ -15,68 +15,68 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $27;
+import 'tx.pb.dart' as $29;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.group.v1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$createGroup = $grpc.ClientMethod<$27.MsgCreateGroup, $27.MsgCreateGroupResponse>(
+  static final _$createGroup = $grpc.ClientMethod<$29.MsgCreateGroup, $29.MsgCreateGroupResponse>(
       '/cosmos.group.v1.Msg/CreateGroup',
-      ($27.MsgCreateGroup value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgCreateGroupResponse.fromBuffer(value));
-  static final _$updateGroupMembers = $grpc.ClientMethod<$27.MsgUpdateGroupMembers, $27.MsgUpdateGroupMembersResponse>(
+      ($29.MsgCreateGroup value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgCreateGroupResponse.fromBuffer(value));
+  static final _$updateGroupMembers = $grpc.ClientMethod<$29.MsgUpdateGroupMembers, $29.MsgUpdateGroupMembersResponse>(
       '/cosmos.group.v1.Msg/UpdateGroupMembers',
-      ($27.MsgUpdateGroupMembers value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgUpdateGroupMembersResponse.fromBuffer(value));
-  static final _$updateGroupAdmin = $grpc.ClientMethod<$27.MsgUpdateGroupAdmin, $27.MsgUpdateGroupAdminResponse>(
+      ($29.MsgUpdateGroupMembers value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgUpdateGroupMembersResponse.fromBuffer(value));
+  static final _$updateGroupAdmin = $grpc.ClientMethod<$29.MsgUpdateGroupAdmin, $29.MsgUpdateGroupAdminResponse>(
       '/cosmos.group.v1.Msg/UpdateGroupAdmin',
-      ($27.MsgUpdateGroupAdmin value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgUpdateGroupAdminResponse.fromBuffer(value));
-  static final _$updateGroupMetadata = $grpc.ClientMethod<$27.MsgUpdateGroupMetadata, $27.MsgUpdateGroupMetadataResponse>(
+      ($29.MsgUpdateGroupAdmin value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgUpdateGroupAdminResponse.fromBuffer(value));
+  static final _$updateGroupMetadata = $grpc.ClientMethod<$29.MsgUpdateGroupMetadata, $29.MsgUpdateGroupMetadataResponse>(
       '/cosmos.group.v1.Msg/UpdateGroupMetadata',
-      ($27.MsgUpdateGroupMetadata value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgUpdateGroupMetadataResponse.fromBuffer(value));
-  static final _$createGroupPolicy = $grpc.ClientMethod<$27.MsgCreateGroupPolicy, $27.MsgCreateGroupPolicyResponse>(
+      ($29.MsgUpdateGroupMetadata value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgUpdateGroupMetadataResponse.fromBuffer(value));
+  static final _$createGroupPolicy = $grpc.ClientMethod<$29.MsgCreateGroupPolicy, $29.MsgCreateGroupPolicyResponse>(
       '/cosmos.group.v1.Msg/CreateGroupPolicy',
-      ($27.MsgCreateGroupPolicy value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgCreateGroupPolicyResponse.fromBuffer(value));
-  static final _$createGroupWithPolicy = $grpc.ClientMethod<$27.MsgCreateGroupWithPolicy, $27.MsgCreateGroupWithPolicyResponse>(
+      ($29.MsgCreateGroupPolicy value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgCreateGroupPolicyResponse.fromBuffer(value));
+  static final _$createGroupWithPolicy = $grpc.ClientMethod<$29.MsgCreateGroupWithPolicy, $29.MsgCreateGroupWithPolicyResponse>(
       '/cosmos.group.v1.Msg/CreateGroupWithPolicy',
-      ($27.MsgCreateGroupWithPolicy value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgCreateGroupWithPolicyResponse.fromBuffer(value));
-  static final _$updateGroupPolicyAdmin = $grpc.ClientMethod<$27.MsgUpdateGroupPolicyAdmin, $27.MsgUpdateGroupPolicyAdminResponse>(
+      ($29.MsgCreateGroupWithPolicy value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgCreateGroupWithPolicyResponse.fromBuffer(value));
+  static final _$updateGroupPolicyAdmin = $grpc.ClientMethod<$29.MsgUpdateGroupPolicyAdmin, $29.MsgUpdateGroupPolicyAdminResponse>(
       '/cosmos.group.v1.Msg/UpdateGroupPolicyAdmin',
-      ($27.MsgUpdateGroupPolicyAdmin value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgUpdateGroupPolicyAdminResponse.fromBuffer(value));
-  static final _$updateGroupPolicyDecisionPolicy = $grpc.ClientMethod<$27.MsgUpdateGroupPolicyDecisionPolicy, $27.MsgUpdateGroupPolicyDecisionPolicyResponse>(
+      ($29.MsgUpdateGroupPolicyAdmin value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgUpdateGroupPolicyAdminResponse.fromBuffer(value));
+  static final _$updateGroupPolicyDecisionPolicy = $grpc.ClientMethod<$29.MsgUpdateGroupPolicyDecisionPolicy, $29.MsgUpdateGroupPolicyDecisionPolicyResponse>(
       '/cosmos.group.v1.Msg/UpdateGroupPolicyDecisionPolicy',
-      ($27.MsgUpdateGroupPolicyDecisionPolicy value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgUpdateGroupPolicyDecisionPolicyResponse.fromBuffer(value));
-  static final _$updateGroupPolicyMetadata = $grpc.ClientMethod<$27.MsgUpdateGroupPolicyMetadata, $27.MsgUpdateGroupPolicyMetadataResponse>(
+      ($29.MsgUpdateGroupPolicyDecisionPolicy value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgUpdateGroupPolicyDecisionPolicyResponse.fromBuffer(value));
+  static final _$updateGroupPolicyMetadata = $grpc.ClientMethod<$29.MsgUpdateGroupPolicyMetadata, $29.MsgUpdateGroupPolicyMetadataResponse>(
       '/cosmos.group.v1.Msg/UpdateGroupPolicyMetadata',
-      ($27.MsgUpdateGroupPolicyMetadata value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgUpdateGroupPolicyMetadataResponse.fromBuffer(value));
-  static final _$submitProposal = $grpc.ClientMethod<$27.MsgSubmitProposal, $27.MsgSubmitProposalResponse>(
+      ($29.MsgUpdateGroupPolicyMetadata value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgUpdateGroupPolicyMetadataResponse.fromBuffer(value));
+  static final _$submitProposal = $grpc.ClientMethod<$29.MsgSubmitProposal, $29.MsgSubmitProposalResponse>(
       '/cosmos.group.v1.Msg/SubmitProposal',
-      ($27.MsgSubmitProposal value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgSubmitProposalResponse.fromBuffer(value));
-  static final _$withdrawProposal = $grpc.ClientMethod<$27.MsgWithdrawProposal, $27.MsgWithdrawProposalResponse>(
+      ($29.MsgSubmitProposal value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgSubmitProposalResponse.fromBuffer(value));
+  static final _$withdrawProposal = $grpc.ClientMethod<$29.MsgWithdrawProposal, $29.MsgWithdrawProposalResponse>(
       '/cosmos.group.v1.Msg/WithdrawProposal',
-      ($27.MsgWithdrawProposal value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgWithdrawProposalResponse.fromBuffer(value));
-  static final _$vote = $grpc.ClientMethod<$27.MsgVote, $27.MsgVoteResponse>(
+      ($29.MsgWithdrawProposal value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgWithdrawProposalResponse.fromBuffer(value));
+  static final _$vote = $grpc.ClientMethod<$29.MsgVote, $29.MsgVoteResponse>(
       '/cosmos.group.v1.Msg/Vote',
-      ($27.MsgVote value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgVoteResponse.fromBuffer(value));
-  static final _$exec = $grpc.ClientMethod<$27.MsgExec, $27.MsgExecResponse>(
+      ($29.MsgVote value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgVoteResponse.fromBuffer(value));
+  static final _$exec = $grpc.ClientMethod<$29.MsgExec, $29.MsgExecResponse>(
       '/cosmos.group.v1.Msg/Exec',
-      ($27.MsgExec value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgExecResponse.fromBuffer(value));
-  static final _$leaveGroup = $grpc.ClientMethod<$27.MsgLeaveGroup, $27.MsgLeaveGroupResponse>(
+      ($29.MsgExec value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgExecResponse.fromBuffer(value));
+  static final _$leaveGroup = $grpc.ClientMethod<$29.MsgLeaveGroup, $29.MsgLeaveGroupResponse>(
       '/cosmos.group.v1.Msg/LeaveGroup',
-      ($27.MsgLeaveGroup value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $27.MsgLeaveGroupResponse.fromBuffer(value));
+      ($29.MsgLeaveGroup value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $29.MsgLeaveGroupResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -84,59 +84,59 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$27.MsgCreateGroupResponse> createGroup($27.MsgCreateGroup request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgCreateGroupResponse> createGroup($29.MsgCreateGroup request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createGroup, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgUpdateGroupMembersResponse> updateGroupMembers($27.MsgUpdateGroupMembers request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgUpdateGroupMembersResponse> updateGroupMembers($29.MsgUpdateGroupMembers request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateGroupMembers, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgUpdateGroupAdminResponse> updateGroupAdmin($27.MsgUpdateGroupAdmin request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgUpdateGroupAdminResponse> updateGroupAdmin($29.MsgUpdateGroupAdmin request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateGroupAdmin, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgUpdateGroupMetadataResponse> updateGroupMetadata($27.MsgUpdateGroupMetadata request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgUpdateGroupMetadataResponse> updateGroupMetadata($29.MsgUpdateGroupMetadata request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateGroupMetadata, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgCreateGroupPolicyResponse> createGroupPolicy($27.MsgCreateGroupPolicy request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgCreateGroupPolicyResponse> createGroupPolicy($29.MsgCreateGroupPolicy request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createGroupPolicy, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgCreateGroupWithPolicyResponse> createGroupWithPolicy($27.MsgCreateGroupWithPolicy request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgCreateGroupWithPolicyResponse> createGroupWithPolicy($29.MsgCreateGroupWithPolicy request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createGroupWithPolicy, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgUpdateGroupPolicyAdminResponse> updateGroupPolicyAdmin($27.MsgUpdateGroupPolicyAdmin request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgUpdateGroupPolicyAdminResponse> updateGroupPolicyAdmin($29.MsgUpdateGroupPolicyAdmin request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateGroupPolicyAdmin, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgUpdateGroupPolicyDecisionPolicyResponse> updateGroupPolicyDecisionPolicy($27.MsgUpdateGroupPolicyDecisionPolicy request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgUpdateGroupPolicyDecisionPolicyResponse> updateGroupPolicyDecisionPolicy($29.MsgUpdateGroupPolicyDecisionPolicy request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateGroupPolicyDecisionPolicy, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgUpdateGroupPolicyMetadataResponse> updateGroupPolicyMetadata($27.MsgUpdateGroupPolicyMetadata request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgUpdateGroupPolicyMetadataResponse> updateGroupPolicyMetadata($29.MsgUpdateGroupPolicyMetadata request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateGroupPolicyMetadata, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgSubmitProposalResponse> submitProposal($27.MsgSubmitProposal request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgSubmitProposalResponse> submitProposal($29.MsgSubmitProposal request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$submitProposal, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgWithdrawProposalResponse> withdrawProposal($27.MsgWithdrawProposal request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgWithdrawProposalResponse> withdrawProposal($29.MsgWithdrawProposal request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$withdrawProposal, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgVoteResponse> vote($27.MsgVote request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgVoteResponse> vote($29.MsgVote request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$vote, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgExecResponse> exec($27.MsgExec request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgExecResponse> exec($29.MsgExec request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$exec, request, options: options);
   }
 
-  $grpc.ResponseFuture<$27.MsgLeaveGroupResponse> leaveGroup($27.MsgLeaveGroup request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$29.MsgLeaveGroupResponse> leaveGroup($29.MsgLeaveGroup request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$leaveGroup, request, options: options);
   }
 }
@@ -146,174 +146,174 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.group.v1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$27.MsgCreateGroup, $27.MsgCreateGroupResponse>(
+    $addMethod($grpc.ServiceMethod<$29.MsgCreateGroup, $29.MsgCreateGroupResponse>(
         'CreateGroup',
         createGroup_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgCreateGroup.fromBuffer(value),
-        ($27.MsgCreateGroupResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgUpdateGroupMembers, $27.MsgUpdateGroupMembersResponse>(
+        ($core.List<$core.int> value) => $29.MsgCreateGroup.fromBuffer(value),
+        ($29.MsgCreateGroupResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgUpdateGroupMembers, $29.MsgUpdateGroupMembersResponse>(
         'UpdateGroupMembers',
         updateGroupMembers_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgUpdateGroupMembers.fromBuffer(value),
-        ($27.MsgUpdateGroupMembersResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgUpdateGroupAdmin, $27.MsgUpdateGroupAdminResponse>(
+        ($core.List<$core.int> value) => $29.MsgUpdateGroupMembers.fromBuffer(value),
+        ($29.MsgUpdateGroupMembersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgUpdateGroupAdmin, $29.MsgUpdateGroupAdminResponse>(
         'UpdateGroupAdmin',
         updateGroupAdmin_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgUpdateGroupAdmin.fromBuffer(value),
-        ($27.MsgUpdateGroupAdminResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgUpdateGroupMetadata, $27.MsgUpdateGroupMetadataResponse>(
+        ($core.List<$core.int> value) => $29.MsgUpdateGroupAdmin.fromBuffer(value),
+        ($29.MsgUpdateGroupAdminResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgUpdateGroupMetadata, $29.MsgUpdateGroupMetadataResponse>(
         'UpdateGroupMetadata',
         updateGroupMetadata_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgUpdateGroupMetadata.fromBuffer(value),
-        ($27.MsgUpdateGroupMetadataResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgCreateGroupPolicy, $27.MsgCreateGroupPolicyResponse>(
+        ($core.List<$core.int> value) => $29.MsgUpdateGroupMetadata.fromBuffer(value),
+        ($29.MsgUpdateGroupMetadataResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgCreateGroupPolicy, $29.MsgCreateGroupPolicyResponse>(
         'CreateGroupPolicy',
         createGroupPolicy_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgCreateGroupPolicy.fromBuffer(value),
-        ($27.MsgCreateGroupPolicyResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgCreateGroupWithPolicy, $27.MsgCreateGroupWithPolicyResponse>(
+        ($core.List<$core.int> value) => $29.MsgCreateGroupPolicy.fromBuffer(value),
+        ($29.MsgCreateGroupPolicyResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgCreateGroupWithPolicy, $29.MsgCreateGroupWithPolicyResponse>(
         'CreateGroupWithPolicy',
         createGroupWithPolicy_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgCreateGroupWithPolicy.fromBuffer(value),
-        ($27.MsgCreateGroupWithPolicyResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgUpdateGroupPolicyAdmin, $27.MsgUpdateGroupPolicyAdminResponse>(
+        ($core.List<$core.int> value) => $29.MsgCreateGroupWithPolicy.fromBuffer(value),
+        ($29.MsgCreateGroupWithPolicyResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgUpdateGroupPolicyAdmin, $29.MsgUpdateGroupPolicyAdminResponse>(
         'UpdateGroupPolicyAdmin',
         updateGroupPolicyAdmin_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgUpdateGroupPolicyAdmin.fromBuffer(value),
-        ($27.MsgUpdateGroupPolicyAdminResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgUpdateGroupPolicyDecisionPolicy, $27.MsgUpdateGroupPolicyDecisionPolicyResponse>(
+        ($core.List<$core.int> value) => $29.MsgUpdateGroupPolicyAdmin.fromBuffer(value),
+        ($29.MsgUpdateGroupPolicyAdminResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgUpdateGroupPolicyDecisionPolicy, $29.MsgUpdateGroupPolicyDecisionPolicyResponse>(
         'UpdateGroupPolicyDecisionPolicy',
         updateGroupPolicyDecisionPolicy_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgUpdateGroupPolicyDecisionPolicy.fromBuffer(value),
-        ($27.MsgUpdateGroupPolicyDecisionPolicyResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgUpdateGroupPolicyMetadata, $27.MsgUpdateGroupPolicyMetadataResponse>(
+        ($core.List<$core.int> value) => $29.MsgUpdateGroupPolicyDecisionPolicy.fromBuffer(value),
+        ($29.MsgUpdateGroupPolicyDecisionPolicyResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgUpdateGroupPolicyMetadata, $29.MsgUpdateGroupPolicyMetadataResponse>(
         'UpdateGroupPolicyMetadata',
         updateGroupPolicyMetadata_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgUpdateGroupPolicyMetadata.fromBuffer(value),
-        ($27.MsgUpdateGroupPolicyMetadataResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgSubmitProposal, $27.MsgSubmitProposalResponse>(
+        ($core.List<$core.int> value) => $29.MsgUpdateGroupPolicyMetadata.fromBuffer(value),
+        ($29.MsgUpdateGroupPolicyMetadataResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgSubmitProposal, $29.MsgSubmitProposalResponse>(
         'SubmitProposal',
         submitProposal_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgSubmitProposal.fromBuffer(value),
-        ($27.MsgSubmitProposalResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgWithdrawProposal, $27.MsgWithdrawProposalResponse>(
+        ($core.List<$core.int> value) => $29.MsgSubmitProposal.fromBuffer(value),
+        ($29.MsgSubmitProposalResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgWithdrawProposal, $29.MsgWithdrawProposalResponse>(
         'WithdrawProposal',
         withdrawProposal_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgWithdrawProposal.fromBuffer(value),
-        ($27.MsgWithdrawProposalResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgVote, $27.MsgVoteResponse>(
+        ($core.List<$core.int> value) => $29.MsgWithdrawProposal.fromBuffer(value),
+        ($29.MsgWithdrawProposalResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgVote, $29.MsgVoteResponse>(
         'Vote',
         vote_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgVote.fromBuffer(value),
-        ($27.MsgVoteResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgExec, $27.MsgExecResponse>(
+        ($core.List<$core.int> value) => $29.MsgVote.fromBuffer(value),
+        ($29.MsgVoteResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgExec, $29.MsgExecResponse>(
         'Exec',
         exec_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgExec.fromBuffer(value),
-        ($27.MsgExecResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$27.MsgLeaveGroup, $27.MsgLeaveGroupResponse>(
+        ($core.List<$core.int> value) => $29.MsgExec.fromBuffer(value),
+        ($29.MsgExecResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$29.MsgLeaveGroup, $29.MsgLeaveGroupResponse>(
         'LeaveGroup',
         leaveGroup_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $27.MsgLeaveGroup.fromBuffer(value),
-        ($27.MsgLeaveGroupResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $29.MsgLeaveGroup.fromBuffer(value),
+        ($29.MsgLeaveGroupResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$27.MsgCreateGroupResponse> createGroup_Pre($grpc.ServiceCall call, $async.Future<$27.MsgCreateGroup> request) async {
+  $async.Future<$29.MsgCreateGroupResponse> createGroup_Pre($grpc.ServiceCall call, $async.Future<$29.MsgCreateGroup> request) async {
     return createGroup(call, await request);
   }
 
-  $async.Future<$27.MsgUpdateGroupMembersResponse> updateGroupMembers_Pre($grpc.ServiceCall call, $async.Future<$27.MsgUpdateGroupMembers> request) async {
+  $async.Future<$29.MsgUpdateGroupMembersResponse> updateGroupMembers_Pre($grpc.ServiceCall call, $async.Future<$29.MsgUpdateGroupMembers> request) async {
     return updateGroupMembers(call, await request);
   }
 
-  $async.Future<$27.MsgUpdateGroupAdminResponse> updateGroupAdmin_Pre($grpc.ServiceCall call, $async.Future<$27.MsgUpdateGroupAdmin> request) async {
+  $async.Future<$29.MsgUpdateGroupAdminResponse> updateGroupAdmin_Pre($grpc.ServiceCall call, $async.Future<$29.MsgUpdateGroupAdmin> request) async {
     return updateGroupAdmin(call, await request);
   }
 
-  $async.Future<$27.MsgUpdateGroupMetadataResponse> updateGroupMetadata_Pre($grpc.ServiceCall call, $async.Future<$27.MsgUpdateGroupMetadata> request) async {
+  $async.Future<$29.MsgUpdateGroupMetadataResponse> updateGroupMetadata_Pre($grpc.ServiceCall call, $async.Future<$29.MsgUpdateGroupMetadata> request) async {
     return updateGroupMetadata(call, await request);
   }
 
-  $async.Future<$27.MsgCreateGroupPolicyResponse> createGroupPolicy_Pre($grpc.ServiceCall call, $async.Future<$27.MsgCreateGroupPolicy> request) async {
+  $async.Future<$29.MsgCreateGroupPolicyResponse> createGroupPolicy_Pre($grpc.ServiceCall call, $async.Future<$29.MsgCreateGroupPolicy> request) async {
     return createGroupPolicy(call, await request);
   }
 
-  $async.Future<$27.MsgCreateGroupWithPolicyResponse> createGroupWithPolicy_Pre($grpc.ServiceCall call, $async.Future<$27.MsgCreateGroupWithPolicy> request) async {
+  $async.Future<$29.MsgCreateGroupWithPolicyResponse> createGroupWithPolicy_Pre($grpc.ServiceCall call, $async.Future<$29.MsgCreateGroupWithPolicy> request) async {
     return createGroupWithPolicy(call, await request);
   }
 
-  $async.Future<$27.MsgUpdateGroupPolicyAdminResponse> updateGroupPolicyAdmin_Pre($grpc.ServiceCall call, $async.Future<$27.MsgUpdateGroupPolicyAdmin> request) async {
+  $async.Future<$29.MsgUpdateGroupPolicyAdminResponse> updateGroupPolicyAdmin_Pre($grpc.ServiceCall call, $async.Future<$29.MsgUpdateGroupPolicyAdmin> request) async {
     return updateGroupPolicyAdmin(call, await request);
   }
 
-  $async.Future<$27.MsgUpdateGroupPolicyDecisionPolicyResponse> updateGroupPolicyDecisionPolicy_Pre($grpc.ServiceCall call, $async.Future<$27.MsgUpdateGroupPolicyDecisionPolicy> request) async {
+  $async.Future<$29.MsgUpdateGroupPolicyDecisionPolicyResponse> updateGroupPolicyDecisionPolicy_Pre($grpc.ServiceCall call, $async.Future<$29.MsgUpdateGroupPolicyDecisionPolicy> request) async {
     return updateGroupPolicyDecisionPolicy(call, await request);
   }
 
-  $async.Future<$27.MsgUpdateGroupPolicyMetadataResponse> updateGroupPolicyMetadata_Pre($grpc.ServiceCall call, $async.Future<$27.MsgUpdateGroupPolicyMetadata> request) async {
+  $async.Future<$29.MsgUpdateGroupPolicyMetadataResponse> updateGroupPolicyMetadata_Pre($grpc.ServiceCall call, $async.Future<$29.MsgUpdateGroupPolicyMetadata> request) async {
     return updateGroupPolicyMetadata(call, await request);
   }
 
-  $async.Future<$27.MsgSubmitProposalResponse> submitProposal_Pre($grpc.ServiceCall call, $async.Future<$27.MsgSubmitProposal> request) async {
+  $async.Future<$29.MsgSubmitProposalResponse> submitProposal_Pre($grpc.ServiceCall call, $async.Future<$29.MsgSubmitProposal> request) async {
     return submitProposal(call, await request);
   }
 
-  $async.Future<$27.MsgWithdrawProposalResponse> withdrawProposal_Pre($grpc.ServiceCall call, $async.Future<$27.MsgWithdrawProposal> request) async {
+  $async.Future<$29.MsgWithdrawProposalResponse> withdrawProposal_Pre($grpc.ServiceCall call, $async.Future<$29.MsgWithdrawProposal> request) async {
     return withdrawProposal(call, await request);
   }
 
-  $async.Future<$27.MsgVoteResponse> vote_Pre($grpc.ServiceCall call, $async.Future<$27.MsgVote> request) async {
+  $async.Future<$29.MsgVoteResponse> vote_Pre($grpc.ServiceCall call, $async.Future<$29.MsgVote> request) async {
     return vote(call, await request);
   }
 
-  $async.Future<$27.MsgExecResponse> exec_Pre($grpc.ServiceCall call, $async.Future<$27.MsgExec> request) async {
+  $async.Future<$29.MsgExecResponse> exec_Pre($grpc.ServiceCall call, $async.Future<$29.MsgExec> request) async {
     return exec(call, await request);
   }
 
-  $async.Future<$27.MsgLeaveGroupResponse> leaveGroup_Pre($grpc.ServiceCall call, $async.Future<$27.MsgLeaveGroup> request) async {
+  $async.Future<$29.MsgLeaveGroupResponse> leaveGroup_Pre($grpc.ServiceCall call, $async.Future<$29.MsgLeaveGroup> request) async {
     return leaveGroup(call, await request);
   }
 
-  $async.Future<$27.MsgCreateGroupResponse> createGroup($grpc.ServiceCall call, $27.MsgCreateGroup request);
-  $async.Future<$27.MsgUpdateGroupMembersResponse> updateGroupMembers($grpc.ServiceCall call, $27.MsgUpdateGroupMembers request);
-  $async.Future<$27.MsgUpdateGroupAdminResponse> updateGroupAdmin($grpc.ServiceCall call, $27.MsgUpdateGroupAdmin request);
-  $async.Future<$27.MsgUpdateGroupMetadataResponse> updateGroupMetadata($grpc.ServiceCall call, $27.MsgUpdateGroupMetadata request);
-  $async.Future<$27.MsgCreateGroupPolicyResponse> createGroupPolicy($grpc.ServiceCall call, $27.MsgCreateGroupPolicy request);
-  $async.Future<$27.MsgCreateGroupWithPolicyResponse> createGroupWithPolicy($grpc.ServiceCall call, $27.MsgCreateGroupWithPolicy request);
-  $async.Future<$27.MsgUpdateGroupPolicyAdminResponse> updateGroupPolicyAdmin($grpc.ServiceCall call, $27.MsgUpdateGroupPolicyAdmin request);
-  $async.Future<$27.MsgUpdateGroupPolicyDecisionPolicyResponse> updateGroupPolicyDecisionPolicy($grpc.ServiceCall call, $27.MsgUpdateGroupPolicyDecisionPolicy request);
-  $async.Future<$27.MsgUpdateGroupPolicyMetadataResponse> updateGroupPolicyMetadata($grpc.ServiceCall call, $27.MsgUpdateGroupPolicyMetadata request);
-  $async.Future<$27.MsgSubmitProposalResponse> submitProposal($grpc.ServiceCall call, $27.MsgSubmitProposal request);
-  $async.Future<$27.MsgWithdrawProposalResponse> withdrawProposal($grpc.ServiceCall call, $27.MsgWithdrawProposal request);
-  $async.Future<$27.MsgVoteResponse> vote($grpc.ServiceCall call, $27.MsgVote request);
-  $async.Future<$27.MsgExecResponse> exec($grpc.ServiceCall call, $27.MsgExec request);
-  $async.Future<$27.MsgLeaveGroupResponse> leaveGroup($grpc.ServiceCall call, $27.MsgLeaveGroup request);
+  $async.Future<$29.MsgCreateGroupResponse> createGroup($grpc.ServiceCall call, $29.MsgCreateGroup request);
+  $async.Future<$29.MsgUpdateGroupMembersResponse> updateGroupMembers($grpc.ServiceCall call, $29.MsgUpdateGroupMembers request);
+  $async.Future<$29.MsgUpdateGroupAdminResponse> updateGroupAdmin($grpc.ServiceCall call, $29.MsgUpdateGroupAdmin request);
+  $async.Future<$29.MsgUpdateGroupMetadataResponse> updateGroupMetadata($grpc.ServiceCall call, $29.MsgUpdateGroupMetadata request);
+  $async.Future<$29.MsgCreateGroupPolicyResponse> createGroupPolicy($grpc.ServiceCall call, $29.MsgCreateGroupPolicy request);
+  $async.Future<$29.MsgCreateGroupWithPolicyResponse> createGroupWithPolicy($grpc.ServiceCall call, $29.MsgCreateGroupWithPolicy request);
+  $async.Future<$29.MsgUpdateGroupPolicyAdminResponse> updateGroupPolicyAdmin($grpc.ServiceCall call, $29.MsgUpdateGroupPolicyAdmin request);
+  $async.Future<$29.MsgUpdateGroupPolicyDecisionPolicyResponse> updateGroupPolicyDecisionPolicy($grpc.ServiceCall call, $29.MsgUpdateGroupPolicyDecisionPolicy request);
+  $async.Future<$29.MsgUpdateGroupPolicyMetadataResponse> updateGroupPolicyMetadata($grpc.ServiceCall call, $29.MsgUpdateGroupPolicyMetadata request);
+  $async.Future<$29.MsgSubmitProposalResponse> submitProposal($grpc.ServiceCall call, $29.MsgSubmitProposal request);
+  $async.Future<$29.MsgWithdrawProposalResponse> withdrawProposal($grpc.ServiceCall call, $29.MsgWithdrawProposal request);
+  $async.Future<$29.MsgVoteResponse> vote($grpc.ServiceCall call, $29.MsgVote request);
+  $async.Future<$29.MsgExecResponse> exec($grpc.ServiceCall call, $29.MsgExec request);
+  $async.Future<$29.MsgLeaveGroupResponse> leaveGroup($grpc.ServiceCall call, $29.MsgLeaveGroup request);
 }

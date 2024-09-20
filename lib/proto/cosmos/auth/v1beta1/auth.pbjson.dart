@@ -49,8 +49,9 @@ const ModuleAccount$json = {
 final $typed_data.Uint8List moduleAccountDescriptor = $convert.base64Decode(
     'Cg1Nb2R1bGVBY2NvdW50EkkKDGJhc2VfYWNjb3VudBgBIAEoCzIgLmNvc21vcy5hdXRoLnYxYm'
     'V0YTEuQmFzZUFjY291bnRCBNDeHwFSC2Jhc2VBY2NvdW50EhIKBG5hbWUYAiABKAlSBG5hbWUS'
-    'IAoLcGVybWlzc2lvbnMYAyADKAlSC3Blcm1pc3Npb25zOkeIoB8AyrQtImNvc21vcy5hdXRoLn'
-    'YxYmV0YTEuTW9kdWxlQWNjb3VudEmK57AqGGNvc21vcy1zZGsvTW9kdWxlQWNjb3VudA==');
+    'IAoLcGVybWlzc2lvbnMYAyADKAlSC3Blcm1pc3Npb25zOlqIoB8AyrQtImNvc21vcy5hdXRoLn'
+    'YxYmV0YTEuTW9kdWxlQWNjb3VudEmK57AqGGNvc21vcy1zZGsvTW9kdWxlQWNjb3VudJLnsCoO'
+    'bW9kdWxlX2FjY291bnQ=');
 
 @$core.Deprecated('Use moduleCredentialDescriptor instead')
 const ModuleCredential$json = {
@@ -59,12 +60,14 @@ const ModuleCredential$json = {
     {'1': 'module_name', '3': 1, '4': 1, '5': 9, '10': 'moduleName'},
     {'1': 'derivation_keys', '3': 2, '4': 3, '5': 12, '10': 'derivationKeys'},
   ],
+  '7': {},
 };
 
 /// Descriptor for `ModuleCredential`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List moduleCredentialDescriptor = $convert.base64Decode(
     'ChBNb2R1bGVDcmVkZW50aWFsEh8KC21vZHVsZV9uYW1lGAEgASgJUgptb2R1bGVOYW1lEicKD2'
-    'Rlcml2YXRpb25fa2V5cxgCIAMoDFIOZGVyaXZhdGlvbktleXM=');
+    'Rlcml2YXRpb25fa2V5cxgCIAMoDFIOZGVyaXZhdGlvbktleXM6JornsCohY29zbW9zLXNkay9H'
+    'cm91cEFjY291bnRDcmVkZW50aWFs');
 
 @$core.Deprecated('Use paramsDescriptor instead')
 const Params$json = {

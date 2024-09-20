@@ -59,7 +59,7 @@ class ModuleOptions extends $pb.GeneratedMessage {
   static ModuleOptions getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ModuleOptions>(create);
   static ModuleOptions? _defaultInstance;
 
-  /// tx describes the tx command for the module.
+  /// tx describes the tx commands for the module.
   @$pb.TagNumber(1)
   ServiceCommandDescriptor get tx => $_getN(0);
   @$pb.TagNumber(1)
@@ -71,7 +71,7 @@ class ModuleOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ServiceCommandDescriptor ensureTx() => $_ensure(0);
 
-  /// query describes the tx command for the module.
+  /// query describes the queries commands for the module.
   @$pb.TagNumber(2)
   ServiceCommandDescriptor get query => $_getN(1);
   @$pb.TagNumber(2)
@@ -375,7 +375,6 @@ class FlagOptions extends $pb.GeneratedMessage {
     $core.String? shorthand,
     $core.String? usage,
     $core.String? defaultValue,
-    $core.String? noOptDefaultValue,
     $core.String? deprecated,
     $core.String? shorthandDeprecated,
     $core.bool? hidden,
@@ -392,9 +391,6 @@ class FlagOptions extends $pb.GeneratedMessage {
     }
     if (defaultValue != null) {
       $result.defaultValue = defaultValue;
-    }
-    if (noOptDefaultValue != null) {
-      $result.noOptDefaultValue = noOptDefaultValue;
     }
     if (deprecated != null) {
       $result.deprecated = deprecated;
@@ -416,7 +412,6 @@ class FlagOptions extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'shorthand')
     ..aOS(3, _omitFieldNames ? '' : 'usage')
     ..aOS(4, _omitFieldNames ? '' : 'defaultValue')
-    ..aOS(5, _omitFieldNames ? '' : 'noOptDefaultValue')
     ..aOS(6, _omitFieldNames ? '' : 'deprecated')
     ..aOS(7, _omitFieldNames ? '' : 'shorthandDeprecated')
     ..aOB(8, _omitFieldNames ? '' : 'hidden')
@@ -484,43 +479,33 @@ class FlagOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearDefaultValue() => clearField(4);
 
-  /// default value is the default value as text if the flag is used without any value.
-  @$pb.TagNumber(5)
-  $core.String get noOptDefaultValue => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set noOptDefaultValue($core.String v) { $_setString(4, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasNoOptDefaultValue() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearNoOptDefaultValue() => clearField(5);
-
   /// deprecated is the usage text to show if this flag is deprecated.
   @$pb.TagNumber(6)
-  $core.String get deprecated => $_getSZ(5);
+  $core.String get deprecated => $_getSZ(4);
   @$pb.TagNumber(6)
-  set deprecated($core.String v) { $_setString(5, v); }
+  set deprecated($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(6)
-  $core.bool hasDeprecated() => $_has(5);
+  $core.bool hasDeprecated() => $_has(4);
   @$pb.TagNumber(6)
   void clearDeprecated() => clearField(6);
 
   /// shorthand_deprecated is the usage text to show if the shorthand of this flag is deprecated.
   @$pb.TagNumber(7)
-  $core.String get shorthandDeprecated => $_getSZ(6);
+  $core.String get shorthandDeprecated => $_getSZ(5);
   @$pb.TagNumber(7)
-  set shorthandDeprecated($core.String v) { $_setString(6, v); }
+  set shorthandDeprecated($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(7)
-  $core.bool hasShorthandDeprecated() => $_has(6);
+  $core.bool hasShorthandDeprecated() => $_has(5);
   @$pb.TagNumber(7)
   void clearShorthandDeprecated() => clearField(7);
 
   /// hidden hides the flag from help/usage text
   @$pb.TagNumber(8)
-  $core.bool get hidden => $_getBF(7);
+  $core.bool get hidden => $_getBF(6);
   @$pb.TagNumber(8)
-  set hidden($core.bool v) { $_setBool(7, v); }
+  set hidden($core.bool v) { $_setBool(6, v); }
   @$pb.TagNumber(8)
-  $core.bool hasHidden() => $_has(7);
+  $core.bool hasHidden() => $_has(6);
   @$pb.TagNumber(8)
   void clearHidden() => clearField(8);
 }

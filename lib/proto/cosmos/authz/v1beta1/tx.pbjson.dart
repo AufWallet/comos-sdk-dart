@@ -31,17 +31,14 @@ final $typed_data.Uint8List msgGrantDescriptor = $convert.base64Decode(
     'dGVlEjwKBWdyYW50GAMgASgLMhsuY29zbW9zLmF1dGh6LnYxYmV0YTEuR3JhbnRCCcjeHwCo57'
     'AqAVIFZ3JhbnQ6JILnsCoHZ3JhbnRlcornsCoTY29zbW9zLXNkay9Nc2dHcmFudA==');
 
-@$core.Deprecated('Use msgExecResponseDescriptor instead')
-const MsgExecResponse$json = {
-  '1': 'MsgExecResponse',
-  '2': [
-    {'1': 'results', '3': 1, '4': 3, '5': 12, '10': 'results'},
-  ],
+@$core.Deprecated('Use msgGrantResponseDescriptor instead')
+const MsgGrantResponse$json = {
+  '1': 'MsgGrantResponse',
 };
 
-/// Descriptor for `MsgExecResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List msgExecResponseDescriptor = $convert.base64Decode(
-    'Cg9Nc2dFeGVjUmVzcG9uc2USGAoHcmVzdWx0cxgBIAMoDFIHcmVzdWx0cw==');
+/// Descriptor for `MsgGrantResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List msgGrantResponseDescriptor = $convert.base64Decode(
+    'ChBNc2dHcmFudFJlc3BvbnNl');
 
 @$core.Deprecated('Use msgExecDescriptor instead')
 const MsgExec$json = {
@@ -60,14 +57,17 @@ final $typed_data.Uint8List msgExecDescriptor = $convert.base64Decode(
     'YXNlLnYxYmV0YTEuTXNnUgRtc2dzOiOC57AqB2dyYW50ZWWK57AqEmNvc21vcy1zZGsvTXNnRX'
     'hlYw==');
 
-@$core.Deprecated('Use msgGrantResponseDescriptor instead')
-const MsgGrantResponse$json = {
-  '1': 'MsgGrantResponse',
+@$core.Deprecated('Use msgExecResponseDescriptor instead')
+const MsgExecResponse$json = {
+  '1': 'MsgExecResponse',
+  '2': [
+    {'1': 'results', '3': 1, '4': 3, '5': 12, '10': 'results'},
+  ],
 };
 
-/// Descriptor for `MsgGrantResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List msgGrantResponseDescriptor = $convert.base64Decode(
-    'ChBNc2dHcmFudFJlc3BvbnNl');
+/// Descriptor for `MsgExecResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List msgExecResponseDescriptor = $convert.base64Decode(
+    'Cg9Nc2dFeGVjUmVzcG9uc2USGAoHcmVzdWx0cxgBIAMoDFIHcmVzdWx0cw==');
 
 @$core.Deprecated('Use msgRevokeDescriptor instead')
 const MsgRevoke$json = {

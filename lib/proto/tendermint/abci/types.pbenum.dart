@@ -108,5 +108,22 @@ class ResponseProcessProposal_ProposalStatus extends $pb.ProtobufEnum {
   const ResponseProcessProposal_ProposalStatus._($core.int v, $core.String n) : super(v, n);
 }
 
+class ResponseVerifyVoteExtension_VerifyStatus extends $pb.ProtobufEnum {
+  static const ResponseVerifyVoteExtension_VerifyStatus UNKNOWN = ResponseVerifyVoteExtension_VerifyStatus._(0, _omitEnumNames ? '' : 'UNKNOWN');
+  static const ResponseVerifyVoteExtension_VerifyStatus ACCEPT = ResponseVerifyVoteExtension_VerifyStatus._(1, _omitEnumNames ? '' : 'ACCEPT');
+  static const ResponseVerifyVoteExtension_VerifyStatus REJECT = ResponseVerifyVoteExtension_VerifyStatus._(2, _omitEnumNames ? '' : 'REJECT');
+
+  static const $core.List<ResponseVerifyVoteExtension_VerifyStatus> values = <ResponseVerifyVoteExtension_VerifyStatus> [
+    UNKNOWN,
+    ACCEPT,
+    REJECT,
+  ];
+
+  static final $core.Map<$core.int, ResponseVerifyVoteExtension_VerifyStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ResponseVerifyVoteExtension_VerifyStatus? valueOf($core.int value) => _byValue[value];
+
+  const ResponseVerifyVoteExtension_VerifyStatus._($core.int v, $core.String n) : super(v, n);
+}
+
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

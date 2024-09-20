@@ -31,17 +31,17 @@ const GenesisState$json = {
 /// Descriptor for `GenesisState`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List genesisStateDescriptor = $convert.base64Decode(
     'CgxHZW5lc2lzU3RhdGUSQQoGcGFyYW1zGAEgASgLMh4uY29zbW9zLnN0YWtpbmcudjFiZXRhMS'
-    '5QYXJhbXNCCcjeHwCo57AqAVIGcGFyYW1zEl0KEGxhc3RfdG90YWxfcG93ZXIYAiABKAxCM8je'
-    'HwDa3h8mZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5JbnSo57AqAVIObGFzdF'
-    'RvdGFsUG93ZXISaQoVbGFzdF92YWxpZGF0b3JfcG93ZXJzGAMgAygLMiouY29zbW9zLnN0YWtp'
-    'bmcudjFiZXRhMS5MYXN0VmFsaWRhdG9yUG93ZXJCCcjeHwCo57AqAVITbGFzdFZhbGlkYXRvcl'
-    'Bvd2VycxJMCgp2YWxpZGF0b3JzGAQgAygLMiEuY29zbW9zLnN0YWtpbmcudjFiZXRhMS5WYWxp'
-    'ZGF0b3JCCcjeHwCo57AqAVIKdmFsaWRhdG9ycxJPCgtkZWxlZ2F0aW9ucxgFIAMoCzIiLmNvc2'
-    '1vcy5zdGFraW5nLnYxYmV0YTEuRGVsZWdhdGlvbkIJyN4fAKjnsCoBUgtkZWxlZ2F0aW9ucxJr'
-    'ChV1bmJvbmRpbmdfZGVsZWdhdGlvbnMYBiADKAsyKy5jb3Ntb3Muc3Rha2luZy52MWJldGExLl'
-    'VuYm9uZGluZ0RlbGVnYXRpb25CCcjeHwCo57AqAVIUdW5ib25kaW5nRGVsZWdhdGlvbnMSVQoN'
-    'cmVkZWxlZ2F0aW9ucxgHIAMoCzIkLmNvc21vcy5zdGFraW5nLnYxYmV0YTEuUmVkZWxlZ2F0aW'
-    '9uQgnI3h8AqOewKgFSDXJlZGVsZWdhdGlvbnMSGgoIZXhwb3J0ZWQYCCABKAhSCGV4cG9ydGVk');
+    '5QYXJhbXNCCcjeHwCo57AqAVIGcGFyYW1zEloKEGxhc3RfdG90YWxfcG93ZXIYAiABKAxCMMje'
+    'HwDa3h8VY29zbW9zc2RrLmlvL21hdGguSW500rQtCmNvc21vcy5JbnSo57AqAVIObGFzdFRvdG'
+    'FsUG93ZXISaQoVbGFzdF92YWxpZGF0b3JfcG93ZXJzGAMgAygLMiouY29zbW9zLnN0YWtpbmcu'
+    'djFiZXRhMS5MYXN0VmFsaWRhdG9yUG93ZXJCCcjeHwCo57AqAVITbGFzdFZhbGlkYXRvclBvd2'
+    'VycxJMCgp2YWxpZGF0b3JzGAQgAygLMiEuY29zbW9zLnN0YWtpbmcudjFiZXRhMS5WYWxpZGF0'
+    'b3JCCcjeHwCo57AqAVIKdmFsaWRhdG9ycxJPCgtkZWxlZ2F0aW9ucxgFIAMoCzIiLmNvc21vcy'
+    '5zdGFraW5nLnYxYmV0YTEuRGVsZWdhdGlvbkIJyN4fAKjnsCoBUgtkZWxlZ2F0aW9ucxJrChV1'
+    'bmJvbmRpbmdfZGVsZWdhdGlvbnMYBiADKAsyKy5jb3Ntb3Muc3Rha2luZy52MWJldGExLlVuYm'
+    '9uZGluZ0RlbGVnYXRpb25CCcjeHwCo57AqAVIUdW5ib25kaW5nRGVsZWdhdGlvbnMSVQoNcmVk'
+    'ZWxlZ2F0aW9ucxgHIAMoCzIkLmNvc21vcy5zdGFraW5nLnYxYmV0YTEuUmVkZWxlZ2F0aW9uQg'
+    'nI3h8AqOewKgFSDXJlZGVsZWdhdGlvbnMSGgoIZXhwb3J0ZWQYCCABKAhSCGV4cG9ydGVk');
 
 @$core.Deprecated('Use lastValidatorPowerDescriptor instead')
 const LastValidatorPower$json = {

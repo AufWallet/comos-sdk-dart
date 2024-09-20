@@ -14,8 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $43;
+import '../../../../google/protobuf/any.pb.dart' as $46;
 import '../../../../tendermint/abci/types.pb.dart' as $8;
+import '../../../../tendermint/types/block.pb.dart' as $63;
 
 /// TxResponse defines a structure containing relevant tx data and metadata. The
 /// tags are stringified and the log is JSON decoded.
@@ -31,7 +32,7 @@ class TxResponse extends $pb.GeneratedMessage {
     $core.String? info,
     $fixnum.Int64? gasWanted,
     $fixnum.Int64? gasUsed,
-    $43.Any? tx,
+    $46.Any? tx,
     $core.String? timestamp,
     $core.Iterable<$8.Event>? events,
   }) {
@@ -92,7 +93,7 @@ class TxResponse extends $pb.GeneratedMessage {
     ..aOS(8, _omitFieldNames ? '' : 'info')
     ..aInt64(9, _omitFieldNames ? '' : 'gasWanted')
     ..aInt64(10, _omitFieldNames ? '' : 'gasUsed')
-    ..aOM<$43.Any>(11, _omitFieldNames ? '' : 'tx', subBuilder: $43.Any.create)
+    ..aOM<$46.Any>(11, _omitFieldNames ? '' : 'tx', subBuilder: $46.Any.create)
     ..aOS(12, _omitFieldNames ? '' : 'timestamp')
     ..pc<$8.Event>(13, _omitFieldNames ? '' : 'events', $pb.PbFieldType.PM, subBuilder: $8.Event.create)
     ..hasRequiredFields = false
@@ -216,15 +217,15 @@ class TxResponse extends $pb.GeneratedMessage {
 
   /// The request transaction bytes.
   @$pb.TagNumber(11)
-  $43.Any get tx => $_getN(10);
+  $46.Any get tx => $_getN(10);
   @$pb.TagNumber(11)
-  set tx($43.Any v) { setField(11, v); }
+  set tx($46.Any v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasTx() => $_has(10);
   @$pb.TagNumber(11)
   void clearTx() => clearField(11);
   @$pb.TagNumber(11)
-  $43.Any ensureTx() => $_ensure(10);
+  $46.Any ensureTx() => $_ensure(10);
 
   /// Time of the previous block. For heights > 1, it's the weighted median of
   /// the timestamps of the valid votes in the block.LastCommit. For height == 1,
@@ -523,7 +524,7 @@ class Result extends $pb.GeneratedMessage {
     $core.List<$core.int>? data,
     $core.String? log,
     $core.Iterable<$8.Event>? events,
-    $core.Iterable<$43.Any>? msgResponses,
+    $core.Iterable<$46.Any>? msgResponses,
   }) {
     final $result = create();
     if (data != null) {
@@ -549,7 +550,7 @@ class Result extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
     ..aOS(2, _omitFieldNames ? '' : 'log')
     ..pc<$8.Event>(3, _omitFieldNames ? '' : 'events', $pb.PbFieldType.PM, subBuilder: $8.Event.create)
-    ..pc<$43.Any>(4, _omitFieldNames ? '' : 'msgResponses', $pb.PbFieldType.PM, subBuilder: $43.Any.create)
+    ..pc<$46.Any>(4, _omitFieldNames ? '' : 'msgResponses', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -610,7 +611,7 @@ class Result extends $pb.GeneratedMessage {
   ///
   ///  Since: cosmos-sdk 0.46
   @$pb.TagNumber(4)
-  $core.List<$43.Any> get msgResponses => $_getList(3);
+  $core.List<$46.Any> get msgResponses => $_getList(3);
 }
 
 /// SimulationResponse defines the response generated when a transaction is
@@ -755,7 +756,7 @@ class TxMsgData extends $pb.GeneratedMessage {
   factory TxMsgData({
   @$core.Deprecated('This field is deprecated.')
     $core.Iterable<MsgData>? data,
-    $core.Iterable<$43.Any>? msgResponses,
+    $core.Iterable<$46.Any>? msgResponses,
   }) {
     final $result = create();
     if (data != null) {
@@ -773,7 +774,7 @@ class TxMsgData extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TxMsgData', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.abci.v1beta1'), createEmptyInstance: create)
     ..pc<MsgData>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.PM, subBuilder: MsgData.create)
-    ..pc<$43.Any>(2, _omitFieldNames ? '' : 'msgResponses', $pb.PbFieldType.PM, subBuilder: $43.Any.create)
+    ..pc<$46.Any>(2, _omitFieldNames ? '' : 'msgResponses', $pb.PbFieldType.PM, subBuilder: $46.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -807,7 +808,7 @@ class TxMsgData extends $pb.GeneratedMessage {
   ///
   ///  Since: cosmos-sdk 0.46
   @$pb.TagNumber(2)
-  $core.List<$43.Any> get msgResponses => $_getList(1);
+  $core.List<$46.Any> get msgResponses => $_getList(1);
 }
 
 /// SearchTxsResult defines a structure for querying txs pageable
@@ -929,6 +930,127 @@ class SearchTxsResult extends $pb.GeneratedMessage {
   /// List of txs in current page
   @$pb.TagNumber(6)
   $core.List<TxResponse> get txs => $_getList(5);
+}
+
+/// SearchBlocksResult defines a structure for querying blocks pageable
+class SearchBlocksResult extends $pb.GeneratedMessage {
+  factory SearchBlocksResult({
+    $fixnum.Int64? totalCount,
+    $fixnum.Int64? count,
+    $fixnum.Int64? pageNumber,
+    $fixnum.Int64? pageTotal,
+    $fixnum.Int64? limit,
+    $core.Iterable<$63.Block>? blocks,
+  }) {
+    final $result = create();
+    if (totalCount != null) {
+      $result.totalCount = totalCount;
+    }
+    if (count != null) {
+      $result.count = count;
+    }
+    if (pageNumber != null) {
+      $result.pageNumber = pageNumber;
+    }
+    if (pageTotal != null) {
+      $result.pageTotal = pageTotal;
+    }
+    if (limit != null) {
+      $result.limit = limit;
+    }
+    if (blocks != null) {
+      $result.blocks.addAll(blocks);
+    }
+    return $result;
+  }
+  SearchBlocksResult._() : super();
+  factory SearchBlocksResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SearchBlocksResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SearchBlocksResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.abci.v1beta1'), createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'totalCount')
+    ..aInt64(2, _omitFieldNames ? '' : 'count')
+    ..aInt64(3, _omitFieldNames ? '' : 'pageNumber')
+    ..aInt64(4, _omitFieldNames ? '' : 'pageTotal')
+    ..aInt64(5, _omitFieldNames ? '' : 'limit')
+    ..pc<$63.Block>(6, _omitFieldNames ? '' : 'blocks', $pb.PbFieldType.PM, subBuilder: $63.Block.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SearchBlocksResult clone() => SearchBlocksResult()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SearchBlocksResult copyWith(void Function(SearchBlocksResult) updates) => super.copyWith((message) => updates(message as SearchBlocksResult)) as SearchBlocksResult;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SearchBlocksResult create() => SearchBlocksResult._();
+  SearchBlocksResult createEmptyInstance() => create();
+  static $pb.PbList<SearchBlocksResult> createRepeated() => $pb.PbList<SearchBlocksResult>();
+  @$core.pragma('dart2js:noInline')
+  static SearchBlocksResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SearchBlocksResult>(create);
+  static SearchBlocksResult? _defaultInstance;
+
+  /// Count of all blocks
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get totalCount => $_getI64(0);
+  @$pb.TagNumber(1)
+  set totalCount($fixnum.Int64 v) { $_setInt64(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTotalCount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTotalCount() => clearField(1);
+
+  /// Count of blocks in current page
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get count => $_getI64(1);
+  @$pb.TagNumber(2)
+  set count($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasCount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCount() => clearField(2);
+
+  /// Index of current page, start from 1
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get pageNumber => $_getI64(2);
+  @$pb.TagNumber(3)
+  set pageNumber($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPageNumber() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageNumber() => clearField(3);
+
+  /// Count of total pages
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get pageTotal => $_getI64(3);
+  @$pb.TagNumber(4)
+  set pageTotal($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPageTotal() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPageTotal() => clearField(4);
+
+  /// Max count blocks per page
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get limit => $_getI64(4);
+  @$pb.TagNumber(5)
+  set limit($fixnum.Int64 v) { $_setInt64(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasLimit() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearLimit() => clearField(5);
+
+  /// List of blocks in current page
+  @$pb.TagNumber(6)
+  $core.List<$63.Block> get blocks => $_getList(5);
 }
 
 

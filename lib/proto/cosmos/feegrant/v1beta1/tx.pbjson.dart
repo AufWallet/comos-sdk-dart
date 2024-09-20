@@ -67,3 +67,26 @@ const MsgRevokeAllowanceResponse$json = {
 final $typed_data.Uint8List msgRevokeAllowanceResponseDescriptor = $convert.base64Decode(
     'ChpNc2dSZXZva2VBbGxvd2FuY2VSZXNwb25zZQ==');
 
+@$core.Deprecated('Use msgPruneAllowancesDescriptor instead')
+const MsgPruneAllowances$json = {
+  '1': 'MsgPruneAllowances',
+  '2': [
+    {'1': 'pruner', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'pruner'},
+  ],
+  '7': {},
+};
+
+/// Descriptor for `MsgPruneAllowances`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List msgPruneAllowancesDescriptor = $convert.base64Decode(
+    'ChJNc2dQcnVuZUFsbG93YW5jZXMSMAoGcHJ1bmVyGAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3'
+    'NTdHJpbmdSBnBydW5lcjoLguewKgZwcnVuZXI=');
+
+@$core.Deprecated('Use msgPruneAllowancesResponseDescriptor instead')
+const MsgPruneAllowancesResponse$json = {
+  '1': 'MsgPruneAllowancesResponse',
+};
+
+/// Descriptor for `MsgPruneAllowancesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List msgPruneAllowancesResponseDescriptor = $convert.base64Decode(
+    'ChpNc2dQcnVuZUFsbG93YW5jZXNSZXNwb25zZQ==');
+

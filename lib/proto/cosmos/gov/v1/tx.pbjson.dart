@@ -23,6 +23,7 @@ const MsgSubmitProposal$json = {
     {'1': 'metadata', '3': 4, '4': 1, '5': 9, '10': 'metadata'},
     {'1': 'title', '3': 5, '4': 1, '5': 9, '10': 'title'},
     {'1': 'summary', '3': 6, '4': 1, '5': 9, '10': 'summary'},
+    {'1': 'expedited', '3': 7, '4': 1, '5': 8, '10': 'expedited'},
   ],
   '7': {},
 };
@@ -30,11 +31,13 @@ const MsgSubmitProposal$json = {
 /// Descriptor for `MsgSubmitProposal`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List msgSubmitProposalDescriptor = $convert.base64Decode(
     'ChFNc2dTdWJtaXRQcm9wb3NhbBIwCghtZXNzYWdlcxgBIAMoCzIULmdvb2dsZS5wcm90b2J1Zi'
-    '5BbnlSCG1lc3NhZ2VzEk0KD2luaXRpYWxfZGVwb3NpdBgCIAMoCzIZLmNvc21vcy5iYXNlLnYx'
-    'YmV0YTEuQ29pbkIJyN4fAKjnsCoBUg5pbml0aWFsRGVwb3NpdBI0Cghwcm9wb3NlchgDIAEoCU'
-    'IY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5nUghwcm9wb3NlchIaCghtZXRhZGF0YRgEIAEoCVII'
-    'bWV0YWRhdGESFAoFdGl0bGUYBSABKAlSBXRpdGxlEhgKB3N1bW1hcnkYBiABKAlSB3N1bW1hcn'
-    'k6MYLnsCoIcHJvcG9zZXKK57AqH2Nvc21vcy1zZGsvdjEvTXNnU3VibWl0UHJvcG9zYWw=');
+    '5BbnlSCG1lc3NhZ2VzEooBCg9pbml0aWFsX2RlcG9zaXQYAiADKAsyGS5jb3Ntb3MuYmFzZS52'
+    'MWJldGExLkNvaW5CRsjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy'
+    '5Db2luc5rnsCoMbGVnYWN5X2NvaW5zqOewKgFSDmluaXRpYWxEZXBvc2l0EjQKCHByb3Bvc2Vy'
+    'GAMgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmdSCHByb3Bvc2VyEhoKCG1ldGFkYXRhGA'
+    'QgASgJUghtZXRhZGF0YRIUCgV0aXRsZRgFIAEoCVIFdGl0bGUSGAoHc3VtbWFyeRgGIAEoCVIH'
+    'c3VtbWFyeRIcCglleHBlZGl0ZWQYByABKAhSCWV4cGVkaXRlZDoxguewKghwcm9wb3NlcornsC'
+    'ofY29zbW9zLXNkay92MS9Nc2dTdWJtaXRQcm9wb3NhbA==');
 
 @$core.Deprecated('Use msgSubmitProposalResponseDescriptor instead')
 const MsgSubmitProposalResponse$json = {
@@ -186,4 +189,37 @@ const MsgUpdateParamsResponse$json = {
 /// Descriptor for `MsgUpdateParamsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List msgUpdateParamsResponseDescriptor = $convert.base64Decode(
     'ChdNc2dVcGRhdGVQYXJhbXNSZXNwb25zZQ==');
+
+@$core.Deprecated('Use msgCancelProposalDescriptor instead')
+const MsgCancelProposal$json = {
+  '1': 'MsgCancelProposal',
+  '2': [
+    {'1': 'proposal_id', '3': 1, '4': 1, '5': 4, '8': {}, '10': 'proposalId'},
+    {'1': 'proposer', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'proposer'},
+  ],
+  '7': {},
+};
+
+/// Descriptor for `MsgCancelProposal`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List msgCancelProposalDescriptor = $convert.base64Decode(
+    'ChFNc2dDYW5jZWxQcm9wb3NhbBIwCgtwcm9wb3NhbF9pZBgBIAEoBEIP6t4fC3Byb3Bvc2FsX2'
+    'lkUgpwcm9wb3NhbElkEjQKCHByb3Bvc2VyGAIgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJp'
+    'bmdSCHByb3Bvc2VyOg2C57AqCHByb3Bvc2Vy');
+
+@$core.Deprecated('Use msgCancelProposalResponseDescriptor instead')
+const MsgCancelProposalResponse$json = {
+  '1': 'MsgCancelProposalResponse',
+  '2': [
+    {'1': 'proposal_id', '3': 1, '4': 1, '5': 4, '8': {}, '10': 'proposalId'},
+    {'1': 'canceled_time', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'canceledTime'},
+    {'1': 'canceled_height', '3': 3, '4': 1, '5': 4, '10': 'canceledHeight'},
+  ],
+};
+
+/// Descriptor for `MsgCancelProposalResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List msgCancelProposalResponseDescriptor = $convert.base64Decode(
+    'ChlNc2dDYW5jZWxQcm9wb3NhbFJlc3BvbnNlEjAKC3Byb3Bvc2FsX2lkGAEgASgEQg/q3h8LcH'
+    'JvcG9zYWxfaWRSCnByb3Bvc2FsSWQSSQoNY2FuY2VsZWRfdGltZRgCIAEoCzIaLmdvb2dsZS5w'
+    'cm90b2J1Zi5UaW1lc3RhbXBCCMjeHwCQ3x8BUgxjYW5jZWxlZFRpbWUSJwoPY2FuY2VsZWRfaG'
+    'VpZ2h0GAMgASgEUg5jYW5jZWxlZEhlaWdodA==');
 

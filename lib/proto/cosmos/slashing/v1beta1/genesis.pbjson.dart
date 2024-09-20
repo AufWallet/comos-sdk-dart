@@ -42,10 +42,10 @@ const SigningInfo$json = {
 
 /// Descriptor for `SigningInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List signingInfoDescriptor = $convert.base64Decode(
-    'CgtTaWduaW5nSW5mbxIyCgdhZGRyZXNzGAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbm'
-    'dSB2FkZHJlc3MSbgoWdmFsaWRhdG9yX3NpZ25pbmdfaW5mbxgCIAEoCzItLmNvc21vcy5zbGFz'
-    'aGluZy52MWJldGExLlZhbGlkYXRvclNpZ25pbmdJbmZvQgnI3h8AqOewKgFSFHZhbGlkYXRvcl'
-    'NpZ25pbmdJbmZv');
+    'CgtTaWduaW5nSW5mbxI7CgdhZGRyZXNzGAEgASgJQiHStC0dY29zbW9zLkNvbnNlbnN1c0FkZH'
+    'Jlc3NTdHJpbmdSB2FkZHJlc3MSbgoWdmFsaWRhdG9yX3NpZ25pbmdfaW5mbxgCIAEoCzItLmNv'
+    'c21vcy5zbGFzaGluZy52MWJldGExLlZhbGlkYXRvclNpZ25pbmdJbmZvQgnI3h8AqOewKgFSFH'
+    'ZhbGlkYXRvclNpZ25pbmdJbmZv');
 
 @$core.Deprecated('Use validatorMissedBlocksDescriptor instead')
 const ValidatorMissedBlocks$json = {
@@ -58,9 +58,10 @@ const ValidatorMissedBlocks$json = {
 
 /// Descriptor for `ValidatorMissedBlocks`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List validatorMissedBlocksDescriptor = $convert.base64Decode(
-    'ChVWYWxpZGF0b3JNaXNzZWRCbG9ja3MSMgoHYWRkcmVzcxgBIAEoCUIY0rQtFGNvc21vcy5BZG'
-    'RyZXNzU3RyaW5nUgdhZGRyZXNzElQKDW1pc3NlZF9ibG9ja3MYAiADKAsyJC5jb3Ntb3Muc2xh'
-    'c2hpbmcudjFiZXRhMS5NaXNzZWRCbG9ja0IJyN4fAKjnsCoBUgxtaXNzZWRCbG9ja3M=');
+    'ChVWYWxpZGF0b3JNaXNzZWRCbG9ja3MSOwoHYWRkcmVzcxgBIAEoCUIh0rQtHWNvc21vcy5Db2'
+    '5zZW5zdXNBZGRyZXNzU3RyaW5nUgdhZGRyZXNzElQKDW1pc3NlZF9ibG9ja3MYAiADKAsyJC5j'
+    'b3Ntb3Muc2xhc2hpbmcudjFiZXRhMS5NaXNzZWRCbG9ja0IJyN4fAKjnsCoBUgxtaXNzZWRCbG'
+    '9ja3M=');
 
 @$core.Deprecated('Use missedBlockDescriptor instead')
 const MissedBlock$json = {

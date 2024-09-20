@@ -22,6 +22,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
     $57.BlockParams? block,
     $57.EvidenceParams? evidence,
     $57.ValidatorParams? validator,
+    $57.ABCIParams? abci,
   }) {
     final $result = create();
     if (authority != null) {
@@ -36,6 +37,9 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
     if (validator != null) {
       $result.validator = validator;
     }
+    if (abci != null) {
+      $result.abci = abci;
+    }
     return $result;
   }
   MsgUpdateParams._() : super();
@@ -47,6 +51,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
     ..aOM<$57.BlockParams>(2, _omitFieldNames ? '' : 'block', subBuilder: $57.BlockParams.create)
     ..aOM<$57.EvidenceParams>(3, _omitFieldNames ? '' : 'evidence', subBuilder: $57.EvidenceParams.create)
     ..aOM<$57.ValidatorParams>(4, _omitFieldNames ? '' : 'validator', subBuilder: $57.ValidatorParams.create)
+    ..aOM<$57.ABCIParams>(5, _omitFieldNames ? '' : 'abci', subBuilder: $57.ABCIParams.create)
     ..hasRequiredFields = false
   ;
 
@@ -118,6 +123,18 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   void clearValidator() => clearField(4);
   @$pb.TagNumber(4)
   $57.ValidatorParams ensureValidator() => $_ensure(3);
+
+  /// Since: cosmos-sdk 0.50
+  @$pb.TagNumber(5)
+  $57.ABCIParams get abci => $_getN(4);
+  @$pb.TagNumber(5)
+  set abci($57.ABCIParams v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasAbci() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearAbci() => clearField(5);
+  @$pb.TagNumber(5)
+  $57.ABCIParams ensureAbci() => $_ensure(4);
 }
 
 /// MsgUpdateParamsResponse defines the response structure for executing a

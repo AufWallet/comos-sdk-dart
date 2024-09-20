@@ -30,6 +30,6 @@ final $typed_data.Uint8List equivocationDescriptor = $convert.base64Decode(
     'CgxFcXVpdm9jYXRpb24SFgoGaGVpZ2h0GAEgASgDUgZoZWlnaHQSPQoEdGltZRgCIAEoCzIaLm'
     'dvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCDcjeHwCQ3x8BqOewKgFSBHRpbWUSFAoFcG93ZXIY'
     'AyABKANSBXBvd2VyEkUKEWNvbnNlbnN1c19hZGRyZXNzGAQgASgJQhjStC0UY29zbW9zLkFkZH'
-    'Jlc3NTdHJpbmdSEGNvbnNlbnN1c0FkZHJlc3M6KIigHwCYoB8A6KAfAIrnsCoXY29zbW9zLXNk'
-    'ay9FcXVpdm9jYXRpb24=');
+    'Jlc3NTdHJpbmdSEGNvbnNlbnN1c0FkZHJlc3M6JIigHwDooB8AiuewKhdjb3Ntb3Mtc2RrL0Vx'
+    'dWl2b2NhdGlvbg==');
 

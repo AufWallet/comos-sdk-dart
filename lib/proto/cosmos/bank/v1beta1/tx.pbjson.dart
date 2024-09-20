@@ -28,10 +28,10 @@ const MsgSend$json = {
 final $typed_data.Uint8List msgSendDescriptor = $convert.base64Decode(
     'CgdNc2dTZW5kEjsKDGZyb21fYWRkcmVzcxgBIAEoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW'
     '5nUgtmcm9tQWRkcmVzcxI3Cgp0b19hZGRyZXNzGAIgASgJQhjStC0UY29zbW9zLkFkZHJlc3NT'
-    'dHJpbmdSCXRvQWRkcmVzcxJoCgZhbW91bnQYAyADKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLk'
-    'NvaW5CNcjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5Db2luc6jn'
-    'sCoBUgZhbW91bnQ6MIigHwDooB8AguewKgxmcm9tX2FkZHJlc3OK57AqEmNvc21vcy1zZGsvTX'
-    'NnU2VuZA==');
+    'dHJpbmdSCXRvQWRkcmVzcxJ5CgZhbW91bnQYAyADKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLk'
+    'NvaW5CRsjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5Db2luc5rn'
+    'sCoMbGVnYWN5X2NvaW5zqOewKgFSBmFtb3VudDowiKAfAOigHwCC57AqDGZyb21fYWRkcmVzc4'
+    'rnsCoSY29zbW9zLXNkay9Nc2dTZW5k');
 
 @$core.Deprecated('Use msgSendResponseDescriptor instead')
 const MsgSendResponse$json = {

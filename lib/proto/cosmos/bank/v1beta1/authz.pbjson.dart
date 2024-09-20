@@ -25,9 +25,10 @@ const SendAuthorization$json = {
 
 /// Descriptor for `SendAuthorization`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendAuthorizationDescriptor = $convert.base64Decode(
-    'ChFTZW5kQXV0aG9yaXphdGlvbhJxCgtzcGVuZF9saW1pdBgBIAMoCzIZLmNvc21vcy5iYXNlLn'
-    'YxYmV0YTEuQ29pbkI1yN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVz'
-    'LkNvaW5zqOewKgFSCnNwZW5kTGltaXQSNwoKYWxsb3dfbGlzdBgCIAMoCUIY0rQtFGNvc21vcy'
-    '5BZGRyZXNzU3RyaW5nUglhbGxvd0xpc3Q6R8q0LSJjb3Ntb3MuYXV0aHoudjFiZXRhMS5BdXRo'
-    'b3JpemF0aW9uiuewKhxjb3Ntb3Mtc2RrL1NlbmRBdXRob3JpemF0aW9u');
+    'ChFTZW5kQXV0aG9yaXphdGlvbhKCAQoLc3BlbmRfbGltaXQYASADKAsyGS5jb3Ntb3MuYmFzZS'
+    '52MWJldGExLkNvaW5CRsjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBl'
+    'cy5Db2luc5rnsCoMbGVnYWN5X2NvaW5zqOewKgFSCnNwZW5kTGltaXQSNwoKYWxsb3dfbGlzdB'
+    'gCIAMoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5nUglhbGxvd0xpc3Q6R8q0LSJjb3Ntb3Mu'
+    'YXV0aHoudjFiZXRhMS5BdXRob3JpemF0aW9uiuewKhxjb3Ntb3Mtc2RrL1NlbmRBdXRob3Jpem'
+    'F0aW9u');
 

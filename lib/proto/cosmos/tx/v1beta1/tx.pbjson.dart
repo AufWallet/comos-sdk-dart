@@ -70,7 +70,15 @@ const SignDocDirectAux$json = {
     {'1': 'chain_id', '3': 3, '4': 1, '5': 9, '10': 'chainId'},
     {'1': 'account_number', '3': 4, '4': 1, '5': 4, '10': 'accountNumber'},
     {'1': 'sequence', '3': 5, '4': 1, '5': 4, '10': 'sequence'},
-    {'1': 'tip', '3': 6, '4': 1, '5': 11, '6': '.cosmos.tx.v1beta1.Tip', '10': 'tip'},
+    {
+      '1': 'tip',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.cosmos.tx.v1beta1.Tip',
+      '8': {'3': true},
+      '10': 'tip',
+    },
   ],
 };
 
@@ -79,8 +87,8 @@ final $typed_data.Uint8List signDocDirectAuxDescriptor = $convert.base64Decode(
     'ChBTaWduRG9jRGlyZWN0QXV4Eh0KCmJvZHlfYnl0ZXMYASABKAxSCWJvZHlCeXRlcxIzCgpwdW'
     'JsaWNfa2V5GAIgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueVIJcHVibGljS2V5EhkKCGNoYWlu'
     'X2lkGAMgASgJUgdjaGFpbklkEiUKDmFjY291bnRfbnVtYmVyGAQgASgEUg1hY2NvdW50TnVtYm'
-    'VyEhoKCHNlcXVlbmNlGAUgASgEUghzZXF1ZW5jZRIoCgN0aXAYBiABKAsyFi5jb3Ntb3MudHgu'
-    'djFiZXRhMS5UaXBSA3RpcA==');
+    'VyEhoKCHNlcXVlbmNlGAUgASgEUghzZXF1ZW5jZRIsCgN0aXAYBiABKAsyFi5jb3Ntb3MudHgu'
+    'djFiZXRhMS5UaXBCAhgBUgN0aXA=');
 
 @$core.Deprecated('Use txBodyDescriptor instead')
 const TxBody$json = {
@@ -109,7 +117,15 @@ const AuthInfo$json = {
   '2': [
     {'1': 'signer_infos', '3': 1, '4': 3, '5': 11, '6': '.cosmos.tx.v1beta1.SignerInfo', '10': 'signerInfos'},
     {'1': 'fee', '3': 2, '4': 1, '5': 11, '6': '.cosmos.tx.v1beta1.Fee', '10': 'fee'},
-    {'1': 'tip', '3': 3, '4': 1, '5': 11, '6': '.cosmos.tx.v1beta1.Tip', '10': 'tip'},
+    {
+      '1': 'tip',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.cosmos.tx.v1beta1.Tip',
+      '8': {'3': true},
+      '10': 'tip',
+    },
   ],
 };
 
@@ -117,7 +133,7 @@ const AuthInfo$json = {
 final $typed_data.Uint8List authInfoDescriptor = $convert.base64Decode(
     'CghBdXRoSW5mbxJACgxzaWduZXJfaW5mb3MYASADKAsyHS5jb3Ntb3MudHgudjFiZXRhMS5TaW'
     'duZXJJbmZvUgtzaWduZXJJbmZvcxIoCgNmZWUYAiABKAsyFi5jb3Ntb3MudHgudjFiZXRhMS5G'
-    'ZWVSA2ZlZRIoCgN0aXAYAyABKAsyFi5jb3Ntb3MudHgudjFiZXRhMS5UaXBSA3RpcA==');
+    'ZWVSA2ZlZRIsCgN0aXAYAyABKAsyFi5jb3Ntb3MudHgudjFiZXRhMS5UaXBCAhgBUgN0aXA=');
 
 @$core.Deprecated('Use signerInfoDescriptor instead')
 const SignerInfo$json = {
@@ -188,11 +204,11 @@ const Fee$json = {
 
 /// Descriptor for `Fee`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List feeDescriptor = $convert.base64Decode(
-    'CgNGZWUSYwoGYW1vdW50GAEgAygLMhkuY29zbW9zLmJhc2UudjFiZXRhMS5Db2luQjDI3h8Aqt'
-    '8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuQ29pbnNSBmFtb3VudBIbCgln'
-    'YXNfbGltaXQYAiABKARSCGdhc0xpbWl0Ei4KBXBheWVyGAMgASgJQhjStC0UY29zbW9zLkFkZH'
-    'Jlc3NTdHJpbmdSBXBheWVyEjIKB2dyYW50ZXIYBCABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0'
-    'cmluZ1IHZ3JhbnRlcg==');
+    'CgNGZWUSeQoGYW1vdW50GAEgAygLMhkuY29zbW9zLmJhc2UudjFiZXRhMS5Db2luQkbI3h8Aqt'
+    '8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuQ29pbnOa57AqDGxlZ2FjeV9j'
+    'b2luc6jnsCoBUgZhbW91bnQSGwoJZ2FzX2xpbWl0GAIgASgEUghnYXNMaW1pdBIuCgVwYXllch'
+    'gDIAEoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5nUgVwYXllchIyCgdncmFudGVyGAQgASgJ'
+    'QhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbmdSB2dyYW50ZXI=');
 
 @$core.Deprecated('Use tipDescriptor instead')
 const Tip$json = {
@@ -201,13 +217,15 @@ const Tip$json = {
     {'1': 'amount', '3': 1, '4': 3, '5': 11, '6': '.cosmos.base.v1beta1.Coin', '8': {}, '10': 'amount'},
     {'1': 'tipper', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'tipper'},
   ],
+  '7': {'3': true},
 };
 
 /// Descriptor for `Tip`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tipDescriptor = $convert.base64Decode(
-    'CgNUaXASYwoGYW1vdW50GAEgAygLMhkuY29zbW9zLmJhc2UudjFiZXRhMS5Db2luQjDI3h8Aqt'
-    '8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuQ29pbnNSBmFtb3VudBIwCgZ0'
-    'aXBwZXIYAiABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZ1IGdGlwcGVy');
+    'CgNUaXASeQoGYW1vdW50GAEgAygLMhkuY29zbW9zLmJhc2UudjFiZXRhMS5Db2luQkbI3h8Aqt'
+    '8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuQ29pbnOa57AqDGxlZ2FjeV9j'
+    'b2luc6jnsCoBUgZhbW91bnQSMAoGdGlwcGVyGAIgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdH'
+    'JpbmdSBnRpcHBlcjoCGAE=');
 
 @$core.Deprecated('Use auxSignerDataDescriptor instead')
 const AuxSignerData$json = {

@@ -15,20 +15,20 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $18;
+import 'query.pb.dart' as $20;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.evidence.v1beta1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$evidence = $grpc.ClientMethod<$18.QueryEvidenceRequest, $18.QueryEvidenceResponse>(
+  static final _$evidence = $grpc.ClientMethod<$20.QueryEvidenceRequest, $20.QueryEvidenceResponse>(
       '/cosmos.evidence.v1beta1.Query/Evidence',
-      ($18.QueryEvidenceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $18.QueryEvidenceResponse.fromBuffer(value));
-  static final _$allEvidence = $grpc.ClientMethod<$18.QueryAllEvidenceRequest, $18.QueryAllEvidenceResponse>(
+      ($20.QueryEvidenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $20.QueryEvidenceResponse.fromBuffer(value));
+  static final _$allEvidence = $grpc.ClientMethod<$20.QueryAllEvidenceRequest, $20.QueryAllEvidenceResponse>(
       '/cosmos.evidence.v1beta1.Query/AllEvidence',
-      ($18.QueryAllEvidenceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $18.QueryAllEvidenceResponse.fromBuffer(value));
+      ($20.QueryAllEvidenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $20.QueryAllEvidenceResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -36,11 +36,11 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$18.QueryEvidenceResponse> evidence($18.QueryEvidenceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$20.QueryEvidenceResponse> evidence($20.QueryEvidenceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$evidence, request, options: options);
   }
 
-  $grpc.ResponseFuture<$18.QueryAllEvidenceResponse> allEvidence($18.QueryAllEvidenceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$20.QueryAllEvidenceResponse> allEvidence($20.QueryAllEvidenceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$allEvidence, request, options: options);
   }
 }
@@ -50,30 +50,30 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.evidence.v1beta1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$18.QueryEvidenceRequest, $18.QueryEvidenceResponse>(
+    $addMethod($grpc.ServiceMethod<$20.QueryEvidenceRequest, $20.QueryEvidenceResponse>(
         'Evidence',
         evidence_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $18.QueryEvidenceRequest.fromBuffer(value),
-        ($18.QueryEvidenceResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$18.QueryAllEvidenceRequest, $18.QueryAllEvidenceResponse>(
+        ($core.List<$core.int> value) => $20.QueryEvidenceRequest.fromBuffer(value),
+        ($20.QueryEvidenceResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$20.QueryAllEvidenceRequest, $20.QueryAllEvidenceResponse>(
         'AllEvidence',
         allEvidence_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $18.QueryAllEvidenceRequest.fromBuffer(value),
-        ($18.QueryAllEvidenceResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $20.QueryAllEvidenceRequest.fromBuffer(value),
+        ($20.QueryAllEvidenceResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$18.QueryEvidenceResponse> evidence_Pre($grpc.ServiceCall call, $async.Future<$18.QueryEvidenceRequest> request) async {
+  $async.Future<$20.QueryEvidenceResponse> evidence_Pre($grpc.ServiceCall call, $async.Future<$20.QueryEvidenceRequest> request) async {
     return evidence(call, await request);
   }
 
-  $async.Future<$18.QueryAllEvidenceResponse> allEvidence_Pre($grpc.ServiceCall call, $async.Future<$18.QueryAllEvidenceRequest> request) async {
+  $async.Future<$20.QueryAllEvidenceResponse> allEvidence_Pre($grpc.ServiceCall call, $async.Future<$20.QueryAllEvidenceRequest> request) async {
     return allEvidence(call, await request);
   }
 
-  $async.Future<$18.QueryEvidenceResponse> evidence($grpc.ServiceCall call, $18.QueryEvidenceRequest request);
-  $async.Future<$18.QueryAllEvidenceResponse> allEvidence($grpc.ServiceCall call, $18.QueryAllEvidenceRequest request);
+  $async.Future<$20.QueryEvidenceResponse> evidence($grpc.ServiceCall call, $20.QueryEvidenceRequest request);
+  $async.Future<$20.QueryAllEvidenceResponse> allEvidence($grpc.ServiceCall call, $20.QueryAllEvidenceRequest request);
 }

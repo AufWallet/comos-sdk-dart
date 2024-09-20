@@ -19,74 +19,74 @@ import 'types.pb.dart' as $8;
 
 export 'types.pb.dart';
 
-@$pb.GrpcServiceName('tendermint.abci.ABCIApplication')
-class ABCIApplicationClient extends $grpc.Client {
+@$pb.GrpcServiceName('tendermint.abci.ABCI')
+class ABCIClient extends $grpc.Client {
   static final _$echo = $grpc.ClientMethod<$8.RequestEcho, $8.ResponseEcho>(
-      '/tendermint.abci.ABCIApplication/Echo',
+      '/tendermint.abci.ABCI/Echo',
       ($8.RequestEcho value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseEcho.fromBuffer(value));
   static final _$flush = $grpc.ClientMethod<$8.RequestFlush, $8.ResponseFlush>(
-      '/tendermint.abci.ABCIApplication/Flush',
+      '/tendermint.abci.ABCI/Flush',
       ($8.RequestFlush value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseFlush.fromBuffer(value));
   static final _$info = $grpc.ClientMethod<$8.RequestInfo, $8.ResponseInfo>(
-      '/tendermint.abci.ABCIApplication/Info',
+      '/tendermint.abci.ABCI/Info',
       ($8.RequestInfo value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseInfo.fromBuffer(value));
-  static final _$deliverTx = $grpc.ClientMethod<$8.RequestDeliverTx, $8.ResponseDeliverTx>(
-      '/tendermint.abci.ABCIApplication/DeliverTx',
-      ($8.RequestDeliverTx value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $8.ResponseDeliverTx.fromBuffer(value));
   static final _$checkTx = $grpc.ClientMethod<$8.RequestCheckTx, $8.ResponseCheckTx>(
-      '/tendermint.abci.ABCIApplication/CheckTx',
+      '/tendermint.abci.ABCI/CheckTx',
       ($8.RequestCheckTx value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseCheckTx.fromBuffer(value));
   static final _$query = $grpc.ClientMethod<$8.RequestQuery, $8.ResponseQuery>(
-      '/tendermint.abci.ABCIApplication/Query',
+      '/tendermint.abci.ABCI/Query',
       ($8.RequestQuery value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseQuery.fromBuffer(value));
   static final _$commit = $grpc.ClientMethod<$8.RequestCommit, $8.ResponseCommit>(
-      '/tendermint.abci.ABCIApplication/Commit',
+      '/tendermint.abci.ABCI/Commit',
       ($8.RequestCommit value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseCommit.fromBuffer(value));
   static final _$initChain = $grpc.ClientMethod<$8.RequestInitChain, $8.ResponseInitChain>(
-      '/tendermint.abci.ABCIApplication/InitChain',
+      '/tendermint.abci.ABCI/InitChain',
       ($8.RequestInitChain value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseInitChain.fromBuffer(value));
-  static final _$beginBlock = $grpc.ClientMethod<$8.RequestBeginBlock, $8.ResponseBeginBlock>(
-      '/tendermint.abci.ABCIApplication/BeginBlock',
-      ($8.RequestBeginBlock value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $8.ResponseBeginBlock.fromBuffer(value));
-  static final _$endBlock = $grpc.ClientMethod<$8.RequestEndBlock, $8.ResponseEndBlock>(
-      '/tendermint.abci.ABCIApplication/EndBlock',
-      ($8.RequestEndBlock value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $8.ResponseEndBlock.fromBuffer(value));
   static final _$listSnapshots = $grpc.ClientMethod<$8.RequestListSnapshots, $8.ResponseListSnapshots>(
-      '/tendermint.abci.ABCIApplication/ListSnapshots',
+      '/tendermint.abci.ABCI/ListSnapshots',
       ($8.RequestListSnapshots value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseListSnapshots.fromBuffer(value));
   static final _$offerSnapshot = $grpc.ClientMethod<$8.RequestOfferSnapshot, $8.ResponseOfferSnapshot>(
-      '/tendermint.abci.ABCIApplication/OfferSnapshot',
+      '/tendermint.abci.ABCI/OfferSnapshot',
       ($8.RequestOfferSnapshot value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseOfferSnapshot.fromBuffer(value));
   static final _$loadSnapshotChunk = $grpc.ClientMethod<$8.RequestLoadSnapshotChunk, $8.ResponseLoadSnapshotChunk>(
-      '/tendermint.abci.ABCIApplication/LoadSnapshotChunk',
+      '/tendermint.abci.ABCI/LoadSnapshotChunk',
       ($8.RequestLoadSnapshotChunk value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseLoadSnapshotChunk.fromBuffer(value));
   static final _$applySnapshotChunk = $grpc.ClientMethod<$8.RequestApplySnapshotChunk, $8.ResponseApplySnapshotChunk>(
-      '/tendermint.abci.ABCIApplication/ApplySnapshotChunk',
+      '/tendermint.abci.ABCI/ApplySnapshotChunk',
       ($8.RequestApplySnapshotChunk value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseApplySnapshotChunk.fromBuffer(value));
   static final _$prepareProposal = $grpc.ClientMethod<$8.RequestPrepareProposal, $8.ResponsePrepareProposal>(
-      '/tendermint.abci.ABCIApplication/PrepareProposal',
+      '/tendermint.abci.ABCI/PrepareProposal',
       ($8.RequestPrepareProposal value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponsePrepareProposal.fromBuffer(value));
   static final _$processProposal = $grpc.ClientMethod<$8.RequestProcessProposal, $8.ResponseProcessProposal>(
-      '/tendermint.abci.ABCIApplication/ProcessProposal',
+      '/tendermint.abci.ABCI/ProcessProposal',
       ($8.RequestProcessProposal value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $8.ResponseProcessProposal.fromBuffer(value));
+  static final _$extendVote = $grpc.ClientMethod<$8.RequestExtendVote, $8.ResponseExtendVote>(
+      '/tendermint.abci.ABCI/ExtendVote',
+      ($8.RequestExtendVote value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $8.ResponseExtendVote.fromBuffer(value));
+  static final _$verifyVoteExtension = $grpc.ClientMethod<$8.RequestVerifyVoteExtension, $8.ResponseVerifyVoteExtension>(
+      '/tendermint.abci.ABCI/VerifyVoteExtension',
+      ($8.RequestVerifyVoteExtension value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $8.ResponseVerifyVoteExtension.fromBuffer(value));
+  static final _$finalizeBlock = $grpc.ClientMethod<$8.RequestFinalizeBlock, $8.ResponseFinalizeBlock>(
+      '/tendermint.abci.ABCI/FinalizeBlock',
+      ($8.RequestFinalizeBlock value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $8.ResponseFinalizeBlock.fromBuffer(value));
 
-  ABCIApplicationClient($grpc.ClientChannel channel,
+  ABCIClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options,
@@ -104,10 +104,6 @@ class ABCIApplicationClient extends $grpc.Client {
     return $createUnaryCall(_$info, request, options: options);
   }
 
-  $grpc.ResponseFuture<$8.ResponseDeliverTx> deliverTx($8.RequestDeliverTx request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$deliverTx, request, options: options);
-  }
-
   $grpc.ResponseFuture<$8.ResponseCheckTx> checkTx($8.RequestCheckTx request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$checkTx, request, options: options);
   }
@@ -122,14 +118,6 @@ class ABCIApplicationClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$8.ResponseInitChain> initChain($8.RequestInitChain request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$initChain, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$8.ResponseBeginBlock> beginBlock($8.RequestBeginBlock request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$beginBlock, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$8.ResponseEndBlock> endBlock($8.RequestEndBlock request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$endBlock, request, options: options);
   }
 
   $grpc.ResponseFuture<$8.ResponseListSnapshots> listSnapshots($8.RequestListSnapshots request, {$grpc.CallOptions? options}) {
@@ -155,13 +143,25 @@ class ABCIApplicationClient extends $grpc.Client {
   $grpc.ResponseFuture<$8.ResponseProcessProposal> processProposal($8.RequestProcessProposal request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$processProposal, request, options: options);
   }
+
+  $grpc.ResponseFuture<$8.ResponseExtendVote> extendVote($8.RequestExtendVote request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$extendVote, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$8.ResponseVerifyVoteExtension> verifyVoteExtension($8.RequestVerifyVoteExtension request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$verifyVoteExtension, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$8.ResponseFinalizeBlock> finalizeBlock($8.RequestFinalizeBlock request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$finalizeBlock, request, options: options);
+  }
 }
 
-@$pb.GrpcServiceName('tendermint.abci.ABCIApplication')
-abstract class ABCIApplicationServiceBase extends $grpc.Service {
-  $core.String get $name => 'tendermint.abci.ABCIApplication';
+@$pb.GrpcServiceName('tendermint.abci.ABCI')
+abstract class ABCIServiceBase extends $grpc.Service {
+  $core.String get $name => 'tendermint.abci.ABCI';
 
-  ABCIApplicationServiceBase() {
+  ABCIServiceBase() {
     $addMethod($grpc.ServiceMethod<$8.RequestEcho, $8.ResponseEcho>(
         'Echo',
         echo_Pre,
@@ -183,13 +183,6 @@ abstract class ABCIApplicationServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $8.RequestInfo.fromBuffer(value),
         ($8.ResponseInfo value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$8.RequestDeliverTx, $8.ResponseDeliverTx>(
-        'DeliverTx',
-        deliverTx_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $8.RequestDeliverTx.fromBuffer(value),
-        ($8.ResponseDeliverTx value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$8.RequestCheckTx, $8.ResponseCheckTx>(
         'CheckTx',
         checkTx_Pre,
@@ -218,20 +211,6 @@ abstract class ABCIApplicationServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $8.RequestInitChain.fromBuffer(value),
         ($8.ResponseInitChain value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$8.RequestBeginBlock, $8.ResponseBeginBlock>(
-        'BeginBlock',
-        beginBlock_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $8.RequestBeginBlock.fromBuffer(value),
-        ($8.ResponseBeginBlock value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$8.RequestEndBlock, $8.ResponseEndBlock>(
-        'EndBlock',
-        endBlock_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $8.RequestEndBlock.fromBuffer(value),
-        ($8.ResponseEndBlock value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$8.RequestListSnapshots, $8.ResponseListSnapshots>(
         'ListSnapshots',
         listSnapshots_Pre,
@@ -274,6 +253,27 @@ abstract class ABCIApplicationServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $8.RequestProcessProposal.fromBuffer(value),
         ($8.ResponseProcessProposal value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$8.RequestExtendVote, $8.ResponseExtendVote>(
+        'ExtendVote',
+        extendVote_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $8.RequestExtendVote.fromBuffer(value),
+        ($8.ResponseExtendVote value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$8.RequestVerifyVoteExtension, $8.ResponseVerifyVoteExtension>(
+        'VerifyVoteExtension',
+        verifyVoteExtension_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $8.RequestVerifyVoteExtension.fromBuffer(value),
+        ($8.ResponseVerifyVoteExtension value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$8.RequestFinalizeBlock, $8.ResponseFinalizeBlock>(
+        'FinalizeBlock',
+        finalizeBlock_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $8.RequestFinalizeBlock.fromBuffer(value),
+        ($8.ResponseFinalizeBlock value) => value.writeToBuffer()));
   }
 
   $async.Future<$8.ResponseEcho> echo_Pre($grpc.ServiceCall call, $async.Future<$8.RequestEcho> request) async {
@@ -286,10 +286,6 @@ abstract class ABCIApplicationServiceBase extends $grpc.Service {
 
   $async.Future<$8.ResponseInfo> info_Pre($grpc.ServiceCall call, $async.Future<$8.RequestInfo> request) async {
     return info(call, await request);
-  }
-
-  $async.Future<$8.ResponseDeliverTx> deliverTx_Pre($grpc.ServiceCall call, $async.Future<$8.RequestDeliverTx> request) async {
-    return deliverTx(call, await request);
   }
 
   $async.Future<$8.ResponseCheckTx> checkTx_Pre($grpc.ServiceCall call, $async.Future<$8.RequestCheckTx> request) async {
@@ -306,14 +302,6 @@ abstract class ABCIApplicationServiceBase extends $grpc.Service {
 
   $async.Future<$8.ResponseInitChain> initChain_Pre($grpc.ServiceCall call, $async.Future<$8.RequestInitChain> request) async {
     return initChain(call, await request);
-  }
-
-  $async.Future<$8.ResponseBeginBlock> beginBlock_Pre($grpc.ServiceCall call, $async.Future<$8.RequestBeginBlock> request) async {
-    return beginBlock(call, await request);
-  }
-
-  $async.Future<$8.ResponseEndBlock> endBlock_Pre($grpc.ServiceCall call, $async.Future<$8.RequestEndBlock> request) async {
-    return endBlock(call, await request);
   }
 
   $async.Future<$8.ResponseListSnapshots> listSnapshots_Pre($grpc.ServiceCall call, $async.Future<$8.RequestListSnapshots> request) async {
@@ -340,20 +328,32 @@ abstract class ABCIApplicationServiceBase extends $grpc.Service {
     return processProposal(call, await request);
   }
 
+  $async.Future<$8.ResponseExtendVote> extendVote_Pre($grpc.ServiceCall call, $async.Future<$8.RequestExtendVote> request) async {
+    return extendVote(call, await request);
+  }
+
+  $async.Future<$8.ResponseVerifyVoteExtension> verifyVoteExtension_Pre($grpc.ServiceCall call, $async.Future<$8.RequestVerifyVoteExtension> request) async {
+    return verifyVoteExtension(call, await request);
+  }
+
+  $async.Future<$8.ResponseFinalizeBlock> finalizeBlock_Pre($grpc.ServiceCall call, $async.Future<$8.RequestFinalizeBlock> request) async {
+    return finalizeBlock(call, await request);
+  }
+
   $async.Future<$8.ResponseEcho> echo($grpc.ServiceCall call, $8.RequestEcho request);
   $async.Future<$8.ResponseFlush> flush($grpc.ServiceCall call, $8.RequestFlush request);
   $async.Future<$8.ResponseInfo> info($grpc.ServiceCall call, $8.RequestInfo request);
-  $async.Future<$8.ResponseDeliverTx> deliverTx($grpc.ServiceCall call, $8.RequestDeliverTx request);
   $async.Future<$8.ResponseCheckTx> checkTx($grpc.ServiceCall call, $8.RequestCheckTx request);
   $async.Future<$8.ResponseQuery> query($grpc.ServiceCall call, $8.RequestQuery request);
   $async.Future<$8.ResponseCommit> commit($grpc.ServiceCall call, $8.RequestCommit request);
   $async.Future<$8.ResponseInitChain> initChain($grpc.ServiceCall call, $8.RequestInitChain request);
-  $async.Future<$8.ResponseBeginBlock> beginBlock($grpc.ServiceCall call, $8.RequestBeginBlock request);
-  $async.Future<$8.ResponseEndBlock> endBlock($grpc.ServiceCall call, $8.RequestEndBlock request);
   $async.Future<$8.ResponseListSnapshots> listSnapshots($grpc.ServiceCall call, $8.RequestListSnapshots request);
   $async.Future<$8.ResponseOfferSnapshot> offerSnapshot($grpc.ServiceCall call, $8.RequestOfferSnapshot request);
   $async.Future<$8.ResponseLoadSnapshotChunk> loadSnapshotChunk($grpc.ServiceCall call, $8.RequestLoadSnapshotChunk request);
   $async.Future<$8.ResponseApplySnapshotChunk> applySnapshotChunk($grpc.ServiceCall call, $8.RequestApplySnapshotChunk request);
   $async.Future<$8.ResponsePrepareProposal> prepareProposal($grpc.ServiceCall call, $8.RequestPrepareProposal request);
   $async.Future<$8.ResponseProcessProposal> processProposal($grpc.ServiceCall call, $8.RequestProcessProposal request);
+  $async.Future<$8.ResponseExtendVote> extendVote($grpc.ServiceCall call, $8.RequestExtendVote request);
+  $async.Future<$8.ResponseVerifyVoteExtension> verifyVoteExtension($grpc.ServiceCall call, $8.RequestVerifyVoteExtension request);
+  $async.Future<$8.ResponseFinalizeBlock> finalizeBlock($grpc.ServiceCall call, $8.RequestFinalizeBlock request);
 }

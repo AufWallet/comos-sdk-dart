@@ -54,8 +54,8 @@ const QueryInflationResponse$json = {
 
 /// Descriptor for `QueryInflationResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryInflationResponseDescriptor = $convert.base64Decode(
-    'ChZRdWVyeUluZmxhdGlvblJlc3BvbnNlElEKCWluZmxhdGlvbhgBIAEoDEIzyN4fANreHyZnaX'
-    'RodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY6jnsCoBUglpbmZsYXRpb24=');
+    'ChZRdWVyeUluZmxhdGlvblJlc3BvbnNlElQKCWluZmxhdGlvbhgBIAEoDEI2yN4fANreHxtjb3'
+    'Ntb3NzZGsuaW8vbWF0aC5MZWdhY3lEZWPStC0KY29zbW9zLkRlY6jnsCoBUglpbmZsYXRpb24=');
 
 @$core.Deprecated('Use queryAnnualProvisionsRequestDescriptor instead')
 const QueryAnnualProvisionsRequest$json = {
@@ -76,7 +76,7 @@ const QueryAnnualProvisionsResponse$json = {
 
 /// Descriptor for `QueryAnnualProvisionsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryAnnualProvisionsResponseDescriptor = $convert.base64Decode(
-    'Ch1RdWVyeUFubnVhbFByb3Zpc2lvbnNSZXNwb25zZRJgChFhbm51YWxfcHJvdmlzaW9ucxgBIA'
-    'EoDEIzyN4fANreHyZnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY6jnsCoB'
-    'UhBhbm51YWxQcm92aXNpb25z');
+    'Ch1RdWVyeUFubnVhbFByb3Zpc2lvbnNSZXNwb25zZRJjChFhbm51YWxfcHJvdmlzaW9ucxgBIA'
+    'EoDEI2yN4fANreHxtjb3Ntb3NzZGsuaW8vbWF0aC5MZWdhY3lEZWPStC0KY29zbW9zLkRlY6jn'
+    'sCoBUhBhbm51YWxQcm92aXNpb25z');
 

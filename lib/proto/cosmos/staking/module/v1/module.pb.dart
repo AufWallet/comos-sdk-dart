@@ -18,6 +18,8 @@ class Module extends $pb.GeneratedMessage {
   factory Module({
     $core.Iterable<$core.String>? hooksOrder,
     $core.String? authority,
+    $core.String? bech32PrefixValidator,
+    $core.String? bech32PrefixConsensus,
   }) {
     final $result = create();
     if (hooksOrder != null) {
@@ -25,6 +27,12 @@ class Module extends $pb.GeneratedMessage {
     }
     if (authority != null) {
       $result.authority = authority;
+    }
+    if (bech32PrefixValidator != null) {
+      $result.bech32PrefixValidator = bech32PrefixValidator;
+    }
+    if (bech32PrefixConsensus != null) {
+      $result.bech32PrefixConsensus = bech32PrefixConsensus;
     }
     return $result;
   }
@@ -35,6 +43,8 @@ class Module extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Module', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.module.v1'), createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'hooksOrder')
     ..aOS(2, _omitFieldNames ? '' : 'authority')
+    ..aOS(3, _omitFieldNames ? '' : 'bech32PrefixValidator')
+    ..aOS(4, _omitFieldNames ? '' : 'bech32PrefixConsensus')
     ..hasRequiredFields = false
   ;
 
@@ -74,6 +84,26 @@ class Module extends $pb.GeneratedMessage {
   $core.bool hasAuthority() => $_has(1);
   @$pb.TagNumber(2)
   void clearAuthority() => clearField(2);
+
+  /// bech32_prefix_validator is the bech32 validator prefix for the app.
+  @$pb.TagNumber(3)
+  $core.String get bech32PrefixValidator => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set bech32PrefixValidator($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasBech32PrefixValidator() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBech32PrefixValidator() => clearField(3);
+
+  /// bech32_prefix_consensus is the bech32 consensus node prefix for the app.
+  @$pb.TagNumber(4)
+  $core.String get bech32PrefixConsensus => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set bech32PrefixConsensus($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasBech32PrefixConsensus() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearBech32PrefixConsensus() => clearField(4);
 }
 
 

@@ -14,21 +14,22 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $43;
-import '../../../google/protobuf/timestamp.pb.dart' as $47;
-import '../../base/v1beta1/coin.pb.dart' as $50;
-import 'staking.pb.dart' as $75;
+import '../../../google/protobuf/any.pb.dart' as $46;
+import '../../../google/protobuf/timestamp.pb.dart' as $50;
+import '../../base/v1beta1/coin.pb.dart' as $53;
+import 'staking.pb.dart' as $78;
 
 /// MsgCreateValidator defines a SDK message for creating a new validator.
 class MsgCreateValidator extends $pb.GeneratedMessage {
   factory MsgCreateValidator({
-    $75.Description? description,
-    $75.CommissionRates? commission,
+    $78.Description? description,
+    $78.CommissionRates? commission,
     $core.String? minSelfDelegation,
+  @$core.Deprecated('This field is deprecated.')
     $core.String? delegatorAddress,
     $core.String? validatorAddress,
-    $43.Any? pubkey,
-    $50.Coin? value,
+    $46.Any? pubkey,
+    $53.Coin? value,
   }) {
     final $result = create();
     if (description != null) {
@@ -41,6 +42,7 @@ class MsgCreateValidator extends $pb.GeneratedMessage {
       $result.minSelfDelegation = minSelfDelegation;
     }
     if (delegatorAddress != null) {
+      // ignore: deprecated_member_use_from_same_package
       $result.delegatorAddress = delegatorAddress;
     }
     if (validatorAddress != null) {
@@ -59,13 +61,13 @@ class MsgCreateValidator extends $pb.GeneratedMessage {
   factory MsgCreateValidator.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgCreateValidator', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$75.Description>(1, _omitFieldNames ? '' : 'description', subBuilder: $75.Description.create)
-    ..aOM<$75.CommissionRates>(2, _omitFieldNames ? '' : 'commission', subBuilder: $75.CommissionRates.create)
+    ..aOM<$78.Description>(1, _omitFieldNames ? '' : 'description', subBuilder: $78.Description.create)
+    ..aOM<$78.CommissionRates>(2, _omitFieldNames ? '' : 'commission', subBuilder: $78.CommissionRates.create)
     ..aOS(3, _omitFieldNames ? '' : 'minSelfDelegation')
     ..aOS(4, _omitFieldNames ? '' : 'delegatorAddress')
     ..aOS(5, _omitFieldNames ? '' : 'validatorAddress')
-    ..aOM<$43.Any>(6, _omitFieldNames ? '' : 'pubkey', subBuilder: $43.Any.create)
-    ..aOM<$50.Coin>(7, _omitFieldNames ? '' : 'value', subBuilder: $50.Coin.create)
+    ..aOM<$46.Any>(6, _omitFieldNames ? '' : 'pubkey', subBuilder: $46.Any.create)
+    ..aOM<$53.Coin>(7, _omitFieldNames ? '' : 'value', subBuilder: $53.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -91,26 +93,26 @@ class MsgCreateValidator extends $pb.GeneratedMessage {
   static MsgCreateValidator? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $75.Description get description => $_getN(0);
+  $78.Description get description => $_getN(0);
   @$pb.TagNumber(1)
-  set description($75.Description v) { setField(1, v); }
+  set description($78.Description v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDescription() => $_has(0);
   @$pb.TagNumber(1)
   void clearDescription() => clearField(1);
   @$pb.TagNumber(1)
-  $75.Description ensureDescription() => $_ensure(0);
+  $78.Description ensureDescription() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $75.CommissionRates get commission => $_getN(1);
+  $78.CommissionRates get commission => $_getN(1);
   @$pb.TagNumber(2)
-  set commission($75.CommissionRates v) { setField(2, v); }
+  set commission($78.CommissionRates v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCommission() => $_has(1);
   @$pb.TagNumber(2)
   void clearCommission() => clearField(2);
   @$pb.TagNumber(2)
-  $75.CommissionRates ensureCommission() => $_ensure(1);
+  $78.CommissionRates ensureCommission() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get minSelfDelegation => $_getSZ(2);
@@ -121,12 +123,19 @@ class MsgCreateValidator extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearMinSelfDelegation() => clearField(3);
 
+  /// Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+  /// The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+  /// only in bech32 notation).
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   $core.String get delegatorAddress => $_getSZ(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   set delegatorAddress($core.String v) { $_setString(3, v); }
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   $core.bool hasDelegatorAddress() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   void clearDelegatorAddress() => clearField(4);
 
@@ -140,26 +149,26 @@ class MsgCreateValidator extends $pb.GeneratedMessage {
   void clearValidatorAddress() => clearField(5);
 
   @$pb.TagNumber(6)
-  $43.Any get pubkey => $_getN(5);
+  $46.Any get pubkey => $_getN(5);
   @$pb.TagNumber(6)
-  set pubkey($43.Any v) { setField(6, v); }
+  set pubkey($46.Any v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasPubkey() => $_has(5);
   @$pb.TagNumber(6)
   void clearPubkey() => clearField(6);
   @$pb.TagNumber(6)
-  $43.Any ensurePubkey() => $_ensure(5);
+  $46.Any ensurePubkey() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $50.Coin get value => $_getN(6);
+  $53.Coin get value => $_getN(6);
   @$pb.TagNumber(7)
-  set value($50.Coin v) { setField(7, v); }
+  set value($53.Coin v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasValue() => $_has(6);
   @$pb.TagNumber(7)
   void clearValue() => clearField(7);
   @$pb.TagNumber(7)
-  $50.Coin ensureValue() => $_ensure(6);
+  $53.Coin ensureValue() => $_ensure(6);
 }
 
 /// MsgCreateValidatorResponse defines the Msg/CreateValidator response type.
@@ -198,7 +207,7 @@ class MsgCreateValidatorResponse extends $pb.GeneratedMessage {
 /// MsgEditValidator defines a SDK message for editing an existing validator.
 class MsgEditValidator extends $pb.GeneratedMessage {
   factory MsgEditValidator({
-    $75.Description? description,
+    $78.Description? description,
     $core.String? validatorAddress,
     $core.String? commissionRate,
     $core.String? minSelfDelegation,
@@ -223,7 +232,7 @@ class MsgEditValidator extends $pb.GeneratedMessage {
   factory MsgEditValidator.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgEditValidator', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$75.Description>(1, _omitFieldNames ? '' : 'description', subBuilder: $75.Description.create)
+    ..aOM<$78.Description>(1, _omitFieldNames ? '' : 'description', subBuilder: $78.Description.create)
     ..aOS(2, _omitFieldNames ? '' : 'validatorAddress')
     ..aOS(3, _omitFieldNames ? '' : 'commissionRate')
     ..aOS(4, _omitFieldNames ? '' : 'minSelfDelegation')
@@ -252,15 +261,15 @@ class MsgEditValidator extends $pb.GeneratedMessage {
   static MsgEditValidator? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $75.Description get description => $_getN(0);
+  $78.Description get description => $_getN(0);
   @$pb.TagNumber(1)
-  set description($75.Description v) { setField(1, v); }
+  set description($78.Description v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDescription() => $_has(0);
   @$pb.TagNumber(1)
   void clearDescription() => clearField(1);
   @$pb.TagNumber(1)
-  $75.Description ensureDescription() => $_ensure(0);
+  $78.Description ensureDescription() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get validatorAddress => $_getSZ(1);
@@ -333,7 +342,7 @@ class MsgDelegate extends $pb.GeneratedMessage {
   factory MsgDelegate({
     $core.String? delegatorAddress,
     $core.String? validatorAddress,
-    $50.Coin? amount,
+    $53.Coin? amount,
   }) {
     final $result = create();
     if (delegatorAddress != null) {
@@ -354,7 +363,7 @@ class MsgDelegate extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgDelegate', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'delegatorAddress')
     ..aOS(2, _omitFieldNames ? '' : 'validatorAddress')
-    ..aOM<$50.Coin>(3, _omitFieldNames ? '' : 'amount', subBuilder: $50.Coin.create)
+    ..aOM<$53.Coin>(3, _omitFieldNames ? '' : 'amount', subBuilder: $53.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -398,15 +407,15 @@ class MsgDelegate extends $pb.GeneratedMessage {
   void clearValidatorAddress() => clearField(2);
 
   @$pb.TagNumber(3)
-  $50.Coin get amount => $_getN(2);
+  $53.Coin get amount => $_getN(2);
   @$pb.TagNumber(3)
-  set amount($50.Coin v) { setField(3, v); }
+  set amount($53.Coin v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasAmount() => $_has(2);
   @$pb.TagNumber(3)
   void clearAmount() => clearField(3);
   @$pb.TagNumber(3)
-  $50.Coin ensureAmount() => $_ensure(2);
+  $53.Coin ensureAmount() => $_ensure(2);
 }
 
 /// MsgDelegateResponse defines the Msg/Delegate response type.
@@ -449,7 +458,7 @@ class MsgBeginRedelegate extends $pb.GeneratedMessage {
     $core.String? delegatorAddress,
     $core.String? validatorSrcAddress,
     $core.String? validatorDstAddress,
-    $50.Coin? amount,
+    $53.Coin? amount,
   }) {
     final $result = create();
     if (delegatorAddress != null) {
@@ -474,7 +483,7 @@ class MsgBeginRedelegate extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'delegatorAddress')
     ..aOS(2, _omitFieldNames ? '' : 'validatorSrcAddress')
     ..aOS(3, _omitFieldNames ? '' : 'validatorDstAddress')
-    ..aOM<$50.Coin>(4, _omitFieldNames ? '' : 'amount', subBuilder: $50.Coin.create)
+    ..aOM<$53.Coin>(4, _omitFieldNames ? '' : 'amount', subBuilder: $53.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -527,21 +536,21 @@ class MsgBeginRedelegate extends $pb.GeneratedMessage {
   void clearValidatorDstAddress() => clearField(3);
 
   @$pb.TagNumber(4)
-  $50.Coin get amount => $_getN(3);
+  $53.Coin get amount => $_getN(3);
   @$pb.TagNumber(4)
-  set amount($50.Coin v) { setField(4, v); }
+  set amount($53.Coin v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasAmount() => $_has(3);
   @$pb.TagNumber(4)
   void clearAmount() => clearField(4);
   @$pb.TagNumber(4)
-  $50.Coin ensureAmount() => $_ensure(3);
+  $53.Coin ensureAmount() => $_ensure(3);
 }
 
 /// MsgBeginRedelegateResponse defines the Msg/BeginRedelegate response type.
 class MsgBeginRedelegateResponse extends $pb.GeneratedMessage {
   factory MsgBeginRedelegateResponse({
-    $47.Timestamp? completionTime,
+    $50.Timestamp? completionTime,
   }) {
     final $result = create();
     if (completionTime != null) {
@@ -554,7 +563,7 @@ class MsgBeginRedelegateResponse extends $pb.GeneratedMessage {
   factory MsgBeginRedelegateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgBeginRedelegateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$47.Timestamp>(1, _omitFieldNames ? '' : 'completionTime', subBuilder: $47.Timestamp.create)
+    ..aOM<$50.Timestamp>(1, _omitFieldNames ? '' : 'completionTime', subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -580,15 +589,15 @@ class MsgBeginRedelegateResponse extends $pb.GeneratedMessage {
   static MsgBeginRedelegateResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $47.Timestamp get completionTime => $_getN(0);
+  $50.Timestamp get completionTime => $_getN(0);
   @$pb.TagNumber(1)
-  set completionTime($47.Timestamp v) { setField(1, v); }
+  set completionTime($50.Timestamp v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCompletionTime() => $_has(0);
   @$pb.TagNumber(1)
   void clearCompletionTime() => clearField(1);
   @$pb.TagNumber(1)
-  $47.Timestamp ensureCompletionTime() => $_ensure(0);
+  $50.Timestamp ensureCompletionTime() => $_ensure(0);
 }
 
 /// MsgUndelegate defines a SDK message for performing an undelegation from a
@@ -597,7 +606,7 @@ class MsgUndelegate extends $pb.GeneratedMessage {
   factory MsgUndelegate({
     $core.String? delegatorAddress,
     $core.String? validatorAddress,
-    $50.Coin? amount,
+    $53.Coin? amount,
   }) {
     final $result = create();
     if (delegatorAddress != null) {
@@ -618,7 +627,7 @@ class MsgUndelegate extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUndelegate', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'delegatorAddress')
     ..aOS(2, _omitFieldNames ? '' : 'validatorAddress')
-    ..aOM<$50.Coin>(3, _omitFieldNames ? '' : 'amount', subBuilder: $50.Coin.create)
+    ..aOM<$53.Coin>(3, _omitFieldNames ? '' : 'amount', subBuilder: $53.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -662,25 +671,29 @@ class MsgUndelegate extends $pb.GeneratedMessage {
   void clearValidatorAddress() => clearField(2);
 
   @$pb.TagNumber(3)
-  $50.Coin get amount => $_getN(2);
+  $53.Coin get amount => $_getN(2);
   @$pb.TagNumber(3)
-  set amount($50.Coin v) { setField(3, v); }
+  set amount($53.Coin v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasAmount() => $_has(2);
   @$pb.TagNumber(3)
   void clearAmount() => clearField(3);
   @$pb.TagNumber(3)
-  $50.Coin ensureAmount() => $_ensure(2);
+  $53.Coin ensureAmount() => $_ensure(2);
 }
 
 /// MsgUndelegateResponse defines the Msg/Undelegate response type.
 class MsgUndelegateResponse extends $pb.GeneratedMessage {
   factory MsgUndelegateResponse({
-    $47.Timestamp? completionTime,
+    $50.Timestamp? completionTime,
+    $53.Coin? amount,
   }) {
     final $result = create();
     if (completionTime != null) {
       $result.completionTime = completionTime;
+    }
+    if (amount != null) {
+      $result.amount = amount;
     }
     return $result;
   }
@@ -689,7 +702,8 @@ class MsgUndelegateResponse extends $pb.GeneratedMessage {
   factory MsgUndelegateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUndelegateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$47.Timestamp>(1, _omitFieldNames ? '' : 'completionTime', subBuilder: $47.Timestamp.create)
+    ..aOM<$50.Timestamp>(1, _omitFieldNames ? '' : 'completionTime', subBuilder: $50.Timestamp.create)
+    ..aOM<$53.Coin>(2, _omitFieldNames ? '' : 'amount', subBuilder: $53.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -715,15 +729,29 @@ class MsgUndelegateResponse extends $pb.GeneratedMessage {
   static MsgUndelegateResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $47.Timestamp get completionTime => $_getN(0);
+  $50.Timestamp get completionTime => $_getN(0);
   @$pb.TagNumber(1)
-  set completionTime($47.Timestamp v) { setField(1, v); }
+  set completionTime($50.Timestamp v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCompletionTime() => $_has(0);
   @$pb.TagNumber(1)
   void clearCompletionTime() => clearField(1);
   @$pb.TagNumber(1)
-  $47.Timestamp ensureCompletionTime() => $_ensure(0);
+  $50.Timestamp ensureCompletionTime() => $_ensure(0);
+
+  ///  amount returns the amount of undelegated coins
+  ///
+  ///  Since: cosmos-sdk 0.50
+  @$pb.TagNumber(2)
+  $53.Coin get amount => $_getN(1);
+  @$pb.TagNumber(2)
+  set amount($53.Coin v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAmount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAmount() => clearField(2);
+  @$pb.TagNumber(2)
+  $53.Coin ensureAmount() => $_ensure(1);
 }
 
 ///  MsgCancelUnbondingDelegation defines the SDK message for performing a cancel unbonding delegation for delegator
@@ -733,7 +761,7 @@ class MsgCancelUnbondingDelegation extends $pb.GeneratedMessage {
   factory MsgCancelUnbondingDelegation({
     $core.String? delegatorAddress,
     $core.String? validatorAddress,
-    $50.Coin? amount,
+    $53.Coin? amount,
     $fixnum.Int64? creationHeight,
   }) {
     final $result = create();
@@ -758,7 +786,7 @@ class MsgCancelUnbondingDelegation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgCancelUnbondingDelegation', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'delegatorAddress')
     ..aOS(2, _omitFieldNames ? '' : 'validatorAddress')
-    ..aOM<$50.Coin>(3, _omitFieldNames ? '' : 'amount', subBuilder: $50.Coin.create)
+    ..aOM<$53.Coin>(3, _omitFieldNames ? '' : 'amount', subBuilder: $53.Coin.create)
     ..aInt64(4, _omitFieldNames ? '' : 'creationHeight')
     ..hasRequiredFields = false
   ;
@@ -804,15 +832,15 @@ class MsgCancelUnbondingDelegation extends $pb.GeneratedMessage {
 
   /// amount is always less than or equal to unbonding delegation entry balance
   @$pb.TagNumber(3)
-  $50.Coin get amount => $_getN(2);
+  $53.Coin get amount => $_getN(2);
   @$pb.TagNumber(3)
-  set amount($50.Coin v) { setField(3, v); }
+  set amount($53.Coin v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasAmount() => $_has(2);
   @$pb.TagNumber(3)
   void clearAmount() => clearField(3);
   @$pb.TagNumber(3)
-  $50.Coin ensureAmount() => $_ensure(2);
+  $53.Coin ensureAmount() => $_ensure(2);
 
   /// creation_height is the height which the unbonding took place.
   @$pb.TagNumber(4)
@@ -866,7 +894,7 @@ class MsgCancelUnbondingDelegationResponse extends $pb.GeneratedMessage {
 class MsgUpdateParams extends $pb.GeneratedMessage {
   factory MsgUpdateParams({
     $core.String? authority,
-    $75.Params? params,
+    $78.Params? params,
   }) {
     final $result = create();
     if (authority != null) {
@@ -883,7 +911,7 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$75.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $75.Params.create)
+    ..aOM<$78.Params>(2, _omitFieldNames ? '' : 'params', subBuilder: $78.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -922,15 +950,15 @@ class MsgUpdateParams extends $pb.GeneratedMessage {
   ///
   ///  NOTE: All parameters must be supplied.
   @$pb.TagNumber(2)
-  $75.Params get params => $_getN(1);
+  $78.Params get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($75.Params v) { setField(2, v); }
+  set params($78.Params v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearParams() => clearField(2);
   @$pb.TagNumber(2)
-  $75.Params ensureParams() => $_ensure(1);
+  $78.Params ensureParams() => $_ensure(1);
 }
 
 ///  MsgUpdateParamsResponse defines the response structure for executing a

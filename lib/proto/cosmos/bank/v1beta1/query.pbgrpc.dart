@@ -53,6 +53,10 @@ class QueryClient extends $grpc.Client {
       '/cosmos.bank.v1beta1.Query/DenomMetadata',
       ($6.QueryDenomMetadataRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $6.QueryDenomMetadataResponse.fromBuffer(value));
+  static final _$denomMetadataByQueryString = $grpc.ClientMethod<$6.QueryDenomMetadataByQueryStringRequest, $6.QueryDenomMetadataByQueryStringResponse>(
+      '/cosmos.bank.v1beta1.Query/DenomMetadataByQueryString',
+      ($6.QueryDenomMetadataByQueryStringRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QueryDenomMetadataByQueryStringResponse.fromBuffer(value));
   static final _$denomsMetadata = $grpc.ClientMethod<$6.QueryDenomsMetadataRequest, $6.QueryDenomsMetadataResponse>(
       '/cosmos.bank.v1beta1.Query/DenomsMetadata',
       ($6.QueryDenomsMetadataRequest value) => value.writeToBuffer(),
@@ -61,6 +65,10 @@ class QueryClient extends $grpc.Client {
       '/cosmos.bank.v1beta1.Query/DenomOwners',
       ($6.QueryDenomOwnersRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $6.QueryDenomOwnersResponse.fromBuffer(value));
+  static final _$denomOwnersByQuery = $grpc.ClientMethod<$6.QueryDenomOwnersByQueryRequest, $6.QueryDenomOwnersByQueryResponse>(
+      '/cosmos.bank.v1beta1.Query/DenomOwnersByQuery',
+      ($6.QueryDenomOwnersByQueryRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QueryDenomOwnersByQueryResponse.fromBuffer(value));
   static final _$sendEnabled = $grpc.ClientMethod<$6.QuerySendEnabledRequest, $6.QuerySendEnabledResponse>(
       '/cosmos.bank.v1beta1.Query/SendEnabled',
       ($6.QuerySendEnabledRequest value) => value.writeToBuffer(),
@@ -104,12 +112,20 @@ class QueryClient extends $grpc.Client {
     return $createUnaryCall(_$denomMetadata, request, options: options);
   }
 
+  $grpc.ResponseFuture<$6.QueryDenomMetadataByQueryStringResponse> denomMetadataByQueryString($6.QueryDenomMetadataByQueryStringRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$denomMetadataByQueryString, request, options: options);
+  }
+
   $grpc.ResponseFuture<$6.QueryDenomsMetadataResponse> denomsMetadata($6.QueryDenomsMetadataRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$denomsMetadata, request, options: options);
   }
 
   $grpc.ResponseFuture<$6.QueryDenomOwnersResponse> denomOwners($6.QueryDenomOwnersRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$denomOwners, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.QueryDenomOwnersByQueryResponse> denomOwnersByQuery($6.QueryDenomOwnersByQueryRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$denomOwnersByQuery, request, options: options);
   }
 
   $grpc.ResponseFuture<$6.QuerySendEnabledResponse> sendEnabled($6.QuerySendEnabledRequest request, {$grpc.CallOptions? options}) {
@@ -178,6 +194,13 @@ abstract class QueryServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $6.QueryDenomMetadataRequest.fromBuffer(value),
         ($6.QueryDenomMetadataResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QueryDenomMetadataByQueryStringRequest, $6.QueryDenomMetadataByQueryStringResponse>(
+        'DenomMetadataByQueryString',
+        denomMetadataByQueryString_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $6.QueryDenomMetadataByQueryStringRequest.fromBuffer(value),
+        ($6.QueryDenomMetadataByQueryStringResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.QueryDenomsMetadataRequest, $6.QueryDenomsMetadataResponse>(
         'DenomsMetadata',
         denomsMetadata_Pre,
@@ -192,6 +215,13 @@ abstract class QueryServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $6.QueryDenomOwnersRequest.fromBuffer(value),
         ($6.QueryDenomOwnersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QueryDenomOwnersByQueryRequest, $6.QueryDenomOwnersByQueryResponse>(
+        'DenomOwnersByQuery',
+        denomOwnersByQuery_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $6.QueryDenomOwnersByQueryRequest.fromBuffer(value),
+        ($6.QueryDenomOwnersByQueryResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$6.QuerySendEnabledRequest, $6.QuerySendEnabledResponse>(
         'SendEnabled',
         sendEnabled_Pre,
@@ -233,12 +263,20 @@ abstract class QueryServiceBase extends $grpc.Service {
     return denomMetadata(call, await request);
   }
 
+  $async.Future<$6.QueryDenomMetadataByQueryStringResponse> denomMetadataByQueryString_Pre($grpc.ServiceCall call, $async.Future<$6.QueryDenomMetadataByQueryStringRequest> request) async {
+    return denomMetadataByQueryString(call, await request);
+  }
+
   $async.Future<$6.QueryDenomsMetadataResponse> denomsMetadata_Pre($grpc.ServiceCall call, $async.Future<$6.QueryDenomsMetadataRequest> request) async {
     return denomsMetadata(call, await request);
   }
 
   $async.Future<$6.QueryDenomOwnersResponse> denomOwners_Pre($grpc.ServiceCall call, $async.Future<$6.QueryDenomOwnersRequest> request) async {
     return denomOwners(call, await request);
+  }
+
+  $async.Future<$6.QueryDenomOwnersByQueryResponse> denomOwnersByQuery_Pre($grpc.ServiceCall call, $async.Future<$6.QueryDenomOwnersByQueryRequest> request) async {
+    return denomOwnersByQuery(call, await request);
   }
 
   $async.Future<$6.QuerySendEnabledResponse> sendEnabled_Pre($grpc.ServiceCall call, $async.Future<$6.QuerySendEnabledRequest> request) async {
@@ -253,7 +291,9 @@ abstract class QueryServiceBase extends $grpc.Service {
   $async.Future<$6.QuerySupplyOfResponse> supplyOf($grpc.ServiceCall call, $6.QuerySupplyOfRequest request);
   $async.Future<$6.QueryParamsResponse> params($grpc.ServiceCall call, $6.QueryParamsRequest request);
   $async.Future<$6.QueryDenomMetadataResponse> denomMetadata($grpc.ServiceCall call, $6.QueryDenomMetadataRequest request);
+  $async.Future<$6.QueryDenomMetadataByQueryStringResponse> denomMetadataByQueryString($grpc.ServiceCall call, $6.QueryDenomMetadataByQueryStringRequest request);
   $async.Future<$6.QueryDenomsMetadataResponse> denomsMetadata($grpc.ServiceCall call, $6.QueryDenomsMetadataRequest request);
   $async.Future<$6.QueryDenomOwnersResponse> denomOwners($grpc.ServiceCall call, $6.QueryDenomOwnersRequest request);
+  $async.Future<$6.QueryDenomOwnersByQueryResponse> denomOwnersByQuery($grpc.ServiceCall call, $6.QueryDenomOwnersByQueryRequest request);
   $async.Future<$6.QuerySendEnabledResponse> sendEnabled($grpc.ServiceCall call, $6.QuerySendEnabledRequest request);
 }

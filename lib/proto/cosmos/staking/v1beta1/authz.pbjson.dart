@@ -21,6 +21,7 @@ const AuthorizationType$json = {
     {'1': 'AUTHORIZATION_TYPE_DELEGATE', '2': 1},
     {'1': 'AUTHORIZATION_TYPE_UNDELEGATE', '2': 2},
     {'1': 'AUTHORIZATION_TYPE_REDELEGATE', '2': 3},
+    {'1': 'AUTHORIZATION_TYPE_CANCEL_UNBONDING_DELEGATION', '2': 4},
   ],
 };
 
@@ -28,15 +29,16 @@ const AuthorizationType$json = {
 final $typed_data.Uint8List authorizationTypeDescriptor = $convert.base64Decode(
     'ChFBdXRob3JpemF0aW9uVHlwZRIiCh5BVVRIT1JJWkFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQAB'
     'IfChtBVVRIT1JJWkFUSU9OX1RZUEVfREVMRUdBVEUQARIhCh1BVVRIT1JJWkFUSU9OX1RZUEVf'
-    'VU5ERUxFR0FURRACEiEKHUFVVEhPUklaQVRJT05fVFlQRV9SRURFTEVHQVRFEAM=');
+    'VU5ERUxFR0FURRACEiEKHUFVVEhPUklaQVRJT05fVFlQRV9SRURFTEVHQVRFEAMSMgouQVVUSE'
+    '9SSVpBVElPTl9UWVBFX0NBTkNFTF9VTkJPTkRJTkdfREVMRUdBVElPThAE');
 
 @$core.Deprecated('Use stakeAuthorizationDescriptor instead')
 const StakeAuthorization$json = {
   '1': 'StakeAuthorization',
   '2': [
     {'1': 'max_tokens', '3': 1, '4': 1, '5': 11, '6': '.cosmos.base.v1beta1.Coin', '8': {}, '10': 'maxTokens'},
-    {'1': 'allow_list', '3': 2, '4': 1, '5': 11, '6': '.cosmos.staking.v1beta1.StakeAuthorization.Validators', '9': 0, '10': 'allowList'},
-    {'1': 'deny_list', '3': 3, '4': 1, '5': 11, '6': '.cosmos.staking.v1beta1.StakeAuthorization.Validators', '9': 0, '10': 'denyList'},
+    {'1': 'allow_list', '3': 2, '4': 1, '5': 11, '6': '.cosmos.staking.v1beta1.StakeAuthorization.Validators', '8': {}, '9': 0, '10': 'allowList'},
+    {'1': 'deny_list', '3': 3, '4': 1, '5': 11, '6': '.cosmos.staking.v1beta1.StakeAuthorization.Validators', '8': {}, '9': 0, '10': 'denyList'},
     {'1': 'authorization_type', '3': 4, '4': 1, '5': 14, '6': '.cosmos.staking.v1beta1.AuthorizationType', '10': 'authorizationType'},
   ],
   '3': [StakeAuthorization_Validators$json],
@@ -58,12 +60,14 @@ const StakeAuthorization_Validators$json = {
 final $typed_data.Uint8List stakeAuthorizationDescriptor = $convert.base64Decode(
     'ChJTdGFrZUF1dGhvcml6YXRpb24SZQoKbWF4X3Rva2VucxgBIAEoCzIZLmNvc21vcy5iYXNlLn'
     'YxYmV0YTEuQ29pbkIrqt8fJ2dpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMuQ29p'
-    'blIJbWF4VG9rZW5zElYKCmFsbG93X2xpc3QYAiABKAsyNS5jb3Ntb3Muc3Rha2luZy52MWJldG'
-    'ExLlN0YWtlQXV0aG9yaXphdGlvbi5WYWxpZGF0b3JzSABSCWFsbG93TGlzdBJUCglkZW55X2xp'
-    'c3QYAyABKAsyNS5jb3Ntb3Muc3Rha2luZy52MWJldGExLlN0YWtlQXV0aG9yaXphdGlvbi5WYW'
-    'xpZGF0b3JzSABSCGRlbnlMaXN0ElgKEmF1dGhvcml6YXRpb25fdHlwZRgEIAEoDjIpLmNvc21v'
-    'cy5zdGFraW5nLnYxYmV0YTEuQXV0aG9yaXphdGlvblR5cGVSEWF1dGhvcml6YXRpb25UeXBlGk'
-    'AKClZhbGlkYXRvcnMSMgoHYWRkcmVzcxgBIAMoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5n'
-    'UgdhZGRyZXNzOkjKtC0iY29zbW9zLmF1dGh6LnYxYmV0YTEuQXV0aG9yaXphdGlvbornsCodY2'
-    '9zbW9zLXNkay9TdGFrZUF1dGhvcml6YXRpb25CDAoKdmFsaWRhdG9ycw==');
+    'blIJbWF4VG9rZW5zEoQBCgphbGxvd19saXN0GAIgASgLMjUuY29zbW9zLnN0YWtpbmcudjFiZX'
+    'RhMS5TdGFrZUF1dGhvcml6YXRpb24uVmFsaWRhdG9yc0IssuewKidjb3Ntb3Mtc2RrL1N0YWtl'
+    'QXV0aG9yaXphdGlvbi9BbGxvd0xpc3RIAFIJYWxsb3dMaXN0EoEBCglkZW55X2xpc3QYAyABKA'
+    'syNS5jb3Ntb3Muc3Rha2luZy52MWJldGExLlN0YWtlQXV0aG9yaXphdGlvbi5WYWxpZGF0b3Jz'
+    'Qiuy57AqJmNvc21vcy1zZGsvU3Rha2VBdXRob3JpemF0aW9uL0RlbnlMaXN0SABSCGRlbnlMaX'
+    'N0ElgKEmF1dGhvcml6YXRpb25fdHlwZRgEIAEoDjIpLmNvc21vcy5zdGFraW5nLnYxYmV0YTEu'
+    'QXV0aG9yaXphdGlvblR5cGVSEWF1dGhvcml6YXRpb25UeXBlGkAKClZhbGlkYXRvcnMSMgoHYW'
+    'RkcmVzcxgBIAMoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5nUgdhZGRyZXNzOkjKtC0iY29z'
+    'bW9zLmF1dGh6LnYxYmV0YTEuQXV0aG9yaXphdGlvbornsCodY29zbW9zLXNkay9TdGFrZUF1dG'
+    'hvcml6YXRpb25CDAoKdmFsaWRhdG9ycw==');
 
