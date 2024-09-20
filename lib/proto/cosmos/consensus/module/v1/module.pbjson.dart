@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: cosmos/app/module/v1alpha1/module.proto
+//  source: cosmos/consensus/module/v1/module.proto
 //
 // @dart = 2.12
 
@@ -16,11 +16,14 @@ import 'dart:typed_data' as $typed_data;
 @$core.Deprecated('Use moduleDescriptor instead')
 const Module$json = {
   '1': 'Module',
+  '2': [
+    {'1': 'authority', '3': 1, '4': 1, '5': 9, '10': 'authority'},
+  ],
   '7': {},
 };
 
 /// Descriptor for `Module`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List moduleDescriptor = $convert.base64Decode(
-    'CgZNb2R1bGU6P7rAltoBOQogZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay9hcHASFQoTY2'
-    '9zbW9zLmFwcC52MWFscGhhMQ==');
+    'CgZNb2R1bGUSHAoJYXV0aG9yaXR5GAEgASgJUglhdXRob3JpdHk6MLrAltoBKgooZ2l0aHViLm'
+    'NvbS9jb3Ntb3MvY29zbW9zLXNkay94L2NvbnNlbnN1cw==');
 

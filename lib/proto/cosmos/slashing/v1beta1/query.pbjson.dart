@@ -32,8 +32,8 @@ const QueryParamsResponse$json = {
 
 /// Descriptor for `QueryParamsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryParamsResponseDescriptor = $convert.base64Decode(
-    'ChNRdWVyeVBhcmFtc1Jlc3BvbnNlEj0KBnBhcmFtcxgBIAEoCzIfLmNvc21vcy5zbGFzaGluZy'
-    '52MWJldGExLlBhcmFtc0IEyN4fAFIGcGFyYW1z');
+    'ChNRdWVyeVBhcmFtc1Jlc3BvbnNlEkIKBnBhcmFtcxgBIAEoCzIfLmNvc21vcy5zbGFzaGluZy'
+    '52MWJldGExLlBhcmFtc0IJyN4fAKjnsCoBUgZwYXJhbXM=');
 
 @$core.Deprecated('Use querySigningInfoRequestDescriptor instead')
 const QuerySigningInfoRequest$json = {
@@ -58,9 +58,9 @@ const QuerySigningInfoResponse$json = {
 
 /// Descriptor for `QuerySigningInfoResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List querySigningInfoResponseDescriptor = $convert.base64Decode(
-    'ChhRdWVyeVNpZ25pbmdJbmZvUmVzcG9uc2USXQoQdmFsX3NpZ25pbmdfaW5mbxgBIAEoCzItLm'
-    'Nvc21vcy5zbGFzaGluZy52MWJldGExLlZhbGlkYXRvclNpZ25pbmdJbmZvQgTI3h8AUg52YWxT'
-    'aWduaW5nSW5mbw==');
+    'ChhRdWVyeVNpZ25pbmdJbmZvUmVzcG9uc2USYgoQdmFsX3NpZ25pbmdfaW5mbxgBIAEoCzItLm'
+    'Nvc21vcy5zbGFzaGluZy52MWJldGExLlZhbGlkYXRvclNpZ25pbmdJbmZvQgnI3h8AqOewKgFS'
+    'DnZhbFNpZ25pbmdJbmZv');
 
 @$core.Deprecated('Use querySigningInfosRequestDescriptor instead')
 const QuerySigningInfosRequest$json = {
@@ -86,8 +86,8 @@ const QuerySigningInfosResponse$json = {
 
 /// Descriptor for `QuerySigningInfosResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List querySigningInfosResponseDescriptor = $convert.base64Decode(
-    'ChlRdWVyeVNpZ25pbmdJbmZvc1Jlc3BvbnNlEkcKBGluZm8YASADKAsyLS5jb3Ntb3Muc2xhc2'
-    'hpbmcudjFiZXRhMS5WYWxpZGF0b3JTaWduaW5nSW5mb0IEyN4fAFIEaW5mbxJHCgpwYWdpbmF0'
-    'aW9uGAIgASgLMicuY29zbW9zLmJhc2UucXVlcnkudjFiZXRhMS5QYWdlUmVzcG9uc2VSCnBhZ2'
-    'luYXRpb24=');
+    'ChlRdWVyeVNpZ25pbmdJbmZvc1Jlc3BvbnNlEkwKBGluZm8YASADKAsyLS5jb3Ntb3Muc2xhc2'
+    'hpbmcudjFiZXRhMS5WYWxpZGF0b3JTaWduaW5nSW5mb0IJyN4fAKjnsCoBUgRpbmZvEkcKCnBh'
+    'Z2luYXRpb24YAiABKAsyJy5jb3Ntb3MuYmFzZS5xdWVyeS52MWJldGExLlBhZ2VSZXNwb25zZV'
+    'IKcGFnaW5hdGlvbg==');
 

@@ -30,10 +30,11 @@ const MsgCreateVestingAccount$json = {
 final $typed_data.Uint8List msgCreateVestingAccountDescriptor = $convert.base64Decode(
     'ChdNc2dDcmVhdGVWZXN0aW5nQWNjb3VudBI7Cgxmcm9tX2FkZHJlc3MYASABKAlCGNK0LRRjb3'
     'Ntb3MuQWRkcmVzc1N0cmluZ1ILZnJvbUFkZHJlc3MSNwoKdG9fYWRkcmVzcxgCIAEoCUIY0rQt'
-    'FGNvc21vcy5BZGRyZXNzU3RyaW5nUgl0b0FkZHJlc3MSYwoGYW1vdW50GAMgAygLMhkuY29zbW'
-    '9zLmJhc2UudjFiZXRhMS5Db2luQjDI3h8Aqt8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1z'
-    'ZGsvdHlwZXMuQ29pbnNSBmFtb3VudBIZCghlbmRfdGltZRgEIAEoA1IHZW5kVGltZRIYCgdkZW'
-    'xheWVkGAUgASgIUgdkZWxheWVkOhXooB8BguewKgxmcm9tX2FkZHJlc3M=');
+    'FGNvc21vcy5BZGRyZXNzU3RyaW5nUgl0b0FkZHJlc3MSaAoGYW1vdW50GAMgAygLMhkuY29zbW'
+    '9zLmJhc2UudjFiZXRhMS5Db2luQjXI3h8Aqt8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1z'
+    'ZGsvdHlwZXMuQ29pbnOo57AqAVIGYW1vdW50EhkKCGVuZF90aW1lGAQgASgDUgdlbmRUaW1lEh'
+    'gKB2RlbGF5ZWQYBSABKAhSB2RlbGF5ZWQ6POigHwGC57AqDGZyb21fYWRkcmVzc4rnsCoiY29z'
+    'bW9zLXNkay9Nc2dDcmVhdGVWZXN0aW5nQWNjb3VudA==');
 
 @$core.Deprecated('Use msgCreateVestingAccountResponseDescriptor instead')
 const MsgCreateVestingAccountResponse$json = {
@@ -59,9 +60,10 @@ const MsgCreatePermanentLockedAccount$json = {
 final $typed_data.Uint8List msgCreatePermanentLockedAccountDescriptor = $convert.base64Decode(
     'Ch9Nc2dDcmVhdGVQZXJtYW5lbnRMb2NrZWRBY2NvdW50EjoKDGZyb21fYWRkcmVzcxgBIAEoCU'
     'IX8t4fE3lhbWw6ImZyb21fYWRkcmVzcyJSC2Zyb21BZGRyZXNzEjQKCnRvX2FkZHJlc3MYAiAB'
-    'KAlCFfLeHxF5YW1sOiJ0b19hZGRyZXNzIlIJdG9BZGRyZXNzEmMKBmFtb3VudBgDIAMoCzIZLm'
-    'Nvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkIwyN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Nt'
-    'b3Mtc2RrL3R5cGVzLkNvaW5zUgZhbW91bnQ6BOigHwE=');
+    'KAlCFfLeHxF5YW1sOiJ0b19hZGRyZXNzIlIJdG9BZGRyZXNzEmgKBmFtb3VudBgDIAMoCzIZLm'
+    'Nvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkI1yN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Nt'
+    'b3Mtc2RrL3R5cGVzLkNvaW5zqOewKgFSBmFtb3VudDo/6KAfAYLnsCoMZnJvbV9hZGRyZXNziu'
+    'ewKiVjb3Ntb3Mtc2RrL01zZ0NyZWF0ZVBlcm1Mb2NrZWRBY2NvdW50');
 
 @$core.Deprecated('Use msgCreatePermanentLockedAccountResponseDescriptor instead')
 const MsgCreatePermanentLockedAccountResponse$json = {
@@ -88,9 +90,10 @@ const MsgCreatePeriodicVestingAccount$json = {
 final $typed_data.Uint8List msgCreatePeriodicVestingAccountDescriptor = $convert.base64Decode(
     'Ch9Nc2dDcmVhdGVQZXJpb2RpY1Zlc3RpbmdBY2NvdW50EiEKDGZyb21fYWRkcmVzcxgBIAEoCV'
     'ILZnJvbUFkZHJlc3MSHQoKdG9fYWRkcmVzcxgCIAEoCVIJdG9BZGRyZXNzEh0KCnN0YXJ0X3Rp'
-    'bWUYAyABKANSCXN0YXJ0VGltZRJNCg92ZXN0aW5nX3BlcmlvZHMYBCADKAsyHi5jb3Ntb3Mudm'
-    'VzdGluZy52MWJldGExLlBlcmlvZEIEyN4fAFIOdmVzdGluZ1BlcmlvZHM6FeigHwCC57AqDGZy'
-    'b21fYWRkcmVzcw==');
+    'bWUYAyABKANSCXN0YXJ0VGltZRJSCg92ZXN0aW5nX3BlcmlvZHMYBCADKAsyHi5jb3Ntb3Mudm'
+    'VzdGluZy52MWJldGExLlBlcmlvZEIJyN4fAKjnsCoBUg52ZXN0aW5nUGVyaW9kczpE6KAfAILn'
+    'sCoMZnJvbV9hZGRyZXNziuewKipjb3Ntb3Mtc2RrL01zZ0NyZWF0ZVBlcmlvZGljVmVzdGluZ0'
+    'FjY291bnQ=');
 
 @$core.Deprecated('Use msgCreatePeriodicVestingAccountResponseDescriptor instead')
 const MsgCreatePeriodicVestingAccountResponse$json = {

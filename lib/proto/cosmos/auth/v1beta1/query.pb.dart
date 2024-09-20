@@ -14,16 +14,16 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $36;
-import '../../base/query/v1beta1/pagination.pb.dart' as $39;
-import 'auth.pb.dart' as $38;
+import '../../../google/protobuf/any.pb.dart' as $43;
+import '../../base/query/v1beta1/pagination.pb.dart' as $46;
+import 'auth.pb.dart' as $45;
 
 ///  QueryAccountsRequest is the request type for the Query/Accounts RPC method.
 ///
 ///  Since: cosmos-sdk 0.43
 class QueryAccountsRequest extends $pb.GeneratedMessage {
   factory QueryAccountsRequest({
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -36,7 +36,7 @@ class QueryAccountsRequest extends $pb.GeneratedMessage {
   factory QueryAccountsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$39.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -63,15 +63,15 @@ class QueryAccountsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $39.PageRequest get pagination => $_getN(0);
+  $46.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($39.PageRequest v) { setField(1, v); }
+  set pagination($46.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $39.PageRequest ensurePagination() => $_ensure(0);
+  $46.PageRequest ensurePagination() => $_ensure(0);
 }
 
 ///  QueryAccountsResponse is the response type for the Query/Accounts RPC method.
@@ -79,8 +79,8 @@ class QueryAccountsRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.43
 class QueryAccountsResponse extends $pb.GeneratedMessage {
   factory QueryAccountsResponse({
-    $core.Iterable<$36.Any>? accounts,
-    $39.PageResponse? pagination,
+    $core.Iterable<$43.Any>? accounts,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (accounts != null) {
@@ -96,8 +96,8 @@ class QueryAccountsResponse extends $pb.GeneratedMessage {
   factory QueryAccountsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..pc<$36.Any>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $36.Any.create)
-    ..aOM<$39.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..pc<$43.Any>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $43.Any.create)
+    ..aOM<$46.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -124,19 +124,19 @@ class QueryAccountsResponse extends $pb.GeneratedMessage {
 
   /// accounts are the existing accounts
   @$pb.TagNumber(1)
-  $core.List<$36.Any> get accounts => $_getList(0);
+  $core.List<$43.Any> get accounts => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $39.PageResponse get pagination => $_getN(1);
+  $46.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageResponse v) { setField(2, v); }
+  set pagination($46.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageResponse ensurePagination() => $_ensure(1);
+  $46.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryAccountRequest is the request type for the Query/Account RPC method.
@@ -194,7 +194,7 @@ class QueryAccountRequest extends $pb.GeneratedMessage {
 /// QueryAccountResponse is the response type for the Query/Account RPC method.
 class QueryAccountResponse extends $pb.GeneratedMessage {
   factory QueryAccountResponse({
-    $36.Any? account,
+    $43.Any? account,
   }) {
     final $result = create();
     if (account != null) {
@@ -207,7 +207,7 @@ class QueryAccountResponse extends $pb.GeneratedMessage {
   factory QueryAccountResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$36.Any>(1, _omitFieldNames ? '' : 'account', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(1, _omitFieldNames ? '' : 'account', subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -234,15 +234,15 @@ class QueryAccountResponse extends $pb.GeneratedMessage {
 
   /// account defines the account of the corresponding address.
   @$pb.TagNumber(1)
-  $36.Any get account => $_getN(0);
+  $43.Any get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($36.Any v) { setField(1, v); }
+  set account($43.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $36.Any ensureAccount() => $_ensure(0);
+  $43.Any ensureAccount() => $_ensure(0);
 }
 
 /// QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -281,7 +281,7 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is the response type for the Query/Params RPC method.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $38.Params? params,
+    $45.Params? params,
   }) {
     final $result = create();
     if (params != null) {
@@ -294,7 +294,7 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$38.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $38.Params.create)
+    ..aOM<$45.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $45.Params.create)
     ..hasRequiredFields = false
   ;
 
@@ -321,15 +321,15 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// params defines the parameters of the module.
   @$pb.TagNumber(1)
-  $38.Params get params => $_getN(0);
+  $45.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($38.Params v) { setField(1, v); }
+  set params($45.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $38.Params ensureParams() => $_ensure(0);
+  $45.Params ensureParams() => $_ensure(0);
 }
 
 ///  QueryModuleAccountsRequest is the request type for the Query/ModuleAccounts RPC method.
@@ -372,7 +372,7 @@ class QueryModuleAccountsRequest extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.46
 class QueryModuleAccountsResponse extends $pb.GeneratedMessage {
   factory QueryModuleAccountsResponse({
-    $core.Iterable<$36.Any>? accounts,
+    $core.Iterable<$43.Any>? accounts,
   }) {
     final $result = create();
     if (accounts != null) {
@@ -385,7 +385,7 @@ class QueryModuleAccountsResponse extends $pb.GeneratedMessage {
   factory QueryModuleAccountsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryModuleAccountsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..pc<$36.Any>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $36.Any.create)
+    ..pc<$43.Any>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -411,7 +411,7 @@ class QueryModuleAccountsResponse extends $pb.GeneratedMessage {
   static QueryModuleAccountsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$36.Any> get accounts => $_getList(0);
+  $core.List<$43.Any> get accounts => $_getList(0);
 }
 
 /// QueryModuleAccountByNameRequest is the request type for the Query/ModuleAccountByName RPC method.
@@ -468,7 +468,7 @@ class QueryModuleAccountByNameRequest extends $pb.GeneratedMessage {
 /// QueryModuleAccountByNameResponse is the response type for the Query/ModuleAccountByName RPC method.
 class QueryModuleAccountByNameResponse extends $pb.GeneratedMessage {
   factory QueryModuleAccountByNameResponse({
-    $36.Any? account,
+    $43.Any? account,
   }) {
     final $result = create();
     if (account != null) {
@@ -481,7 +481,7 @@ class QueryModuleAccountByNameResponse extends $pb.GeneratedMessage {
   factory QueryModuleAccountByNameResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryModuleAccountByNameResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$36.Any>(1, _omitFieldNames ? '' : 'account', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(1, _omitFieldNames ? '' : 'account', subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -507,15 +507,15 @@ class QueryModuleAccountByNameResponse extends $pb.GeneratedMessage {
   static QueryModuleAccountByNameResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $36.Any get account => $_getN(0);
+  $43.Any get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($36.Any v) { setField(1, v); }
+  set account($43.Any v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $36.Any ensureAccount() => $_ensure(0);
+  $43.Any ensureAccount() => $_ensure(0);
 }
 
 ///  Bech32PrefixRequest is the request type for Bech32Prefix rpc method.
@@ -823,11 +823,17 @@ class AddressStringToBytesResponse extends $pb.GeneratedMessage {
 ///  Since: cosmos-sdk 0.46.2
 class QueryAccountAddressByIDRequest extends $pb.GeneratedMessage {
   factory QueryAccountAddressByIDRequest({
+  @$core.Deprecated('This field is deprecated.')
     $fixnum.Int64? id,
+    $fixnum.Int64? accountId,
   }) {
     final $result = create();
     if (id != null) {
+      // ignore: deprecated_member_use_from_same_package
       $result.id = id;
+    }
+    if (accountId != null) {
+      $result.accountId = accountId;
     }
     return $result;
   }
@@ -837,6 +843,7 @@ class QueryAccountAddressByIDRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountAddressByIDRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'id')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'accountId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -861,17 +868,35 @@ class QueryAccountAddressByIDRequest extends $pb.GeneratedMessage {
   static QueryAccountAddressByIDRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryAccountAddressByIDRequest>(create);
   static QueryAccountAddressByIDRequest? _defaultInstance;
 
-  /// id is the account number of the address to be queried. This field
-  /// should have been an uint64 (like all account numbers), and will be
-  /// updated to uint64 in a future version of the auth query.
+  ///  Deprecated, use account_id instead
+  ///
+  ///  id is the account number of the address to be queried. This field
+  ///  should have been an uint64 (like all account numbers), and will be
+  ///  updated to uint64 in a future version of the auth query.
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $fixnum.Int64 get id => $_getI64(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   set id($fixnum.Int64 v) { $_setInt64(0, v); }
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
+
+  ///  account_id is the account number of the address to be queried.
+  ///
+  ///  Since: cosmos-sdk 0.47
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get accountId => $_getI64(1);
+  @$pb.TagNumber(2)
+  set accountId($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAccountId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAccountId() => clearField(2);
 }
 
 ///  QueryAccountAddressByIDResponse is the response type for AccountAddressByID rpc method
@@ -925,6 +950,116 @@ class QueryAccountAddressByIDResponse extends $pb.GeneratedMessage {
   $core.bool hasAccountAddress() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccountAddress() => clearField(1);
+}
+
+///  QueryAccountInfoRequest is the Query/AccountInfo request type.
+///
+///  Since: cosmos-sdk 0.47
+class QueryAccountInfoRequest extends $pb.GeneratedMessage {
+  factory QueryAccountInfoRequest({
+    $core.String? address,
+  }) {
+    final $result = create();
+    if (address != null) {
+      $result.address = address;
+    }
+    return $result;
+  }
+  QueryAccountInfoRequest._() : super();
+  factory QueryAccountInfoRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory QueryAccountInfoRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountInfoRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  QueryAccountInfoRequest clone() => QueryAccountInfoRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  QueryAccountInfoRequest copyWith(void Function(QueryAccountInfoRequest) updates) => super.copyWith((message) => updates(message as QueryAccountInfoRequest)) as QueryAccountInfoRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static QueryAccountInfoRequest create() => QueryAccountInfoRequest._();
+  QueryAccountInfoRequest createEmptyInstance() => create();
+  static $pb.PbList<QueryAccountInfoRequest> createRepeated() => $pb.PbList<QueryAccountInfoRequest>();
+  @$core.pragma('dart2js:noInline')
+  static QueryAccountInfoRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryAccountInfoRequest>(create);
+  static QueryAccountInfoRequest? _defaultInstance;
+
+  /// address is the account address string.
+  @$pb.TagNumber(1)
+  $core.String get address => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set address($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAddress() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAddress() => clearField(1);
+}
+
+///  QueryAccountInfoResponse is the Query/AccountInfo response type.
+///
+///  Since: cosmos-sdk 0.47
+class QueryAccountInfoResponse extends $pb.GeneratedMessage {
+  factory QueryAccountInfoResponse({
+    $45.BaseAccount? info,
+  }) {
+    final $result = create();
+    if (info != null) {
+      $result.info = info;
+    }
+    return $result;
+  }
+  QueryAccountInfoResponse._() : super();
+  factory QueryAccountInfoResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory QueryAccountInfoResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryAccountInfoResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
+    ..aOM<$45.BaseAccount>(1, _omitFieldNames ? '' : 'info', subBuilder: $45.BaseAccount.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  QueryAccountInfoResponse clone() => QueryAccountInfoResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  QueryAccountInfoResponse copyWith(void Function(QueryAccountInfoResponse) updates) => super.copyWith((message) => updates(message as QueryAccountInfoResponse)) as QueryAccountInfoResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static QueryAccountInfoResponse create() => QueryAccountInfoResponse._();
+  QueryAccountInfoResponse createEmptyInstance() => create();
+  static $pb.PbList<QueryAccountInfoResponse> createRepeated() => $pb.PbList<QueryAccountInfoResponse>();
+  @$core.pragma('dart2js:noInline')
+  static QueryAccountInfoResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryAccountInfoResponse>(create);
+  static QueryAccountInfoResponse? _defaultInstance;
+
+  /// info is the account info which is represented by BaseAccount.
+  @$pb.TagNumber(1)
+  $45.BaseAccount get info => $_getN(0);
+  @$pb.TagNumber(1)
+  set info($45.BaseAccount v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasInfo() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearInfo() => clearField(1);
+  @$pb.TagNumber(1)
+  $45.BaseAccount ensureInfo() => $_ensure(0);
 }
 
 

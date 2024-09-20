@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $61;
-import 'types.pbenum.dart' as $61;
+import 'types.pb.dart' as $69;
+import 'types.pbenum.dart' as $69;
 
 /// EventCreateGroup is an event emitted when a group is created.
 class EventCreateGroup extends $pb.GeneratedMessage {
@@ -385,7 +385,7 @@ class EventVote extends $pb.GeneratedMessage {
 class EventExec extends $pb.GeneratedMessage {
   factory EventExec({
     $fixnum.Int64? proposalId,
-    $61.ProposalExecutorResult? result,
+    $69.ProposalExecutorResult? result,
     $core.String? logs,
   }) {
     final $result = create();
@@ -406,7 +406,7 @@ class EventExec extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EventExec', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..e<$61.ProposalExecutorResult>(2, _omitFieldNames ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $61.ProposalExecutorResult.PROPOSAL_EXECUTOR_RESULT_UNSPECIFIED, valueOf: $61.ProposalExecutorResult.valueOf, enumValues: $61.ProposalExecutorResult.values)
+    ..e<$69.ProposalExecutorResult>(2, _omitFieldNames ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $69.ProposalExecutorResult.PROPOSAL_EXECUTOR_RESULT_UNSPECIFIED, valueOf: $69.ProposalExecutorResult.valueOf, enumValues: $69.ProposalExecutorResult.values)
     ..aOS(3, _omitFieldNames ? '' : 'logs')
     ..hasRequiredFields = false
   ;
@@ -444,9 +444,9 @@ class EventExec extends $pb.GeneratedMessage {
 
   /// result is the proposal execution result.
   @$pb.TagNumber(2)
-  $61.ProposalExecutorResult get result => $_getN(1);
+  $69.ProposalExecutorResult get result => $_getN(1);
   @$pb.TagNumber(2)
-  set result($61.ProposalExecutorResult v) { setField(2, v); }
+  set result($69.ProposalExecutorResult v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasResult() => $_has(1);
   @$pb.TagNumber(2)
@@ -534,8 +534,8 @@ class EventLeaveGroup extends $pb.GeneratedMessage {
 class EventProposalPruned extends $pb.GeneratedMessage {
   factory EventProposalPruned({
     $fixnum.Int64? proposalId,
-    $61.ProposalStatus? status,
-    $61.TallyResult? tallyResult,
+    $69.ProposalStatus? status,
+    $69.TallyResult? tallyResult,
   }) {
     final $result = create();
     if (proposalId != null) {
@@ -555,8 +555,8 @@ class EventProposalPruned extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EventProposalPruned', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..e<$61.ProposalStatus>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $61.ProposalStatus.PROPOSAL_STATUS_UNSPECIFIED, valueOf: $61.ProposalStatus.valueOf, enumValues: $61.ProposalStatus.values)
-    ..aOM<$61.TallyResult>(3, _omitFieldNames ? '' : 'tallyResult', subBuilder: $61.TallyResult.create)
+    ..e<$69.ProposalStatus>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $69.ProposalStatus.PROPOSAL_STATUS_UNSPECIFIED, valueOf: $69.ProposalStatus.valueOf, enumValues: $69.ProposalStatus.values)
+    ..aOM<$69.TallyResult>(3, _omitFieldNames ? '' : 'tallyResult', subBuilder: $69.TallyResult.create)
     ..hasRequiredFields = false
   ;
 
@@ -593,9 +593,9 @@ class EventProposalPruned extends $pb.GeneratedMessage {
 
   /// status is the proposal status (UNSPECIFIED, SUBMITTED, ACCEPTED, REJECTED, ABORTED, WITHDRAWN).
   @$pb.TagNumber(2)
-  $61.ProposalStatus get status => $_getN(1);
+  $69.ProposalStatus get status => $_getN(1);
   @$pb.TagNumber(2)
-  set status($61.ProposalStatus v) { setField(2, v); }
+  set status($69.ProposalStatus v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasStatus() => $_has(1);
   @$pb.TagNumber(2)
@@ -603,15 +603,15 @@ class EventProposalPruned extends $pb.GeneratedMessage {
 
   /// tally_result is the proposal tally result (when applicable).
   @$pb.TagNumber(3)
-  $61.TallyResult get tallyResult => $_getN(2);
+  $69.TallyResult get tallyResult => $_getN(2);
   @$pb.TagNumber(3)
-  set tallyResult($61.TallyResult v) { setField(3, v); }
+  set tallyResult($69.TallyResult v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTallyResult() => $_has(2);
   @$pb.TagNumber(3)
   void clearTallyResult() => clearField(3);
   @$pb.TagNumber(3)
-  $61.TallyResult ensureTallyResult() => $_ensure(2);
+  $69.TallyResult ensureTallyResult() => $_ensure(2);
 }
 
 

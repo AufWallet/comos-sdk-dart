@@ -14,18 +14,18 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'staking.pb.dart' as $66;
+import 'staking.pb.dart' as $75;
 
 /// GenesisState defines the staking module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $66.Params? params,
+    $75.Params? params,
     $core.List<$core.int>? lastTotalPower,
     $core.Iterable<LastValidatorPower>? lastValidatorPowers,
-    $core.Iterable<$66.Validator>? validators,
-    $core.Iterable<$66.Delegation>? delegations,
-    $core.Iterable<$66.UnbondingDelegation>? unbondingDelegations,
-    $core.Iterable<$66.Redelegation>? redelegations,
+    $core.Iterable<$75.Validator>? validators,
+    $core.Iterable<$75.Delegation>? delegations,
+    $core.Iterable<$75.UnbondingDelegation>? unbondingDelegations,
+    $core.Iterable<$75.Redelegation>? redelegations,
     $core.bool? exported,
   }) {
     final $result = create();
@@ -60,13 +60,13 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.staking.v1beta1'), createEmptyInstance: create)
-    ..aOM<$66.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $66.Params.create)
+    ..aOM<$75.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $75.Params.create)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'lastTotalPower', $pb.PbFieldType.OY)
     ..pc<LastValidatorPower>(3, _omitFieldNames ? '' : 'lastValidatorPowers', $pb.PbFieldType.PM, subBuilder: LastValidatorPower.create)
-    ..pc<$66.Validator>(4, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: $66.Validator.create)
-    ..pc<$66.Delegation>(5, _omitFieldNames ? '' : 'delegations', $pb.PbFieldType.PM, subBuilder: $66.Delegation.create)
-    ..pc<$66.UnbondingDelegation>(6, _omitFieldNames ? '' : 'unbondingDelegations', $pb.PbFieldType.PM, subBuilder: $66.UnbondingDelegation.create)
-    ..pc<$66.Redelegation>(7, _omitFieldNames ? '' : 'redelegations', $pb.PbFieldType.PM, subBuilder: $66.Redelegation.create)
+    ..pc<$75.Validator>(4, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: $75.Validator.create)
+    ..pc<$75.Delegation>(5, _omitFieldNames ? '' : 'delegations', $pb.PbFieldType.PM, subBuilder: $75.Delegation.create)
+    ..pc<$75.UnbondingDelegation>(6, _omitFieldNames ? '' : 'unbondingDelegations', $pb.PbFieldType.PM, subBuilder: $75.UnbondingDelegation.create)
+    ..pc<$75.Redelegation>(7, _omitFieldNames ? '' : 'redelegations', $pb.PbFieldType.PM, subBuilder: $75.Redelegation.create)
     ..aOB(8, _omitFieldNames ? '' : 'exported')
     ..hasRequiredFields = false
   ;
@@ -92,17 +92,17 @@ class GenesisState extends $pb.GeneratedMessage {
   static GenesisState getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GenesisState>(create);
   static GenesisState? _defaultInstance;
 
-  /// params defines all the paramaters of related to deposit.
+  /// params defines all the parameters of related to deposit.
   @$pb.TagNumber(1)
-  $66.Params get params => $_getN(0);
+  $75.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($66.Params v) { setField(1, v); }
+  set params($75.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $66.Params ensureParams() => $_ensure(0);
+  $75.Params ensureParams() => $_ensure(0);
 
   /// last_total_power tracks the total amounts of bonded tokens recorded during
   /// the previous end block.
@@ -122,19 +122,19 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// delegations defines the validator set at genesis.
   @$pb.TagNumber(4)
-  $core.List<$66.Validator> get validators => $_getList(3);
+  $core.List<$75.Validator> get validators => $_getList(3);
 
   /// delegations defines the delegations active at genesis.
   @$pb.TagNumber(5)
-  $core.List<$66.Delegation> get delegations => $_getList(4);
+  $core.List<$75.Delegation> get delegations => $_getList(4);
 
   /// unbonding_delegations defines the unbonding delegations active at genesis.
   @$pb.TagNumber(6)
-  $core.List<$66.UnbondingDelegation> get unbondingDelegations => $_getList(5);
+  $core.List<$75.UnbondingDelegation> get unbondingDelegations => $_getList(5);
 
   /// redelegations defines the redelegations active at genesis.
   @$pb.TagNumber(7)
-  $core.List<$66.Redelegation> get redelegations => $_getList(6);
+  $core.List<$75.Redelegation> get redelegations => $_getList(6);
 
   @$pb.TagNumber(8)
   $core.bool get exported => $_getBF(7);

@@ -15,48 +15,56 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $4;
+import 'query.pb.dart' as $6;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.bank.v1beta1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$balance = $grpc.ClientMethod<$4.QueryBalanceRequest, $4.QueryBalanceResponse>(
+  static final _$balance = $grpc.ClientMethod<$6.QueryBalanceRequest, $6.QueryBalanceResponse>(
       '/cosmos.bank.v1beta1.Query/Balance',
-      ($4.QueryBalanceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.QueryBalanceResponse.fromBuffer(value));
-  static final _$allBalances = $grpc.ClientMethod<$4.QueryAllBalancesRequest, $4.QueryAllBalancesResponse>(
+      ($6.QueryBalanceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QueryBalanceResponse.fromBuffer(value));
+  static final _$allBalances = $grpc.ClientMethod<$6.QueryAllBalancesRequest, $6.QueryAllBalancesResponse>(
       '/cosmos.bank.v1beta1.Query/AllBalances',
-      ($4.QueryAllBalancesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.QueryAllBalancesResponse.fromBuffer(value));
-  static final _$spendableBalances = $grpc.ClientMethod<$4.QuerySpendableBalancesRequest, $4.QuerySpendableBalancesResponse>(
+      ($6.QueryAllBalancesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QueryAllBalancesResponse.fromBuffer(value));
+  static final _$spendableBalances = $grpc.ClientMethod<$6.QuerySpendableBalancesRequest, $6.QuerySpendableBalancesResponse>(
       '/cosmos.bank.v1beta1.Query/SpendableBalances',
-      ($4.QuerySpendableBalancesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.QuerySpendableBalancesResponse.fromBuffer(value));
-  static final _$totalSupply = $grpc.ClientMethod<$4.QueryTotalSupplyRequest, $4.QueryTotalSupplyResponse>(
+      ($6.QuerySpendableBalancesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QuerySpendableBalancesResponse.fromBuffer(value));
+  static final _$spendableBalanceByDenom = $grpc.ClientMethod<$6.QuerySpendableBalanceByDenomRequest, $6.QuerySpendableBalanceByDenomResponse>(
+      '/cosmos.bank.v1beta1.Query/SpendableBalanceByDenom',
+      ($6.QuerySpendableBalanceByDenomRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QuerySpendableBalanceByDenomResponse.fromBuffer(value));
+  static final _$totalSupply = $grpc.ClientMethod<$6.QueryTotalSupplyRequest, $6.QueryTotalSupplyResponse>(
       '/cosmos.bank.v1beta1.Query/TotalSupply',
-      ($4.QueryTotalSupplyRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.QueryTotalSupplyResponse.fromBuffer(value));
-  static final _$supplyOf = $grpc.ClientMethod<$4.QuerySupplyOfRequest, $4.QuerySupplyOfResponse>(
+      ($6.QueryTotalSupplyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QueryTotalSupplyResponse.fromBuffer(value));
+  static final _$supplyOf = $grpc.ClientMethod<$6.QuerySupplyOfRequest, $6.QuerySupplyOfResponse>(
       '/cosmos.bank.v1beta1.Query/SupplyOf',
-      ($4.QuerySupplyOfRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.QuerySupplyOfResponse.fromBuffer(value));
-  static final _$params = $grpc.ClientMethod<$4.QueryParamsRequest, $4.QueryParamsResponse>(
+      ($6.QuerySupplyOfRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QuerySupplyOfResponse.fromBuffer(value));
+  static final _$params = $grpc.ClientMethod<$6.QueryParamsRequest, $6.QueryParamsResponse>(
       '/cosmos.bank.v1beta1.Query/Params',
-      ($4.QueryParamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.QueryParamsResponse.fromBuffer(value));
-  static final _$denomMetadata = $grpc.ClientMethod<$4.QueryDenomMetadataRequest, $4.QueryDenomMetadataResponse>(
+      ($6.QueryParamsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QueryParamsResponse.fromBuffer(value));
+  static final _$denomMetadata = $grpc.ClientMethod<$6.QueryDenomMetadataRequest, $6.QueryDenomMetadataResponse>(
       '/cosmos.bank.v1beta1.Query/DenomMetadata',
-      ($4.QueryDenomMetadataRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.QueryDenomMetadataResponse.fromBuffer(value));
-  static final _$denomsMetadata = $grpc.ClientMethod<$4.QueryDenomsMetadataRequest, $4.QueryDenomsMetadataResponse>(
+      ($6.QueryDenomMetadataRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QueryDenomMetadataResponse.fromBuffer(value));
+  static final _$denomsMetadata = $grpc.ClientMethod<$6.QueryDenomsMetadataRequest, $6.QueryDenomsMetadataResponse>(
       '/cosmos.bank.v1beta1.Query/DenomsMetadata',
-      ($4.QueryDenomsMetadataRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.QueryDenomsMetadataResponse.fromBuffer(value));
-  static final _$denomOwners = $grpc.ClientMethod<$4.QueryDenomOwnersRequest, $4.QueryDenomOwnersResponse>(
+      ($6.QueryDenomsMetadataRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QueryDenomsMetadataResponse.fromBuffer(value));
+  static final _$denomOwners = $grpc.ClientMethod<$6.QueryDenomOwnersRequest, $6.QueryDenomOwnersResponse>(
       '/cosmos.bank.v1beta1.Query/DenomOwners',
-      ($4.QueryDenomOwnersRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.QueryDenomOwnersResponse.fromBuffer(value));
+      ($6.QueryDenomOwnersRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QueryDenomOwnersResponse.fromBuffer(value));
+  static final _$sendEnabled = $grpc.ClientMethod<$6.QuerySendEnabledRequest, $6.QuerySendEnabledResponse>(
+      '/cosmos.bank.v1beta1.Query/SendEnabled',
+      ($6.QuerySendEnabledRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $6.QuerySendEnabledResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -64,40 +72,48 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$4.QueryBalanceResponse> balance($4.QueryBalanceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$6.QueryBalanceResponse> balance($6.QueryBalanceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$balance, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.QueryAllBalancesResponse> allBalances($4.QueryAllBalancesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$6.QueryAllBalancesResponse> allBalances($6.QueryAllBalancesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$allBalances, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.QuerySpendableBalancesResponse> spendableBalances($4.QuerySpendableBalancesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$6.QuerySpendableBalancesResponse> spendableBalances($6.QuerySpendableBalancesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$spendableBalances, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.QueryTotalSupplyResponse> totalSupply($4.QueryTotalSupplyRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$6.QuerySpendableBalanceByDenomResponse> spendableBalanceByDenom($6.QuerySpendableBalanceByDenomRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$spendableBalanceByDenom, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.QueryTotalSupplyResponse> totalSupply($6.QueryTotalSupplyRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$totalSupply, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.QuerySupplyOfResponse> supplyOf($4.QuerySupplyOfRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$6.QuerySupplyOfResponse> supplyOf($6.QuerySupplyOfRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$supplyOf, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.QueryParamsResponse> params($4.QueryParamsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$6.QueryParamsResponse> params($6.QueryParamsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$params, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.QueryDenomMetadataResponse> denomMetadata($4.QueryDenomMetadataRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$6.QueryDenomMetadataResponse> denomMetadata($6.QueryDenomMetadataRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$denomMetadata, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.QueryDenomsMetadataResponse> denomsMetadata($4.QueryDenomsMetadataRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$6.QueryDenomsMetadataResponse> denomsMetadata($6.QueryDenomsMetadataRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$denomsMetadata, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.QueryDenomOwnersResponse> denomOwners($4.QueryDenomOwnersRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$6.QueryDenomOwnersResponse> denomOwners($6.QueryDenomOwnersRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$denomOwners, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$6.QuerySendEnabledResponse> sendEnabled($6.QuerySendEnabledRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$sendEnabled, request, options: options);
   }
 }
 
@@ -106,114 +122,138 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.bank.v1beta1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$4.QueryBalanceRequest, $4.QueryBalanceResponse>(
+    $addMethod($grpc.ServiceMethod<$6.QueryBalanceRequest, $6.QueryBalanceResponse>(
         'Balance',
         balance_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.QueryBalanceRequest.fromBuffer(value),
-        ($4.QueryBalanceResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.QueryAllBalancesRequest, $4.QueryAllBalancesResponse>(
+        ($core.List<$core.int> value) => $6.QueryBalanceRequest.fromBuffer(value),
+        ($6.QueryBalanceResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QueryAllBalancesRequest, $6.QueryAllBalancesResponse>(
         'AllBalances',
         allBalances_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.QueryAllBalancesRequest.fromBuffer(value),
-        ($4.QueryAllBalancesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.QuerySpendableBalancesRequest, $4.QuerySpendableBalancesResponse>(
+        ($core.List<$core.int> value) => $6.QueryAllBalancesRequest.fromBuffer(value),
+        ($6.QueryAllBalancesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QuerySpendableBalancesRequest, $6.QuerySpendableBalancesResponse>(
         'SpendableBalances',
         spendableBalances_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.QuerySpendableBalancesRequest.fromBuffer(value),
-        ($4.QuerySpendableBalancesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.QueryTotalSupplyRequest, $4.QueryTotalSupplyResponse>(
+        ($core.List<$core.int> value) => $6.QuerySpendableBalancesRequest.fromBuffer(value),
+        ($6.QuerySpendableBalancesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QuerySpendableBalanceByDenomRequest, $6.QuerySpendableBalanceByDenomResponse>(
+        'SpendableBalanceByDenom',
+        spendableBalanceByDenom_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $6.QuerySpendableBalanceByDenomRequest.fromBuffer(value),
+        ($6.QuerySpendableBalanceByDenomResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QueryTotalSupplyRequest, $6.QueryTotalSupplyResponse>(
         'TotalSupply',
         totalSupply_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.QueryTotalSupplyRequest.fromBuffer(value),
-        ($4.QueryTotalSupplyResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.QuerySupplyOfRequest, $4.QuerySupplyOfResponse>(
+        ($core.List<$core.int> value) => $6.QueryTotalSupplyRequest.fromBuffer(value),
+        ($6.QueryTotalSupplyResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QuerySupplyOfRequest, $6.QuerySupplyOfResponse>(
         'SupplyOf',
         supplyOf_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.QuerySupplyOfRequest.fromBuffer(value),
-        ($4.QuerySupplyOfResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.QueryParamsRequest, $4.QueryParamsResponse>(
+        ($core.List<$core.int> value) => $6.QuerySupplyOfRequest.fromBuffer(value),
+        ($6.QuerySupplyOfResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QueryParamsRequest, $6.QueryParamsResponse>(
         'Params',
         params_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.QueryParamsRequest.fromBuffer(value),
-        ($4.QueryParamsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.QueryDenomMetadataRequest, $4.QueryDenomMetadataResponse>(
+        ($core.List<$core.int> value) => $6.QueryParamsRequest.fromBuffer(value),
+        ($6.QueryParamsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QueryDenomMetadataRequest, $6.QueryDenomMetadataResponse>(
         'DenomMetadata',
         denomMetadata_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.QueryDenomMetadataRequest.fromBuffer(value),
-        ($4.QueryDenomMetadataResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.QueryDenomsMetadataRequest, $4.QueryDenomsMetadataResponse>(
+        ($core.List<$core.int> value) => $6.QueryDenomMetadataRequest.fromBuffer(value),
+        ($6.QueryDenomMetadataResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QueryDenomsMetadataRequest, $6.QueryDenomsMetadataResponse>(
         'DenomsMetadata',
         denomsMetadata_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.QueryDenomsMetadataRequest.fromBuffer(value),
-        ($4.QueryDenomsMetadataResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.QueryDenomOwnersRequest, $4.QueryDenomOwnersResponse>(
+        ($core.List<$core.int> value) => $6.QueryDenomsMetadataRequest.fromBuffer(value),
+        ($6.QueryDenomsMetadataResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QueryDenomOwnersRequest, $6.QueryDenomOwnersResponse>(
         'DenomOwners',
         denomOwners_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.QueryDenomOwnersRequest.fromBuffer(value),
-        ($4.QueryDenomOwnersResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $6.QueryDenomOwnersRequest.fromBuffer(value),
+        ($6.QueryDenomOwnersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$6.QuerySendEnabledRequest, $6.QuerySendEnabledResponse>(
+        'SendEnabled',
+        sendEnabled_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $6.QuerySendEnabledRequest.fromBuffer(value),
+        ($6.QuerySendEnabledResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$4.QueryBalanceResponse> balance_Pre($grpc.ServiceCall call, $async.Future<$4.QueryBalanceRequest> request) async {
+  $async.Future<$6.QueryBalanceResponse> balance_Pre($grpc.ServiceCall call, $async.Future<$6.QueryBalanceRequest> request) async {
     return balance(call, await request);
   }
 
-  $async.Future<$4.QueryAllBalancesResponse> allBalances_Pre($grpc.ServiceCall call, $async.Future<$4.QueryAllBalancesRequest> request) async {
+  $async.Future<$6.QueryAllBalancesResponse> allBalances_Pre($grpc.ServiceCall call, $async.Future<$6.QueryAllBalancesRequest> request) async {
     return allBalances(call, await request);
   }
 
-  $async.Future<$4.QuerySpendableBalancesResponse> spendableBalances_Pre($grpc.ServiceCall call, $async.Future<$4.QuerySpendableBalancesRequest> request) async {
+  $async.Future<$6.QuerySpendableBalancesResponse> spendableBalances_Pre($grpc.ServiceCall call, $async.Future<$6.QuerySpendableBalancesRequest> request) async {
     return spendableBalances(call, await request);
   }
 
-  $async.Future<$4.QueryTotalSupplyResponse> totalSupply_Pre($grpc.ServiceCall call, $async.Future<$4.QueryTotalSupplyRequest> request) async {
+  $async.Future<$6.QuerySpendableBalanceByDenomResponse> spendableBalanceByDenom_Pre($grpc.ServiceCall call, $async.Future<$6.QuerySpendableBalanceByDenomRequest> request) async {
+    return spendableBalanceByDenom(call, await request);
+  }
+
+  $async.Future<$6.QueryTotalSupplyResponse> totalSupply_Pre($grpc.ServiceCall call, $async.Future<$6.QueryTotalSupplyRequest> request) async {
     return totalSupply(call, await request);
   }
 
-  $async.Future<$4.QuerySupplyOfResponse> supplyOf_Pre($grpc.ServiceCall call, $async.Future<$4.QuerySupplyOfRequest> request) async {
+  $async.Future<$6.QuerySupplyOfResponse> supplyOf_Pre($grpc.ServiceCall call, $async.Future<$6.QuerySupplyOfRequest> request) async {
     return supplyOf(call, await request);
   }
 
-  $async.Future<$4.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$4.QueryParamsRequest> request) async {
+  $async.Future<$6.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$6.QueryParamsRequest> request) async {
     return params(call, await request);
   }
 
-  $async.Future<$4.QueryDenomMetadataResponse> denomMetadata_Pre($grpc.ServiceCall call, $async.Future<$4.QueryDenomMetadataRequest> request) async {
+  $async.Future<$6.QueryDenomMetadataResponse> denomMetadata_Pre($grpc.ServiceCall call, $async.Future<$6.QueryDenomMetadataRequest> request) async {
     return denomMetadata(call, await request);
   }
 
-  $async.Future<$4.QueryDenomsMetadataResponse> denomsMetadata_Pre($grpc.ServiceCall call, $async.Future<$4.QueryDenomsMetadataRequest> request) async {
+  $async.Future<$6.QueryDenomsMetadataResponse> denomsMetadata_Pre($grpc.ServiceCall call, $async.Future<$6.QueryDenomsMetadataRequest> request) async {
     return denomsMetadata(call, await request);
   }
 
-  $async.Future<$4.QueryDenomOwnersResponse> denomOwners_Pre($grpc.ServiceCall call, $async.Future<$4.QueryDenomOwnersRequest> request) async {
+  $async.Future<$6.QueryDenomOwnersResponse> denomOwners_Pre($grpc.ServiceCall call, $async.Future<$6.QueryDenomOwnersRequest> request) async {
     return denomOwners(call, await request);
   }
 
-  $async.Future<$4.QueryBalanceResponse> balance($grpc.ServiceCall call, $4.QueryBalanceRequest request);
-  $async.Future<$4.QueryAllBalancesResponse> allBalances($grpc.ServiceCall call, $4.QueryAllBalancesRequest request);
-  $async.Future<$4.QuerySpendableBalancesResponse> spendableBalances($grpc.ServiceCall call, $4.QuerySpendableBalancesRequest request);
-  $async.Future<$4.QueryTotalSupplyResponse> totalSupply($grpc.ServiceCall call, $4.QueryTotalSupplyRequest request);
-  $async.Future<$4.QuerySupplyOfResponse> supplyOf($grpc.ServiceCall call, $4.QuerySupplyOfRequest request);
-  $async.Future<$4.QueryParamsResponse> params($grpc.ServiceCall call, $4.QueryParamsRequest request);
-  $async.Future<$4.QueryDenomMetadataResponse> denomMetadata($grpc.ServiceCall call, $4.QueryDenomMetadataRequest request);
-  $async.Future<$4.QueryDenomsMetadataResponse> denomsMetadata($grpc.ServiceCall call, $4.QueryDenomsMetadataRequest request);
-  $async.Future<$4.QueryDenomOwnersResponse> denomOwners($grpc.ServiceCall call, $4.QueryDenomOwnersRequest request);
+  $async.Future<$6.QuerySendEnabledResponse> sendEnabled_Pre($grpc.ServiceCall call, $async.Future<$6.QuerySendEnabledRequest> request) async {
+    return sendEnabled(call, await request);
+  }
+
+  $async.Future<$6.QueryBalanceResponse> balance($grpc.ServiceCall call, $6.QueryBalanceRequest request);
+  $async.Future<$6.QueryAllBalancesResponse> allBalances($grpc.ServiceCall call, $6.QueryAllBalancesRequest request);
+  $async.Future<$6.QuerySpendableBalancesResponse> spendableBalances($grpc.ServiceCall call, $6.QuerySpendableBalancesRequest request);
+  $async.Future<$6.QuerySpendableBalanceByDenomResponse> spendableBalanceByDenom($grpc.ServiceCall call, $6.QuerySpendableBalanceByDenomRequest request);
+  $async.Future<$6.QueryTotalSupplyResponse> totalSupply($grpc.ServiceCall call, $6.QueryTotalSupplyRequest request);
+  $async.Future<$6.QuerySupplyOfResponse> supplyOf($grpc.ServiceCall call, $6.QuerySupplyOfRequest request);
+  $async.Future<$6.QueryParamsResponse> params($grpc.ServiceCall call, $6.QueryParamsRequest request);
+  $async.Future<$6.QueryDenomMetadataResponse> denomMetadata($grpc.ServiceCall call, $6.QueryDenomMetadataRequest request);
+  $async.Future<$6.QueryDenomsMetadataResponse> denomsMetadata($grpc.ServiceCall call, $6.QueryDenomsMetadataRequest request);
+  $async.Future<$6.QueryDenomOwnersResponse> denomOwners($grpc.ServiceCall call, $6.QueryDenomOwnersRequest request);
+  $async.Future<$6.QuerySendEnabledResponse> sendEnabled($grpc.ServiceCall call, $6.QuerySendEnabledRequest request);
 }

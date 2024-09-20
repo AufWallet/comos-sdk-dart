@@ -14,8 +14,10 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Msg {
+  static final service = $pb.Extension<$core.bool>(_omitMessageNames ? '' : 'google.protobuf.ServiceOptions', _omitFieldNames ? '' : 'service', 11110000, $pb.PbFieldType.OB);
   static final signer = $pb.Extension<$core.String>.repeated(_omitMessageNames ? '' : 'google.protobuf.MessageOptions', _omitFieldNames ? '' : 'signer', 11110000, $pb.PbFieldType.PS, check: $pb.getCheckFunction($pb.PbFieldType.PS));
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
+    registry.add(service);
     registry.add(signer);
   }
 }

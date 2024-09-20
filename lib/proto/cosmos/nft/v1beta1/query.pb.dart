@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $39;
-import 'nft.pb.dart' as $63;
+import '../../base/query/v1beta1/pagination.pb.dart' as $46;
+import 'nft.pb.dart' as $71;
 
 /// QueryBalanceRequest is the request type for the Query/Balance RPC method
 class QueryBalanceRequest extends $pb.GeneratedMessage {
@@ -63,6 +63,7 @@ class QueryBalanceRequest extends $pb.GeneratedMessage {
   static QueryBalanceRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryBalanceRequest>(create);
   static QueryBalanceRequest? _defaultInstance;
 
+  /// class_id associated with the nft
   @$pb.TagNumber(1)
   $core.String get classId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -72,6 +73,7 @@ class QueryBalanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearClassId() => clearField(1);
 
+  /// owner is the owner address of the nft
   @$pb.TagNumber(2)
   $core.String get owner => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -123,6 +125,7 @@ class QueryBalanceResponse extends $pb.GeneratedMessage {
   static QueryBalanceResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryBalanceResponse>(create);
   static QueryBalanceResponse? _defaultInstance;
 
+  /// amount is the number of all NFTs of a given class owned by the owner
   @$pb.TagNumber(1)
   $fixnum.Int64 get amount => $_getI64(0);
   @$pb.TagNumber(1)
@@ -179,6 +182,7 @@ class QueryOwnerRequest extends $pb.GeneratedMessage {
   static QueryOwnerRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryOwnerRequest>(create);
   static QueryOwnerRequest? _defaultInstance;
 
+  /// class_id associated with the nft
   @$pb.TagNumber(1)
   $core.String get classId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -188,6 +192,7 @@ class QueryOwnerRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearClassId() => clearField(1);
 
+  /// id is a unique identifier of the NFT
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -239,6 +244,7 @@ class QueryOwnerResponse extends $pb.GeneratedMessage {
   static QueryOwnerResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryOwnerResponse>(create);
   static QueryOwnerResponse? _defaultInstance;
 
+  /// owner is the owner address of the nft
   @$pb.TagNumber(1)
   $core.String get owner => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -290,6 +296,7 @@ class QuerySupplyRequest extends $pb.GeneratedMessage {
   static QuerySupplyRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QuerySupplyRequest>(create);
   static QuerySupplyRequest? _defaultInstance;
 
+  /// class_id associated with the nft
   @$pb.TagNumber(1)
   $core.String get classId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -341,6 +348,7 @@ class QuerySupplyResponse extends $pb.GeneratedMessage {
   static QuerySupplyResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QuerySupplyResponse>(create);
   static QuerySupplyResponse? _defaultInstance;
 
+  /// amount is the number of all NFTs from the given class
   @$pb.TagNumber(1)
   $fixnum.Int64 get amount => $_getI64(0);
   @$pb.TagNumber(1)
@@ -356,7 +364,7 @@ class QueryNFTsRequest extends $pb.GeneratedMessage {
   factory QueryNFTsRequest({
     $core.String? classId,
     $core.String? owner,
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (classId != null) {
@@ -377,7 +385,7 @@ class QueryNFTsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryNFTsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'classId')
     ..aOS(2, _omitFieldNames ? '' : 'owner')
-    ..aOM<$39.PageRequest>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -402,6 +410,7 @@ class QueryNFTsRequest extends $pb.GeneratedMessage {
   static QueryNFTsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryNFTsRequest>(create);
   static QueryNFTsRequest? _defaultInstance;
 
+  /// class_id associated with the nft
   @$pb.TagNumber(1)
   $core.String get classId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -411,6 +420,7 @@ class QueryNFTsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearClassId() => clearField(1);
 
+  /// owner is the owner address of the nft
   @$pb.TagNumber(2)
   $core.String get owner => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -420,23 +430,24 @@ class QueryNFTsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOwner() => clearField(2);
 
+  /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(3)
-  $39.PageRequest get pagination => $_getN(2);
+  $46.PageRequest get pagination => $_getN(2);
   @$pb.TagNumber(3)
-  set pagination($39.PageRequest v) { setField(3, v); }
+  set pagination($46.PageRequest v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPagination() => $_has(2);
   @$pb.TagNumber(3)
   void clearPagination() => clearField(3);
   @$pb.TagNumber(3)
-  $39.PageRequest ensurePagination() => $_ensure(2);
+  $46.PageRequest ensurePagination() => $_ensure(2);
 }
 
 /// QueryNFTsResponse is the response type for the Query/NFTs RPC methods
 class QueryNFTsResponse extends $pb.GeneratedMessage {
   factory QueryNFTsResponse({
-    $core.Iterable<$63.NFT>? nfts,
-    $39.PageResponse? pagination,
+    $core.Iterable<$71.NFT>? nfts,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (nfts != null) {
@@ -452,8 +463,8 @@ class QueryNFTsResponse extends $pb.GeneratedMessage {
   factory QueryNFTsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryNFTsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..pc<$63.NFT>(1, _omitFieldNames ? '' : 'nfts', $pb.PbFieldType.PM, subBuilder: $63.NFT.create)
-    ..aOM<$39.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..pc<$71.NFT>(1, _omitFieldNames ? '' : 'nfts', $pb.PbFieldType.PM, subBuilder: $71.NFT.create)
+    ..aOM<$46.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -478,19 +489,21 @@ class QueryNFTsResponse extends $pb.GeneratedMessage {
   static QueryNFTsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryNFTsResponse>(create);
   static QueryNFTsResponse? _defaultInstance;
 
+  /// NFT defines the NFT
   @$pb.TagNumber(1)
-  $core.List<$63.NFT> get nfts => $_getList(0);
+  $core.List<$71.NFT> get nfts => $_getList(0);
 
+  /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $39.PageResponse get pagination => $_getN(1);
+  $46.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageResponse v) { setField(2, v); }
+  set pagination($46.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageResponse ensurePagination() => $_ensure(1);
+  $46.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryNFTRequest is the request type for the Query/NFT RPC method
@@ -539,6 +552,7 @@ class QueryNFTRequest extends $pb.GeneratedMessage {
   static QueryNFTRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryNFTRequest>(create);
   static QueryNFTRequest? _defaultInstance;
 
+  /// class_id associated with the nft
   @$pb.TagNumber(1)
   $core.String get classId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -548,6 +562,7 @@ class QueryNFTRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearClassId() => clearField(1);
 
+  /// id is a unique identifier of the NFT
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -561,7 +576,7 @@ class QueryNFTRequest extends $pb.GeneratedMessage {
 /// QueryNFTResponse is the response type for the Query/NFT RPC method
 class QueryNFTResponse extends $pb.GeneratedMessage {
   factory QueryNFTResponse({
-    $63.NFT? nft,
+    $71.NFT? nft,
   }) {
     final $result = create();
     if (nft != null) {
@@ -574,7 +589,7 @@ class QueryNFTResponse extends $pb.GeneratedMessage {
   factory QueryNFTResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryNFTResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..aOM<$63.NFT>(1, _omitFieldNames ? '' : 'nft', subBuilder: $63.NFT.create)
+    ..aOM<$71.NFT>(1, _omitFieldNames ? '' : 'nft', subBuilder: $71.NFT.create)
     ..hasRequiredFields = false
   ;
 
@@ -599,16 +614,17 @@ class QueryNFTResponse extends $pb.GeneratedMessage {
   static QueryNFTResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryNFTResponse>(create);
   static QueryNFTResponse? _defaultInstance;
 
+  /// owner is the owner address of the nft
   @$pb.TagNumber(1)
-  $63.NFT get nft => $_getN(0);
+  $71.NFT get nft => $_getN(0);
   @$pb.TagNumber(1)
-  set nft($63.NFT v) { setField(1, v); }
+  set nft($71.NFT v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasNft() => $_has(0);
   @$pb.TagNumber(1)
   void clearNft() => clearField(1);
   @$pb.TagNumber(1)
-  $63.NFT ensureNft() => $_ensure(0);
+  $71.NFT ensureNft() => $_ensure(0);
 }
 
 /// QueryClassRequest is the request type for the Query/Class RPC method
@@ -652,6 +668,7 @@ class QueryClassRequest extends $pb.GeneratedMessage {
   static QueryClassRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryClassRequest>(create);
   static QueryClassRequest? _defaultInstance;
 
+  /// class_id associated with the nft
   @$pb.TagNumber(1)
   $core.String get classId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -665,7 +682,7 @@ class QueryClassRequest extends $pb.GeneratedMessage {
 /// QueryClassResponse is the response type for the Query/Class RPC method
 class QueryClassResponse extends $pb.GeneratedMessage {
   factory QueryClassResponse({
-    $63.Class? class_1,
+    $71.Class? class_1,
   }) {
     final $result = create();
     if (class_1 != null) {
@@ -678,7 +695,7 @@ class QueryClassResponse extends $pb.GeneratedMessage {
   factory QueryClassResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClassResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..aOM<$63.Class>(1, _omitFieldNames ? '' : 'class', subBuilder: $63.Class.create)
+    ..aOM<$71.Class>(1, _omitFieldNames ? '' : 'class', subBuilder: $71.Class.create)
     ..hasRequiredFields = false
   ;
 
@@ -703,22 +720,23 @@ class QueryClassResponse extends $pb.GeneratedMessage {
   static QueryClassResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryClassResponse>(create);
   static QueryClassResponse? _defaultInstance;
 
+  /// class defines the class of the nft type.
   @$pb.TagNumber(1)
-  $63.Class get class_1 => $_getN(0);
+  $71.Class get class_1 => $_getN(0);
   @$pb.TagNumber(1)
-  set class_1($63.Class v) { setField(1, v); }
+  set class_1($71.Class v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasClass_1() => $_has(0);
   @$pb.TagNumber(1)
   void clearClass_1() => clearField(1);
   @$pb.TagNumber(1)
-  $63.Class ensureClass_1() => $_ensure(0);
+  $71.Class ensureClass_1() => $_ensure(0);
 }
 
 /// QueryClassesRequest is the request type for the Query/Classes RPC method
 class QueryClassesRequest extends $pb.GeneratedMessage {
   factory QueryClassesRequest({
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -731,7 +749,7 @@ class QueryClassesRequest extends $pb.GeneratedMessage {
   factory QueryClassesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClassesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..aOM<$39.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -758,22 +776,22 @@ class QueryClassesRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(1)
-  $39.PageRequest get pagination => $_getN(0);
+  $46.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($39.PageRequest v) { setField(1, v); }
+  set pagination($46.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $39.PageRequest ensurePagination() => $_ensure(0);
+  $46.PageRequest ensurePagination() => $_ensure(0);
 }
 
 /// QueryClassesResponse is the response type for the Query/Classes RPC method
 class QueryClassesResponse extends $pb.GeneratedMessage {
   factory QueryClassesResponse({
-    $core.Iterable<$63.Class>? classes,
-    $39.PageResponse? pagination,
+    $core.Iterable<$71.Class>? classes,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (classes != null) {
@@ -789,8 +807,8 @@ class QueryClassesResponse extends $pb.GeneratedMessage {
   factory QueryClassesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryClassesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..pc<$63.Class>(1, _omitFieldNames ? '' : 'classes', $pb.PbFieldType.PM, subBuilder: $63.Class.create)
-    ..aOM<$39.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..pc<$71.Class>(1, _omitFieldNames ? '' : 'classes', $pb.PbFieldType.PM, subBuilder: $71.Class.create)
+    ..aOM<$46.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -815,19 +833,21 @@ class QueryClassesResponse extends $pb.GeneratedMessage {
   static QueryClassesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryClassesResponse>(create);
   static QueryClassesResponse? _defaultInstance;
 
+  /// class defines the class of the nft type.
   @$pb.TagNumber(1)
-  $core.List<$63.Class> get classes => $_getList(0);
+  $core.List<$71.Class> get classes => $_getList(0);
 
+  /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $39.PageResponse get pagination => $_getN(1);
+  $46.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageResponse v) { setField(2, v); }
+  set pagination($46.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageResponse ensurePagination() => $_ensure(1);
+  $46.PageResponse ensurePagination() => $_ensure(1);
 }
 
 

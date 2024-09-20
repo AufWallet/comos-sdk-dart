@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $39;
-import 'authz.pb.dart' as $41;
+import '../../base/query/v1beta1/pagination.pb.dart' as $46;
+import 'authz.pb.dart' as $48;
 
 /// QueryGrantsRequest is the request type for the Query/Grants RPC method.
 class QueryGrantsRequest extends $pb.GeneratedMessage {
@@ -22,7 +22,7 @@ class QueryGrantsRequest extends $pb.GeneratedMessage {
     $core.String? granter,
     $core.String? grantee,
     $core.String? msgTypeUrl,
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (granter != null) {
@@ -47,7 +47,7 @@ class QueryGrantsRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'granter')
     ..aOS(2, _omitFieldNames ? '' : 'grantee')
     ..aOS(3, _omitFieldNames ? '' : 'msgTypeUrl')
-    ..aOM<$39.PageRequest>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -102,22 +102,22 @@ class QueryGrantsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an pagination for the request.
   @$pb.TagNumber(4)
-  $39.PageRequest get pagination => $_getN(3);
+  $46.PageRequest get pagination => $_getN(3);
   @$pb.TagNumber(4)
-  set pagination($39.PageRequest v) { setField(4, v); }
+  set pagination($46.PageRequest v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasPagination() => $_has(3);
   @$pb.TagNumber(4)
   void clearPagination() => clearField(4);
   @$pb.TagNumber(4)
-  $39.PageRequest ensurePagination() => $_ensure(3);
+  $46.PageRequest ensurePagination() => $_ensure(3);
 }
 
 /// QueryGrantsResponse is the response type for the Query/Authorizations RPC method.
 class QueryGrantsResponse extends $pb.GeneratedMessage {
   factory QueryGrantsResponse({
-    $core.Iterable<$41.Grant>? grants,
-    $39.PageResponse? pagination,
+    $core.Iterable<$48.Grant>? grants,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (grants != null) {
@@ -133,8 +133,8 @@ class QueryGrantsResponse extends $pb.GeneratedMessage {
   factory QueryGrantsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGrantsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
-    ..pc<$41.Grant>(1, _omitFieldNames ? '' : 'grants', $pb.PbFieldType.PM, subBuilder: $41.Grant.create)
-    ..aOM<$39.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..pc<$48.Grant>(1, _omitFieldNames ? '' : 'grants', $pb.PbFieldType.PM, subBuilder: $48.Grant.create)
+    ..aOM<$46.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -161,26 +161,26 @@ class QueryGrantsResponse extends $pb.GeneratedMessage {
 
   /// authorizations is a list of grants granted for grantee by granter.
   @$pb.TagNumber(1)
-  $core.List<$41.Grant> get grants => $_getList(0);
+  $core.List<$48.Grant> get grants => $_getList(0);
 
   /// pagination defines an pagination for the response.
   @$pb.TagNumber(2)
-  $39.PageResponse get pagination => $_getN(1);
+  $46.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageResponse v) { setField(2, v); }
+  set pagination($46.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageResponse ensurePagination() => $_ensure(1);
+  $46.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryGranterGrantsRequest is the request type for the Query/GranterGrants RPC method.
 class QueryGranterGrantsRequest extends $pb.GeneratedMessage {
   factory QueryGranterGrantsRequest({
     $core.String? granter,
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (granter != null) {
@@ -197,7 +197,7 @@ class QueryGranterGrantsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGranterGrantsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'granter')
-    ..aOM<$39.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -233,22 +233,22 @@ class QueryGranterGrantsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an pagination for the request.
   @$pb.TagNumber(2)
-  $39.PageRequest get pagination => $_getN(1);
+  $46.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageRequest v) { setField(2, v); }
+  set pagination($46.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageRequest ensurePagination() => $_ensure(1);
+  $46.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryGranterGrantsResponse is the response type for the Query/GranterGrants RPC method.
 class QueryGranterGrantsResponse extends $pb.GeneratedMessage {
   factory QueryGranterGrantsResponse({
-    $core.Iterable<$41.GrantAuthorization>? grants,
-    $39.PageResponse? pagination,
+    $core.Iterable<$48.GrantAuthorization>? grants,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (grants != null) {
@@ -264,8 +264,8 @@ class QueryGranterGrantsResponse extends $pb.GeneratedMessage {
   factory QueryGranterGrantsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGranterGrantsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
-    ..pc<$41.GrantAuthorization>(1, _omitFieldNames ? '' : 'grants', $pb.PbFieldType.PM, subBuilder: $41.GrantAuthorization.create)
-    ..aOM<$39.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..pc<$48.GrantAuthorization>(1, _omitFieldNames ? '' : 'grants', $pb.PbFieldType.PM, subBuilder: $48.GrantAuthorization.create)
+    ..aOM<$46.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -292,26 +292,26 @@ class QueryGranterGrantsResponse extends $pb.GeneratedMessage {
 
   /// grants is a list of grants granted by the granter.
   @$pb.TagNumber(1)
-  $core.List<$41.GrantAuthorization> get grants => $_getList(0);
+  $core.List<$48.GrantAuthorization> get grants => $_getList(0);
 
   /// pagination defines an pagination for the response.
   @$pb.TagNumber(2)
-  $39.PageResponse get pagination => $_getN(1);
+  $46.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageResponse v) { setField(2, v); }
+  set pagination($46.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageResponse ensurePagination() => $_ensure(1);
+  $46.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryGranteeGrantsRequest is the request type for the Query/IssuedGrants RPC method.
 class QueryGranteeGrantsRequest extends $pb.GeneratedMessage {
   factory QueryGranteeGrantsRequest({
     $core.String? grantee,
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (grantee != null) {
@@ -328,7 +328,7 @@ class QueryGranteeGrantsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGranteeGrantsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'grantee')
-    ..aOM<$39.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -364,22 +364,22 @@ class QueryGranteeGrantsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an pagination for the request.
   @$pb.TagNumber(2)
-  $39.PageRequest get pagination => $_getN(1);
+  $46.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageRequest v) { setField(2, v); }
+  set pagination($46.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageRequest ensurePagination() => $_ensure(1);
+  $46.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryGranteeGrantsResponse is the response type for the Query/GranteeGrants RPC method.
 class QueryGranteeGrantsResponse extends $pb.GeneratedMessage {
   factory QueryGranteeGrantsResponse({
-    $core.Iterable<$41.GrantAuthorization>? grants,
-    $39.PageResponse? pagination,
+    $core.Iterable<$48.GrantAuthorization>? grants,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (grants != null) {
@@ -395,8 +395,8 @@ class QueryGranteeGrantsResponse extends $pb.GeneratedMessage {
   factory QueryGranteeGrantsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryGranteeGrantsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
-    ..pc<$41.GrantAuthorization>(1, _omitFieldNames ? '' : 'grants', $pb.PbFieldType.PM, subBuilder: $41.GrantAuthorization.create)
-    ..aOM<$39.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..pc<$48.GrantAuthorization>(1, _omitFieldNames ? '' : 'grants', $pb.PbFieldType.PM, subBuilder: $48.GrantAuthorization.create)
+    ..aOM<$46.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -423,19 +423,19 @@ class QueryGranteeGrantsResponse extends $pb.GeneratedMessage {
 
   /// grants is a list of grants granted to the grantee.
   @$pb.TagNumber(1)
-  $core.List<$41.GrantAuthorization> get grants => $_getList(0);
+  $core.List<$48.GrantAuthorization> get grants => $_getList(0);
 
   /// pagination defines an pagination for the response.
   @$pb.TagNumber(2)
-  $39.PageResponse get pagination => $_getN(1);
+  $46.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageResponse v) { setField(2, v); }
+  set pagination($46.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageResponse ensurePagination() => $_ensure(1);
+  $46.PageResponse ensurePagination() => $_ensure(1);
 }
 
 

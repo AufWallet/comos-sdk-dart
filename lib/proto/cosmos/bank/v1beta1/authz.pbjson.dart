@@ -18,13 +18,16 @@ const SendAuthorization$json = {
   '1': 'SendAuthorization',
   '2': [
     {'1': 'spend_limit', '3': 1, '4': 3, '5': 11, '6': '.cosmos.base.v1beta1.Coin', '8': {}, '10': 'spendLimit'},
+    {'1': 'allow_list', '3': 2, '4': 3, '5': 9, '8': {}, '10': 'allowList'},
   ],
   '7': {},
 };
 
 /// Descriptor for `SendAuthorization`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendAuthorizationDescriptor = $convert.base64Decode(
-    'ChFTZW5kQXV0aG9yaXphdGlvbhJsCgtzcGVuZF9saW1pdBgBIAMoCzIZLmNvc21vcy5iYXNlLn'
-    'YxYmV0YTEuQ29pbkIwyN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVz'
-    'LkNvaW5zUgpzcGVuZExpbWl0OhHKtC0NQXV0aG9yaXphdGlvbg==');
+    'ChFTZW5kQXV0aG9yaXphdGlvbhJxCgtzcGVuZF9saW1pdBgBIAMoCzIZLmNvc21vcy5iYXNlLn'
+    'YxYmV0YTEuQ29pbkI1yN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVz'
+    'LkNvaW5zqOewKgFSCnNwZW5kTGltaXQSNwoKYWxsb3dfbGlzdBgCIAMoCUIY0rQtFGNvc21vcy'
+    '5BZGRyZXNzU3RyaW5nUglhbGxvd0xpc3Q6R8q0LSJjb3Ntb3MuYXV0aHoudjFiZXRhMS5BdXRo'
+    'b3JpemF0aW9uiuewKhxjb3Ntb3Mtc2RrL1NlbmRBdXRob3JpemF0aW9u');
 

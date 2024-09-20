@@ -14,18 +14,18 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'gov.pb.dart' as $60;
+import 'gov.pb.dart' as $68;
 
 /// GenesisState defines the gov module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
     $fixnum.Int64? startingProposalId,
-    $core.Iterable<$60.Deposit>? deposits,
-    $core.Iterable<$60.Vote>? votes,
-    $core.Iterable<$60.Proposal>? proposals,
-    $60.DepositParams? depositParams,
-    $60.VotingParams? votingParams,
-    $60.TallyParams? tallyParams,
+    $core.Iterable<$68.Deposit>? deposits,
+    $core.Iterable<$68.Vote>? votes,
+    $core.Iterable<$68.Proposal>? proposals,
+    $68.DepositParams? depositParams,
+    $68.VotingParams? votingParams,
+    $68.TallyParams? tallyParams,
   }) {
     final $result = create();
     if (startingProposalId != null) {
@@ -57,12 +57,12 @@ class GenesisState extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'startingProposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..pc<$60.Deposit>(2, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM, subBuilder: $60.Deposit.create)
-    ..pc<$60.Vote>(3, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $60.Vote.create)
-    ..pc<$60.Proposal>(4, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $60.Proposal.create)
-    ..aOM<$60.DepositParams>(5, _omitFieldNames ? '' : 'depositParams', subBuilder: $60.DepositParams.create)
-    ..aOM<$60.VotingParams>(6, _omitFieldNames ? '' : 'votingParams', subBuilder: $60.VotingParams.create)
-    ..aOM<$60.TallyParams>(7, _omitFieldNames ? '' : 'tallyParams', subBuilder: $60.TallyParams.create)
+    ..pc<$68.Deposit>(2, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM, subBuilder: $68.Deposit.create)
+    ..pc<$68.Vote>(3, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $68.Vote.create)
+    ..pc<$68.Proposal>(4, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $68.Proposal.create)
+    ..aOM<$68.DepositParams>(5, _omitFieldNames ? '' : 'depositParams', subBuilder: $68.DepositParams.create)
+    ..aOM<$68.VotingParams>(6, _omitFieldNames ? '' : 'votingParams', subBuilder: $68.VotingParams.create)
+    ..aOM<$68.TallyParams>(7, _omitFieldNames ? '' : 'tallyParams', subBuilder: $68.TallyParams.create)
     ..hasRequiredFields = false
   ;
 
@@ -99,51 +99,51 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// deposits defines all the deposits present at genesis.
   @$pb.TagNumber(2)
-  $core.List<$60.Deposit> get deposits => $_getList(1);
+  $core.List<$68.Deposit> get deposits => $_getList(1);
 
   /// votes defines all the votes present at genesis.
   @$pb.TagNumber(3)
-  $core.List<$60.Vote> get votes => $_getList(2);
+  $core.List<$68.Vote> get votes => $_getList(2);
 
   /// proposals defines all the proposals present at genesis.
   @$pb.TagNumber(4)
-  $core.List<$60.Proposal> get proposals => $_getList(3);
+  $core.List<$68.Proposal> get proposals => $_getList(3);
 
-  /// params defines all the paramaters of related to deposit.
+  /// params defines all the parameters of related to deposit.
   @$pb.TagNumber(5)
-  $60.DepositParams get depositParams => $_getN(4);
+  $68.DepositParams get depositParams => $_getN(4);
   @$pb.TagNumber(5)
-  set depositParams($60.DepositParams v) { setField(5, v); }
+  set depositParams($68.DepositParams v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasDepositParams() => $_has(4);
   @$pb.TagNumber(5)
   void clearDepositParams() => clearField(5);
   @$pb.TagNumber(5)
-  $60.DepositParams ensureDepositParams() => $_ensure(4);
+  $68.DepositParams ensureDepositParams() => $_ensure(4);
 
-  /// params defines all the paramaters of related to voting.
+  /// params defines all the parameters of related to voting.
   @$pb.TagNumber(6)
-  $60.VotingParams get votingParams => $_getN(5);
+  $68.VotingParams get votingParams => $_getN(5);
   @$pb.TagNumber(6)
-  set votingParams($60.VotingParams v) { setField(6, v); }
+  set votingParams($68.VotingParams v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasVotingParams() => $_has(5);
   @$pb.TagNumber(6)
   void clearVotingParams() => clearField(6);
   @$pb.TagNumber(6)
-  $60.VotingParams ensureVotingParams() => $_ensure(5);
+  $68.VotingParams ensureVotingParams() => $_ensure(5);
 
-  /// params defines all the paramaters of related to tally.
+  /// params defines all the parameters of related to tally.
   @$pb.TagNumber(7)
-  $60.TallyParams get tallyParams => $_getN(6);
+  $68.TallyParams get tallyParams => $_getN(6);
   @$pb.TagNumber(7)
-  set tallyParams($60.TallyParams v) { setField(7, v); }
+  set tallyParams($68.TallyParams v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasTallyParams() => $_has(6);
   @$pb.TagNumber(7)
   void clearTallyParams() => clearField(7);
   @$pb.TagNumber(7)
-  $60.TallyParams ensureTallyParams() => $_ensure(6);
+  $68.TallyParams ensureTallyParams() => $_ensure(6);
 }
 
 

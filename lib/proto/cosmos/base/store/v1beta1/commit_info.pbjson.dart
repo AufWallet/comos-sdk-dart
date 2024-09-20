@@ -19,6 +19,7 @@ const CommitInfo$json = {
   '2': [
     {'1': 'version', '3': 1, '4': 1, '5': 3, '10': 'version'},
     {'1': 'store_infos', '3': 2, '4': 3, '5': 11, '6': '.cosmos.base.store.v1beta1.StoreInfo', '8': {}, '10': 'storeInfos'},
+    {'1': 'timestamp', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'timestamp'},
   ],
 };
 
@@ -26,7 +27,8 @@ const CommitInfo$json = {
 final $typed_data.Uint8List commitInfoDescriptor = $convert.base64Decode(
     'CgpDb21taXRJbmZvEhgKB3ZlcnNpb24YASABKANSB3ZlcnNpb24SSwoLc3RvcmVfaW5mb3MYAi'
     'ADKAsyJC5jb3Ntb3MuYmFzZS5zdG9yZS52MWJldGExLlN0b3JlSW5mb0IEyN4fAFIKc3RvcmVJ'
-    'bmZvcw==');
+    'bmZvcxJCCgl0aW1lc3RhbXAYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgjI3h'
+    '8AkN8fAVIJdGltZXN0YW1w');
 
 @$core.Deprecated('Use storeInfoDescriptor instead')
 const StoreInfo$json = {

@@ -14,17 +14,17 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../auth/v1beta1/auth.pb.dart' as $38;
-import '../../base/v1beta1/coin.pb.dart' as $42;
+import '../../auth/v1beta1/auth.pb.dart' as $45;
+import '../../base/v1beta1/coin.pb.dart' as $50;
 
 /// BaseVestingAccount implements the VestingAccount interface. It contains all
 /// the necessary fields needed for any vesting account implementation.
 class BaseVestingAccount extends $pb.GeneratedMessage {
   factory BaseVestingAccount({
-    $38.BaseAccount? baseAccount,
-    $core.Iterable<$42.Coin>? originalVesting,
-    $core.Iterable<$42.Coin>? delegatedFree,
-    $core.Iterable<$42.Coin>? delegatedVesting,
+    $45.BaseAccount? baseAccount,
+    $core.Iterable<$50.Coin>? originalVesting,
+    $core.Iterable<$50.Coin>? delegatedFree,
+    $core.Iterable<$50.Coin>? delegatedVesting,
     $fixnum.Int64? endTime,
   }) {
     final $result = create();
@@ -50,10 +50,10 @@ class BaseVestingAccount extends $pb.GeneratedMessage {
   factory BaseVestingAccount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BaseVestingAccount', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.vesting.v1beta1'), createEmptyInstance: create)
-    ..aOM<$38.BaseAccount>(1, _omitFieldNames ? '' : 'baseAccount', subBuilder: $38.BaseAccount.create)
-    ..pc<$42.Coin>(2, _omitFieldNames ? '' : 'originalVesting', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
-    ..pc<$42.Coin>(3, _omitFieldNames ? '' : 'delegatedFree', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
-    ..pc<$42.Coin>(4, _omitFieldNames ? '' : 'delegatedVesting', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
+    ..aOM<$45.BaseAccount>(1, _omitFieldNames ? '' : 'baseAccount', subBuilder: $45.BaseAccount.create)
+    ..pc<$50.Coin>(2, _omitFieldNames ? '' : 'originalVesting', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
+    ..pc<$50.Coin>(3, _omitFieldNames ? '' : 'delegatedFree', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
+    ..pc<$50.Coin>(4, _omitFieldNames ? '' : 'delegatedVesting', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
     ..aInt64(5, _omitFieldNames ? '' : 'endTime')
     ..hasRequiredFields = false
   ;
@@ -80,24 +80,24 @@ class BaseVestingAccount extends $pb.GeneratedMessage {
   static BaseVestingAccount? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $38.BaseAccount get baseAccount => $_getN(0);
+  $45.BaseAccount get baseAccount => $_getN(0);
   @$pb.TagNumber(1)
-  set baseAccount($38.BaseAccount v) { setField(1, v); }
+  set baseAccount($45.BaseAccount v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBaseAccount() => $_has(0);
   @$pb.TagNumber(1)
   void clearBaseAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $38.BaseAccount ensureBaseAccount() => $_ensure(0);
+  $45.BaseAccount ensureBaseAccount() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$42.Coin> get originalVesting => $_getList(1);
+  $core.List<$50.Coin> get originalVesting => $_getList(1);
 
   @$pb.TagNumber(3)
-  $core.List<$42.Coin> get delegatedFree => $_getList(2);
+  $core.List<$50.Coin> get delegatedFree => $_getList(2);
 
   @$pb.TagNumber(4)
-  $core.List<$42.Coin> get delegatedVesting => $_getList(3);
+  $core.List<$50.Coin> get delegatedVesting => $_getList(3);
 
   /// Vesting end time, as unix timestamp (in seconds).
   @$pb.TagNumber(5)
@@ -238,7 +238,7 @@ class DelayedVestingAccount extends $pb.GeneratedMessage {
 class Period extends $pb.GeneratedMessage {
   factory Period({
     $fixnum.Int64? length,
-    $core.Iterable<$42.Coin>? amount,
+    $core.Iterable<$50.Coin>? amount,
   }) {
     final $result = create();
     if (length != null) {
@@ -255,7 +255,7 @@ class Period extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Period', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.vesting.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'length')
-    ..pc<$42.Coin>(2, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
+    ..pc<$50.Coin>(2, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -291,7 +291,7 @@ class Period extends $pb.GeneratedMessage {
   void clearLength() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$42.Coin> get amount => $_getList(1);
+  $core.List<$50.Coin> get amount => $_getList(1);
 }
 
 /// PeriodicVestingAccount implements the VestingAccount interface. It

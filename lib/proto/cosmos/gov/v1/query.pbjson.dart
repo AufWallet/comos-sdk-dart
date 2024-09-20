@@ -146,18 +146,45 @@ final $typed_data.Uint8List queryParamsRequestDescriptor = $convert.base64Decode
 const QueryParamsResponse$json = {
   '1': 'QueryParamsResponse',
   '2': [
-    {'1': 'voting_params', '3': 1, '4': 1, '5': 11, '6': '.cosmos.gov.v1.VotingParams', '10': 'votingParams'},
-    {'1': 'deposit_params', '3': 2, '4': 1, '5': 11, '6': '.cosmos.gov.v1.DepositParams', '10': 'depositParams'},
-    {'1': 'tally_params', '3': 3, '4': 1, '5': 11, '6': '.cosmos.gov.v1.TallyParams', '10': 'tallyParams'},
+    {
+      '1': 'voting_params',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.cosmos.gov.v1.VotingParams',
+      '8': {'3': true},
+      '10': 'votingParams',
+    },
+    {
+      '1': 'deposit_params',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.cosmos.gov.v1.DepositParams',
+      '8': {'3': true},
+      '10': 'depositParams',
+    },
+    {
+      '1': 'tally_params',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.cosmos.gov.v1.TallyParams',
+      '8': {'3': true},
+      '10': 'tallyParams',
+    },
+    {'1': 'params', '3': 4, '4': 1, '5': 11, '6': '.cosmos.gov.v1.Params', '10': 'params'},
   ],
 };
 
 /// Descriptor for `QueryParamsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryParamsResponseDescriptor = $convert.base64Decode(
-    'ChNRdWVyeVBhcmFtc1Jlc3BvbnNlEkAKDXZvdGluZ19wYXJhbXMYASABKAsyGy5jb3Ntb3MuZ2'
-    '92LnYxLlZvdGluZ1BhcmFtc1IMdm90aW5nUGFyYW1zEkMKDmRlcG9zaXRfcGFyYW1zGAIgASgL'
-    'MhwuY29zbW9zLmdvdi52MS5EZXBvc2l0UGFyYW1zUg1kZXBvc2l0UGFyYW1zEj0KDHRhbGx5X3'
-    'BhcmFtcxgDIAEoCzIaLmNvc21vcy5nb3YudjEuVGFsbHlQYXJhbXNSC3RhbGx5UGFyYW1z');
+    'ChNRdWVyeVBhcmFtc1Jlc3BvbnNlEkQKDXZvdGluZ19wYXJhbXMYASABKAsyGy5jb3Ntb3MuZ2'
+    '92LnYxLlZvdGluZ1BhcmFtc0ICGAFSDHZvdGluZ1BhcmFtcxJHCg5kZXBvc2l0X3BhcmFtcxgC'
+    'IAEoCzIcLmNvc21vcy5nb3YudjEuRGVwb3NpdFBhcmFtc0ICGAFSDWRlcG9zaXRQYXJhbXMSQQ'
+    'oMdGFsbHlfcGFyYW1zGAMgASgLMhouY29zbW9zLmdvdi52MS5UYWxseVBhcmFtc0ICGAFSC3Rh'
+    'bGx5UGFyYW1zEi0KBnBhcmFtcxgEIAEoCzIVLmNvc21vcy5nb3YudjEuUGFyYW1zUgZwYXJhbX'
+    'M=');
 
 @$core.Deprecated('Use queryDepositRequestDescriptor instead')
 const QueryDepositRequest$json = {

@@ -14,10 +14,10 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $36;
-import '../../../google/protobuf/duration.pb.dart' as $48;
-import '../../../google/protobuf/timestamp.pb.dart' as $40;
-import '../../base/v1beta1/coin.pb.dart' as $42;
+import '../../../google/protobuf/any.pb.dart' as $43;
+import '../../../google/protobuf/duration.pb.dart' as $56;
+import '../../../google/protobuf/timestamp.pb.dart' as $47;
+import '../../base/v1beta1/coin.pb.dart' as $50;
 import 'gov.pbenum.dart';
 
 export 'gov.pbenum.dart';
@@ -70,6 +70,7 @@ class WeightedVoteOption extends $pb.GeneratedMessage {
   static WeightedVoteOption getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WeightedVoteOption>(create);
   static WeightedVoteOption? _defaultInstance;
 
+  /// option defines the valid vote options, it must not contain duplicate vote options.
   @$pb.TagNumber(1)
   VoteOption get option => $_getN(0);
   @$pb.TagNumber(1)
@@ -79,6 +80,7 @@ class WeightedVoteOption extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOption() => clearField(1);
 
+  /// weight is the vote weight associated with the vote option.
   @$pb.TagNumber(2)
   $core.String get weight => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -136,6 +138,7 @@ class TextProposal extends $pb.GeneratedMessage {
   static TextProposal getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TextProposal>(create);
   static TextProposal? _defaultInstance;
 
+  /// title of the proposal.
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -145,6 +148,7 @@ class TextProposal extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => clearField(1);
 
+  /// description associated with the proposal.
   @$pb.TagNumber(2)
   $core.String get description => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -161,7 +165,7 @@ class Deposit extends $pb.GeneratedMessage {
   factory Deposit({
     $fixnum.Int64? proposalId,
     $core.String? depositor,
-    $core.Iterable<$42.Coin>? amount,
+    $core.Iterable<$50.Coin>? amount,
   }) {
     final $result = create();
     if (proposalId != null) {
@@ -182,7 +186,7 @@ class Deposit extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Deposit', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(2, _omitFieldNames ? '' : 'depositor')
-    ..pc<$42.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
+    ..pc<$50.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -207,6 +211,7 @@ class Deposit extends $pb.GeneratedMessage {
   static Deposit getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Deposit>(create);
   static Deposit? _defaultInstance;
 
+  /// proposal_id defines the unique id of the proposal.
   @$pb.TagNumber(1)
   $fixnum.Int64 get proposalId => $_getI64(0);
   @$pb.TagNumber(1)
@@ -216,6 +221,7 @@ class Deposit extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProposalId() => clearField(1);
 
+  /// depositor defines the deposit addresses from the proposals.
   @$pb.TagNumber(2)
   $core.String get depositor => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -225,22 +231,23 @@ class Deposit extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDepositor() => clearField(2);
 
+  /// amount to be deposited by depositor.
   @$pb.TagNumber(3)
-  $core.List<$42.Coin> get amount => $_getList(2);
+  $core.List<$50.Coin> get amount => $_getList(2);
 }
 
 /// Proposal defines the core field members of a governance proposal.
 class Proposal extends $pb.GeneratedMessage {
   factory Proposal({
     $fixnum.Int64? proposalId,
-    $36.Any? content,
+    $43.Any? content,
     ProposalStatus? status,
     TallyResult? finalTallyResult,
-    $40.Timestamp? submitTime,
-    $40.Timestamp? depositEndTime,
-    $core.Iterable<$42.Coin>? totalDeposit,
-    $40.Timestamp? votingStartTime,
-    $40.Timestamp? votingEndTime,
+    $47.Timestamp? submitTime,
+    $47.Timestamp? depositEndTime,
+    $core.Iterable<$50.Coin>? totalDeposit,
+    $47.Timestamp? votingStartTime,
+    $47.Timestamp? votingEndTime,
   }) {
     final $result = create();
     if (proposalId != null) {
@@ -278,14 +285,14 @@ class Proposal extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposal', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$36.Any>(2, _omitFieldNames ? '' : 'content', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(2, _omitFieldNames ? '' : 'content', subBuilder: $43.Any.create)
     ..e<ProposalStatus>(3, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ProposalStatus.PROPOSAL_STATUS_UNSPECIFIED, valueOf: ProposalStatus.valueOf, enumValues: ProposalStatus.values)
     ..aOM<TallyResult>(4, _omitFieldNames ? '' : 'finalTallyResult', subBuilder: TallyResult.create)
-    ..aOM<$40.Timestamp>(5, _omitFieldNames ? '' : 'submitTime', subBuilder: $40.Timestamp.create)
-    ..aOM<$40.Timestamp>(6, _omitFieldNames ? '' : 'depositEndTime', subBuilder: $40.Timestamp.create)
-    ..pc<$42.Coin>(7, _omitFieldNames ? '' : 'totalDeposit', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
-    ..aOM<$40.Timestamp>(8, _omitFieldNames ? '' : 'votingStartTime', subBuilder: $40.Timestamp.create)
-    ..aOM<$40.Timestamp>(9, _omitFieldNames ? '' : 'votingEndTime', subBuilder: $40.Timestamp.create)
+    ..aOM<$47.Timestamp>(5, _omitFieldNames ? '' : 'submitTime', subBuilder: $47.Timestamp.create)
+    ..aOM<$47.Timestamp>(6, _omitFieldNames ? '' : 'depositEndTime', subBuilder: $47.Timestamp.create)
+    ..pc<$50.Coin>(7, _omitFieldNames ? '' : 'totalDeposit', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
+    ..aOM<$47.Timestamp>(8, _omitFieldNames ? '' : 'votingStartTime', subBuilder: $47.Timestamp.create)
+    ..aOM<$47.Timestamp>(9, _omitFieldNames ? '' : 'votingEndTime', subBuilder: $47.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -310,6 +317,7 @@ class Proposal extends $pb.GeneratedMessage {
   static Proposal getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Proposal>(create);
   static Proposal? _defaultInstance;
 
+  /// proposal_id defines the unique id of the proposal.
   @$pb.TagNumber(1)
   $fixnum.Int64 get proposalId => $_getI64(0);
   @$pb.TagNumber(1)
@@ -319,17 +327,19 @@ class Proposal extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProposalId() => clearField(1);
 
+  /// content is the proposal's content.
   @$pb.TagNumber(2)
-  $36.Any get content => $_getN(1);
+  $43.Any get content => $_getN(1);
   @$pb.TagNumber(2)
-  set content($36.Any v) { setField(2, v); }
+  set content($43.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasContent() => $_has(1);
   @$pb.TagNumber(2)
   void clearContent() => clearField(2);
   @$pb.TagNumber(2)
-  $36.Any ensureContent() => $_ensure(1);
+  $43.Any ensureContent() => $_ensure(1);
 
+  /// status defines the proposal status.
   @$pb.TagNumber(3)
   ProposalStatus get status => $_getN(2);
   @$pb.TagNumber(3)
@@ -353,52 +363,57 @@ class Proposal extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   TallyResult ensureFinalTallyResult() => $_ensure(3);
 
+  /// submit_time is the time of proposal submission.
   @$pb.TagNumber(5)
-  $40.Timestamp get submitTime => $_getN(4);
+  $47.Timestamp get submitTime => $_getN(4);
   @$pb.TagNumber(5)
-  set submitTime($40.Timestamp v) { setField(5, v); }
+  set submitTime($47.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasSubmitTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearSubmitTime() => clearField(5);
   @$pb.TagNumber(5)
-  $40.Timestamp ensureSubmitTime() => $_ensure(4);
+  $47.Timestamp ensureSubmitTime() => $_ensure(4);
 
+  /// deposit_end_time is the end time for deposition.
   @$pb.TagNumber(6)
-  $40.Timestamp get depositEndTime => $_getN(5);
+  $47.Timestamp get depositEndTime => $_getN(5);
   @$pb.TagNumber(6)
-  set depositEndTime($40.Timestamp v) { setField(6, v); }
+  set depositEndTime($47.Timestamp v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasDepositEndTime() => $_has(5);
   @$pb.TagNumber(6)
   void clearDepositEndTime() => clearField(6);
   @$pb.TagNumber(6)
-  $40.Timestamp ensureDepositEndTime() => $_ensure(5);
+  $47.Timestamp ensureDepositEndTime() => $_ensure(5);
 
+  /// total_deposit is the total deposit on the proposal.
   @$pb.TagNumber(7)
-  $core.List<$42.Coin> get totalDeposit => $_getList(6);
+  $core.List<$50.Coin> get totalDeposit => $_getList(6);
 
+  /// voting_start_time is the starting time to vote on a proposal.
   @$pb.TagNumber(8)
-  $40.Timestamp get votingStartTime => $_getN(7);
+  $47.Timestamp get votingStartTime => $_getN(7);
   @$pb.TagNumber(8)
-  set votingStartTime($40.Timestamp v) { setField(8, v); }
+  set votingStartTime($47.Timestamp v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasVotingStartTime() => $_has(7);
   @$pb.TagNumber(8)
   void clearVotingStartTime() => clearField(8);
   @$pb.TagNumber(8)
-  $40.Timestamp ensureVotingStartTime() => $_ensure(7);
+  $47.Timestamp ensureVotingStartTime() => $_ensure(7);
 
+  /// voting_end_time is the end time of voting on a proposal.
   @$pb.TagNumber(9)
-  $40.Timestamp get votingEndTime => $_getN(8);
+  $47.Timestamp get votingEndTime => $_getN(8);
   @$pb.TagNumber(9)
-  set votingEndTime($40.Timestamp v) { setField(9, v); }
+  set votingEndTime($47.Timestamp v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasVotingEndTime() => $_has(8);
   @$pb.TagNumber(9)
   void clearVotingEndTime() => clearField(9);
   @$pb.TagNumber(9)
-  $40.Timestamp ensureVotingEndTime() => $_ensure(8);
+  $47.Timestamp ensureVotingEndTime() => $_ensure(8);
 }
 
 /// TallyResult defines a standard tally for a governance proposal.
@@ -457,6 +472,7 @@ class TallyResult extends $pb.GeneratedMessage {
   static TallyResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TallyResult>(create);
   static TallyResult? _defaultInstance;
 
+  /// yes is the number of yes votes on a proposal.
   @$pb.TagNumber(1)
   $core.String get yes => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -466,6 +482,7 @@ class TallyResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearYes() => clearField(1);
 
+  /// abstain is the number of abstain votes on a proposal.
   @$pb.TagNumber(2)
   $core.String get abstain => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -475,6 +492,7 @@ class TallyResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAbstain() => clearField(2);
 
+  /// no is the number of no votes on a proposal.
   @$pb.TagNumber(3)
   $core.String get no => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -484,6 +502,7 @@ class TallyResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearNo() => clearField(3);
 
+  /// no_with_veto is the number of no with veto votes on a proposal.
   @$pb.TagNumber(4)
   $core.String get noWithVeto => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -553,6 +572,7 @@ class Vote extends $pb.GeneratedMessage {
   static Vote getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Vote>(create);
   static Vote? _defaultInstance;
 
+  /// proposal_id defines the unique id of the proposal.
   @$pb.TagNumber(1)
   $fixnum.Int64 get proposalId => $_getI64(0);
   @$pb.TagNumber(1)
@@ -562,6 +582,7 @@ class Vote extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProposalId() => clearField(1);
 
+  /// voter is the voter address of the proposal.
   @$pb.TagNumber(2)
   $core.String get voter => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -587,7 +608,9 @@ class Vote extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOption() => clearField(3);
 
-  /// Since: cosmos-sdk 0.43
+  ///  options is the weighted vote options.
+  ///
+  ///  Since: cosmos-sdk 0.43
   @$pb.TagNumber(4)
   $core.List<WeightedVoteOption> get options => $_getList(3);
 }
@@ -595,8 +618,8 @@ class Vote extends $pb.GeneratedMessage {
 /// DepositParams defines the params for deposits on governance proposals.
 class DepositParams extends $pb.GeneratedMessage {
   factory DepositParams({
-    $core.Iterable<$42.Coin>? minDeposit,
-    $48.Duration? maxDepositPeriod,
+    $core.Iterable<$50.Coin>? minDeposit,
+    $56.Duration? maxDepositPeriod,
   }) {
     final $result = create();
     if (minDeposit != null) {
@@ -612,8 +635,8 @@ class DepositParams extends $pb.GeneratedMessage {
   factory DepositParams.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DepositParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..pc<$42.Coin>(1, _omitFieldNames ? '' : 'minDeposit', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
-    ..aOM<$48.Duration>(2, _omitFieldNames ? '' : 'maxDepositPeriod', subBuilder: $48.Duration.create)
+    ..pc<$50.Coin>(1, _omitFieldNames ? '' : 'minDeposit', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
+    ..aOM<$56.Duration>(2, _omitFieldNames ? '' : 'maxDepositPeriod', subBuilder: $56.Duration.create)
     ..hasRequiredFields = false
   ;
 
@@ -640,26 +663,26 @@ class DepositParams extends $pb.GeneratedMessage {
 
   /// Minimum deposit for a proposal to enter voting period.
   @$pb.TagNumber(1)
-  $core.List<$42.Coin> get minDeposit => $_getList(0);
+  $core.List<$50.Coin> get minDeposit => $_getList(0);
 
   /// Maximum period for Atom holders to deposit on a proposal. Initial value: 2
   /// months.
   @$pb.TagNumber(2)
-  $48.Duration get maxDepositPeriod => $_getN(1);
+  $56.Duration get maxDepositPeriod => $_getN(1);
   @$pb.TagNumber(2)
-  set maxDepositPeriod($48.Duration v) { setField(2, v); }
+  set maxDepositPeriod($56.Duration v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMaxDepositPeriod() => $_has(1);
   @$pb.TagNumber(2)
   void clearMaxDepositPeriod() => clearField(2);
   @$pb.TagNumber(2)
-  $48.Duration ensureMaxDepositPeriod() => $_ensure(1);
+  $56.Duration ensureMaxDepositPeriod() => $_ensure(1);
 }
 
 /// VotingParams defines the params for voting on governance proposals.
 class VotingParams extends $pb.GeneratedMessage {
   factory VotingParams({
-    $48.Duration? votingPeriod,
+    $56.Duration? votingPeriod,
   }) {
     final $result = create();
     if (votingPeriod != null) {
@@ -672,7 +695,7 @@ class VotingParams extends $pb.GeneratedMessage {
   factory VotingParams.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VotingParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..aOM<$48.Duration>(1, _omitFieldNames ? '' : 'votingPeriod', subBuilder: $48.Duration.create)
+    ..aOM<$56.Duration>(1, _omitFieldNames ? '' : 'votingPeriod', subBuilder: $56.Duration.create)
     ..hasRequiredFields = false
   ;
 
@@ -697,17 +720,17 @@ class VotingParams extends $pb.GeneratedMessage {
   static VotingParams getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VotingParams>(create);
   static VotingParams? _defaultInstance;
 
-  /// Length of the voting period.
+  /// Duration of the voting period.
   @$pb.TagNumber(1)
-  $48.Duration get votingPeriod => $_getN(0);
+  $56.Duration get votingPeriod => $_getN(0);
   @$pb.TagNumber(1)
-  set votingPeriod($48.Duration v) { setField(1, v); }
+  set votingPeriod($56.Duration v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVotingPeriod() => $_has(0);
   @$pb.TagNumber(1)
   void clearVotingPeriod() => clearField(1);
   @$pb.TagNumber(1)
-  $48.Duration ensureVotingPeriod() => $_ensure(0);
+  $56.Duration ensureVotingPeriod() => $_ensure(0);
 }
 
 /// TallyParams defines the params for tallying votes on governance proposals.

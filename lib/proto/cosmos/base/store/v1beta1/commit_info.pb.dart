@@ -14,12 +14,15 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../../../google/protobuf/timestamp.pb.dart' as $47;
+
 /// CommitInfo defines commit information used by the multi-store when committing
 /// a version/height.
 class CommitInfo extends $pb.GeneratedMessage {
   factory CommitInfo({
     $fixnum.Int64? version,
     $core.Iterable<StoreInfo>? storeInfos,
+    $47.Timestamp? timestamp,
   }) {
     final $result = create();
     if (version != null) {
@@ -27,6 +30,9 @@ class CommitInfo extends $pb.GeneratedMessage {
     }
     if (storeInfos != null) {
       $result.storeInfos.addAll(storeInfos);
+    }
+    if (timestamp != null) {
+      $result.timestamp = timestamp;
     }
     return $result;
   }
@@ -37,6 +43,7 @@ class CommitInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CommitInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.store.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'version')
     ..pc<StoreInfo>(2, _omitFieldNames ? '' : 'storeInfos', $pb.PbFieldType.PM, subBuilder: StoreInfo.create)
+    ..aOM<$47.Timestamp>(3, _omitFieldNames ? '' : 'timestamp', subBuilder: $47.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -72,6 +79,17 @@ class CommitInfo extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $core.List<StoreInfo> get storeInfos => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $47.Timestamp get timestamp => $_getN(2);
+  @$pb.TagNumber(3)
+  set timestamp($47.Timestamp v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasTimestamp() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTimestamp() => clearField(3);
+  @$pb.TagNumber(3)
+  $47.Timestamp ensureTimestamp() => $_ensure(2);
 }
 
 /// StoreInfo defines store-specific commit information. It contains a reference
@@ -142,7 +160,7 @@ class StoreInfo extends $pb.GeneratedMessage {
   CommitID ensureCommitId() => $_ensure(1);
 }
 
-/// CommitID defines the committment information when a specific store is
+/// CommitID defines the commitment information when a specific store is
 /// committed.
 class CommitID extends $pb.GeneratedMessage {
   factory CommitID({

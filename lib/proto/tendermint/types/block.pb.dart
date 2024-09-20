@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'evidence.pb.dart' as $51;
-import 'types.pb.dart' as $49;
+import 'evidence.pb.dart' as $59;
+import 'types.pb.dart' as $58;
 
 class Block extends $pb.GeneratedMessage {
   factory Block({
-    $49.Header? header,
-    $49.Data? data,
-    $51.EvidenceList? evidence,
-    $49.Commit? lastCommit,
+    $58.Header? header,
+    $58.Data? data,
+    $59.EvidenceList? evidence,
+    $58.Commit? lastCommit,
   }) {
     final $result = create();
     if (header != null) {
@@ -43,10 +43,10 @@ class Block extends $pb.GeneratedMessage {
   factory Block.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Block', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..aOM<$49.Header>(1, _omitFieldNames ? '' : 'header', subBuilder: $49.Header.create)
-    ..aOM<$49.Data>(2, _omitFieldNames ? '' : 'data', subBuilder: $49.Data.create)
-    ..aOM<$51.EvidenceList>(3, _omitFieldNames ? '' : 'evidence', subBuilder: $51.EvidenceList.create)
-    ..aOM<$49.Commit>(4, _omitFieldNames ? '' : 'lastCommit', subBuilder: $49.Commit.create)
+    ..aOM<$58.Header>(1, _omitFieldNames ? '' : 'header', subBuilder: $58.Header.create)
+    ..aOM<$58.Data>(2, _omitFieldNames ? '' : 'data', subBuilder: $58.Data.create)
+    ..aOM<$59.EvidenceList>(3, _omitFieldNames ? '' : 'evidence', subBuilder: $59.EvidenceList.create)
+    ..aOM<$58.Commit>(4, _omitFieldNames ? '' : 'lastCommit', subBuilder: $58.Commit.create)
     ..hasRequiredFields = false
   ;
 
@@ -72,48 +72,48 @@ class Block extends $pb.GeneratedMessage {
   static Block? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $49.Header get header => $_getN(0);
+  $58.Header get header => $_getN(0);
   @$pb.TagNumber(1)
-  set header($49.Header v) { setField(1, v); }
+  set header($58.Header v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasHeader() => $_has(0);
   @$pb.TagNumber(1)
   void clearHeader() => clearField(1);
   @$pb.TagNumber(1)
-  $49.Header ensureHeader() => $_ensure(0);
+  $58.Header ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $49.Data get data => $_getN(1);
+  $58.Data get data => $_getN(1);
   @$pb.TagNumber(2)
-  set data($49.Data v) { setField(2, v); }
+  set data($58.Data v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasData() => $_has(1);
   @$pb.TagNumber(2)
   void clearData() => clearField(2);
   @$pb.TagNumber(2)
-  $49.Data ensureData() => $_ensure(1);
+  $58.Data ensureData() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $51.EvidenceList get evidence => $_getN(2);
+  $59.EvidenceList get evidence => $_getN(2);
   @$pb.TagNumber(3)
-  set evidence($51.EvidenceList v) { setField(3, v); }
+  set evidence($59.EvidenceList v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasEvidence() => $_has(2);
   @$pb.TagNumber(3)
   void clearEvidence() => clearField(3);
   @$pb.TagNumber(3)
-  $51.EvidenceList ensureEvidence() => $_ensure(2);
+  $59.EvidenceList ensureEvidence() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $49.Commit get lastCommit => $_getN(3);
+  $58.Commit get lastCommit => $_getN(3);
   @$pb.TagNumber(4)
-  set lastCommit($49.Commit v) { setField(4, v); }
+  set lastCommit($58.Commit v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasLastCommit() => $_has(3);
   @$pb.TagNumber(4)
   void clearLastCommit() => clearField(4);
   @$pb.TagNumber(4)
-  $49.Commit ensureLastCommit() => $_ensure(3);
+  $58.Commit ensureLastCommit() => $_ensure(3);
 }
 
 

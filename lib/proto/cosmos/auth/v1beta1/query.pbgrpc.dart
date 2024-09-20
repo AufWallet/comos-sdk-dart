@@ -57,6 +57,10 @@ class QueryClient extends $grpc.Client {
       '/cosmos.auth.v1beta1.Query/AddressStringToBytes',
       ($1.AddressStringToBytesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.AddressStringToBytesResponse.fromBuffer(value));
+  static final _$accountInfo = $grpc.ClientMethod<$1.QueryAccountInfoRequest, $1.QueryAccountInfoResponse>(
+      '/cosmos.auth.v1beta1.Query/AccountInfo',
+      ($1.QueryAccountInfoRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.QueryAccountInfoResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -98,6 +102,10 @@ class QueryClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.AddressStringToBytesResponse> addressStringToBytes($1.AddressStringToBytesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$addressStringToBytes, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.QueryAccountInfoResponse> accountInfo($1.QueryAccountInfoRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$accountInfo, request, options: options);
   }
 }
 
@@ -169,6 +177,13 @@ abstract class QueryServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.AddressStringToBytesRequest.fromBuffer(value),
         ($1.AddressStringToBytesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.QueryAccountInfoRequest, $1.QueryAccountInfoResponse>(
+        'AccountInfo',
+        accountInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.QueryAccountInfoRequest.fromBuffer(value),
+        ($1.QueryAccountInfoResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.QueryAccountsResponse> accounts_Pre($grpc.ServiceCall call, $async.Future<$1.QueryAccountsRequest> request) async {
@@ -207,6 +222,10 @@ abstract class QueryServiceBase extends $grpc.Service {
     return addressStringToBytes(call, await request);
   }
 
+  $async.Future<$1.QueryAccountInfoResponse> accountInfo_Pre($grpc.ServiceCall call, $async.Future<$1.QueryAccountInfoRequest> request) async {
+    return accountInfo(call, await request);
+  }
+
   $async.Future<$1.QueryAccountsResponse> accounts($grpc.ServiceCall call, $1.QueryAccountsRequest request);
   $async.Future<$1.QueryAccountResponse> account($grpc.ServiceCall call, $1.QueryAccountRequest request);
   $async.Future<$1.QueryAccountAddressByIDResponse> accountAddressByID($grpc.ServiceCall call, $1.QueryAccountAddressByIDRequest request);
@@ -216,4 +235,5 @@ abstract class QueryServiceBase extends $grpc.Service {
   $async.Future<$1.Bech32PrefixResponse> bech32Prefix($grpc.ServiceCall call, $1.Bech32PrefixRequest request);
   $async.Future<$1.AddressBytesToStringResponse> addressBytesToString($grpc.ServiceCall call, $1.AddressBytesToStringRequest request);
   $async.Future<$1.AddressStringToBytesResponse> addressStringToBytes($grpc.ServiceCall call, $1.AddressStringToBytesRequest request);
+  $async.Future<$1.QueryAccountInfoResponse> accountInfo($grpc.ServiceCall call, $1.QueryAccountInfoRequest request);
 }

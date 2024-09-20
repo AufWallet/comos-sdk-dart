@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../tendermint/abci/types.pb.dart' as $6;
+import '../../../../tendermint/abci/types.pb.dart' as $8;
 
 ///  StoreKVPair is a KVStore KVPair used for listening to state changes (Sets and Deletes)
 ///  It optionally includes the StoreKey for the originating KVStore and a Boolean flag to distinguish between Sets and
@@ -115,8 +115,8 @@ class StoreKVPair extends $pb.GeneratedMessage {
 /// DeliverTx encapulate deliver tx request and response.
 class BlockMetadata_DeliverTx extends $pb.GeneratedMessage {
   factory BlockMetadata_DeliverTx({
-    $6.RequestDeliverTx? request,
-    $6.ResponseDeliverTx? response,
+    $8.RequestDeliverTx? request,
+    $8.ResponseDeliverTx? response,
   }) {
     final $result = create();
     if (request != null) {
@@ -132,8 +132,8 @@ class BlockMetadata_DeliverTx extends $pb.GeneratedMessage {
   factory BlockMetadata_DeliverTx.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BlockMetadata.DeliverTx', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.store.v1beta1'), createEmptyInstance: create)
-    ..aOM<$6.RequestDeliverTx>(1, _omitFieldNames ? '' : 'request', subBuilder: $6.RequestDeliverTx.create)
-    ..aOM<$6.ResponseDeliverTx>(2, _omitFieldNames ? '' : 'response', subBuilder: $6.ResponseDeliverTx.create)
+    ..aOM<$8.RequestDeliverTx>(1, _omitFieldNames ? '' : 'request', subBuilder: $8.RequestDeliverTx.create)
+    ..aOM<$8.ResponseDeliverTx>(2, _omitFieldNames ? '' : 'response', subBuilder: $8.ResponseDeliverTx.create)
     ..hasRequiredFields = false
   ;
 
@@ -159,38 +159,38 @@ class BlockMetadata_DeliverTx extends $pb.GeneratedMessage {
   static BlockMetadata_DeliverTx? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $6.RequestDeliverTx get request => $_getN(0);
+  $8.RequestDeliverTx get request => $_getN(0);
   @$pb.TagNumber(1)
-  set request($6.RequestDeliverTx v) { setField(1, v); }
+  set request($8.RequestDeliverTx v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRequest() => $_has(0);
   @$pb.TagNumber(1)
   void clearRequest() => clearField(1);
   @$pb.TagNumber(1)
-  $6.RequestDeliverTx ensureRequest() => $_ensure(0);
+  $8.RequestDeliverTx ensureRequest() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $6.ResponseDeliverTx get response => $_getN(1);
+  $8.ResponseDeliverTx get response => $_getN(1);
   @$pb.TagNumber(2)
-  set response($6.ResponseDeliverTx v) { setField(2, v); }
+  set response($8.ResponseDeliverTx v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasResponse() => $_has(1);
   @$pb.TagNumber(2)
   void clearResponse() => clearField(2);
   @$pb.TagNumber(2)
-  $6.ResponseDeliverTx ensureResponse() => $_ensure(1);
+  $8.ResponseDeliverTx ensureResponse() => $_ensure(1);
 }
 
 /// BlockMetadata contains all the abci event data of a block
 /// the file streamer dump them into files together with the state changes.
 class BlockMetadata extends $pb.GeneratedMessage {
   factory BlockMetadata({
-    $6.RequestBeginBlock? requestBeginBlock,
-    $6.ResponseBeginBlock? responseBeginBlock,
+    $8.RequestBeginBlock? requestBeginBlock,
+    $8.ResponseBeginBlock? responseBeginBlock,
     $core.Iterable<BlockMetadata_DeliverTx>? deliverTxs,
-    $6.RequestEndBlock? requestEndBlock,
-    $6.ResponseEndBlock? responseEndBlock,
-    $6.ResponseCommit? responseCommit,
+    $8.RequestEndBlock? requestEndBlock,
+    $8.ResponseEndBlock? responseEndBlock,
+    $8.ResponseCommit? responseCommit,
   }) {
     final $result = create();
     if (requestBeginBlock != null) {
@@ -218,12 +218,12 @@ class BlockMetadata extends $pb.GeneratedMessage {
   factory BlockMetadata.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BlockMetadata', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.store.v1beta1'), createEmptyInstance: create)
-    ..aOM<$6.RequestBeginBlock>(1, _omitFieldNames ? '' : 'requestBeginBlock', subBuilder: $6.RequestBeginBlock.create)
-    ..aOM<$6.ResponseBeginBlock>(2, _omitFieldNames ? '' : 'responseBeginBlock', subBuilder: $6.ResponseBeginBlock.create)
+    ..aOM<$8.RequestBeginBlock>(1, _omitFieldNames ? '' : 'requestBeginBlock', subBuilder: $8.RequestBeginBlock.create)
+    ..aOM<$8.ResponseBeginBlock>(2, _omitFieldNames ? '' : 'responseBeginBlock', subBuilder: $8.ResponseBeginBlock.create)
     ..pc<BlockMetadata_DeliverTx>(3, _omitFieldNames ? '' : 'deliverTxs', $pb.PbFieldType.PM, subBuilder: BlockMetadata_DeliverTx.create)
-    ..aOM<$6.RequestEndBlock>(4, _omitFieldNames ? '' : 'requestEndBlock', subBuilder: $6.RequestEndBlock.create)
-    ..aOM<$6.ResponseEndBlock>(5, _omitFieldNames ? '' : 'responseEndBlock', subBuilder: $6.ResponseEndBlock.create)
-    ..aOM<$6.ResponseCommit>(6, _omitFieldNames ? '' : 'responseCommit', subBuilder: $6.ResponseCommit.create)
+    ..aOM<$8.RequestEndBlock>(4, _omitFieldNames ? '' : 'requestEndBlock', subBuilder: $8.RequestEndBlock.create)
+    ..aOM<$8.ResponseEndBlock>(5, _omitFieldNames ? '' : 'responseEndBlock', subBuilder: $8.ResponseEndBlock.create)
+    ..aOM<$8.ResponseCommit>(6, _omitFieldNames ? '' : 'responseCommit', subBuilder: $8.ResponseCommit.create)
     ..hasRequiredFields = false
   ;
 
@@ -249,62 +249,62 @@ class BlockMetadata extends $pb.GeneratedMessage {
   static BlockMetadata? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $6.RequestBeginBlock get requestBeginBlock => $_getN(0);
+  $8.RequestBeginBlock get requestBeginBlock => $_getN(0);
   @$pb.TagNumber(1)
-  set requestBeginBlock($6.RequestBeginBlock v) { setField(1, v); }
+  set requestBeginBlock($8.RequestBeginBlock v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRequestBeginBlock() => $_has(0);
   @$pb.TagNumber(1)
   void clearRequestBeginBlock() => clearField(1);
   @$pb.TagNumber(1)
-  $6.RequestBeginBlock ensureRequestBeginBlock() => $_ensure(0);
+  $8.RequestBeginBlock ensureRequestBeginBlock() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $6.ResponseBeginBlock get responseBeginBlock => $_getN(1);
+  $8.ResponseBeginBlock get responseBeginBlock => $_getN(1);
   @$pb.TagNumber(2)
-  set responseBeginBlock($6.ResponseBeginBlock v) { setField(2, v); }
+  set responseBeginBlock($8.ResponseBeginBlock v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasResponseBeginBlock() => $_has(1);
   @$pb.TagNumber(2)
   void clearResponseBeginBlock() => clearField(2);
   @$pb.TagNumber(2)
-  $6.ResponseBeginBlock ensureResponseBeginBlock() => $_ensure(1);
+  $8.ResponseBeginBlock ensureResponseBeginBlock() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.List<BlockMetadata_DeliverTx> get deliverTxs => $_getList(2);
 
   @$pb.TagNumber(4)
-  $6.RequestEndBlock get requestEndBlock => $_getN(3);
+  $8.RequestEndBlock get requestEndBlock => $_getN(3);
   @$pb.TagNumber(4)
-  set requestEndBlock($6.RequestEndBlock v) { setField(4, v); }
+  set requestEndBlock($8.RequestEndBlock v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequestEndBlock() => $_has(3);
   @$pb.TagNumber(4)
   void clearRequestEndBlock() => clearField(4);
   @$pb.TagNumber(4)
-  $6.RequestEndBlock ensureRequestEndBlock() => $_ensure(3);
+  $8.RequestEndBlock ensureRequestEndBlock() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $6.ResponseEndBlock get responseEndBlock => $_getN(4);
+  $8.ResponseEndBlock get responseEndBlock => $_getN(4);
   @$pb.TagNumber(5)
-  set responseEndBlock($6.ResponseEndBlock v) { setField(5, v); }
+  set responseEndBlock($8.ResponseEndBlock v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasResponseEndBlock() => $_has(4);
   @$pb.TagNumber(5)
   void clearResponseEndBlock() => clearField(5);
   @$pb.TagNumber(5)
-  $6.ResponseEndBlock ensureResponseEndBlock() => $_ensure(4);
+  $8.ResponseEndBlock ensureResponseEndBlock() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $6.ResponseCommit get responseCommit => $_getN(5);
+  $8.ResponseCommit get responseCommit => $_getN(5);
   @$pb.TagNumber(6)
-  set responseCommit($6.ResponseCommit v) { setField(6, v); }
+  set responseCommit($8.ResponseCommit v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasResponseCommit() => $_has(5);
   @$pb.TagNumber(6)
   void clearResponseCommit() => clearField(6);
   @$pb.TagNumber(6)
-  $6.ResponseCommit ensureResponseCommit() => $_ensure(5);
+  $8.ResponseCommit ensureResponseCommit() => $_ensure(5);
 }
 
 

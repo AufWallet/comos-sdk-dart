@@ -28,8 +28,9 @@ const MsgGrantAllowance$json = {
 final $typed_data.Uint8List msgGrantAllowanceDescriptor = $convert.base64Decode(
     'ChFNc2dHcmFudEFsbG93YW5jZRIyCgdncmFudGVyGAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3'
     'NTdHJpbmdSB2dyYW50ZXISMgoHZ3JhbnRlZRgCIAEoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3Ry'
-    'aW5nUgdncmFudGVlEkUKCWFsbG93YW5jZRgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlCEc'
-    'q0LQ1GZWVBbGxvd2FuY2VJUglhbGxvd2FuY2U6DILnsCoHZ3JhbnRlcg==');
+    'aW5nUgdncmFudGVlEl0KCWFsbG93YW5jZRgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlCKc'
+    'q0LSVjb3Ntb3MuZmVlZ3JhbnQudjFiZXRhMS5GZWVBbGxvd2FuY2VJUglhbGxvd2FuY2U6LYLn'
+    'sCoHZ3JhbnRlcornsCocY29zbW9zLXNkay9Nc2dHcmFudEFsbG93YW5jZQ==');
 
 @$core.Deprecated('Use msgGrantAllowanceResponseDescriptor instead')
 const MsgGrantAllowanceResponse$json = {
@@ -54,7 +55,8 @@ const MsgRevokeAllowance$json = {
 final $typed_data.Uint8List msgRevokeAllowanceDescriptor = $convert.base64Decode(
     'ChJNc2dSZXZva2VBbGxvd2FuY2USMgoHZ3JhbnRlchgBIAEoCUIY0rQtFGNvc21vcy5BZGRyZX'
     'NzU3RyaW5nUgdncmFudGVyEjIKB2dyYW50ZWUYAiABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0'
-    'cmluZ1IHZ3JhbnRlZToMguewKgdncmFudGVy');
+    'cmluZ1IHZ3JhbnRlZTouguewKgdncmFudGVyiuewKh1jb3Ntb3Mtc2RrL01zZ1Jldm9rZUFsbG'
+    '93YW5jZQ==');
 
 @$core.Deprecated('Use msgRevokeAllowanceResponseDescriptor instead')
 const MsgRevokeAllowanceResponse$json = {

@@ -33,7 +33,11 @@ const BroadcastMode$json = {
   '1': 'BroadcastMode',
   '2': [
     {'1': 'BROADCAST_MODE_UNSPECIFIED', '2': 0},
-    {'1': 'BROADCAST_MODE_BLOCK', '2': 1},
+    {
+      '1': 'BROADCAST_MODE_BLOCK',
+      '2': 1,
+      '3': {'1': true},
+    },
     {'1': 'BROADCAST_MODE_SYNC', '2': 2},
     {'1': 'BROADCAST_MODE_ASYNC', '2': 3},
   ],
@@ -41,9 +45,9 @@ const BroadcastMode$json = {
 
 /// Descriptor for `BroadcastMode`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List broadcastModeDescriptor = $convert.base64Decode(
-    'Cg1Ccm9hZGNhc3RNb2RlEh4KGkJST0FEQ0FTVF9NT0RFX1VOU1BFQ0lGSUVEEAASGAoUQlJPQU'
-    'RDQVNUX01PREVfQkxPQ0sQARIXChNCUk9BRENBU1RfTU9ERV9TWU5DEAISGAoUQlJPQURDQVNU'
-    'X01PREVfQVNZTkMQAw==');
+    'Cg1Ccm9hZGNhc3RNb2RlEh4KGkJST0FEQ0FTVF9NT0RFX1VOU1BFQ0lGSUVEEAASHAoUQlJPQU'
+    'RDQVNUX01PREVfQkxPQ0sQARoCCAESFwoTQlJPQURDQVNUX01PREVfU1lOQxACEhgKFEJST0FE'
+    'Q0FTVF9NT0RFX0FTWU5DEAM=');
 
 @$core.Deprecated('Use getTxsEventRequestDescriptor instead')
 const GetTxsEventRequest$json = {
@@ -223,4 +227,104 @@ final $typed_data.Uint8List getBlockWithTxsResponseDescriptor = $convert.base64D
     'UgdibG9ja0lkEi0KBWJsb2NrGAMgASgLMhcudGVuZGVybWludC50eXBlcy5CbG9ja1IFYmxvY2'
     'sSRwoKcGFnaW5hdGlvbhgEIAEoCzInLmNvc21vcy5iYXNlLnF1ZXJ5LnYxYmV0YTEuUGFnZVJl'
     'c3BvbnNlUgpwYWdpbmF0aW9u');
+
+@$core.Deprecated('Use txDecodeRequestDescriptor instead')
+const TxDecodeRequest$json = {
+  '1': 'TxDecodeRequest',
+  '2': [
+    {'1': 'tx_bytes', '3': 1, '4': 1, '5': 12, '10': 'txBytes'},
+  ],
+};
+
+/// Descriptor for `TxDecodeRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txDecodeRequestDescriptor = $convert.base64Decode(
+    'Cg9UeERlY29kZVJlcXVlc3QSGQoIdHhfYnl0ZXMYASABKAxSB3R4Qnl0ZXM=');
+
+@$core.Deprecated('Use txDecodeResponseDescriptor instead')
+const TxDecodeResponse$json = {
+  '1': 'TxDecodeResponse',
+  '2': [
+    {'1': 'tx', '3': 1, '4': 1, '5': 11, '6': '.cosmos.tx.v1beta1.Tx', '10': 'tx'},
+  ],
+};
+
+/// Descriptor for `TxDecodeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txDecodeResponseDescriptor = $convert.base64Decode(
+    'ChBUeERlY29kZVJlc3BvbnNlEiUKAnR4GAEgASgLMhUuY29zbW9zLnR4LnYxYmV0YTEuVHhSAn'
+    'R4');
+
+@$core.Deprecated('Use txEncodeRequestDescriptor instead')
+const TxEncodeRequest$json = {
+  '1': 'TxEncodeRequest',
+  '2': [
+    {'1': 'tx', '3': 1, '4': 1, '5': 11, '6': '.cosmos.tx.v1beta1.Tx', '10': 'tx'},
+  ],
+};
+
+/// Descriptor for `TxEncodeRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txEncodeRequestDescriptor = $convert.base64Decode(
+    'Cg9UeEVuY29kZVJlcXVlc3QSJQoCdHgYASABKAsyFS5jb3Ntb3MudHgudjFiZXRhMS5UeFICdH'
+    'g=');
+
+@$core.Deprecated('Use txEncodeResponseDescriptor instead')
+const TxEncodeResponse$json = {
+  '1': 'TxEncodeResponse',
+  '2': [
+    {'1': 'tx_bytes', '3': 1, '4': 1, '5': 12, '10': 'txBytes'},
+  ],
+};
+
+/// Descriptor for `TxEncodeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txEncodeResponseDescriptor = $convert.base64Decode(
+    'ChBUeEVuY29kZVJlc3BvbnNlEhkKCHR4X2J5dGVzGAEgASgMUgd0eEJ5dGVz');
+
+@$core.Deprecated('Use txEncodeAminoRequestDescriptor instead')
+const TxEncodeAminoRequest$json = {
+  '1': 'TxEncodeAminoRequest',
+  '2': [
+    {'1': 'amino_json', '3': 1, '4': 1, '5': 9, '10': 'aminoJson'},
+  ],
+};
+
+/// Descriptor for `TxEncodeAminoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txEncodeAminoRequestDescriptor = $convert.base64Decode(
+    'ChRUeEVuY29kZUFtaW5vUmVxdWVzdBIdCgphbWlub19qc29uGAEgASgJUglhbWlub0pzb24=');
+
+@$core.Deprecated('Use txEncodeAminoResponseDescriptor instead')
+const TxEncodeAminoResponse$json = {
+  '1': 'TxEncodeAminoResponse',
+  '2': [
+    {'1': 'amino_binary', '3': 1, '4': 1, '5': 12, '10': 'aminoBinary'},
+  ],
+};
+
+/// Descriptor for `TxEncodeAminoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txEncodeAminoResponseDescriptor = $convert.base64Decode(
+    'ChVUeEVuY29kZUFtaW5vUmVzcG9uc2USIQoMYW1pbm9fYmluYXJ5GAEgASgMUgthbWlub0Jpbm'
+    'FyeQ==');
+
+@$core.Deprecated('Use txDecodeAminoRequestDescriptor instead')
+const TxDecodeAminoRequest$json = {
+  '1': 'TxDecodeAminoRequest',
+  '2': [
+    {'1': 'amino_binary', '3': 1, '4': 1, '5': 12, '10': 'aminoBinary'},
+  ],
+};
+
+/// Descriptor for `TxDecodeAminoRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txDecodeAminoRequestDescriptor = $convert.base64Decode(
+    'ChRUeERlY29kZUFtaW5vUmVxdWVzdBIhCgxhbWlub19iaW5hcnkYASABKAxSC2FtaW5vQmluYX'
+    'J5');
+
+@$core.Deprecated('Use txDecodeAminoResponseDescriptor instead')
+const TxDecodeAminoResponse$json = {
+  '1': 'TxDecodeAminoResponse',
+  '2': [
+    {'1': 'amino_json', '3': 1, '4': 1, '5': 9, '10': 'aminoJson'},
+  ],
+};
+
+/// Descriptor for `TxDecodeAminoResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txDecodeAminoResponseDescriptor = $convert.base64Decode(
+    'ChVUeERlY29kZUFtaW5vUmVzcG9uc2USHQoKYW1pbm9fanNvbhgBIAEoCVIJYW1pbm9Kc29u');
 

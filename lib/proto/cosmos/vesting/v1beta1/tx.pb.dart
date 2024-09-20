@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $42;
-import 'vesting.pb.dart' as $72;
+import '../../base/v1beta1/coin.pb.dart' as $50;
+import 'vesting.pb.dart' as $81;
 
 /// MsgCreateVestingAccount defines a message that enables creating a vesting
 /// account.
@@ -23,7 +23,7 @@ class MsgCreateVestingAccount extends $pb.GeneratedMessage {
   factory MsgCreateVestingAccount({
     $core.String? fromAddress,
     $core.String? toAddress,
-    $core.Iterable<$42.Coin>? amount,
+    $core.Iterable<$50.Coin>? amount,
     $fixnum.Int64? endTime,
     $core.bool? delayed,
   }) {
@@ -52,7 +52,7 @@ class MsgCreateVestingAccount extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgCreateVestingAccount', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.vesting.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'fromAddress')
     ..aOS(2, _omitFieldNames ? '' : 'toAddress')
-    ..pc<$42.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
+    ..pc<$50.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
     ..aInt64(4, _omitFieldNames ? '' : 'endTime')
     ..aOB(5, _omitFieldNames ? '' : 'delayed')
     ..hasRequiredFields = false
@@ -98,7 +98,7 @@ class MsgCreateVestingAccount extends $pb.GeneratedMessage {
   void clearToAddress() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<$42.Coin> get amount => $_getList(2);
+  $core.List<$50.Coin> get amount => $_getList(2);
 
   /// end of vesting as unix time (in seconds).
   @$pb.TagNumber(4)
@@ -161,7 +161,7 @@ class MsgCreatePermanentLockedAccount extends $pb.GeneratedMessage {
   factory MsgCreatePermanentLockedAccount({
     $core.String? fromAddress,
     $core.String? toAddress,
-    $core.Iterable<$42.Coin>? amount,
+    $core.Iterable<$50.Coin>? amount,
   }) {
     final $result = create();
     if (fromAddress != null) {
@@ -182,7 +182,7 @@ class MsgCreatePermanentLockedAccount extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgCreatePermanentLockedAccount', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.vesting.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'fromAddress')
     ..aOS(2, _omitFieldNames ? '' : 'toAddress')
-    ..pc<$42.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
+    ..pc<$50.Coin>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -226,7 +226,7 @@ class MsgCreatePermanentLockedAccount extends $pb.GeneratedMessage {
   void clearToAddress() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<$42.Coin> get amount => $_getList(2);
+  $core.List<$50.Coin> get amount => $_getList(2);
 }
 
 ///  MsgCreatePermanentLockedAccountResponse defines the Msg/CreatePermanentLockedAccount response type.
@@ -273,7 +273,7 @@ class MsgCreatePeriodicVestingAccount extends $pb.GeneratedMessage {
     $core.String? fromAddress,
     $core.String? toAddress,
     $fixnum.Int64? startTime,
-    $core.Iterable<$72.Period>? vestingPeriods,
+    $core.Iterable<$81.Period>? vestingPeriods,
   }) {
     final $result = create();
     if (fromAddress != null) {
@@ -298,7 +298,7 @@ class MsgCreatePeriodicVestingAccount extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'fromAddress')
     ..aOS(2, _omitFieldNames ? '' : 'toAddress')
     ..aInt64(3, _omitFieldNames ? '' : 'startTime')
-    ..pc<$72.Period>(4, _omitFieldNames ? '' : 'vestingPeriods', $pb.PbFieldType.PM, subBuilder: $72.Period.create)
+    ..pc<$81.Period>(4, _omitFieldNames ? '' : 'vestingPeriods', $pb.PbFieldType.PM, subBuilder: $81.Period.create)
     ..hasRequiredFields = false
   ;
 
@@ -352,7 +352,7 @@ class MsgCreatePeriodicVestingAccount extends $pb.GeneratedMessage {
   void clearStartTime() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<$72.Period> get vestingPeriods => $_getList(3);
+  $core.List<$81.Period> get vestingPeriods => $_getList(3);
 }
 
 ///  MsgCreateVestingAccountResponse defines the Msg/CreatePeriodicVestingAccount

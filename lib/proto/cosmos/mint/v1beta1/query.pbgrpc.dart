@@ -15,24 +15,24 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $24;
+import 'query.pb.dart' as $28;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.mint.v1beta1.Query')
 class QueryClient extends $grpc.Client {
-  static final _$params = $grpc.ClientMethod<$24.QueryParamsRequest, $24.QueryParamsResponse>(
+  static final _$params = $grpc.ClientMethod<$28.QueryParamsRequest, $28.QueryParamsResponse>(
       '/cosmos.mint.v1beta1.Query/Params',
-      ($24.QueryParamsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $24.QueryParamsResponse.fromBuffer(value));
-  static final _$inflation = $grpc.ClientMethod<$24.QueryInflationRequest, $24.QueryInflationResponse>(
+      ($28.QueryParamsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $28.QueryParamsResponse.fromBuffer(value));
+  static final _$inflation = $grpc.ClientMethod<$28.QueryInflationRequest, $28.QueryInflationResponse>(
       '/cosmos.mint.v1beta1.Query/Inflation',
-      ($24.QueryInflationRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $24.QueryInflationResponse.fromBuffer(value));
-  static final _$annualProvisions = $grpc.ClientMethod<$24.QueryAnnualProvisionsRequest, $24.QueryAnnualProvisionsResponse>(
+      ($28.QueryInflationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $28.QueryInflationResponse.fromBuffer(value));
+  static final _$annualProvisions = $grpc.ClientMethod<$28.QueryAnnualProvisionsRequest, $28.QueryAnnualProvisionsResponse>(
       '/cosmos.mint.v1beta1.Query/AnnualProvisions',
-      ($24.QueryAnnualProvisionsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $24.QueryAnnualProvisionsResponse.fromBuffer(value));
+      ($28.QueryAnnualProvisionsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $28.QueryAnnualProvisionsResponse.fromBuffer(value));
 
   QueryClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -40,15 +40,15 @@ class QueryClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$24.QueryParamsResponse> params($24.QueryParamsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$28.QueryParamsResponse> params($28.QueryParamsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$params, request, options: options);
   }
 
-  $grpc.ResponseFuture<$24.QueryInflationResponse> inflation($24.QueryInflationRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$28.QueryInflationResponse> inflation($28.QueryInflationRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$inflation, request, options: options);
   }
 
-  $grpc.ResponseFuture<$24.QueryAnnualProvisionsResponse> annualProvisions($24.QueryAnnualProvisionsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$28.QueryAnnualProvisionsResponse> annualProvisions($28.QueryAnnualProvisionsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$annualProvisions, request, options: options);
   }
 }
@@ -58,42 +58,42 @@ abstract class QueryServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.mint.v1beta1.Query';
 
   QueryServiceBase() {
-    $addMethod($grpc.ServiceMethod<$24.QueryParamsRequest, $24.QueryParamsResponse>(
+    $addMethod($grpc.ServiceMethod<$28.QueryParamsRequest, $28.QueryParamsResponse>(
         'Params',
         params_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $24.QueryParamsRequest.fromBuffer(value),
-        ($24.QueryParamsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$24.QueryInflationRequest, $24.QueryInflationResponse>(
+        ($core.List<$core.int> value) => $28.QueryParamsRequest.fromBuffer(value),
+        ($28.QueryParamsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$28.QueryInflationRequest, $28.QueryInflationResponse>(
         'Inflation',
         inflation_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $24.QueryInflationRequest.fromBuffer(value),
-        ($24.QueryInflationResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$24.QueryAnnualProvisionsRequest, $24.QueryAnnualProvisionsResponse>(
+        ($core.List<$core.int> value) => $28.QueryInflationRequest.fromBuffer(value),
+        ($28.QueryInflationResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$28.QueryAnnualProvisionsRequest, $28.QueryAnnualProvisionsResponse>(
         'AnnualProvisions',
         annualProvisions_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $24.QueryAnnualProvisionsRequest.fromBuffer(value),
-        ($24.QueryAnnualProvisionsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $28.QueryAnnualProvisionsRequest.fromBuffer(value),
+        ($28.QueryAnnualProvisionsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$24.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$24.QueryParamsRequest> request) async {
+  $async.Future<$28.QueryParamsResponse> params_Pre($grpc.ServiceCall call, $async.Future<$28.QueryParamsRequest> request) async {
     return params(call, await request);
   }
 
-  $async.Future<$24.QueryInflationResponse> inflation_Pre($grpc.ServiceCall call, $async.Future<$24.QueryInflationRequest> request) async {
+  $async.Future<$28.QueryInflationResponse> inflation_Pre($grpc.ServiceCall call, $async.Future<$28.QueryInflationRequest> request) async {
     return inflation(call, await request);
   }
 
-  $async.Future<$24.QueryAnnualProvisionsResponse> annualProvisions_Pre($grpc.ServiceCall call, $async.Future<$24.QueryAnnualProvisionsRequest> request) async {
+  $async.Future<$28.QueryAnnualProvisionsResponse> annualProvisions_Pre($grpc.ServiceCall call, $async.Future<$28.QueryAnnualProvisionsRequest> request) async {
     return annualProvisions(call, await request);
   }
 
-  $async.Future<$24.QueryParamsResponse> params($grpc.ServiceCall call, $24.QueryParamsRequest request);
-  $async.Future<$24.QueryInflationResponse> inflation($grpc.ServiceCall call, $24.QueryInflationRequest request);
-  $async.Future<$24.QueryAnnualProvisionsResponse> annualProvisions($grpc.ServiceCall call, $24.QueryAnnualProvisionsRequest request);
+  $async.Future<$28.QueryParamsResponse> params($grpc.ServiceCall call, $28.QueryParamsRequest request);
+  $async.Future<$28.QueryInflationResponse> inflation($grpc.ServiceCall call, $28.QueryInflationRequest request);
+  $async.Future<$28.QueryAnnualProvisionsResponse> annualProvisions($grpc.ServiceCall call, $28.QueryAnnualProvisionsRequest request);
 }

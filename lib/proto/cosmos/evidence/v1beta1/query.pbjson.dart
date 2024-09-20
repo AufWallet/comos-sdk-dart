@@ -17,15 +17,23 @@ import 'dart:typed_data' as $typed_data;
 const QueryEvidenceRequest$json = {
   '1': 'QueryEvidenceRequest',
   '2': [
-    {'1': 'evidence_hash', '3': 1, '4': 1, '5': 12, '8': {}, '10': 'evidenceHash'},
+    {
+      '1': 'evidence_hash',
+      '3': 1,
+      '4': 1,
+      '5': 12,
+      '8': {'3': true},
+      '10': 'evidenceHash',
+    },
+    {'1': 'hash', '3': 2, '4': 1, '5': 9, '10': 'hash'},
   ],
 };
 
 /// Descriptor for `QueryEvidenceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryEvidenceRequestDescriptor = $convert.base64Decode(
-    'ChRRdWVyeUV2aWRlbmNlUmVxdWVzdBJdCg1ldmlkZW5jZV9oYXNoGAEgASgMQjj63h80Z2l0aH'
-    'ViLmNvbS90ZW5kZXJtaW50L3RlbmRlcm1pbnQvbGlicy9ieXRlcy5IZXhCeXRlc1IMZXZpZGVu'
-    'Y2VIYXNo');
+    'ChRRdWVyeUV2aWRlbmNlUmVxdWVzdBJbCg1ldmlkZW5jZV9oYXNoGAEgASgMQjYYAfreHzBnaX'
+    'RodWIuY29tL2NvbWV0YmZ0L2NvbWV0YmZ0L2xpYnMvYnl0ZXMuSGV4Qnl0ZXNSDGV2aWRlbmNl'
+    'SGFzaBISCgRoYXNoGAIgASgJUgRoYXNo');
 
 @$core.Deprecated('Use queryEvidenceResponseDescriptor instead')
 const QueryEvidenceResponse$json = {

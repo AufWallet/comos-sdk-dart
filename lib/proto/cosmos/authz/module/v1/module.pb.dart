@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: cosmos/app/module/v1alpha1/module.proto
+//  source: cosmos/authz/module/v1/module.proto
 //
 // @dart = 2.12
 
@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-/// Module is the module config object for the cosmos.app v1 app module.
+/// Module is the config object of the authz module.
 class Module extends $pb.GeneratedMessage {
   factory Module() => create();
   Module._() : super();
   factory Module.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Module.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Module', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.app.module.v1alpha1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Module', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.module.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 

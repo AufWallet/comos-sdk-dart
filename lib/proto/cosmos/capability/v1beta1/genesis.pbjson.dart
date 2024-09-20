@@ -24,9 +24,9 @@ const GenesisOwners$json = {
 
 /// Descriptor for `GenesisOwners`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List genesisOwnersDescriptor = $convert.base64Decode(
-    'Cg1HZW5lc2lzT3duZXJzEhQKBWluZGV4GAEgASgEUgVpbmRleBJUCgxpbmRleF9vd25lcnMYAi'
-    'ABKAsyKy5jb3Ntb3MuY2FwYWJpbGl0eS52MWJldGExLkNhcGFiaWxpdHlPd25lcnNCBMjeHwBS'
-    'C2luZGV4T3duZXJz');
+    'Cg1HZW5lc2lzT3duZXJzEhQKBWluZGV4GAEgASgEUgVpbmRleBJZCgxpbmRleF9vd25lcnMYAi'
+    'ABKAsyKy5jb3Ntb3MuY2FwYWJpbGl0eS52MWJldGExLkNhcGFiaWxpdHlPd25lcnNCCcjeHwCo'
+    '57AqAVILaW5kZXhPd25lcnM=');
 
 @$core.Deprecated('Use genesisStateDescriptor instead')
 const GenesisState$json = {
@@ -39,6 +39,7 @@ const GenesisState$json = {
 
 /// Descriptor for `GenesisState`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List genesisStateDescriptor = $convert.base64Decode(
-    'CgxHZW5lc2lzU3RhdGUSFAoFaW5kZXgYASABKARSBWluZGV4EkYKBm93bmVycxgCIAMoCzIoLm'
-    'Nvc21vcy5jYXBhYmlsaXR5LnYxYmV0YTEuR2VuZXNpc093bmVyc0IEyN4fAFIGb3duZXJz');
+    'CgxHZW5lc2lzU3RhdGUSFAoFaW5kZXgYASABKARSBWluZGV4EksKBm93bmVycxgCIAMoCzIoLm'
+    'Nvc21vcy5jYXBhYmlsaXR5LnYxYmV0YTEuR2VuZXNpc093bmVyc0IJyN4fAKjnsCoBUgZvd25l'
+    'cnM=');
 

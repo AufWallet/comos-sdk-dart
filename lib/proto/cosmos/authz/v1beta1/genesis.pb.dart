@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'authz.pb.dart' as $41;
+import 'authz.pb.dart' as $48;
 
 /// GenesisState defines the authz module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $core.Iterable<$41.GrantAuthorization>? authorization,
+    $core.Iterable<$48.GrantAuthorization>? authorization,
   }) {
     final $result = create();
     if (authorization != null) {
@@ -31,7 +31,7 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
-    ..pc<$41.GrantAuthorization>(1, _omitFieldNames ? '' : 'authorization', $pb.PbFieldType.PM, subBuilder: $41.GrantAuthorization.create)
+    ..pc<$48.GrantAuthorization>(1, _omitFieldNames ? '' : 'authorization', $pb.PbFieldType.PM, subBuilder: $48.GrantAuthorization.create)
     ..hasRequiredFields = false
   ;
 
@@ -57,7 +57,7 @@ class GenesisState extends $pb.GeneratedMessage {
   static GenesisState? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$41.GrantAuthorization> get authorization => $_getList(0);
+  $core.List<$48.GrantAuthorization> get authorization => $_getList(0);
 }
 
 

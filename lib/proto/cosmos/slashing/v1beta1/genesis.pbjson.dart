@@ -25,11 +25,11 @@ const GenesisState$json = {
 
 /// Descriptor for `GenesisState`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List genesisStateDescriptor = $convert.base64Decode(
-    'CgxHZW5lc2lzU3RhdGUSPQoGcGFyYW1zGAEgASgLMh8uY29zbW9zLnNsYXNoaW5nLnYxYmV0YT'
-    'EuUGFyYW1zQgTI3h8AUgZwYXJhbXMSTwoNc2lnbmluZ19pbmZvcxgCIAMoCzIkLmNvc21vcy5z'
-    'bGFzaGluZy52MWJldGExLlNpZ25pbmdJbmZvQgTI3h8AUgxzaWduaW5nSW5mb3MSWQoNbWlzc2'
-    'VkX2Jsb2NrcxgDIAMoCzIuLmNvc21vcy5zbGFzaGluZy52MWJldGExLlZhbGlkYXRvck1pc3Nl'
-    'ZEJsb2Nrc0IEyN4fAFIMbWlzc2VkQmxvY2tz');
+    'CgxHZW5lc2lzU3RhdGUSQgoGcGFyYW1zGAEgASgLMh8uY29zbW9zLnNsYXNoaW5nLnYxYmV0YT'
+    'EuUGFyYW1zQgnI3h8AqOewKgFSBnBhcmFtcxJUCg1zaWduaW5nX2luZm9zGAIgAygLMiQuY29z'
+    'bW9zLnNsYXNoaW5nLnYxYmV0YTEuU2lnbmluZ0luZm9CCcjeHwCo57AqAVIMc2lnbmluZ0luZm'
+    '9zEl4KDW1pc3NlZF9ibG9ja3MYAyADKAsyLi5jb3Ntb3Muc2xhc2hpbmcudjFiZXRhMS5WYWxp'
+    'ZGF0b3JNaXNzZWRCbG9ja3NCCcjeHwCo57AqAVIMbWlzc2VkQmxvY2tz');
 
 @$core.Deprecated('Use signingInfoDescriptor instead')
 const SigningInfo$json = {
@@ -43,9 +43,9 @@ const SigningInfo$json = {
 /// Descriptor for `SigningInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List signingInfoDescriptor = $convert.base64Decode(
     'CgtTaWduaW5nSW5mbxIyCgdhZGRyZXNzGAEgASgJQhjStC0UY29zbW9zLkFkZHJlc3NTdHJpbm'
-    'dSB2FkZHJlc3MSaQoWdmFsaWRhdG9yX3NpZ25pbmdfaW5mbxgCIAEoCzItLmNvc21vcy5zbGFz'
-    'aGluZy52MWJldGExLlZhbGlkYXRvclNpZ25pbmdJbmZvQgTI3h8AUhR2YWxpZGF0b3JTaWduaW'
-    '5nSW5mbw==');
+    'dSB2FkZHJlc3MSbgoWdmFsaWRhdG9yX3NpZ25pbmdfaW5mbxgCIAEoCzItLmNvc21vcy5zbGFz'
+    'aGluZy52MWJldGExLlZhbGlkYXRvclNpZ25pbmdJbmZvQgnI3h8AqOewKgFSFHZhbGlkYXRvcl'
+    'NpZ25pbmdJbmZv');
 
 @$core.Deprecated('Use validatorMissedBlocksDescriptor instead')
 const ValidatorMissedBlocks$json = {
@@ -59,8 +59,8 @@ const ValidatorMissedBlocks$json = {
 /// Descriptor for `ValidatorMissedBlocks`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List validatorMissedBlocksDescriptor = $convert.base64Decode(
     'ChVWYWxpZGF0b3JNaXNzZWRCbG9ja3MSMgoHYWRkcmVzcxgBIAEoCUIY0rQtFGNvc21vcy5BZG'
-    'RyZXNzU3RyaW5nUgdhZGRyZXNzEk8KDW1pc3NlZF9ibG9ja3MYAiADKAsyJC5jb3Ntb3Muc2xh'
-    'c2hpbmcudjFiZXRhMS5NaXNzZWRCbG9ja0IEyN4fAFIMbWlzc2VkQmxvY2tz');
+    'RyZXNzU3RyaW5nUgdhZGRyZXNzElQKDW1pc3NlZF9ibG9ja3MYAiADKAsyJC5jb3Ntb3Muc2xh'
+    'c2hpbmcudjFiZXRhMS5NaXNzZWRCbG9ja0IJyN4fAKjnsCoBUgxtaXNzZWRCbG9ja3M=');
 
 @$core.Deprecated('Use missedBlockDescriptor instead')
 const MissedBlock$json = {

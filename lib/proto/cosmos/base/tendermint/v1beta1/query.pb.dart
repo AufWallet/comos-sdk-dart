@@ -14,19 +14,18 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $36;
-import '../../../../tendermint/p2p/types.pb.dart' as $54;
-import '../../../../tendermint/types/block.pb.dart' as $52;
-import '../../../../tendermint/types/types.pb.dart' as $49;
-import '../../query/v1beta1/pagination.pb.dart' as $39;
-import 'types.pb.dart' as $53;
+import '../../../../google/protobuf/any.pb.dart' as $43;
+import '../../../../tendermint/p2p/types.pb.dart' as $62;
+import '../../../../tendermint/types/block.pb.dart' as $60;
+import '../../../../tendermint/types/types.pb.dart' as $58;
+import '../../query/v1beta1/pagination.pb.dart' as $46;
+import 'types.pb.dart' as $61;
 
-/// GetValidatorSetByHeightRequest is the request type for the
-/// Query/GetValidatorSetByHeight RPC method.
+/// GetValidatorSetByHeightRequest is the request type for the Query/GetValidatorSetByHeight RPC method.
 class GetValidatorSetByHeightRequest extends $pb.GeneratedMessage {
   factory GetValidatorSetByHeightRequest({
     $fixnum.Int64? height,
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (height != null) {
@@ -43,7 +42,7 @@ class GetValidatorSetByHeightRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetValidatorSetByHeightRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'height')
-    ..aOM<$39.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -79,24 +78,23 @@ class GetValidatorSetByHeightRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an pagination for the request.
   @$pb.TagNumber(2)
-  $39.PageRequest get pagination => $_getN(1);
+  $46.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageRequest v) { setField(2, v); }
+  set pagination($46.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageRequest ensurePagination() => $_ensure(1);
+  $46.PageRequest ensurePagination() => $_ensure(1);
 }
 
-/// GetValidatorSetByHeightResponse is the response type for the
-/// Query/GetValidatorSetByHeight RPC method.
+/// GetValidatorSetByHeightResponse is the response type for the Query/GetValidatorSetByHeight RPC method.
 class GetValidatorSetByHeightResponse extends $pb.GeneratedMessage {
   factory GetValidatorSetByHeightResponse({
     $fixnum.Int64? blockHeight,
     $core.Iterable<Validator>? validators,
-    $39.PageResponse? pagination,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (blockHeight != null) {
@@ -117,7 +115,7 @@ class GetValidatorSetByHeightResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetValidatorSetByHeightResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'blockHeight')
     ..pc<Validator>(2, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: Validator.create)
-    ..aOM<$39.PageResponse>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..aOM<$46.PageResponse>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -156,22 +154,21 @@ class GetValidatorSetByHeightResponse extends $pb.GeneratedMessage {
 
   /// pagination defines an pagination for the response.
   @$pb.TagNumber(3)
-  $39.PageResponse get pagination => $_getN(2);
+  $46.PageResponse get pagination => $_getN(2);
   @$pb.TagNumber(3)
-  set pagination($39.PageResponse v) { setField(3, v); }
+  set pagination($46.PageResponse v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPagination() => $_has(2);
   @$pb.TagNumber(3)
   void clearPagination() => clearField(3);
   @$pb.TagNumber(3)
-  $39.PageResponse ensurePagination() => $_ensure(2);
+  $46.PageResponse ensurePagination() => $_ensure(2);
 }
 
-/// GetLatestValidatorSetRequest is the request type for the
-/// Query/GetValidatorSetByHeight RPC method.
+/// GetLatestValidatorSetRequest is the request type for the Query/GetValidatorSetByHeight RPC method.
 class GetLatestValidatorSetRequest extends $pb.GeneratedMessage {
   factory GetLatestValidatorSetRequest({
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (pagination != null) {
@@ -184,7 +181,7 @@ class GetLatestValidatorSetRequest extends $pb.GeneratedMessage {
   factory GetLatestValidatorSetRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetLatestValidatorSetRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
-    ..aOM<$39.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(1, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -211,24 +208,23 @@ class GetLatestValidatorSetRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an pagination for the request.
   @$pb.TagNumber(1)
-  $39.PageRequest get pagination => $_getN(0);
+  $46.PageRequest get pagination => $_getN(0);
   @$pb.TagNumber(1)
-  set pagination($39.PageRequest v) { setField(1, v); }
+  set pagination($46.PageRequest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPagination() => $_has(0);
   @$pb.TagNumber(1)
   void clearPagination() => clearField(1);
   @$pb.TagNumber(1)
-  $39.PageRequest ensurePagination() => $_ensure(0);
+  $46.PageRequest ensurePagination() => $_ensure(0);
 }
 
-/// GetLatestValidatorSetResponse is the response type for the
-/// Query/GetValidatorSetByHeight RPC method.
+/// GetLatestValidatorSetResponse is the response type for the Query/GetValidatorSetByHeight RPC method.
 class GetLatestValidatorSetResponse extends $pb.GeneratedMessage {
   factory GetLatestValidatorSetResponse({
     $fixnum.Int64? blockHeight,
     $core.Iterable<Validator>? validators,
-    $39.PageResponse? pagination,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (blockHeight != null) {
@@ -249,7 +245,7 @@ class GetLatestValidatorSetResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetLatestValidatorSetResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'blockHeight')
     ..pc<Validator>(2, _omitFieldNames ? '' : 'validators', $pb.PbFieldType.PM, subBuilder: Validator.create)
-    ..aOM<$39.PageResponse>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..aOM<$46.PageResponse>(3, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -288,22 +284,22 @@ class GetLatestValidatorSetResponse extends $pb.GeneratedMessage {
 
   /// pagination defines an pagination for the response.
   @$pb.TagNumber(3)
-  $39.PageResponse get pagination => $_getN(2);
+  $46.PageResponse get pagination => $_getN(2);
   @$pb.TagNumber(3)
-  set pagination($39.PageResponse v) { setField(3, v); }
+  set pagination($46.PageResponse v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPagination() => $_has(2);
   @$pb.TagNumber(3)
   void clearPagination() => clearField(3);
   @$pb.TagNumber(3)
-  $39.PageResponse ensurePagination() => $_ensure(2);
+  $46.PageResponse ensurePagination() => $_ensure(2);
 }
 
 /// Validator is the type for the validator-set.
 class Validator extends $pb.GeneratedMessage {
   factory Validator({
     $core.String? address,
-    $36.Any? pubKey,
+    $43.Any? pubKey,
     $fixnum.Int64? votingPower,
     $fixnum.Int64? proposerPriority,
   }) {
@@ -328,7 +324,7 @@ class Validator extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Validator', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$36.Any>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $43.Any.create)
     ..aInt64(3, _omitFieldNames ? '' : 'votingPower')
     ..aInt64(4, _omitFieldNames ? '' : 'proposerPriority')
     ..hasRequiredFields = false
@@ -365,15 +361,15 @@ class Validator extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 
   @$pb.TagNumber(2)
-  $36.Any get pubKey => $_getN(1);
+  $43.Any get pubKey => $_getN(1);
   @$pb.TagNumber(2)
-  set pubKey($36.Any v) { setField(2, v); }
+  set pubKey($43.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPubKey() => $_has(1);
   @$pb.TagNumber(2)
   void clearPubKey() => clearField(2);
   @$pb.TagNumber(2)
-  $36.Any ensurePubKey() => $_ensure(1);
+  $43.Any ensurePubKey() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $fixnum.Int64 get votingPower => $_getI64(2);
@@ -394,8 +390,7 @@ class Validator extends $pb.GeneratedMessage {
   void clearProposerPriority() => clearField(4);
 }
 
-/// GetBlockByHeightRequest is the request type for the Query/GetBlockByHeight
-/// RPC method.
+/// GetBlockByHeightRequest is the request type for the Query/GetBlockByHeight RPC method.
 class GetBlockByHeightRequest extends $pb.GeneratedMessage {
   factory GetBlockByHeightRequest({
     $fixnum.Int64? height,
@@ -446,13 +441,12 @@ class GetBlockByHeightRequest extends $pb.GeneratedMessage {
   void clearHeight() => clearField(1);
 }
 
-/// GetBlockByHeightResponse is the response type for the Query/GetBlockByHeight
-/// RPC method.
+/// GetBlockByHeightResponse is the response type for the Query/GetBlockByHeight RPC method.
 class GetBlockByHeightResponse extends $pb.GeneratedMessage {
   factory GetBlockByHeightResponse({
-    $49.BlockID? blockId,
-    $52.Block? block,
-    $53.Block? sdkBlock,
+    $58.BlockID? blockId,
+    $60.Block? block,
+    $61.Block? sdkBlock,
   }) {
     final $result = create();
     if (blockId != null) {
@@ -471,9 +465,9 @@ class GetBlockByHeightResponse extends $pb.GeneratedMessage {
   factory GetBlockByHeightResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBlockByHeightResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
-    ..aOM<$49.BlockID>(1, _omitFieldNames ? '' : 'blockId', subBuilder: $49.BlockID.create)
-    ..aOM<$52.Block>(2, _omitFieldNames ? '' : 'block', subBuilder: $52.Block.create)
-    ..aOM<$53.Block>(3, _omitFieldNames ? '' : 'sdkBlock', subBuilder: $53.Block.create)
+    ..aOM<$58.BlockID>(1, _omitFieldNames ? '' : 'blockId', subBuilder: $58.BlockID.create)
+    ..aOM<$60.Block>(2, _omitFieldNames ? '' : 'block', subBuilder: $60.Block.create)
+    ..aOM<$61.Block>(3, _omitFieldNames ? '' : 'sdkBlock', subBuilder: $61.Block.create)
     ..hasRequiredFields = false
   ;
 
@@ -499,43 +493,42 @@ class GetBlockByHeightResponse extends $pb.GeneratedMessage {
   static GetBlockByHeightResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $49.BlockID get blockId => $_getN(0);
+  $58.BlockID get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($49.BlockID v) { setField(1, v); }
+  set blockId($58.BlockID v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $49.BlockID ensureBlockId() => $_ensure(0);
+  $58.BlockID ensureBlockId() => $_ensure(0);
 
   /// Deprecated: please use `sdk_block` instead
   @$pb.TagNumber(2)
-  $52.Block get block => $_getN(1);
+  $60.Block get block => $_getN(1);
   @$pb.TagNumber(2)
-  set block($52.Block v) { setField(2, v); }
+  set block($60.Block v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBlock() => $_has(1);
   @$pb.TagNumber(2)
   void clearBlock() => clearField(2);
   @$pb.TagNumber(2)
-  $52.Block ensureBlock() => $_ensure(1);
+  $60.Block ensureBlock() => $_ensure(1);
 
   /// Since: cosmos-sdk 0.47
   @$pb.TagNumber(3)
-  $53.Block get sdkBlock => $_getN(2);
+  $61.Block get sdkBlock => $_getN(2);
   @$pb.TagNumber(3)
-  set sdkBlock($53.Block v) { setField(3, v); }
+  set sdkBlock($61.Block v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasSdkBlock() => $_has(2);
   @$pb.TagNumber(3)
   void clearSdkBlock() => clearField(3);
   @$pb.TagNumber(3)
-  $53.Block ensureSdkBlock() => $_ensure(2);
+  $61.Block ensureSdkBlock() => $_ensure(2);
 }
 
-/// GetLatestBlockRequest is the request type for the Query/GetLatestBlock RPC
-/// method.
+/// GetLatestBlockRequest is the request type for the Query/GetLatestBlock RPC method.
 class GetLatestBlockRequest extends $pb.GeneratedMessage {
   factory GetLatestBlockRequest() => create();
   GetLatestBlockRequest._() : super();
@@ -568,13 +561,12 @@ class GetLatestBlockRequest extends $pb.GeneratedMessage {
   static GetLatestBlockRequest? _defaultInstance;
 }
 
-/// GetLatestBlockResponse is the response type for the Query/GetLatestBlock RPC
-/// method.
+/// GetLatestBlockResponse is the response type for the Query/GetLatestBlock RPC method.
 class GetLatestBlockResponse extends $pb.GeneratedMessage {
   factory GetLatestBlockResponse({
-    $49.BlockID? blockId,
-    $52.Block? block,
-    $53.Block? sdkBlock,
+    $58.BlockID? blockId,
+    $60.Block? block,
+    $61.Block? sdkBlock,
   }) {
     final $result = create();
     if (blockId != null) {
@@ -593,9 +585,9 @@ class GetLatestBlockResponse extends $pb.GeneratedMessage {
   factory GetLatestBlockResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetLatestBlockResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
-    ..aOM<$49.BlockID>(1, _omitFieldNames ? '' : 'blockId', subBuilder: $49.BlockID.create)
-    ..aOM<$52.Block>(2, _omitFieldNames ? '' : 'block', subBuilder: $52.Block.create)
-    ..aOM<$53.Block>(3, _omitFieldNames ? '' : 'sdkBlock', subBuilder: $53.Block.create)
+    ..aOM<$58.BlockID>(1, _omitFieldNames ? '' : 'blockId', subBuilder: $58.BlockID.create)
+    ..aOM<$60.Block>(2, _omitFieldNames ? '' : 'block', subBuilder: $60.Block.create)
+    ..aOM<$61.Block>(3, _omitFieldNames ? '' : 'sdkBlock', subBuilder: $61.Block.create)
     ..hasRequiredFields = false
   ;
 
@@ -621,39 +613,39 @@ class GetLatestBlockResponse extends $pb.GeneratedMessage {
   static GetLatestBlockResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $49.BlockID get blockId => $_getN(0);
+  $58.BlockID get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($49.BlockID v) { setField(1, v); }
+  set blockId($58.BlockID v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $49.BlockID ensureBlockId() => $_ensure(0);
+  $58.BlockID ensureBlockId() => $_ensure(0);
 
   /// Deprecated: please use `sdk_block` instead
   @$pb.TagNumber(2)
-  $52.Block get block => $_getN(1);
+  $60.Block get block => $_getN(1);
   @$pb.TagNumber(2)
-  set block($52.Block v) { setField(2, v); }
+  set block($60.Block v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBlock() => $_has(1);
   @$pb.TagNumber(2)
   void clearBlock() => clearField(2);
   @$pb.TagNumber(2)
-  $52.Block ensureBlock() => $_ensure(1);
+  $60.Block ensureBlock() => $_ensure(1);
 
   /// Since: cosmos-sdk 0.47
   @$pb.TagNumber(3)
-  $53.Block get sdkBlock => $_getN(2);
+  $61.Block get sdkBlock => $_getN(2);
   @$pb.TagNumber(3)
-  set sdkBlock($53.Block v) { setField(3, v); }
+  set sdkBlock($61.Block v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasSdkBlock() => $_has(2);
   @$pb.TagNumber(3)
   void clearSdkBlock() => clearField(3);
   @$pb.TagNumber(3)
-  $53.Block ensureSdkBlock() => $_ensure(2);
+  $61.Block ensureSdkBlock() => $_ensure(2);
 }
 
 /// GetSyncingRequest is the request type for the Query/GetSyncing RPC method.
@@ -773,11 +765,10 @@ class GetNodeInfoRequest extends $pb.GeneratedMessage {
   static GetNodeInfoRequest? _defaultInstance;
 }
 
-/// GetNodeInfoResponse is the response type for the Query/GetNodeInfo RPC
-/// method.
+/// GetNodeInfoResponse is the response type for the Query/GetNodeInfo RPC method.
 class GetNodeInfoResponse extends $pb.GeneratedMessage {
   factory GetNodeInfoResponse({
-    $54.DefaultNodeInfo? defaultNodeInfo,
+    $62.DefaultNodeInfo? defaultNodeInfo,
     VersionInfo? applicationVersion,
   }) {
     final $result = create();
@@ -794,7 +785,7 @@ class GetNodeInfoResponse extends $pb.GeneratedMessage {
   factory GetNodeInfoResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetNodeInfoResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.tendermint.v1beta1'), createEmptyInstance: create)
-    ..aOM<$54.DefaultNodeInfo>(1, _omitFieldNames ? '' : 'defaultNodeInfo', subBuilder: $54.DefaultNodeInfo.create)
+    ..aOM<$62.DefaultNodeInfo>(1, _omitFieldNames ? '' : 'defaultNodeInfo', subBuilder: $62.DefaultNodeInfo.create)
     ..aOM<VersionInfo>(2, _omitFieldNames ? '' : 'applicationVersion', subBuilder: VersionInfo.create)
     ..hasRequiredFields = false
   ;
@@ -821,15 +812,15 @@ class GetNodeInfoResponse extends $pb.GeneratedMessage {
   static GetNodeInfoResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $54.DefaultNodeInfo get defaultNodeInfo => $_getN(0);
+  $62.DefaultNodeInfo get defaultNodeInfo => $_getN(0);
   @$pb.TagNumber(1)
-  set defaultNodeInfo($54.DefaultNodeInfo v) { setField(1, v); }
+  set defaultNodeInfo($62.DefaultNodeInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDefaultNodeInfo() => $_has(0);
   @$pb.TagNumber(1)
   void clearDefaultNodeInfo() => clearField(1);
   @$pb.TagNumber(1)
-  $54.DefaultNodeInfo ensureDefaultNodeInfo() => $_ensure(0);
+  $62.DefaultNodeInfo ensureDefaultNodeInfo() => $_ensure(0);
 
   @$pb.TagNumber(2)
   VersionInfo get applicationVersion => $_getN(1);
@@ -1162,8 +1153,7 @@ class ABCIQueryRequest extends $pb.GeneratedMessage {
   void clearProve() => clearField(4);
 }
 
-///  ABCIQueryResponse defines the response structure for the ABCIQuery gRPC
-///  query.
+///  ABCIQueryResponse defines the response structure for the ABCIQuery gRPC query.
 ///
 ///  Note: This type is a duplicate of the ResponseQuery proto type defined in
 ///  Tendermint.
@@ -1332,11 +1322,10 @@ class ABCIQueryResponse extends $pb.GeneratedMessage {
 }
 
 ///  ProofOp defines an operation used for calculating Merkle root. The data could
-///  be arbitrary format, providing nessecary data for example neighbouring node
+///  be arbitrary format, providing necessary data for example neighbouring node
 ///  hash.
 ///
-///  Note: This type is a duplicate of the ProofOp proto type defined in
-///  Tendermint.
+///  Note: This type is a duplicate of the ProofOp proto type defined in Tendermint.
 class ProofOp extends $pb.GeneratedMessage {
   factory ProofOp({
     $core.String? type,
@@ -1417,8 +1406,7 @@ class ProofOp extends $pb.GeneratedMessage {
 
 ///  ProofOps is Merkle proof defined by the list of ProofOps.
 ///
-///  Note: This type is a duplicate of the ProofOps proto type defined in
-///  Tendermint.
+///  Note: This type is a duplicate of the ProofOps proto type defined in Tendermint.
 class ProofOps extends $pb.GeneratedMessage {
   factory ProofOps({
     $core.Iterable<ProofOp>? ops,

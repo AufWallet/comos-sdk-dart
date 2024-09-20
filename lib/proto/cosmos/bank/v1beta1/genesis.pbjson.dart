@@ -21,17 +21,20 @@ const GenesisState$json = {
     {'1': 'balances', '3': 2, '4': 3, '5': 11, '6': '.cosmos.bank.v1beta1.Balance', '8': {}, '10': 'balances'},
     {'1': 'supply', '3': 3, '4': 3, '5': 11, '6': '.cosmos.base.v1beta1.Coin', '8': {}, '10': 'supply'},
     {'1': 'denom_metadata', '3': 4, '4': 3, '5': 11, '6': '.cosmos.bank.v1beta1.Metadata', '8': {}, '10': 'denomMetadata'},
+    {'1': 'send_enabled', '3': 5, '4': 3, '5': 11, '6': '.cosmos.bank.v1beta1.SendEnabled', '8': {}, '10': 'sendEnabled'},
   ],
 };
 
 /// Descriptor for `GenesisState`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List genesisStateDescriptor = $convert.base64Decode(
-    'CgxHZW5lc2lzU3RhdGUSOQoGcGFyYW1zGAEgASgLMhsuY29zbW9zLmJhbmsudjFiZXRhMS5QYX'
-    'JhbXNCBMjeHwBSBnBhcmFtcxI+CghiYWxhbmNlcxgCIAMoCzIcLmNvc21vcy5iYW5rLnYxYmV0'
-    'YTEuQmFsYW5jZUIEyN4fAFIIYmFsYW5jZXMSYwoGc3VwcGx5GAMgAygLMhkuY29zbW9zLmJhc2'
-    'UudjFiZXRhMS5Db2luQjDI3h8Aqt8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlw'
-    'ZXMuQ29pbnNSBnN1cHBseRJKCg5kZW5vbV9tZXRhZGF0YRgEIAMoCzIdLmNvc21vcy5iYW5rLn'
-    'YxYmV0YTEuTWV0YWRhdGFCBMjeHwBSDWRlbm9tTWV0YWRhdGE=');
+    'CgxHZW5lc2lzU3RhdGUSPgoGcGFyYW1zGAEgASgLMhsuY29zbW9zLmJhbmsudjFiZXRhMS5QYX'
+    'JhbXNCCcjeHwCo57AqAVIGcGFyYW1zEkMKCGJhbGFuY2VzGAIgAygLMhwuY29zbW9zLmJhbmsu'
+    'djFiZXRhMS5CYWxhbmNlQgnI3h8AqOewKgFSCGJhbGFuY2VzEmgKBnN1cHBseRgDIAMoCzIZLm'
+    'Nvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkI1yN4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Nt'
+    'b3Mtc2RrL3R5cGVzLkNvaW5zqOewKgFSBnN1cHBseRJPCg5kZW5vbV9tZXRhZGF0YRgEIAMoCz'
+    'IdLmNvc21vcy5iYW5rLnYxYmV0YTEuTWV0YWRhdGFCCcjeHwCo57AqAVINZGVub21NZXRhZGF0'
+    'YRJOCgxzZW5kX2VuYWJsZWQYBSADKAsyIC5jb3Ntb3MuYmFuay52MWJldGExLlNlbmRFbmFibG'
+    'VkQgnI3h8AqOewKgFSC3NlbmRFbmFibGVk');
 
 @$core.Deprecated('Use balanceDescriptor instead')
 const Balance$json = {
@@ -46,7 +49,7 @@ const Balance$json = {
 /// Descriptor for `Balance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List balanceDescriptor = $convert.base64Decode(
     'CgdCYWxhbmNlEjIKB2FkZHJlc3MYASABKAlCGNK0LRRjb3Ntb3MuQWRkcmVzc1N0cmluZ1IHYW'
-    'RkcmVzcxJhCgVjb2lucxgCIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkIwyN4fAKrf'
-    'HyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zUgVjb2luczoIiKAfAO'
-    'igHwA=');
+    'RkcmVzcxJmCgVjb2lucxgCIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkI1yN4fAKrf'
+    'HyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zqOewKgFSBWNvaW5zOg'
+    'iIoB8A6KAfAA==');
 

@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $36;
-import 'auth.pb.dart' as $38;
+import '../../../google/protobuf/any.pb.dart' as $43;
+import 'auth.pb.dart' as $45;
 
 /// GenesisState defines the auth module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $38.Params? params,
-    $core.Iterable<$36.Any>? accounts,
+    $45.Params? params,
+    $core.Iterable<$43.Any>? accounts,
   }) {
     final $result = create();
     if (params != null) {
@@ -36,8 +36,8 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
-    ..aOM<$38.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $38.Params.create)
-    ..pc<$36.Any>(2, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $36.Any.create)
+    ..aOM<$45.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $45.Params.create)
+    ..pc<$43.Any>(2, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -62,21 +62,21 @@ class GenesisState extends $pb.GeneratedMessage {
   static GenesisState getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GenesisState>(create);
   static GenesisState? _defaultInstance;
 
-  /// params defines all the paramaters of the module.
+  /// params defines all the parameters of the module.
   @$pb.TagNumber(1)
-  $38.Params get params => $_getN(0);
+  $45.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($38.Params v) { setField(1, v); }
+  set params($45.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $38.Params ensureParams() => $_ensure(0);
+  $45.Params ensureParams() => $_ensure(0);
 
   /// accounts are the accounts present at genesis.
   @$pb.TagNumber(2)
-  $core.List<$36.Any> get accounts => $_getList(1);
+  $core.List<$43.Any> get accounts => $_getList(1);
 }
 
 

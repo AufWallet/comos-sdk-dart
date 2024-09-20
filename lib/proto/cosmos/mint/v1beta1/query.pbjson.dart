@@ -32,8 +32,8 @@ const QueryParamsResponse$json = {
 
 /// Descriptor for `QueryParamsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryParamsResponseDescriptor = $convert.base64Decode(
-    'ChNRdWVyeVBhcmFtc1Jlc3BvbnNlEjkKBnBhcmFtcxgBIAEoCzIbLmNvc21vcy5taW50LnYxYm'
-    'V0YTEuUGFyYW1zQgTI3h8AUgZwYXJhbXM=');
+    'ChNRdWVyeVBhcmFtc1Jlc3BvbnNlEj4KBnBhcmFtcxgBIAEoCzIbLmNvc21vcy5taW50LnYxYm'
+    'V0YTEuUGFyYW1zQgnI3h8AqOewKgFSBnBhcmFtcw==');
 
 @$core.Deprecated('Use queryInflationRequestDescriptor instead')
 const QueryInflationRequest$json = {
@@ -54,8 +54,8 @@ const QueryInflationResponse$json = {
 
 /// Descriptor for `QueryInflationResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryInflationResponseDescriptor = $convert.base64Decode(
-    'ChZRdWVyeUluZmxhdGlvblJlc3BvbnNlEkwKCWluZmxhdGlvbhgBIAEoDEIuyN4fANreHyZnaX'
-    'RodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY1IJaW5mbGF0aW9u');
+    'ChZRdWVyeUluZmxhdGlvblJlc3BvbnNlElEKCWluZmxhdGlvbhgBIAEoDEIzyN4fANreHyZnaX'
+    'RodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY6jnsCoBUglpbmZsYXRpb24=');
 
 @$core.Deprecated('Use queryAnnualProvisionsRequestDescriptor instead')
 const QueryAnnualProvisionsRequest$json = {
@@ -76,7 +76,7 @@ const QueryAnnualProvisionsResponse$json = {
 
 /// Descriptor for `QueryAnnualProvisionsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryAnnualProvisionsResponseDescriptor = $convert.base64Decode(
-    'Ch1RdWVyeUFubnVhbFByb3Zpc2lvbnNSZXNwb25zZRJbChFhbm51YWxfcHJvdmlzaW9ucxgBIA'
-    'EoDEIuyN4fANreHyZnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY1IQYW5u'
-    'dWFsUHJvdmlzaW9ucw==');
+    'Ch1RdWVyeUFubnVhbFByb3Zpc2lvbnNSZXNwb25zZRJgChFhbm51YWxfcHJvdmlzaW9ucxgBIA'
+    'EoDEIzyN4fANreHyZnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkRlY6jnsCoB'
+    'UhBhbm51YWxQcm92aXNpb25z');
 

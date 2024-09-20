@@ -15,16 +15,16 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'query.pb.dart' as $7;
+import 'query.pb.dart' as $9;
 
 export 'query.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.base.node.v1beta1.Service')
 class ServiceClient extends $grpc.Client {
-  static final _$config = $grpc.ClientMethod<$7.ConfigRequest, $7.ConfigResponse>(
+  static final _$config = $grpc.ClientMethod<$9.ConfigRequest, $9.ConfigResponse>(
       '/cosmos.base.node.v1beta1.Service/Config',
-      ($7.ConfigRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $7.ConfigResponse.fromBuffer(value));
+      ($9.ConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $9.ConfigResponse.fromBuffer(value));
 
   ServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class ServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$7.ConfigResponse> config($7.ConfigRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$9.ConfigResponse> config($9.ConfigRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$config, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class ServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.base.node.v1beta1.Service';
 
   ServiceBase() {
-    $addMethod($grpc.ServiceMethod<$7.ConfigRequest, $7.ConfigResponse>(
+    $addMethod($grpc.ServiceMethod<$9.ConfigRequest, $9.ConfigResponse>(
         'Config',
         config_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $7.ConfigRequest.fromBuffer(value),
-        ($7.ConfigResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $9.ConfigRequest.fromBuffer(value),
+        ($9.ConfigResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$7.ConfigResponse> config_Pre($grpc.ServiceCall call, $async.Future<$7.ConfigRequest> request) async {
+  $async.Future<$9.ConfigResponse> config_Pre($grpc.ServiceCall call, $async.Future<$9.ConfigRequest> request) async {
     return config(call, await request);
   }
 
-  $async.Future<$7.ConfigResponse> config($grpc.ServiceCall call, $7.ConfigRequest request);
+  $async.Future<$9.ConfigResponse> config($grpc.ServiceCall call, $9.ConfigRequest request);
 }

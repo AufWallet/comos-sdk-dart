@@ -14,13 +14,15 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $42;
+import '../../base/v1beta1/coin.pb.dart' as $50;
 
 /// Params defines the set of params for the distribution module.
 class Params extends $pb.GeneratedMessage {
   factory Params({
     $core.String? communityTax,
+  @$core.Deprecated('This field is deprecated.')
     $core.String? baseProposerReward,
+  @$core.Deprecated('This field is deprecated.')
     $core.String? bonusProposerReward,
     $core.bool? withdrawAddrEnabled,
   }) {
@@ -29,9 +31,11 @@ class Params extends $pb.GeneratedMessage {
       $result.communityTax = communityTax;
     }
     if (baseProposerReward != null) {
+      // ignore: deprecated_member_use_from_same_package
       $result.baseProposerReward = baseProposerReward;
     }
     if (bonusProposerReward != null) {
+      // ignore: deprecated_member_use_from_same_package
       $result.bonusProposerReward = bonusProposerReward;
     }
     if (withdrawAddrEnabled != null) {
@@ -81,21 +85,33 @@ class Params extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCommunityTax() => clearField(1);
 
+  /// Deprecated: The base_proposer_reward field is deprecated and is no longer used
+  /// in the x/distribution module's reward mechanism.
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.String get baseProposerReward => $_getSZ(1);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   set baseProposerReward($core.String v) { $_setString(1, v); }
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.bool hasBaseProposerReward() => $_has(1);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   void clearBaseProposerReward() => clearField(2);
 
+  /// Deprecated: The bonus_proposer_reward field is deprecated and is no longer used
+  /// in the x/distribution module's reward mechanism.
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   $core.String get bonusProposerReward => $_getSZ(2);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   set bonusProposerReward($core.String v) { $_setString(2, v); }
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   $core.bool hasBonusProposerReward() => $_has(2);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(3)
   void clearBonusProposerReward() => clearField(3);
 
@@ -123,7 +139,7 @@ class Params extends $pb.GeneratedMessage {
 ///  + one per validator for the zeroeth period, set on initialization
 class ValidatorHistoricalRewards extends $pb.GeneratedMessage {
   factory ValidatorHistoricalRewards({
-    $core.Iterable<$42.DecCoin>? cumulativeRewardRatio,
+    $core.Iterable<$50.DecCoin>? cumulativeRewardRatio,
     $core.int? referenceCount,
   }) {
     final $result = create();
@@ -140,7 +156,7 @@ class ValidatorHistoricalRewards extends $pb.GeneratedMessage {
   factory ValidatorHistoricalRewards.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorHistoricalRewards', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$42.DecCoin>(1, _omitFieldNames ? '' : 'cumulativeRewardRatio', $pb.PbFieldType.PM, subBuilder: $42.DecCoin.create)
+    ..pc<$50.DecCoin>(1, _omitFieldNames ? '' : 'cumulativeRewardRatio', $pb.PbFieldType.PM, subBuilder: $50.DecCoin.create)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'referenceCount', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
@@ -167,7 +183,7 @@ class ValidatorHistoricalRewards extends $pb.GeneratedMessage {
   static ValidatorHistoricalRewards? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$42.DecCoin> get cumulativeRewardRatio => $_getList(0);
+  $core.List<$50.DecCoin> get cumulativeRewardRatio => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.int get referenceCount => $_getIZ(1);
@@ -184,7 +200,7 @@ class ValidatorHistoricalRewards extends $pb.GeneratedMessage {
 /// each block as long as the validator's tokens remain constant.
 class ValidatorCurrentRewards extends $pb.GeneratedMessage {
   factory ValidatorCurrentRewards({
-    $core.Iterable<$42.DecCoin>? rewards,
+    $core.Iterable<$50.DecCoin>? rewards,
     $fixnum.Int64? period,
   }) {
     final $result = create();
@@ -201,7 +217,7 @@ class ValidatorCurrentRewards extends $pb.GeneratedMessage {
   factory ValidatorCurrentRewards.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorCurrentRewards', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$42.DecCoin>(1, _omitFieldNames ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $42.DecCoin.create)
+    ..pc<$50.DecCoin>(1, _omitFieldNames ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $50.DecCoin.create)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'period', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
@@ -228,7 +244,7 @@ class ValidatorCurrentRewards extends $pb.GeneratedMessage {
   static ValidatorCurrentRewards? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$42.DecCoin> get rewards => $_getList(0);
+  $core.List<$50.DecCoin> get rewards => $_getList(0);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get period => $_getI64(1);
@@ -244,7 +260,7 @@ class ValidatorCurrentRewards extends $pb.GeneratedMessage {
 /// for a validator kept as a running counter, can be withdrawn at any time.
 class ValidatorAccumulatedCommission extends $pb.GeneratedMessage {
   factory ValidatorAccumulatedCommission({
-    $core.Iterable<$42.DecCoin>? commission,
+    $core.Iterable<$50.DecCoin>? commission,
   }) {
     final $result = create();
     if (commission != null) {
@@ -257,7 +273,7 @@ class ValidatorAccumulatedCommission extends $pb.GeneratedMessage {
   factory ValidatorAccumulatedCommission.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorAccumulatedCommission', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$42.DecCoin>(1, _omitFieldNames ? '' : 'commission', $pb.PbFieldType.PM, subBuilder: $42.DecCoin.create)
+    ..pc<$50.DecCoin>(1, _omitFieldNames ? '' : 'commission', $pb.PbFieldType.PM, subBuilder: $50.DecCoin.create)
     ..hasRequiredFields = false
   ;
 
@@ -283,14 +299,14 @@ class ValidatorAccumulatedCommission extends $pb.GeneratedMessage {
   static ValidatorAccumulatedCommission? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$42.DecCoin> get commission => $_getList(0);
+  $core.List<$50.DecCoin> get commission => $_getList(0);
 }
 
 /// ValidatorOutstandingRewards represents outstanding (un-withdrawn) rewards
 /// for a validator inexpensive to track, allows simple sanity checks.
 class ValidatorOutstandingRewards extends $pb.GeneratedMessage {
   factory ValidatorOutstandingRewards({
-    $core.Iterable<$42.DecCoin>? rewards,
+    $core.Iterable<$50.DecCoin>? rewards,
   }) {
     final $result = create();
     if (rewards != null) {
@@ -303,7 +319,7 @@ class ValidatorOutstandingRewards extends $pb.GeneratedMessage {
   factory ValidatorOutstandingRewards.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorOutstandingRewards', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$42.DecCoin>(1, _omitFieldNames ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $42.DecCoin.create)
+    ..pc<$50.DecCoin>(1, _omitFieldNames ? '' : 'rewards', $pb.PbFieldType.PM, subBuilder: $50.DecCoin.create)
     ..hasRequiredFields = false
   ;
 
@@ -329,7 +345,7 @@ class ValidatorOutstandingRewards extends $pb.GeneratedMessage {
   static ValidatorOutstandingRewards? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$42.DecCoin> get rewards => $_getList(0);
+  $core.List<$50.DecCoin> get rewards => $_getList(0);
 }
 
 /// ValidatorSlashEvent represents a validator slash event.
@@ -448,7 +464,7 @@ class ValidatorSlashEvents extends $pb.GeneratedMessage {
 /// FeePool is the global fee pool for distribution.
 class FeePool extends $pb.GeneratedMessage {
   factory FeePool({
-    $core.Iterable<$42.DecCoin>? communityPool,
+    $core.Iterable<$50.DecCoin>? communityPool,
   }) {
     final $result = create();
     if (communityPool != null) {
@@ -461,7 +477,7 @@ class FeePool extends $pb.GeneratedMessage {
   factory FeePool.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FeePool', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..pc<$42.DecCoin>(1, _omitFieldNames ? '' : 'communityPool', $pb.PbFieldType.PM, subBuilder: $42.DecCoin.create)
+    ..pc<$50.DecCoin>(1, _omitFieldNames ? '' : 'communityPool', $pb.PbFieldType.PM, subBuilder: $50.DecCoin.create)
     ..hasRequiredFields = false
   ;
 
@@ -487,18 +503,23 @@ class FeePool extends $pb.GeneratedMessage {
   static FeePool? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$42.DecCoin> get communityPool => $_getList(0);
+  $core.List<$50.DecCoin> get communityPool => $_getList(0);
 }
 
-/// CommunityPoolSpendProposal details a proposal for use of community funds,
-/// together with how many coins are proposed to be spent, and to which
-/// recipient account.
+///  CommunityPoolSpendProposal details a proposal for use of community funds,
+///  together with how many coins are proposed to be spent, and to which
+///  recipient account.
+///
+///  Deprecated: Do not use. As of the Cosmos SDK release v0.47.x, there is no
+///  longer a need for an explicit CommunityPoolSpendProposal. To spend community
+///  pool funds, a simple MsgCommunityPoolSpend can be invoked from the x/gov
+///  module via a v1 governance proposal.
 class CommunityPoolSpendProposal extends $pb.GeneratedMessage {
   factory CommunityPoolSpendProposal({
     $core.String? title,
     $core.String? description,
     $core.String? recipient,
-    $core.Iterable<$42.Coin>? amount,
+    $core.Iterable<$50.Coin>? amount,
   }) {
     final $result = create();
     if (title != null) {
@@ -523,7 +544,7 @@ class CommunityPoolSpendProposal extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'title')
     ..aOS(2, _omitFieldNames ? '' : 'description')
     ..aOS(3, _omitFieldNames ? '' : 'recipient')
-    ..pc<$42.Coin>(4, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $42.Coin.create)
+    ..pc<$50.Coin>(4, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.PM, subBuilder: $50.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -576,7 +597,7 @@ class CommunityPoolSpendProposal extends $pb.GeneratedMessage {
   void clearRecipient() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<$42.Coin> get amount => $_getList(3);
+  $core.List<$50.Coin> get amount => $_getList(3);
 }
 
 /// DelegatorStartingInfo represents the starting info for a delegator reward
@@ -668,7 +689,7 @@ class DelegatorStartingInfo extends $pb.GeneratedMessage {
 class DelegationDelegatorReward extends $pb.GeneratedMessage {
   factory DelegationDelegatorReward({
     $core.String? validatorAddress,
-    $core.Iterable<$42.DecCoin>? reward,
+    $core.Iterable<$50.DecCoin>? reward,
   }) {
     final $result = create();
     if (validatorAddress != null) {
@@ -685,7 +706,7 @@ class DelegationDelegatorReward extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DelegationDelegatorReward', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'validatorAddress')
-    ..pc<$42.DecCoin>(2, _omitFieldNames ? '' : 'reward', $pb.PbFieldType.PM, subBuilder: $42.DecCoin.create)
+    ..pc<$50.DecCoin>(2, _omitFieldNames ? '' : 'reward', $pb.PbFieldType.PM, subBuilder: $50.DecCoin.create)
     ..hasRequiredFields = false
   ;
 
@@ -720,7 +741,7 @@ class DelegationDelegatorReward extends $pb.GeneratedMessage {
   void clearValidatorAddress() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$42.DecCoin> get reward => $_getList(1);
+  $core.List<$50.DecCoin> get reward => $_getList(1);
 }
 
 /// CommunityPoolSpendProposalWithDeposit defines a CommunityPoolSpendProposal

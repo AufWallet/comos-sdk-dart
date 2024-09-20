@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'config.pb.dart' as $37;
+import 'config.pb.dart' as $44;
 
 /// QueryConfigRequest is the Query/Config request type.
 class QueryConfigRequest extends $pb.GeneratedMessage {
@@ -51,7 +51,7 @@ class QueryConfigRequest extends $pb.GeneratedMessage {
 /// QueryConfigRequest is the Query/Config response type.
 class QueryConfigResponse extends $pb.GeneratedMessage {
   factory QueryConfigResponse({
-    $37.Config? config,
+    $44.Config? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -64,7 +64,7 @@ class QueryConfigResponse extends $pb.GeneratedMessage {
   factory QueryConfigResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryConfigResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.app.v1alpha1'), createEmptyInstance: create)
-    ..aOM<$37.Config>(1, _omitFieldNames ? '' : 'config', subBuilder: $37.Config.create)
+    ..aOM<$44.Config>(1, _omitFieldNames ? '' : 'config', subBuilder: $44.Config.create)
     ..hasRequiredFields = false
   ;
 
@@ -91,15 +91,15 @@ class QueryConfigResponse extends $pb.GeneratedMessage {
 
   /// config is the current app config.
   @$pb.TagNumber(1)
-  $37.Config get config => $_getN(0);
+  $44.Config get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($37.Config v) { setField(1, v); }
+  set config($44.Config v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConfig() => $_has(0);
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $37.Config ensureConfig() => $_ensure(0);
+  $44.Config ensureConfig() => $_ensure(0);
 }
 
 

@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'upgrade.pb.dart' as $71;
+import 'upgrade.pb.dart' as $80;
 
 ///  MsgSoftwareUpgrade is the Msg/SoftwareUpgrade request type.
 ///
@@ -21,7 +21,7 @@ import 'upgrade.pb.dart' as $71;
 class MsgSoftwareUpgrade extends $pb.GeneratedMessage {
   factory MsgSoftwareUpgrade({
     $core.String? authority,
-    $71.Plan? plan,
+    $80.Plan? plan,
   }) {
     final $result = create();
     if (authority != null) {
@@ -38,7 +38,7 @@ class MsgSoftwareUpgrade extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgSoftwareUpgrade', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.upgrade.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'authority')
-    ..aOM<$71.Plan>(2, _omitFieldNames ? '' : 'plan', subBuilder: $71.Plan.create)
+    ..aOM<$80.Plan>(2, _omitFieldNames ? '' : 'plan', subBuilder: $80.Plan.create)
     ..hasRequiredFields = false
   ;
 
@@ -63,7 +63,7 @@ class MsgSoftwareUpgrade extends $pb.GeneratedMessage {
   static MsgSoftwareUpgrade getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MsgSoftwareUpgrade>(create);
   static MsgSoftwareUpgrade? _defaultInstance;
 
-  /// authority is the address of the governance account.
+  /// authority is the address that controls the module (defaults to x/gov unless overwritten).
   @$pb.TagNumber(1)
   $core.String get authority => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -75,15 +75,15 @@ class MsgSoftwareUpgrade extends $pb.GeneratedMessage {
 
   /// plan is the upgrade plan.
   @$pb.TagNumber(2)
-  $71.Plan get plan => $_getN(1);
+  $80.Plan get plan => $_getN(1);
   @$pb.TagNumber(2)
-  set plan($71.Plan v) { setField(2, v); }
+  set plan($80.Plan v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPlan() => $_has(1);
   @$pb.TagNumber(2)
   void clearPlan() => clearField(2);
   @$pb.TagNumber(2)
-  $71.Plan ensurePlan() => $_ensure(1);
+  $80.Plan ensurePlan() => $_ensure(1);
 }
 
 ///  MsgSoftwareUpgradeResponse is the Msg/SoftwareUpgrade response type.
@@ -164,7 +164,7 @@ class MsgCancelUpgrade extends $pb.GeneratedMessage {
   static MsgCancelUpgrade getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MsgCancelUpgrade>(create);
   static MsgCancelUpgrade? _defaultInstance;
 
-  /// authority is the address of the governance account.
+  /// authority is the address that controls the module (defaults to x/gov unless overwritten).
   @$pb.TagNumber(1)
   $core.String get authority => $_getSZ(0);
   @$pb.TagNumber(1)

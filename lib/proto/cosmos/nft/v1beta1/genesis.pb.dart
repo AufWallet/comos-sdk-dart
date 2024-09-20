@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'nft.pb.dart' as $63;
+import 'nft.pb.dart' as $71;
 
 /// GenesisState defines the nft module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $core.Iterable<$63.Class>? classes,
+    $core.Iterable<$71.Class>? classes,
     $core.Iterable<Entry>? entries,
   }) {
     final $result = create();
@@ -35,7 +35,7 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
-    ..pc<$63.Class>(1, _omitFieldNames ? '' : 'classes', $pb.PbFieldType.PM, subBuilder: $63.Class.create)
+    ..pc<$71.Class>(1, _omitFieldNames ? '' : 'classes', $pb.PbFieldType.PM, subBuilder: $71.Class.create)
     ..pc<Entry>(2, _omitFieldNames ? '' : 'entries', $pb.PbFieldType.PM, subBuilder: Entry.create)
     ..hasRequiredFields = false
   ;
@@ -63,8 +63,9 @@ class GenesisState extends $pb.GeneratedMessage {
 
   /// class defines the class of the nft type.
   @$pb.TagNumber(1)
-  $core.List<$63.Class> get classes => $_getList(0);
+  $core.List<$71.Class> get classes => $_getList(0);
 
+  /// entry defines all nft owned by a person.
   @$pb.TagNumber(2)
   $core.List<Entry> get entries => $_getList(1);
 }
@@ -73,7 +74,7 @@ class GenesisState extends $pb.GeneratedMessage {
 class Entry extends $pb.GeneratedMessage {
   factory Entry({
     $core.String? owner,
-    $core.Iterable<$63.NFT>? nfts,
+    $core.Iterable<$71.NFT>? nfts,
   }) {
     final $result = create();
     if (owner != null) {
@@ -90,7 +91,7 @@ class Entry extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Entry', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.nft.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'owner')
-    ..pc<$63.NFT>(2, _omitFieldNames ? '' : 'nfts', $pb.PbFieldType.PM, subBuilder: $63.NFT.create)
+    ..pc<$71.NFT>(2, _omitFieldNames ? '' : 'nfts', $pb.PbFieldType.PM, subBuilder: $71.NFT.create)
     ..hasRequiredFields = false
   ;
 
@@ -127,7 +128,7 @@ class Entry extends $pb.GeneratedMessage {
 
   /// nfts is a group of nfts of the same owner
   @$pb.TagNumber(2)
-  $core.List<$63.NFT> get nfts => $_getList(1);
+  $core.List<$71.NFT> get nfts => $_getList(1);
 }
 
 

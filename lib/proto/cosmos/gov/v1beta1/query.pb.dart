@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/query/v1beta1/pagination.pb.dart' as $39;
-import 'gov.pb.dart' as $60;
-import 'gov.pbenum.dart' as $60;
+import '../../base/query/v1beta1/pagination.pb.dart' as $46;
+import 'gov.pb.dart' as $68;
+import 'gov.pbenum.dart' as $68;
 
 /// QueryProposalRequest is the request type for the Query/Proposal RPC method.
 class QueryProposalRequest extends $pb.GeneratedMessage {
@@ -73,7 +73,7 @@ class QueryProposalRequest extends $pb.GeneratedMessage {
 /// QueryProposalResponse is the response type for the Query/Proposal RPC method.
 class QueryProposalResponse extends $pb.GeneratedMessage {
   factory QueryProposalResponse({
-    $60.Proposal? proposal,
+    $68.Proposal? proposal,
   }) {
     final $result = create();
     if (proposal != null) {
@@ -86,7 +86,7 @@ class QueryProposalResponse extends $pb.GeneratedMessage {
   factory QueryProposalResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryProposalResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..aOM<$60.Proposal>(1, _omitFieldNames ? '' : 'proposal', subBuilder: $60.Proposal.create)
+    ..aOM<$68.Proposal>(1, _omitFieldNames ? '' : 'proposal', subBuilder: $68.Proposal.create)
     ..hasRequiredFields = false
   ;
 
@@ -112,24 +112,24 @@ class QueryProposalResponse extends $pb.GeneratedMessage {
   static QueryProposalResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $60.Proposal get proposal => $_getN(0);
+  $68.Proposal get proposal => $_getN(0);
   @$pb.TagNumber(1)
-  set proposal($60.Proposal v) { setField(1, v); }
+  set proposal($68.Proposal v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasProposal() => $_has(0);
   @$pb.TagNumber(1)
   void clearProposal() => clearField(1);
   @$pb.TagNumber(1)
-  $60.Proposal ensureProposal() => $_ensure(0);
+  $68.Proposal ensureProposal() => $_ensure(0);
 }
 
 /// QueryProposalsRequest is the request type for the Query/Proposals RPC method.
 class QueryProposalsRequest extends $pb.GeneratedMessage {
   factory QueryProposalsRequest({
-    $60.ProposalStatus? proposalStatus,
+    $68.ProposalStatus? proposalStatus,
     $core.String? voter,
     $core.String? depositor,
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (proposalStatus != null) {
@@ -151,10 +151,10 @@ class QueryProposalsRequest extends $pb.GeneratedMessage {
   factory QueryProposalsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryProposalsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..e<$60.ProposalStatus>(1, _omitFieldNames ? '' : 'proposalStatus', $pb.PbFieldType.OE, defaultOrMaker: $60.ProposalStatus.PROPOSAL_STATUS_UNSPECIFIED, valueOf: $60.ProposalStatus.valueOf, enumValues: $60.ProposalStatus.values)
+    ..e<$68.ProposalStatus>(1, _omitFieldNames ? '' : 'proposalStatus', $pb.PbFieldType.OE, defaultOrMaker: $68.ProposalStatus.PROPOSAL_STATUS_UNSPECIFIED, valueOf: $68.ProposalStatus.valueOf, enumValues: $68.ProposalStatus.values)
     ..aOS(2, _omitFieldNames ? '' : 'voter')
     ..aOS(3, _omitFieldNames ? '' : 'depositor')
-    ..aOM<$39.PageRequest>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(4, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -181,9 +181,9 @@ class QueryProposalsRequest extends $pb.GeneratedMessage {
 
   /// proposal_status defines the status of the proposals.
   @$pb.TagNumber(1)
-  $60.ProposalStatus get proposalStatus => $_getN(0);
+  $68.ProposalStatus get proposalStatus => $_getN(0);
   @$pb.TagNumber(1)
-  set proposalStatus($60.ProposalStatus v) { setField(1, v); }
+  set proposalStatus($68.ProposalStatus v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasProposalStatus() => $_has(0);
   @$pb.TagNumber(1)
@@ -211,23 +211,23 @@ class QueryProposalsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(4)
-  $39.PageRequest get pagination => $_getN(3);
+  $46.PageRequest get pagination => $_getN(3);
   @$pb.TagNumber(4)
-  set pagination($39.PageRequest v) { setField(4, v); }
+  set pagination($46.PageRequest v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasPagination() => $_has(3);
   @$pb.TagNumber(4)
   void clearPagination() => clearField(4);
   @$pb.TagNumber(4)
-  $39.PageRequest ensurePagination() => $_ensure(3);
+  $46.PageRequest ensurePagination() => $_ensure(3);
 }
 
 /// QueryProposalsResponse is the response type for the Query/Proposals RPC
 /// method.
 class QueryProposalsResponse extends $pb.GeneratedMessage {
   factory QueryProposalsResponse({
-    $core.Iterable<$60.Proposal>? proposals,
-    $39.PageResponse? pagination,
+    $core.Iterable<$68.Proposal>? proposals,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (proposals != null) {
@@ -243,8 +243,8 @@ class QueryProposalsResponse extends $pb.GeneratedMessage {
   factory QueryProposalsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryProposalsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..pc<$60.Proposal>(1, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $60.Proposal.create)
-    ..aOM<$39.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..pc<$68.Proposal>(1, _omitFieldNames ? '' : 'proposals', $pb.PbFieldType.PM, subBuilder: $68.Proposal.create)
+    ..aOM<$46.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -269,20 +269,21 @@ class QueryProposalsResponse extends $pb.GeneratedMessage {
   static QueryProposalsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryProposalsResponse>(create);
   static QueryProposalsResponse? _defaultInstance;
 
+  /// proposals defines all the requested governance proposals.
   @$pb.TagNumber(1)
-  $core.List<$60.Proposal> get proposals => $_getList(0);
+  $core.List<$68.Proposal> get proposals => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $39.PageResponse get pagination => $_getN(1);
+  $46.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageResponse v) { setField(2, v); }
+  set pagination($46.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageResponse ensurePagination() => $_ensure(1);
+  $46.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryVoteRequest is the request type for the Query/Vote RPC method.
@@ -355,7 +356,7 @@ class QueryVoteRequest extends $pb.GeneratedMessage {
 /// QueryVoteResponse is the response type for the Query/Vote RPC method.
 class QueryVoteResponse extends $pb.GeneratedMessage {
   factory QueryVoteResponse({
-    $60.Vote? vote,
+    $68.Vote? vote,
   }) {
     final $result = create();
     if (vote != null) {
@@ -368,7 +369,7 @@ class QueryVoteResponse extends $pb.GeneratedMessage {
   factory QueryVoteResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryVoteResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..aOM<$60.Vote>(1, _omitFieldNames ? '' : 'vote', subBuilder: $60.Vote.create)
+    ..aOM<$68.Vote>(1, _omitFieldNames ? '' : 'vote', subBuilder: $68.Vote.create)
     ..hasRequiredFields = false
   ;
 
@@ -393,24 +394,24 @@ class QueryVoteResponse extends $pb.GeneratedMessage {
   static QueryVoteResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryVoteResponse>(create);
   static QueryVoteResponse? _defaultInstance;
 
-  /// vote defined the queried vote.
+  /// vote defines the queried vote.
   @$pb.TagNumber(1)
-  $60.Vote get vote => $_getN(0);
+  $68.Vote get vote => $_getN(0);
   @$pb.TagNumber(1)
-  set vote($60.Vote v) { setField(1, v); }
+  set vote($68.Vote v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVote() => $_has(0);
   @$pb.TagNumber(1)
   void clearVote() => clearField(1);
   @$pb.TagNumber(1)
-  $60.Vote ensureVote() => $_ensure(0);
+  $68.Vote ensureVote() => $_ensure(0);
 }
 
 /// QueryVotesRequest is the request type for the Query/Votes RPC method.
 class QueryVotesRequest extends $pb.GeneratedMessage {
   factory QueryVotesRequest({
     $fixnum.Int64? proposalId,
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (proposalId != null) {
@@ -427,7 +428,7 @@ class QueryVotesRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryVotesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$39.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -464,22 +465,22 @@ class QueryVotesRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $39.PageRequest get pagination => $_getN(1);
+  $46.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageRequest v) { setField(2, v); }
+  set pagination($46.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageRequest ensurePagination() => $_ensure(1);
+  $46.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryVotesResponse is the response type for the Query/Votes RPC method.
 class QueryVotesResponse extends $pb.GeneratedMessage {
   factory QueryVotesResponse({
-    $core.Iterable<$60.Vote>? votes,
-    $39.PageResponse? pagination,
+    $core.Iterable<$68.Vote>? votes,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (votes != null) {
@@ -495,8 +496,8 @@ class QueryVotesResponse extends $pb.GeneratedMessage {
   factory QueryVotesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryVotesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..pc<$60.Vote>(1, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $60.Vote.create)
-    ..aOM<$39.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..pc<$68.Vote>(1, _omitFieldNames ? '' : 'votes', $pb.PbFieldType.PM, subBuilder: $68.Vote.create)
+    ..aOM<$46.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -521,21 +522,21 @@ class QueryVotesResponse extends $pb.GeneratedMessage {
   static QueryVotesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryVotesResponse>(create);
   static QueryVotesResponse? _defaultInstance;
 
-  /// votes defined the queried votes.
+  /// votes defines the queried votes.
   @$pb.TagNumber(1)
-  $core.List<$60.Vote> get votes => $_getList(0);
+  $core.List<$68.Vote> get votes => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $39.PageResponse get pagination => $_getN(1);
+  $46.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageResponse v) { setField(2, v); }
+  set pagination($46.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageResponse ensurePagination() => $_ensure(1);
+  $46.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -594,9 +595,9 @@ class QueryParamsRequest extends $pb.GeneratedMessage {
 /// QueryParamsResponse is the response type for the Query/Params RPC method.
 class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse({
-    $60.VotingParams? votingParams,
-    $60.DepositParams? depositParams,
-    $60.TallyParams? tallyParams,
+    $68.VotingParams? votingParams,
+    $68.DepositParams? depositParams,
+    $68.TallyParams? tallyParams,
   }) {
     final $result = create();
     if (votingParams != null) {
@@ -615,9 +616,9 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
   factory QueryParamsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryParamsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..aOM<$60.VotingParams>(1, _omitFieldNames ? '' : 'votingParams', subBuilder: $60.VotingParams.create)
-    ..aOM<$60.DepositParams>(2, _omitFieldNames ? '' : 'depositParams', subBuilder: $60.DepositParams.create)
-    ..aOM<$60.TallyParams>(3, _omitFieldNames ? '' : 'tallyParams', subBuilder: $60.TallyParams.create)
+    ..aOM<$68.VotingParams>(1, _omitFieldNames ? '' : 'votingParams', subBuilder: $68.VotingParams.create)
+    ..aOM<$68.DepositParams>(2, _omitFieldNames ? '' : 'depositParams', subBuilder: $68.DepositParams.create)
+    ..aOM<$68.TallyParams>(3, _omitFieldNames ? '' : 'tallyParams', subBuilder: $68.TallyParams.create)
     ..hasRequiredFields = false
   ;
 
@@ -644,39 +645,39 @@ class QueryParamsResponse extends $pb.GeneratedMessage {
 
   /// voting_params defines the parameters related to voting.
   @$pb.TagNumber(1)
-  $60.VotingParams get votingParams => $_getN(0);
+  $68.VotingParams get votingParams => $_getN(0);
   @$pb.TagNumber(1)
-  set votingParams($60.VotingParams v) { setField(1, v); }
+  set votingParams($68.VotingParams v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVotingParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearVotingParams() => clearField(1);
   @$pb.TagNumber(1)
-  $60.VotingParams ensureVotingParams() => $_ensure(0);
+  $68.VotingParams ensureVotingParams() => $_ensure(0);
 
   /// deposit_params defines the parameters related to deposit.
   @$pb.TagNumber(2)
-  $60.DepositParams get depositParams => $_getN(1);
+  $68.DepositParams get depositParams => $_getN(1);
   @$pb.TagNumber(2)
-  set depositParams($60.DepositParams v) { setField(2, v); }
+  set depositParams($68.DepositParams v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasDepositParams() => $_has(1);
   @$pb.TagNumber(2)
   void clearDepositParams() => clearField(2);
   @$pb.TagNumber(2)
-  $60.DepositParams ensureDepositParams() => $_ensure(1);
+  $68.DepositParams ensureDepositParams() => $_ensure(1);
 
   /// tally_params defines the parameters related to tally.
   @$pb.TagNumber(3)
-  $60.TallyParams get tallyParams => $_getN(2);
+  $68.TallyParams get tallyParams => $_getN(2);
   @$pb.TagNumber(3)
-  set tallyParams($60.TallyParams v) { setField(3, v); }
+  set tallyParams($68.TallyParams v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTallyParams() => $_has(2);
   @$pb.TagNumber(3)
   void clearTallyParams() => clearField(3);
   @$pb.TagNumber(3)
-  $60.TallyParams ensureTallyParams() => $_ensure(2);
+  $68.TallyParams ensureTallyParams() => $_ensure(2);
 }
 
 /// QueryDepositRequest is the request type for the Query/Deposit RPC method.
@@ -749,7 +750,7 @@ class QueryDepositRequest extends $pb.GeneratedMessage {
 /// QueryDepositResponse is the response type for the Query/Deposit RPC method.
 class QueryDepositResponse extends $pb.GeneratedMessage {
   factory QueryDepositResponse({
-    $60.Deposit? deposit,
+    $68.Deposit? deposit,
   }) {
     final $result = create();
     if (deposit != null) {
@@ -762,7 +763,7 @@ class QueryDepositResponse extends $pb.GeneratedMessage {
   factory QueryDepositResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDepositResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..aOM<$60.Deposit>(1, _omitFieldNames ? '' : 'deposit', subBuilder: $60.Deposit.create)
+    ..aOM<$68.Deposit>(1, _omitFieldNames ? '' : 'deposit', subBuilder: $68.Deposit.create)
     ..hasRequiredFields = false
   ;
 
@@ -789,22 +790,22 @@ class QueryDepositResponse extends $pb.GeneratedMessage {
 
   /// deposit defines the requested deposit.
   @$pb.TagNumber(1)
-  $60.Deposit get deposit => $_getN(0);
+  $68.Deposit get deposit => $_getN(0);
   @$pb.TagNumber(1)
-  set deposit($60.Deposit v) { setField(1, v); }
+  set deposit($68.Deposit v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDeposit() => $_has(0);
   @$pb.TagNumber(1)
   void clearDeposit() => clearField(1);
   @$pb.TagNumber(1)
-  $60.Deposit ensureDeposit() => $_ensure(0);
+  $68.Deposit ensureDeposit() => $_ensure(0);
 }
 
 /// QueryDepositsRequest is the request type for the Query/Deposits RPC method.
 class QueryDepositsRequest extends $pb.GeneratedMessage {
   factory QueryDepositsRequest({
     $fixnum.Int64? proposalId,
-    $39.PageRequest? pagination,
+    $46.PageRequest? pagination,
   }) {
     final $result = create();
     if (proposalId != null) {
@@ -821,7 +822,7 @@ class QueryDepositsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDepositsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$39.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageRequest.create)
+    ..aOM<$46.PageRequest>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -858,22 +859,22 @@ class QueryDepositsRequest extends $pb.GeneratedMessage {
 
   /// pagination defines an optional pagination for the request.
   @$pb.TagNumber(2)
-  $39.PageRequest get pagination => $_getN(1);
+  $46.PageRequest get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageRequest v) { setField(2, v); }
+  set pagination($46.PageRequest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageRequest ensurePagination() => $_ensure(1);
+  $46.PageRequest ensurePagination() => $_ensure(1);
 }
 
 /// QueryDepositsResponse is the response type for the Query/Deposits RPC method.
 class QueryDepositsResponse extends $pb.GeneratedMessage {
   factory QueryDepositsResponse({
-    $core.Iterable<$60.Deposit>? deposits,
-    $39.PageResponse? pagination,
+    $core.Iterable<$68.Deposit>? deposits,
+    $46.PageResponse? pagination,
   }) {
     final $result = create();
     if (deposits != null) {
@@ -889,8 +890,8 @@ class QueryDepositsResponse extends $pb.GeneratedMessage {
   factory QueryDepositsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryDepositsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..pc<$60.Deposit>(1, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM, subBuilder: $60.Deposit.create)
-    ..aOM<$39.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $39.PageResponse.create)
+    ..pc<$68.Deposit>(1, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM, subBuilder: $68.Deposit.create)
+    ..aOM<$46.PageResponse>(2, _omitFieldNames ? '' : 'pagination', subBuilder: $46.PageResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -915,20 +916,21 @@ class QueryDepositsResponse extends $pb.GeneratedMessage {
   static QueryDepositsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryDepositsResponse>(create);
   static QueryDepositsResponse? _defaultInstance;
 
+  /// deposits defines the requested deposits.
   @$pb.TagNumber(1)
-  $core.List<$60.Deposit> get deposits => $_getList(0);
+  $core.List<$68.Deposit> get deposits => $_getList(0);
 
   /// pagination defines the pagination in the response.
   @$pb.TagNumber(2)
-  $39.PageResponse get pagination => $_getN(1);
+  $46.PageResponse get pagination => $_getN(1);
   @$pb.TagNumber(2)
-  set pagination($39.PageResponse v) { setField(2, v); }
+  set pagination($46.PageResponse v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPagination() => $_has(1);
   @$pb.TagNumber(2)
   void clearPagination() => clearField(2);
   @$pb.TagNumber(2)
-  $39.PageResponse ensurePagination() => $_ensure(1);
+  $46.PageResponse ensurePagination() => $_ensure(1);
 }
 
 /// QueryTallyResultRequest is the request type for the Query/Tally RPC method.
@@ -986,7 +988,7 @@ class QueryTallyResultRequest extends $pb.GeneratedMessage {
 /// QueryTallyResultResponse is the response type for the Query/Tally RPC method.
 class QueryTallyResultResponse extends $pb.GeneratedMessage {
   factory QueryTallyResultResponse({
-    $60.TallyResult? tally,
+    $68.TallyResult? tally,
   }) {
     final $result = create();
     if (tally != null) {
@@ -999,7 +1001,7 @@ class QueryTallyResultResponse extends $pb.GeneratedMessage {
   factory QueryTallyResultResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryTallyResultResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.gov.v1beta1'), createEmptyInstance: create)
-    ..aOM<$60.TallyResult>(1, _omitFieldNames ? '' : 'tally', subBuilder: $60.TallyResult.create)
+    ..aOM<$68.TallyResult>(1, _omitFieldNames ? '' : 'tally', subBuilder: $68.TallyResult.create)
     ..hasRequiredFields = false
   ;
 
@@ -1026,15 +1028,15 @@ class QueryTallyResultResponse extends $pb.GeneratedMessage {
 
   /// tally defines the requested tally.
   @$pb.TagNumber(1)
-  $60.TallyResult get tally => $_getN(0);
+  $68.TallyResult get tally => $_getN(0);
   @$pb.TagNumber(1)
-  set tally($60.TallyResult v) { setField(1, v); }
+  set tally($68.TallyResult v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTally() => $_has(0);
   @$pb.TagNumber(1)
   void clearTally() => clearField(1);
   @$pb.TagNumber(1)
-  $60.TallyResult ensureTally() => $_ensure(0);
+  $68.TallyResult ensureTally() => $_ensure(0);
 }
 
 

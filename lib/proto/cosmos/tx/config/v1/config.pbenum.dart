@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: cosmos/app/module/v1alpha1/module.proto
+//  source: cosmos/tx/config/v1/config.proto
 //
 // @dart = 2.12
 

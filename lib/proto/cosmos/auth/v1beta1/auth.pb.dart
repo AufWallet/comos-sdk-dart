@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $36;
+import '../../../google/protobuf/any.pb.dart' as $43;
 
 /// BaseAccount defines a base account type. It contains all the necessary fields
 /// for basic account functionality. Any custom account type should extend this
@@ -22,7 +22,7 @@ import '../../../google/protobuf/any.pb.dart' as $36;
 class BaseAccount extends $pb.GeneratedMessage {
   factory BaseAccount({
     $core.String? address,
-    $36.Any? pubKey,
+    $43.Any? pubKey,
     $fixnum.Int64? accountNumber,
     $fixnum.Int64? sequence,
   }) {
@@ -47,7 +47,7 @@ class BaseAccount extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BaseAccount', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'address')
-    ..aOM<$36.Any>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(2, _omitFieldNames ? '' : 'pubKey', subBuilder: $43.Any.create)
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'accountNumber', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'sequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
@@ -84,15 +84,15 @@ class BaseAccount extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 
   @$pb.TagNumber(2)
-  $36.Any get pubKey => $_getN(1);
+  $43.Any get pubKey => $_getN(1);
   @$pb.TagNumber(2)
-  set pubKey($36.Any v) { setField(2, v); }
+  set pubKey($43.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPubKey() => $_has(1);
   @$pb.TagNumber(2)
   void clearPubKey() => clearField(2);
   @$pb.TagNumber(2)
-  $36.Any ensurePubKey() => $_ensure(1);
+  $43.Any ensurePubKey() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $fixnum.Int64 get accountNumber => $_getI64(2);
@@ -186,6 +186,70 @@ class ModuleAccount extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<$core.String> get permissions => $_getList(2);
+}
+
+///  ModuleCredential represents a unclaimable pubkey for base accounts controlled by modules.
+///
+///  Since: cosmos-sdk 0.47
+class ModuleCredential extends $pb.GeneratedMessage {
+  factory ModuleCredential({
+    $core.String? moduleName,
+    $core.Iterable<$core.List<$core.int>>? derivationKeys,
+  }) {
+    final $result = create();
+    if (moduleName != null) {
+      $result.moduleName = moduleName;
+    }
+    if (derivationKeys != null) {
+      $result.derivationKeys.addAll(derivationKeys);
+    }
+    return $result;
+  }
+  ModuleCredential._() : super();
+  factory ModuleCredential.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ModuleCredential.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ModuleCredential', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.auth.v1beta1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'moduleName')
+    ..p<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'derivationKeys', $pb.PbFieldType.PY)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ModuleCredential clone() => ModuleCredential()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ModuleCredential copyWith(void Function(ModuleCredential) updates) => super.copyWith((message) => updates(message as ModuleCredential)) as ModuleCredential;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ModuleCredential create() => ModuleCredential._();
+  ModuleCredential createEmptyInstance() => create();
+  static $pb.PbList<ModuleCredential> createRepeated() => $pb.PbList<ModuleCredential>();
+  @$core.pragma('dart2js:noInline')
+  static ModuleCredential getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ModuleCredential>(create);
+  static ModuleCredential? _defaultInstance;
+
+  /// module_name is the name of the module used for address derivation (passed into address.Module).
+  @$pb.TagNumber(1)
+  $core.String get moduleName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set moduleName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasModuleName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearModuleName() => clearField(1);
+
+  /// derivation_keys is for deriving a module account address (passed into address.Module)
+  /// adding more keys creates sub-account addresses (passed into address.Derive)
+  @$pb.TagNumber(2)
+  $core.List<$core.List<$core.int>> get derivationKeys => $_getList(1);
 }
 
 /// Params defines the parameters for the auth module.

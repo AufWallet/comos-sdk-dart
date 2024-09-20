@@ -51,6 +51,6 @@ const CapabilityOwners$json = {
 
 /// Descriptor for `CapabilityOwners`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List capabilityOwnersDescriptor = $convert.base64Decode(
-    'ChBDYXBhYmlsaXR5T3duZXJzEj4KBm93bmVycxgBIAMoCzIgLmNvc21vcy5jYXBhYmlsaXR5Ln'
-    'YxYmV0YTEuT3duZXJCBMjeHwBSBm93bmVycw==');
+    'ChBDYXBhYmlsaXR5T3duZXJzEkMKBm93bmVycxgBIAMoCzIgLmNvc21vcy5jYXBhYmlsaXR5Ln'
+    'YxYmV0YTEuT3duZXJCCcjeHwCo57AqAVIGb3duZXJz');
 

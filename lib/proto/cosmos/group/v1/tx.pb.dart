@@ -14,10 +14,10 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $36;
+import '../../../google/protobuf/any.pb.dart' as $43;
 import 'tx.pbenum.dart';
-import 'types.pb.dart' as $61;
-import 'types.pbenum.dart' as $61;
+import 'types.pb.dart' as $69;
+import 'types.pbenum.dart' as $69;
 
 export 'tx.pbenum.dart';
 
@@ -25,7 +25,7 @@ export 'tx.pbenum.dart';
 class MsgCreateGroup extends $pb.GeneratedMessage {
   factory MsgCreateGroup({
     $core.String? admin,
-    $core.Iterable<$61.MemberRequest>? members,
+    $core.Iterable<$69.MemberRequest>? members,
     $core.String? metadata,
   }) {
     final $result = create();
@@ -46,7 +46,7 @@ class MsgCreateGroup extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgCreateGroup', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'admin')
-    ..pc<$61.MemberRequest>(2, _omitFieldNames ? '' : 'members', $pb.PbFieldType.PM, subBuilder: $61.MemberRequest.create)
+    ..pc<$69.MemberRequest>(2, _omitFieldNames ? '' : 'members', $pb.PbFieldType.PM, subBuilder: $69.MemberRequest.create)
     ..aOS(3, _omitFieldNames ? '' : 'metadata')
     ..hasRequiredFields = false
   ;
@@ -84,7 +84,7 @@ class MsgCreateGroup extends $pb.GeneratedMessage {
 
   /// members defines the group members.
   @$pb.TagNumber(2)
-  $core.List<$61.MemberRequest> get members => $_getList(1);
+  $core.List<$69.MemberRequest> get members => $_getList(1);
 
   /// metadata is any arbitrary metadata to attached to the group.
   @$pb.TagNumber(3)
@@ -154,7 +154,7 @@ class MsgUpdateGroupMembers extends $pb.GeneratedMessage {
   factory MsgUpdateGroupMembers({
     $core.String? admin,
     $fixnum.Int64? groupId,
-    $core.Iterable<$61.MemberRequest>? memberUpdates,
+    $core.Iterable<$69.MemberRequest>? memberUpdates,
   }) {
     final $result = create();
     if (admin != null) {
@@ -175,7 +175,7 @@ class MsgUpdateGroupMembers extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateGroupMembers', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'admin')
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'groupId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..pc<$61.MemberRequest>(3, _omitFieldNames ? '' : 'memberUpdates', $pb.PbFieldType.PM, subBuilder: $61.MemberRequest.create)
+    ..pc<$69.MemberRequest>(3, _omitFieldNames ? '' : 'memberUpdates', $pb.PbFieldType.PM, subBuilder: $69.MemberRequest.create)
     ..hasRequiredFields = false
   ;
 
@@ -223,7 +223,7 @@ class MsgUpdateGroupMembers extends $pb.GeneratedMessage {
   /// member_updates is the list of members to update,
   /// set weight to 0 to remove a member.
   @$pb.TagNumber(3)
-  $core.List<$61.MemberRequest> get memberUpdates => $_getList(2);
+  $core.List<$69.MemberRequest> get memberUpdates => $_getList(2);
 }
 
 /// MsgUpdateGroupMembersResponse is the Msg/UpdateGroupMembers response type.
@@ -495,7 +495,7 @@ class MsgCreateGroupPolicy extends $pb.GeneratedMessage {
     $core.String? admin,
     $fixnum.Int64? groupId,
     $core.String? metadata,
-    $36.Any? decisionPolicy,
+    $43.Any? decisionPolicy,
   }) {
     final $result = create();
     if (admin != null) {
@@ -520,7 +520,7 @@ class MsgCreateGroupPolicy extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'admin')
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'groupId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(3, _omitFieldNames ? '' : 'metadata')
-    ..aOM<$36.Any>(4, _omitFieldNames ? '' : 'decisionPolicy', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(4, _omitFieldNames ? '' : 'decisionPolicy', subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -577,15 +577,15 @@ class MsgCreateGroupPolicy extends $pb.GeneratedMessage {
 
   /// decision_policy specifies the group policy's decision policy.
   @$pb.TagNumber(4)
-  $36.Any get decisionPolicy => $_getN(3);
+  $43.Any get decisionPolicy => $_getN(3);
   @$pb.TagNumber(4)
-  set decisionPolicy($36.Any v) { setField(4, v); }
+  set decisionPolicy($43.Any v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasDecisionPolicy() => $_has(3);
   @$pb.TagNumber(4)
   void clearDecisionPolicy() => clearField(4);
   @$pb.TagNumber(4)
-  $36.Any ensureDecisionPolicy() => $_ensure(3);
+  $43.Any ensureDecisionPolicy() => $_ensure(3);
 }
 
 /// MsgCreateGroupPolicyResponse is the Msg/CreateGroupPolicy response type.
@@ -722,15 +722,48 @@ class MsgUpdateGroupPolicyAdmin extends $pb.GeneratedMessage {
   void clearNewAdmin() => clearField(3);
 }
 
+/// MsgUpdateGroupPolicyAdminResponse is the Msg/UpdateGroupPolicyAdmin response type.
+class MsgUpdateGroupPolicyAdminResponse extends $pb.GeneratedMessage {
+  factory MsgUpdateGroupPolicyAdminResponse() => create();
+  MsgUpdateGroupPolicyAdminResponse._() : super();
+  factory MsgUpdateGroupPolicyAdminResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MsgUpdateGroupPolicyAdminResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateGroupPolicyAdminResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MsgUpdateGroupPolicyAdminResponse clone() => MsgUpdateGroupPolicyAdminResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MsgUpdateGroupPolicyAdminResponse copyWith(void Function(MsgUpdateGroupPolicyAdminResponse) updates) => super.copyWith((message) => updates(message as MsgUpdateGroupPolicyAdminResponse)) as MsgUpdateGroupPolicyAdminResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MsgUpdateGroupPolicyAdminResponse create() => MsgUpdateGroupPolicyAdminResponse._();
+  MsgUpdateGroupPolicyAdminResponse createEmptyInstance() => create();
+  static $pb.PbList<MsgUpdateGroupPolicyAdminResponse> createRepeated() => $pb.PbList<MsgUpdateGroupPolicyAdminResponse>();
+  @$core.pragma('dart2js:noInline')
+  static MsgUpdateGroupPolicyAdminResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MsgUpdateGroupPolicyAdminResponse>(create);
+  static MsgUpdateGroupPolicyAdminResponse? _defaultInstance;
+}
+
 /// MsgCreateGroupWithPolicy is the Msg/CreateGroupWithPolicy request type.
 class MsgCreateGroupWithPolicy extends $pb.GeneratedMessage {
   factory MsgCreateGroupWithPolicy({
     $core.String? admin,
-    $core.Iterable<$61.MemberRequest>? members,
+    $core.Iterable<$69.MemberRequest>? members,
     $core.String? groupMetadata,
     $core.String? groupPolicyMetadata,
     $core.bool? groupPolicyAsAdmin,
-    $36.Any? decisionPolicy,
+    $43.Any? decisionPolicy,
   }) {
     final $result = create();
     if (admin != null) {
@@ -759,11 +792,11 @@ class MsgCreateGroupWithPolicy extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgCreateGroupWithPolicy', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'admin')
-    ..pc<$61.MemberRequest>(2, _omitFieldNames ? '' : 'members', $pb.PbFieldType.PM, subBuilder: $61.MemberRequest.create)
+    ..pc<$69.MemberRequest>(2, _omitFieldNames ? '' : 'members', $pb.PbFieldType.PM, subBuilder: $69.MemberRequest.create)
     ..aOS(3, _omitFieldNames ? '' : 'groupMetadata')
     ..aOS(4, _omitFieldNames ? '' : 'groupPolicyMetadata')
     ..aOB(5, _omitFieldNames ? '' : 'groupPolicyAsAdmin')
-    ..aOM<$36.Any>(6, _omitFieldNames ? '' : 'decisionPolicy', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(6, _omitFieldNames ? '' : 'decisionPolicy', subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -800,7 +833,7 @@ class MsgCreateGroupWithPolicy extends $pb.GeneratedMessage {
 
   /// members defines the group members.
   @$pb.TagNumber(2)
-  $core.List<$61.MemberRequest> get members => $_getList(1);
+  $core.List<$69.MemberRequest> get members => $_getList(1);
 
   /// group_metadata is any arbitrary metadata attached to the group.
   @$pb.TagNumber(3)
@@ -835,15 +868,15 @@ class MsgCreateGroupWithPolicy extends $pb.GeneratedMessage {
 
   /// decision_policy specifies the group policy's decision policy.
   @$pb.TagNumber(6)
-  $36.Any get decisionPolicy => $_getN(5);
+  $43.Any get decisionPolicy => $_getN(5);
   @$pb.TagNumber(6)
-  set decisionPolicy($36.Any v) { setField(6, v); }
+  set decisionPolicy($43.Any v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasDecisionPolicy() => $_has(5);
   @$pb.TagNumber(6)
   void clearDecisionPolicy() => clearField(6);
   @$pb.TagNumber(6)
-  $36.Any ensureDecisionPolicy() => $_ensure(5);
+  $43.Any ensureDecisionPolicy() => $_ensure(5);
 }
 
 /// MsgCreateGroupWithPolicyResponse is the Msg/CreateGroupWithPolicy response type.
@@ -913,45 +946,12 @@ class MsgCreateGroupWithPolicyResponse extends $pb.GeneratedMessage {
   void clearGroupPolicyAddress() => clearField(2);
 }
 
-/// MsgUpdateGroupPolicyAdminResponse is the Msg/UpdateGroupPolicyAdmin response type.
-class MsgUpdateGroupPolicyAdminResponse extends $pb.GeneratedMessage {
-  factory MsgUpdateGroupPolicyAdminResponse() => create();
-  MsgUpdateGroupPolicyAdminResponse._() : super();
-  factory MsgUpdateGroupPolicyAdminResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory MsgUpdateGroupPolicyAdminResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateGroupPolicyAdminResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  MsgUpdateGroupPolicyAdminResponse clone() => MsgUpdateGroupPolicyAdminResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  MsgUpdateGroupPolicyAdminResponse copyWith(void Function(MsgUpdateGroupPolicyAdminResponse) updates) => super.copyWith((message) => updates(message as MsgUpdateGroupPolicyAdminResponse)) as MsgUpdateGroupPolicyAdminResponse;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static MsgUpdateGroupPolicyAdminResponse create() => MsgUpdateGroupPolicyAdminResponse._();
-  MsgUpdateGroupPolicyAdminResponse createEmptyInstance() => create();
-  static $pb.PbList<MsgUpdateGroupPolicyAdminResponse> createRepeated() => $pb.PbList<MsgUpdateGroupPolicyAdminResponse>();
-  @$core.pragma('dart2js:noInline')
-  static MsgUpdateGroupPolicyAdminResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MsgUpdateGroupPolicyAdminResponse>(create);
-  static MsgUpdateGroupPolicyAdminResponse? _defaultInstance;
-}
-
 /// MsgUpdateGroupPolicyDecisionPolicy is the Msg/UpdateGroupPolicyDecisionPolicy request type.
 class MsgUpdateGroupPolicyDecisionPolicy extends $pb.GeneratedMessage {
   factory MsgUpdateGroupPolicyDecisionPolicy({
     $core.String? admin,
     $core.String? groupPolicyAddress,
-    $36.Any? decisionPolicy,
+    $43.Any? decisionPolicy,
   }) {
     final $result = create();
     if (admin != null) {
@@ -972,7 +972,7 @@ class MsgUpdateGroupPolicyDecisionPolicy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgUpdateGroupPolicyDecisionPolicy', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'admin')
     ..aOS(2, _omitFieldNames ? '' : 'groupPolicyAddress')
-    ..aOM<$36.Any>(3, _omitFieldNames ? '' : 'decisionPolicy', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(3, _omitFieldNames ? '' : 'decisionPolicy', subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -1019,15 +1019,15 @@ class MsgUpdateGroupPolicyDecisionPolicy extends $pb.GeneratedMessage {
 
   /// decision_policy is the updated group policy's decision policy.
   @$pb.TagNumber(3)
-  $36.Any get decisionPolicy => $_getN(2);
+  $43.Any get decisionPolicy => $_getN(2);
   @$pb.TagNumber(3)
-  set decisionPolicy($36.Any v) { setField(3, v); }
+  set decisionPolicy($43.Any v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasDecisionPolicy() => $_has(2);
   @$pb.TagNumber(3)
   void clearDecisionPolicy() => clearField(3);
   @$pb.TagNumber(3)
-  $36.Any ensureDecisionPolicy() => $_ensure(2);
+  $43.Any ensureDecisionPolicy() => $_ensure(2);
 }
 
 /// MsgUpdateGroupPolicyDecisionPolicyResponse is the Msg/UpdateGroupPolicyDecisionPolicy response type.
@@ -1134,7 +1134,7 @@ class MsgUpdateGroupPolicyMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearGroupPolicyAddress() => clearField(2);
 
-  /// metadata is the updated group policy metadata.
+  /// metadata is the group policy metadata to be updated.
   @$pb.TagNumber(3)
   $core.String get metadata => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1184,8 +1184,10 @@ class MsgSubmitProposal extends $pb.GeneratedMessage {
     $core.String? groupPolicyAddress,
     $core.Iterable<$core.String>? proposers,
     $core.String? metadata,
-    $core.Iterable<$36.Any>? messages,
+    $core.Iterable<$43.Any>? messages,
     Exec? exec,
+    $core.String? title,
+    $core.String? summary,
   }) {
     final $result = create();
     if (groupPolicyAddress != null) {
@@ -1203,6 +1205,12 @@ class MsgSubmitProposal extends $pb.GeneratedMessage {
     if (exec != null) {
       $result.exec = exec;
     }
+    if (title != null) {
+      $result.title = title;
+    }
+    if (summary != null) {
+      $result.summary = summary;
+    }
     return $result;
   }
   MsgSubmitProposal._() : super();
@@ -1213,8 +1221,10 @@ class MsgSubmitProposal extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'groupPolicyAddress')
     ..pPS(2, _omitFieldNames ? '' : 'proposers')
     ..aOS(3, _omitFieldNames ? '' : 'metadata')
-    ..pc<$36.Any>(4, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: $36.Any.create)
+    ..pc<$43.Any>(4, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: $43.Any.create)
     ..e<Exec>(5, _omitFieldNames ? '' : 'exec', $pb.PbFieldType.OE, defaultOrMaker: Exec.EXEC_UNSPECIFIED, valueOf: Exec.valueOf, enumValues: Exec.values)
+    ..aOS(6, _omitFieldNames ? '' : 'title')
+    ..aOS(7, _omitFieldNames ? '' : 'summary')
     ..hasRequiredFields = false
   ;
 
@@ -1254,7 +1264,7 @@ class MsgSubmitProposal extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.List<$core.String> get proposers => $_getList(1);
 
-  /// metadata is any arbitrary metadata to attached to the proposal.
+  /// metadata is any arbitrary metadata attached to the proposal.
   @$pb.TagNumber(3)
   $core.String get metadata => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1266,7 +1276,7 @@ class MsgSubmitProposal extends $pb.GeneratedMessage {
 
   /// messages is a list of `sdk.Msg`s that will be executed if the proposal passes.
   @$pb.TagNumber(4)
-  $core.List<$36.Any> get messages => $_getList(3);
+  $core.List<$43.Any> get messages => $_getList(3);
 
   /// exec defines the mode of execution of the proposal,
   /// whether it should be executed immediately on creation or not.
@@ -1279,6 +1289,30 @@ class MsgSubmitProposal extends $pb.GeneratedMessage {
   $core.bool hasExec() => $_has(4);
   @$pb.TagNumber(5)
   void clearExec() => clearField(5);
+
+  ///  title is the title of the proposal.
+  ///
+  ///  Since: cosmos-sdk 0.47
+  @$pb.TagNumber(6)
+  $core.String get title => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set title($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasTitle() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearTitle() => clearField(6);
+
+  ///  summary is the summary of the proposal.
+  ///
+  ///  Since: cosmos-sdk 0.47
+  @$pb.TagNumber(7)
+  $core.String get summary => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set summary($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasSummary() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearSummary() => clearField(7);
 }
 
 /// MsgSubmitProposalResponse is the Msg/SubmitProposal response type.
@@ -1438,7 +1472,7 @@ class MsgVote extends $pb.GeneratedMessage {
   factory MsgVote({
     $fixnum.Int64? proposalId,
     $core.String? voter,
-    $61.VoteOption? option,
+    $69.VoteOption? option,
     $core.String? metadata,
     Exec? exec,
   }) {
@@ -1467,7 +1501,7 @@ class MsgVote extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgVote', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'proposalId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(2, _omitFieldNames ? '' : 'voter')
-    ..e<$61.VoteOption>(3, _omitFieldNames ? '' : 'option', $pb.PbFieldType.OE, defaultOrMaker: $61.VoteOption.VOTE_OPTION_UNSPECIFIED, valueOf: $61.VoteOption.valueOf, enumValues: $61.VoteOption.values)
+    ..e<$69.VoteOption>(3, _omitFieldNames ? '' : 'option', $pb.PbFieldType.OE, defaultOrMaker: $69.VoteOption.VOTE_OPTION_UNSPECIFIED, valueOf: $69.VoteOption.valueOf, enumValues: $69.VoteOption.values)
     ..aOS(4, _omitFieldNames ? '' : 'metadata')
     ..e<Exec>(5, _omitFieldNames ? '' : 'exec', $pb.PbFieldType.OE, defaultOrMaker: Exec.EXEC_UNSPECIFIED, valueOf: Exec.valueOf, enumValues: Exec.values)
     ..hasRequiredFields = false
@@ -1516,15 +1550,15 @@ class MsgVote extends $pb.GeneratedMessage {
 
   /// option is the voter's choice on the proposal.
   @$pb.TagNumber(3)
-  $61.VoteOption get option => $_getN(2);
+  $69.VoteOption get option => $_getN(2);
   @$pb.TagNumber(3)
-  set option($61.VoteOption v) { setField(3, v); }
+  set option($69.VoteOption v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasOption() => $_has(2);
   @$pb.TagNumber(3)
   void clearOption() => clearField(3);
 
-  /// metadata is any arbitrary metadata to attached to the vote.
+  /// metadata is any arbitrary metadata attached to the vote.
   @$pb.TagNumber(4)
   $core.String get metadata => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1649,7 +1683,7 @@ class MsgExec extends $pb.GeneratedMessage {
 /// MsgExecResponse is the Msg/Exec request type.
 class MsgExecResponse extends $pb.GeneratedMessage {
   factory MsgExecResponse({
-    $61.ProposalExecutorResult? result,
+    $69.ProposalExecutorResult? result,
   }) {
     final $result = create();
     if (result != null) {
@@ -1662,7 +1696,7 @@ class MsgExecResponse extends $pb.GeneratedMessage {
   factory MsgExecResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgExecResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.group.v1'), createEmptyInstance: create)
-    ..e<$61.ProposalExecutorResult>(2, _omitFieldNames ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $61.ProposalExecutorResult.PROPOSAL_EXECUTOR_RESULT_UNSPECIFIED, valueOf: $61.ProposalExecutorResult.valueOf, enumValues: $61.ProposalExecutorResult.values)
+    ..e<$69.ProposalExecutorResult>(2, _omitFieldNames ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $69.ProposalExecutorResult.PROPOSAL_EXECUTOR_RESULT_UNSPECIFIED, valueOf: $69.ProposalExecutorResult.valueOf, enumValues: $69.ProposalExecutorResult.values)
     ..hasRequiredFields = false
   ;
 
@@ -1689,9 +1723,9 @@ class MsgExecResponse extends $pb.GeneratedMessage {
 
   /// result is the final result of the proposal execution.
   @$pb.TagNumber(2)
-  $61.ProposalExecutorResult get result => $_getN(0);
+  $69.ProposalExecutorResult get result => $_getN(0);
   @$pb.TagNumber(2)
-  set result($61.ProposalExecutorResult v) { setField(2, v); }
+  set result($69.ProposalExecutorResult v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasResult() => $_has(0);
   @$pb.TagNumber(2)

@@ -29,14 +29,15 @@ const BaseVestingAccount$json = {
 /// Descriptor for `BaseVestingAccount`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List baseVestingAccountDescriptor = $convert.base64Decode(
     'ChJCYXNlVmVzdGluZ0FjY291bnQSSQoMYmFzZV9hY2NvdW50GAEgASgLMiAuY29zbW9zLmF1dG'
-    'gudjFiZXRhMS5CYXNlQWNjb3VudEIE0N4fAVILYmFzZUFjY291bnQSdgoQb3JpZ2luYWxfdmVz'
-    'dGluZxgCIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkIwyN4fAKrfHyhnaXRodWIuY2'
-    '9tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zUg9vcmlnaW5hbFZlc3RpbmcScgoOZGVs'
-    'ZWdhdGVkX2ZyZWUYAyADKAsyGS5jb3Ntb3MuYmFzZS52MWJldGExLkNvaW5CMMjeHwCq3x8oZ2'
-    'l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5Db2luc1INZGVsZWdhdGVkRnJlZRJ4'
-    'ChFkZWxlZ2F0ZWRfdmVzdGluZxgEIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkIwyN'
-    '4fAKrfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zUhBkZWxlZ2F0'
-    'ZWRWZXN0aW5nEhkKCGVuZF90aW1lGAUgASgDUgdlbmRUaW1lOgiIoB8AmKAfAA==');
+    'gudjFiZXRhMS5CYXNlQWNjb3VudEIE0N4fAVILYmFzZUFjY291bnQSewoQb3JpZ2luYWxfdmVz'
+    'dGluZxgCIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkI1yN4fAKrfHyhnaXRodWIuY2'
+    '9tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zqOewKgFSD29yaWdpbmFsVmVzdGluZxJ3'
+    'Cg5kZWxlZ2F0ZWRfZnJlZRgDIAMoCzIZLmNvc21vcy5iYXNlLnYxYmV0YTEuQ29pbkI1yN4fAK'
+    'rfHyhnaXRodWIuY29tL2Nvc21vcy9jb3Ntb3Mtc2RrL3R5cGVzLkNvaW5zqOewKgFSDWRlbGVn'
+    'YXRlZEZyZWUSfQoRZGVsZWdhdGVkX3Zlc3RpbmcYBCADKAsyGS5jb3Ntb3MuYmFzZS52MWJldG'
+    'ExLkNvaW5CNcjeHwCq3x8oZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcy5Db2lu'
+    'c6jnsCoBUhBkZWxlZ2F0ZWRWZXN0aW5nEhkKCGVuZF90aW1lGAUgASgDUgdlbmRUaW1lOiqIoB'
+    '8AmKAfAIrnsCodY29zbW9zLXNkay9CYXNlVmVzdGluZ0FjY291bnQ=');
 
 @$core.Deprecated('Use continuousVestingAccountDescriptor instead')
 const ContinuousVestingAccount$json = {
@@ -52,8 +53,8 @@ const ContinuousVestingAccount$json = {
 final $typed_data.Uint8List continuousVestingAccountDescriptor = $convert.base64Decode(
     'ChhDb250aW51b3VzVmVzdGluZ0FjY291bnQSYgoUYmFzZV92ZXN0aW5nX2FjY291bnQYASABKA'
     'syKi5jb3Ntb3MudmVzdGluZy52MWJldGExLkJhc2VWZXN0aW5nQWNjb3VudEIE0N4fAVISYmFz'
-    'ZVZlc3RpbmdBY2NvdW50Eh0KCnN0YXJ0X3RpbWUYAiABKANSCXN0YXJ0VGltZToIiKAfAJigHw'
-    'A=');
+    'ZVZlc3RpbmdBY2NvdW50Eh0KCnN0YXJ0X3RpbWUYAiABKANSCXN0YXJ0VGltZTowiKAfAJigHw'
+    'CK57AqI2Nvc21vcy1zZGsvQ29udGludW91c1Zlc3RpbmdBY2NvdW50');
 
 @$core.Deprecated('Use delayedVestingAccountDescriptor instead')
 const DelayedVestingAccount$json = {
@@ -68,7 +69,8 @@ const DelayedVestingAccount$json = {
 final $typed_data.Uint8List delayedVestingAccountDescriptor = $convert.base64Decode(
     'ChVEZWxheWVkVmVzdGluZ0FjY291bnQSYgoUYmFzZV92ZXN0aW5nX2FjY291bnQYASABKAsyKi'
     '5jb3Ntb3MudmVzdGluZy52MWJldGExLkJhc2VWZXN0aW5nQWNjb3VudEIE0N4fAVISYmFzZVZl'
-    'c3RpbmdBY2NvdW50OgiIoB8AmKAfAA==');
+    'c3RpbmdBY2NvdW50Oi2IoB8AmKAfAIrnsCogY29zbW9zLXNkay9EZWxheWVkVmVzdGluZ0FjY2'
+    '91bnQ=');
 
 @$core.Deprecated('Use periodDescriptor instead')
 const Period$json = {
@@ -82,9 +84,9 @@ const Period$json = {
 
 /// Descriptor for `Period`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List periodDescriptor = $convert.base64Decode(
-    'CgZQZXJpb2QSFgoGbGVuZ3RoGAEgASgDUgZsZW5ndGgSYwoGYW1vdW50GAIgAygLMhkuY29zbW'
-    '9zLmJhc2UudjFiZXRhMS5Db2luQjDI3h8Aqt8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1z'
-    'ZGsvdHlwZXMuQ29pbnNSBmFtb3VudDoEmKAfAA==');
+    'CgZQZXJpb2QSFgoGbGVuZ3RoGAEgASgDUgZsZW5ndGgSaAoGYW1vdW50GAIgAygLMhkuY29zbW'
+    '9zLmJhc2UudjFiZXRhMS5Db2luQjXI3h8Aqt8fKGdpdGh1Yi5jb20vY29zbW9zL2Nvc21vcy1z'
+    'ZGsvdHlwZXMuQ29pbnOo57AqAVIGYW1vdW50OgSYoB8A');
 
 @$core.Deprecated('Use periodicVestingAccountDescriptor instead')
 const PeriodicVestingAccount$json = {
@@ -101,9 +103,10 @@ const PeriodicVestingAccount$json = {
 final $typed_data.Uint8List periodicVestingAccountDescriptor = $convert.base64Decode(
     'ChZQZXJpb2RpY1Zlc3RpbmdBY2NvdW50EmIKFGJhc2VfdmVzdGluZ19hY2NvdW50GAEgASgLMi'
     'ouY29zbW9zLnZlc3RpbmcudjFiZXRhMS5CYXNlVmVzdGluZ0FjY291bnRCBNDeHwFSEmJhc2VW'
-    'ZXN0aW5nQWNjb3VudBIdCgpzdGFydF90aW1lGAIgASgDUglzdGFydFRpbWUSTQoPdmVzdGluZ1'
-    '9wZXJpb2RzGAMgAygLMh4uY29zbW9zLnZlc3RpbmcudjFiZXRhMS5QZXJpb2RCBMjeHwBSDnZl'
-    'c3RpbmdQZXJpb2RzOgiIoB8AmKAfAA==');
+    'ZXN0aW5nQWNjb3VudBIdCgpzdGFydF90aW1lGAIgASgDUglzdGFydFRpbWUSUgoPdmVzdGluZ1'
+    '9wZXJpb2RzGAMgAygLMh4uY29zbW9zLnZlc3RpbmcudjFiZXRhMS5QZXJpb2RCCcjeHwCo57Aq'
+    'AVIOdmVzdGluZ1BlcmlvZHM6LoigHwCYoB8AiuewKiFjb3Ntb3Mtc2RrL1BlcmlvZGljVmVzdG'
+    'luZ0FjY291bnQ=');
 
 @$core.Deprecated('Use permanentLockedAccountDescriptor instead')
 const PermanentLockedAccount$json = {
@@ -118,5 +121,6 @@ const PermanentLockedAccount$json = {
 final $typed_data.Uint8List permanentLockedAccountDescriptor = $convert.base64Decode(
     'ChZQZXJtYW5lbnRMb2NrZWRBY2NvdW50EmIKFGJhc2VfdmVzdGluZ19hY2NvdW50GAEgASgLMi'
     'ouY29zbW9zLnZlc3RpbmcudjFiZXRhMS5CYXNlVmVzdGluZ0FjY291bnRCBNDeHwFSEmJhc2VW'
-    'ZXN0aW5nQWNjb3VudDoIiKAfAJigHwA=');
+    'ZXN0aW5nQWNjb3VudDouiKAfAJigHwCK57AqIWNvc21vcy1zZGsvUGVybWFuZW50TG9ja2VkQW'
+    'Njb3VudA==');
 

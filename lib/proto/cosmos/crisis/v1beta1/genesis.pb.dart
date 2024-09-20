@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $42;
+import '../../base/v1beta1/coin.pb.dart' as $50;
 
 /// GenesisState defines the crisis module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $42.Coin? constantFee,
+    $50.Coin? constantFee,
   }) {
     final $result = create();
     if (constantFee != null) {
@@ -31,7 +31,7 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.crisis.v1beta1'), createEmptyInstance: create)
-    ..aOM<$42.Coin>(3, _omitFieldNames ? '' : 'constantFee', subBuilder: $42.Coin.create)
+    ..aOM<$50.Coin>(3, _omitFieldNames ? '' : 'constantFee', subBuilder: $50.Coin.create)
     ..hasRequiredFields = false
   ;
 
@@ -59,15 +59,15 @@ class GenesisState extends $pb.GeneratedMessage {
   /// constant_fee is the fee used to verify the invariant in the crisis
   /// module.
   @$pb.TagNumber(3)
-  $42.Coin get constantFee => $_getN(0);
+  $50.Coin get constantFee => $_getN(0);
   @$pb.TagNumber(3)
-  set constantFee($42.Coin v) { setField(3, v); }
+  set constantFee($50.Coin v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasConstantFee() => $_has(0);
   @$pb.TagNumber(3)
   void clearConstantFee() => clearField(3);
   @$pb.TagNumber(3)
-  $42.Coin ensureConstantFee() => $_ensure(0);
+  $50.Coin ensureConstantFee() => $_ensure(0);
 }
 
 

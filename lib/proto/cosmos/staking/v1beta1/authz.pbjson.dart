@@ -64,5 +64,6 @@ final $typed_data.Uint8List stakeAuthorizationDescriptor = $convert.base64Decode
     'xpZGF0b3JzSABSCGRlbnlMaXN0ElgKEmF1dGhvcml6YXRpb25fdHlwZRgEIAEoDjIpLmNvc21v'
     'cy5zdGFraW5nLnYxYmV0YTEuQXV0aG9yaXphdGlvblR5cGVSEWF1dGhvcml6YXRpb25UeXBlGk'
     'AKClZhbGlkYXRvcnMSMgoHYWRkcmVzcxgBIAMoCUIY0rQtFGNvc21vcy5BZGRyZXNzU3RyaW5n'
-    'UgdhZGRyZXNzOhHKtC0NQXV0aG9yaXphdGlvbkIMCgp2YWxpZGF0b3Jz');
+    'UgdhZGRyZXNzOkjKtC0iY29zbW9zLmF1dGh6LnYxYmV0YTEuQXV0aG9yaXphdGlvbornsCodY2'
+    '9zbW9zLXNkay9TdGFrZUF1dGhvcml6YXRpb25CDAoKdmFsaWRhdG9ycw==');
 

@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $36;
+import '../../../google/protobuf/any.pb.dart' as $43;
 
 /// MsgSubmitEvidence represents a message that supports submitting arbitrary
 /// Evidence of misbehavior such as equivocation or counterfactual signing.
 class MsgSubmitEvidence extends $pb.GeneratedMessage {
   factory MsgSubmitEvidence({
     $core.String? submitter,
-    $36.Any? evidence,
+    $43.Any? evidence,
   }) {
     final $result = create();
     if (submitter != null) {
@@ -37,7 +37,7 @@ class MsgSubmitEvidence extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgSubmitEvidence', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.evidence.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'submitter')
-    ..aOM<$36.Any>(2, _omitFieldNames ? '' : 'evidence', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(2, _omitFieldNames ? '' : 'evidence', subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -62,6 +62,7 @@ class MsgSubmitEvidence extends $pb.GeneratedMessage {
   static MsgSubmitEvidence getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MsgSubmitEvidence>(create);
   static MsgSubmitEvidence? _defaultInstance;
 
+  /// submitter is the signer account address of evidence.
   @$pb.TagNumber(1)
   $core.String get submitter => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -71,16 +72,17 @@ class MsgSubmitEvidence extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSubmitter() => clearField(1);
 
+  /// evidence defines the evidence of misbehavior.
   @$pb.TagNumber(2)
-  $36.Any get evidence => $_getN(1);
+  $43.Any get evidence => $_getN(1);
   @$pb.TagNumber(2)
-  set evidence($36.Any v) { setField(2, v); }
+  set evidence($43.Any v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasEvidence() => $_has(1);
   @$pb.TagNumber(2)
   void clearEvidence() => clearField(2);
   @$pb.TagNumber(2)
-  $36.Any ensureEvidence() => $_ensure(1);
+  $43.Any ensureEvidence() => $_ensure(1);
 }
 
 /// MsgSubmitEvidenceResponse defines the Msg/SubmitEvidence response type.

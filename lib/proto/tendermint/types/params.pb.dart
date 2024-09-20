@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/protobuf/duration.pb.dart' as $48;
+import '../../google/protobuf/duration.pb.dart' as $56;
 
 /// ConsensusParams contains consensus critical parameters that determine the
 /// validity of blocks.
@@ -123,7 +123,6 @@ class BlockParams extends $pb.GeneratedMessage {
   factory BlockParams({
     $fixnum.Int64? maxBytes,
     $fixnum.Int64? maxGas,
-    $fixnum.Int64? timeIotaMs,
   }) {
     final $result = create();
     if (maxBytes != null) {
@@ -131,9 +130,6 @@ class BlockParams extends $pb.GeneratedMessage {
     }
     if (maxGas != null) {
       $result.maxGas = maxGas;
-    }
-    if (timeIotaMs != null) {
-      $result.timeIotaMs = timeIotaMs;
     }
     return $result;
   }
@@ -144,7 +140,6 @@ class BlockParams extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BlockParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'maxBytes')
     ..aInt64(2, _omitFieldNames ? '' : 'maxGas')
-    ..aInt64(3, _omitFieldNames ? '' : 'timeIotaMs')
     ..hasRequiredFields = false
   ;
 
@@ -190,26 +185,13 @@ class BlockParams extends $pb.GeneratedMessage {
   $core.bool hasMaxGas() => $_has(1);
   @$pb.TagNumber(2)
   void clearMaxGas() => clearField(2);
-
-  ///  Minimum time increment between consecutive blocks (in milliseconds) If the
-  ///  block header timestamp is ahead of the system clock, decrease this value.
-  ///
-  ///  Not exposed to the application.
-  @$pb.TagNumber(3)
-  $fixnum.Int64 get timeIotaMs => $_getI64(2);
-  @$pb.TagNumber(3)
-  set timeIotaMs($fixnum.Int64 v) { $_setInt64(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasTimeIotaMs() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearTimeIotaMs() => clearField(3);
 }
 
 /// EvidenceParams determine how we handle evidence of malfeasance.
 class EvidenceParams extends $pb.GeneratedMessage {
   factory EvidenceParams({
     $fixnum.Int64? maxAgeNumBlocks,
-    $48.Duration? maxAgeDuration,
+    $56.Duration? maxAgeDuration,
     $fixnum.Int64? maxBytes,
   }) {
     final $result = create();
@@ -230,7 +212,7 @@ class EvidenceParams extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EvidenceParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'maxAgeNumBlocks')
-    ..aOM<$48.Duration>(2, _omitFieldNames ? '' : 'maxAgeDuration', subBuilder: $48.Duration.create)
+    ..aOM<$56.Duration>(2, _omitFieldNames ? '' : 'maxAgeDuration', subBuilder: $56.Duration.create)
     ..aInt64(3, _omitFieldNames ? '' : 'maxBytes')
     ..hasRequiredFields = false
   ;
@@ -275,15 +257,15 @@ class EvidenceParams extends $pb.GeneratedMessage {
   ///  mechanism for handling [Nothing-At-Stake
   ///  attacks](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed).
   @$pb.TagNumber(2)
-  $48.Duration get maxAgeDuration => $_getN(1);
+  $56.Duration get maxAgeDuration => $_getN(1);
   @$pb.TagNumber(2)
-  set maxAgeDuration($48.Duration v) { setField(2, v); }
+  set maxAgeDuration($56.Duration v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMaxAgeDuration() => $_has(1);
   @$pb.TagNumber(2)
   void clearMaxAgeDuration() => clearField(2);
   @$pb.TagNumber(2)
-  $48.Duration ensureMaxAgeDuration() => $_ensure(1);
+  $56.Duration ensureMaxAgeDuration() => $_ensure(1);
 
   /// This sets the maximum size of total evidence in bytes that can be committed in a single block.
   /// and should fall comfortably under the max block bytes.
@@ -347,11 +329,11 @@ class ValidatorParams extends $pb.GeneratedMessage {
 /// VersionParams contains the ABCI application version.
 class VersionParams extends $pb.GeneratedMessage {
   factory VersionParams({
-    $fixnum.Int64? appVersion,
+    $fixnum.Int64? app,
   }) {
     final $result = create();
-    if (appVersion != null) {
-      $result.appVersion = appVersion;
+    if (app != null) {
+      $result.app = app;
     }
     return $result;
   }
@@ -360,7 +342,7 @@ class VersionParams extends $pb.GeneratedMessage {
   factory VersionParams.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VersionParams', package: const $pb.PackageName(_omitMessageNames ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'appVersion', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'app', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -386,13 +368,13 @@ class VersionParams extends $pb.GeneratedMessage {
   static VersionParams? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $fixnum.Int64 get appVersion => $_getI64(0);
+  $fixnum.Int64 get app => $_getI64(0);
   @$pb.TagNumber(1)
-  set appVersion($fixnum.Int64 v) { $_setInt64(0, v); }
+  set app($fixnum.Int64 v) { $_setInt64(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasAppVersion() => $_has(0);
+  $core.bool hasApp() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAppVersion() => clearField(1);
+  void clearApp() => clearField(1);
 }
 
 ///  HashedParams is a subset of ConsensusParams.

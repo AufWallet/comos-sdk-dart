@@ -187,7 +187,9 @@ class SnapshotItem extends $pb.GeneratedMessage {
     SnapshotIAVLItem? iavl,
     SnapshotExtensionMeta? extension_3,
     SnapshotExtensionPayload? extensionPayload,
+  @$core.Deprecated('This field is deprecated.')
     SnapshotKVItem? kv,
+  @$core.Deprecated('This field is deprecated.')
     SnapshotSchema? schema,
   }) {
     final $result = create();
@@ -204,9 +206,11 @@ class SnapshotItem extends $pb.GeneratedMessage {
       $result.extensionPayload = extensionPayload;
     }
     if (kv != null) {
+      // ignore: deprecated_member_use_from_same_package
       $result.kv = kv;
     }
     if (schema != null) {
+      // ignore: deprecated_member_use_from_same_package
       $result.schema = schema;
     }
     return $result;
@@ -303,25 +307,35 @@ class SnapshotItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   SnapshotExtensionPayload ensureExtensionPayload() => $_ensure(3);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   SnapshotKVItem get kv => $_getN(4);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   set kv(SnapshotKVItem v) { setField(5, v); }
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.bool hasKv() => $_has(4);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   void clearKv() => clearField(5);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   SnapshotKVItem ensureKv() => $_ensure(4);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   SnapshotSchema get schema => $_getN(5);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   set schema(SnapshotSchema v) { setField(6, v); }
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   $core.bool hasSchema() => $_has(5);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   void clearSchema() => clearField(6);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   SnapshotSchema ensureSchema() => $_ensure(5);
 }
@@ -599,6 +613,7 @@ class SnapshotExtensionPayload extends $pb.GeneratedMessage {
 ///  SnapshotKVItem is an exported Key/Value Pair
 ///
 ///  Since: cosmos-sdk 0.46
+///  Deprecated: This message was part of store/v2alpha1 which has been deleted from v0.47.
 class SnapshotKVItem extends $pb.GeneratedMessage {
   factory SnapshotKVItem({
     $core.List<$core.int>? key,
@@ -666,6 +681,7 @@ class SnapshotKVItem extends $pb.GeneratedMessage {
 ///  SnapshotSchema is an exported schema of smt store
 ///
 ///  Since: cosmos-sdk 0.46
+///  Deprecated: This message was part of store/v2alpha1 which has been deleted from v0.47.
 class SnapshotSchema extends $pb.GeneratedMessage {
   factory SnapshotSchema({
     $core.Iterable<$core.List<$core.int>>? keys,

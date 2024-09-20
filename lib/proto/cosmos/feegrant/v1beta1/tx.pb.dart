@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $36;
+import '../../../google/protobuf/any.pb.dart' as $43;
 
 /// MsgGrantAllowance adds permission for Grantee to spend up to Allowance
 /// of fees from the account of Granter.
@@ -21,7 +21,7 @@ class MsgGrantAllowance extends $pb.GeneratedMessage {
   factory MsgGrantAllowance({
     $core.String? granter,
     $core.String? grantee,
-    $36.Any? allowance,
+    $43.Any? allowance,
   }) {
     final $result = create();
     if (granter != null) {
@@ -42,7 +42,7 @@ class MsgGrantAllowance extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgGrantAllowance', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.feegrant.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'granter')
     ..aOS(2, _omitFieldNames ? '' : 'grantee')
-    ..aOM<$36.Any>(3, _omitFieldNames ? '' : 'allowance', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(3, _omitFieldNames ? '' : 'allowance', subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -89,15 +89,15 @@ class MsgGrantAllowance extends $pb.GeneratedMessage {
 
   /// allowance can be any of basic, periodic, allowed fee allowance.
   @$pb.TagNumber(3)
-  $36.Any get allowance => $_getN(2);
+  $43.Any get allowance => $_getN(2);
   @$pb.TagNumber(3)
-  set allowance($36.Any v) { setField(3, v); }
+  set allowance($43.Any v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasAllowance() => $_has(2);
   @$pb.TagNumber(3)
   void clearAllowance() => clearField(3);
   @$pb.TagNumber(3)
-  $36.Any ensureAllowance() => $_ensure(2);
+  $43.Any ensureAllowance() => $_ensure(2);
 }
 
 /// MsgGrantAllowanceResponse defines the Msg/GrantAllowanceResponse response type.

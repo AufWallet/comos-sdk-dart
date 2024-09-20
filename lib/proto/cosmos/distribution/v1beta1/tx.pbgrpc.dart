@@ -15,28 +15,36 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $13;
+import 'tx.pb.dart' as $17;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.distribution.v1beta1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$setWithdrawAddress = $grpc.ClientMethod<$13.MsgSetWithdrawAddress, $13.MsgSetWithdrawAddressResponse>(
+  static final _$setWithdrawAddress = $grpc.ClientMethod<$17.MsgSetWithdrawAddress, $17.MsgSetWithdrawAddressResponse>(
       '/cosmos.distribution.v1beta1.Msg/SetWithdrawAddress',
-      ($13.MsgSetWithdrawAddress value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $13.MsgSetWithdrawAddressResponse.fromBuffer(value));
-  static final _$withdrawDelegatorReward = $grpc.ClientMethod<$13.MsgWithdrawDelegatorReward, $13.MsgWithdrawDelegatorRewardResponse>(
+      ($17.MsgSetWithdrawAddress value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.MsgSetWithdrawAddressResponse.fromBuffer(value));
+  static final _$withdrawDelegatorReward = $grpc.ClientMethod<$17.MsgWithdrawDelegatorReward, $17.MsgWithdrawDelegatorRewardResponse>(
       '/cosmos.distribution.v1beta1.Msg/WithdrawDelegatorReward',
-      ($13.MsgWithdrawDelegatorReward value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $13.MsgWithdrawDelegatorRewardResponse.fromBuffer(value));
-  static final _$withdrawValidatorCommission = $grpc.ClientMethod<$13.MsgWithdrawValidatorCommission, $13.MsgWithdrawValidatorCommissionResponse>(
+      ($17.MsgWithdrawDelegatorReward value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.MsgWithdrawDelegatorRewardResponse.fromBuffer(value));
+  static final _$withdrawValidatorCommission = $grpc.ClientMethod<$17.MsgWithdrawValidatorCommission, $17.MsgWithdrawValidatorCommissionResponse>(
       '/cosmos.distribution.v1beta1.Msg/WithdrawValidatorCommission',
-      ($13.MsgWithdrawValidatorCommission value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $13.MsgWithdrawValidatorCommissionResponse.fromBuffer(value));
-  static final _$fundCommunityPool = $grpc.ClientMethod<$13.MsgFundCommunityPool, $13.MsgFundCommunityPoolResponse>(
+      ($17.MsgWithdrawValidatorCommission value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.MsgWithdrawValidatorCommissionResponse.fromBuffer(value));
+  static final _$fundCommunityPool = $grpc.ClientMethod<$17.MsgFundCommunityPool, $17.MsgFundCommunityPoolResponse>(
       '/cosmos.distribution.v1beta1.Msg/FundCommunityPool',
-      ($13.MsgFundCommunityPool value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $13.MsgFundCommunityPoolResponse.fromBuffer(value));
+      ($17.MsgFundCommunityPool value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.MsgFundCommunityPoolResponse.fromBuffer(value));
+  static final _$updateParams = $grpc.ClientMethod<$17.MsgUpdateParams, $17.MsgUpdateParamsResponse>(
+      '/cosmos.distribution.v1beta1.Msg/UpdateParams',
+      ($17.MsgUpdateParams value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.MsgUpdateParamsResponse.fromBuffer(value));
+  static final _$communityPoolSpend = $grpc.ClientMethod<$17.MsgCommunityPoolSpend, $17.MsgCommunityPoolSpendResponse>(
+      '/cosmos.distribution.v1beta1.Msg/CommunityPoolSpend',
+      ($17.MsgCommunityPoolSpend value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.MsgCommunityPoolSpendResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -44,20 +52,28 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$13.MsgSetWithdrawAddressResponse> setWithdrawAddress($13.MsgSetWithdrawAddress request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$17.MsgSetWithdrawAddressResponse> setWithdrawAddress($17.MsgSetWithdrawAddress request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setWithdrawAddress, request, options: options);
   }
 
-  $grpc.ResponseFuture<$13.MsgWithdrawDelegatorRewardResponse> withdrawDelegatorReward($13.MsgWithdrawDelegatorReward request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$17.MsgWithdrawDelegatorRewardResponse> withdrawDelegatorReward($17.MsgWithdrawDelegatorReward request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$withdrawDelegatorReward, request, options: options);
   }
 
-  $grpc.ResponseFuture<$13.MsgWithdrawValidatorCommissionResponse> withdrawValidatorCommission($13.MsgWithdrawValidatorCommission request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$17.MsgWithdrawValidatorCommissionResponse> withdrawValidatorCommission($17.MsgWithdrawValidatorCommission request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$withdrawValidatorCommission, request, options: options);
   }
 
-  $grpc.ResponseFuture<$13.MsgFundCommunityPoolResponse> fundCommunityPool($13.MsgFundCommunityPool request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$17.MsgFundCommunityPoolResponse> fundCommunityPool($17.MsgFundCommunityPool request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$fundCommunityPool, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$17.MsgUpdateParamsResponse> updateParams($17.MsgUpdateParams request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateParams, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$17.MsgCommunityPoolSpendResponse> communityPoolSpend($17.MsgCommunityPoolSpend request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$communityPoolSpend, request, options: options);
   }
 }
 
@@ -66,54 +82,78 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.distribution.v1beta1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$13.MsgSetWithdrawAddress, $13.MsgSetWithdrawAddressResponse>(
+    $addMethod($grpc.ServiceMethod<$17.MsgSetWithdrawAddress, $17.MsgSetWithdrawAddressResponse>(
         'SetWithdrawAddress',
         setWithdrawAddress_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $13.MsgSetWithdrawAddress.fromBuffer(value),
-        ($13.MsgSetWithdrawAddressResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$13.MsgWithdrawDelegatorReward, $13.MsgWithdrawDelegatorRewardResponse>(
+        ($core.List<$core.int> value) => $17.MsgSetWithdrawAddress.fromBuffer(value),
+        ($17.MsgSetWithdrawAddressResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$17.MsgWithdrawDelegatorReward, $17.MsgWithdrawDelegatorRewardResponse>(
         'WithdrawDelegatorReward',
         withdrawDelegatorReward_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $13.MsgWithdrawDelegatorReward.fromBuffer(value),
-        ($13.MsgWithdrawDelegatorRewardResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$13.MsgWithdrawValidatorCommission, $13.MsgWithdrawValidatorCommissionResponse>(
+        ($core.List<$core.int> value) => $17.MsgWithdrawDelegatorReward.fromBuffer(value),
+        ($17.MsgWithdrawDelegatorRewardResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$17.MsgWithdrawValidatorCommission, $17.MsgWithdrawValidatorCommissionResponse>(
         'WithdrawValidatorCommission',
         withdrawValidatorCommission_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $13.MsgWithdrawValidatorCommission.fromBuffer(value),
-        ($13.MsgWithdrawValidatorCommissionResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$13.MsgFundCommunityPool, $13.MsgFundCommunityPoolResponse>(
+        ($core.List<$core.int> value) => $17.MsgWithdrawValidatorCommission.fromBuffer(value),
+        ($17.MsgWithdrawValidatorCommissionResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$17.MsgFundCommunityPool, $17.MsgFundCommunityPoolResponse>(
         'FundCommunityPool',
         fundCommunityPool_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $13.MsgFundCommunityPool.fromBuffer(value),
-        ($13.MsgFundCommunityPoolResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $17.MsgFundCommunityPool.fromBuffer(value),
+        ($17.MsgFundCommunityPoolResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$17.MsgUpdateParams, $17.MsgUpdateParamsResponse>(
+        'UpdateParams',
+        updateParams_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $17.MsgUpdateParams.fromBuffer(value),
+        ($17.MsgUpdateParamsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$17.MsgCommunityPoolSpend, $17.MsgCommunityPoolSpendResponse>(
+        'CommunityPoolSpend',
+        communityPoolSpend_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $17.MsgCommunityPoolSpend.fromBuffer(value),
+        ($17.MsgCommunityPoolSpendResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$13.MsgSetWithdrawAddressResponse> setWithdrawAddress_Pre($grpc.ServiceCall call, $async.Future<$13.MsgSetWithdrawAddress> request) async {
+  $async.Future<$17.MsgSetWithdrawAddressResponse> setWithdrawAddress_Pre($grpc.ServiceCall call, $async.Future<$17.MsgSetWithdrawAddress> request) async {
     return setWithdrawAddress(call, await request);
   }
 
-  $async.Future<$13.MsgWithdrawDelegatorRewardResponse> withdrawDelegatorReward_Pre($grpc.ServiceCall call, $async.Future<$13.MsgWithdrawDelegatorReward> request) async {
+  $async.Future<$17.MsgWithdrawDelegatorRewardResponse> withdrawDelegatorReward_Pre($grpc.ServiceCall call, $async.Future<$17.MsgWithdrawDelegatorReward> request) async {
     return withdrawDelegatorReward(call, await request);
   }
 
-  $async.Future<$13.MsgWithdrawValidatorCommissionResponse> withdrawValidatorCommission_Pre($grpc.ServiceCall call, $async.Future<$13.MsgWithdrawValidatorCommission> request) async {
+  $async.Future<$17.MsgWithdrawValidatorCommissionResponse> withdrawValidatorCommission_Pre($grpc.ServiceCall call, $async.Future<$17.MsgWithdrawValidatorCommission> request) async {
     return withdrawValidatorCommission(call, await request);
   }
 
-  $async.Future<$13.MsgFundCommunityPoolResponse> fundCommunityPool_Pre($grpc.ServiceCall call, $async.Future<$13.MsgFundCommunityPool> request) async {
+  $async.Future<$17.MsgFundCommunityPoolResponse> fundCommunityPool_Pre($grpc.ServiceCall call, $async.Future<$17.MsgFundCommunityPool> request) async {
     return fundCommunityPool(call, await request);
   }
 
-  $async.Future<$13.MsgSetWithdrawAddressResponse> setWithdrawAddress($grpc.ServiceCall call, $13.MsgSetWithdrawAddress request);
-  $async.Future<$13.MsgWithdrawDelegatorRewardResponse> withdrawDelegatorReward($grpc.ServiceCall call, $13.MsgWithdrawDelegatorReward request);
-  $async.Future<$13.MsgWithdrawValidatorCommissionResponse> withdrawValidatorCommission($grpc.ServiceCall call, $13.MsgWithdrawValidatorCommission request);
-  $async.Future<$13.MsgFundCommunityPoolResponse> fundCommunityPool($grpc.ServiceCall call, $13.MsgFundCommunityPool request);
+  $async.Future<$17.MsgUpdateParamsResponse> updateParams_Pre($grpc.ServiceCall call, $async.Future<$17.MsgUpdateParams> request) async {
+    return updateParams(call, await request);
+  }
+
+  $async.Future<$17.MsgCommunityPoolSpendResponse> communityPoolSpend_Pre($grpc.ServiceCall call, $async.Future<$17.MsgCommunityPoolSpend> request) async {
+    return communityPoolSpend(call, await request);
+  }
+
+  $async.Future<$17.MsgSetWithdrawAddressResponse> setWithdrawAddress($grpc.ServiceCall call, $17.MsgSetWithdrawAddress request);
+  $async.Future<$17.MsgWithdrawDelegatorRewardResponse> withdrawDelegatorReward($grpc.ServiceCall call, $17.MsgWithdrawDelegatorReward request);
+  $async.Future<$17.MsgWithdrawValidatorCommissionResponse> withdrawValidatorCommission($grpc.ServiceCall call, $17.MsgWithdrawValidatorCommission request);
+  $async.Future<$17.MsgFundCommunityPoolResponse> fundCommunityPool($grpc.ServiceCall call, $17.MsgFundCommunityPool request);
+  $async.Future<$17.MsgUpdateParamsResponse> updateParams($grpc.ServiceCall call, $17.MsgUpdateParams request);
+  $async.Future<$17.MsgCommunityPoolSpendResponse> communityPoolSpend($grpc.ServiceCall call, $17.MsgCommunityPoolSpend request);
 }

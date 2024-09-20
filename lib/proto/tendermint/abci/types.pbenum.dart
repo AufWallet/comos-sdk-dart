@@ -28,21 +28,21 @@ class CheckTxType extends $pb.ProtobufEnum {
   const CheckTxType._($core.int v, $core.String n) : super(v, n);
 }
 
-class EvidenceType extends $pb.ProtobufEnum {
-  static const EvidenceType UNKNOWN = EvidenceType._(0, _omitEnumNames ? '' : 'UNKNOWN');
-  static const EvidenceType DUPLICATE_VOTE = EvidenceType._(1, _omitEnumNames ? '' : 'DUPLICATE_VOTE');
-  static const EvidenceType LIGHT_CLIENT_ATTACK = EvidenceType._(2, _omitEnumNames ? '' : 'LIGHT_CLIENT_ATTACK');
+class MisbehaviorType extends $pb.ProtobufEnum {
+  static const MisbehaviorType UNKNOWN = MisbehaviorType._(0, _omitEnumNames ? '' : 'UNKNOWN');
+  static const MisbehaviorType DUPLICATE_VOTE = MisbehaviorType._(1, _omitEnumNames ? '' : 'DUPLICATE_VOTE');
+  static const MisbehaviorType LIGHT_CLIENT_ATTACK = MisbehaviorType._(2, _omitEnumNames ? '' : 'LIGHT_CLIENT_ATTACK');
 
-  static const $core.List<EvidenceType> values = <EvidenceType> [
+  static const $core.List<MisbehaviorType> values = <MisbehaviorType> [
     UNKNOWN,
     DUPLICATE_VOTE,
     LIGHT_CLIENT_ATTACK,
   ];
 
-  static final $core.Map<$core.int, EvidenceType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static EvidenceType? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, MisbehaviorType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static MisbehaviorType? valueOf($core.int value) => _byValue[value];
 
-  const EvidenceType._($core.int v, $core.String n) : super(v, n);
+  const MisbehaviorType._($core.int v, $core.String n) : super(v, n);
 }
 
 class ResponseOfferSnapshot_Result extends $pb.ProtobufEnum {
@@ -89,6 +89,23 @@ class ResponseApplySnapshotChunk_Result extends $pb.ProtobufEnum {
   static ResponseApplySnapshotChunk_Result? valueOf($core.int value) => _byValue[value];
 
   const ResponseApplySnapshotChunk_Result._($core.int v, $core.String n) : super(v, n);
+}
+
+class ResponseProcessProposal_ProposalStatus extends $pb.ProtobufEnum {
+  static const ResponseProcessProposal_ProposalStatus UNKNOWN = ResponseProcessProposal_ProposalStatus._(0, _omitEnumNames ? '' : 'UNKNOWN');
+  static const ResponseProcessProposal_ProposalStatus ACCEPT = ResponseProcessProposal_ProposalStatus._(1, _omitEnumNames ? '' : 'ACCEPT');
+  static const ResponseProcessProposal_ProposalStatus REJECT = ResponseProcessProposal_ProposalStatus._(2, _omitEnumNames ? '' : 'REJECT');
+
+  static const $core.List<ResponseProcessProposal_ProposalStatus> values = <ResponseProcessProposal_ProposalStatus> [
+    UNKNOWN,
+    ACCEPT,
+    REJECT,
+  ];
+
+  static final $core.Map<$core.int, ResponseProcessProposal_ProposalStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ResponseProcessProposal_ProposalStatus? valueOf($core.int value) => _byValue[value];
+
+  const ResponseProcessProposal_ProposalStatus._($core.int v, $core.String n) : super(v, n);
 }
 
 

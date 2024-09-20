@@ -27,9 +27,10 @@ const ParameterChangeProposal$json = {
 /// Descriptor for `ParameterChangeProposal`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List parameterChangeProposalDescriptor = $convert.base64Decode(
     'ChdQYXJhbWV0ZXJDaGFuZ2VQcm9wb3NhbBIUCgV0aXRsZRgBIAEoCVIFdGl0bGUSIAoLZGVzY3'
-    'JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEkIKB2NoYW5nZXMYAyADKAsyIi5jb3Ntb3MucGFy'
-    'YW1zLnYxYmV0YTEuUGFyYW1DaGFuZ2VCBMjeHwBSB2NoYW5nZXM6JoigHwCYoB8AyrQtGmNvc2'
-    '1vcy5nb3YudjFiZXRhMS5Db250ZW50');
+    'JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEkcKB2NoYW5nZXMYAyADKAsyIi5jb3Ntb3MucGFy'
+    'YW1zLnYxYmV0YTEuUGFyYW1DaGFuZ2VCCcjeHwCo57AqAVIHY2hhbmdlczpNiKAfAJigHwDKtC'
+    '0aY29zbW9zLmdvdi52MWJldGExLkNvbnRlbnSK57AqImNvc21vcy1zZGsvUGFyYW1ldGVyQ2hh'
+    'bmdlUHJvcG9zYWw=');
 
 @$core.Deprecated('Use paramChangeDescriptor instead')
 const ParamChange$json = {

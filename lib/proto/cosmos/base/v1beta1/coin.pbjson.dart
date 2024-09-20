@@ -25,8 +25,8 @@ const Coin$json = {
 
 /// Descriptor for `Coin`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List coinDescriptor = $convert.base64Decode(
-    'CgRDb2luEhQKBWRlbm9tGAEgASgJUgVkZW5vbRIxCgZhbW91bnQYAiABKAlCGcjeHwDa3h8DSW'
-    '500rQtCmNvc21vcy5JbnRSBmFtb3VudDoE6KAfAQ==');
+    'CgRDb2luEhQKBWRlbm9tGAEgASgJUgVkZW5vbRI2CgZhbW91bnQYAiABKAlCHsjeHwDa3h8DSW'
+    '500rQtCmNvc21vcy5JbnSo57AqAVIGYW1vdW50OgTooB8B');
 
 @$core.Deprecated('Use decCoinDescriptor instead')
 const DecCoin$json = {

@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../base/v1beta1/coin.pb.dart' as $42;
-import 'distribution.pb.dart' as $57;
+import '../../base/v1beta1/coin.pb.dart' as $50;
+import 'distribution.pb.dart' as $65;
 
 /// DelegatorWithdrawInfo is the address for where distributions rewards are
 /// withdrawn to by default this struct is only used at genesis to feed in
@@ -90,7 +90,7 @@ class DelegatorWithdrawInfo extends $pb.GeneratedMessage {
 class ValidatorOutstandingRewardsRecord extends $pb.GeneratedMessage {
   factory ValidatorOutstandingRewardsRecord({
     $core.String? validatorAddress,
-    $core.Iterable<$42.DecCoin>? outstandingRewards,
+    $core.Iterable<$50.DecCoin>? outstandingRewards,
   }) {
     final $result = create();
     if (validatorAddress != null) {
@@ -107,7 +107,7 @@ class ValidatorOutstandingRewardsRecord extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorOutstandingRewardsRecord', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'validatorAddress')
-    ..pc<$42.DecCoin>(2, _omitFieldNames ? '' : 'outstandingRewards', $pb.PbFieldType.PM, subBuilder: $42.DecCoin.create)
+    ..pc<$50.DecCoin>(2, _omitFieldNames ? '' : 'outstandingRewards', $pb.PbFieldType.PM, subBuilder: $50.DecCoin.create)
     ..hasRequiredFields = false
   ;
 
@@ -142,9 +142,9 @@ class ValidatorOutstandingRewardsRecord extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearValidatorAddress() => clearField(1);
 
-  /// outstanding_rewards represents the oustanding rewards of a validator.
+  /// outstanding_rewards represents the outstanding rewards of a validator.
   @$pb.TagNumber(2)
-  $core.List<$42.DecCoin> get outstandingRewards => $_getList(1);
+  $core.List<$50.DecCoin> get outstandingRewards => $_getList(1);
 }
 
 /// ValidatorAccumulatedCommissionRecord is used for import / export via genesis
@@ -152,7 +152,7 @@ class ValidatorOutstandingRewardsRecord extends $pb.GeneratedMessage {
 class ValidatorAccumulatedCommissionRecord extends $pb.GeneratedMessage {
   factory ValidatorAccumulatedCommissionRecord({
     $core.String? validatorAddress,
-    $57.ValidatorAccumulatedCommission? accumulated,
+    $65.ValidatorAccumulatedCommission? accumulated,
   }) {
     final $result = create();
     if (validatorAddress != null) {
@@ -169,7 +169,7 @@ class ValidatorAccumulatedCommissionRecord extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorAccumulatedCommissionRecord', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'validatorAddress')
-    ..aOM<$57.ValidatorAccumulatedCommission>(2, _omitFieldNames ? '' : 'accumulated', subBuilder: $57.ValidatorAccumulatedCommission.create)
+    ..aOM<$65.ValidatorAccumulatedCommission>(2, _omitFieldNames ? '' : 'accumulated', subBuilder: $65.ValidatorAccumulatedCommission.create)
     ..hasRequiredFields = false
   ;
 
@@ -206,15 +206,15 @@ class ValidatorAccumulatedCommissionRecord extends $pb.GeneratedMessage {
 
   /// accumulated is the accumulated commission of a validator.
   @$pb.TagNumber(2)
-  $57.ValidatorAccumulatedCommission get accumulated => $_getN(1);
+  $65.ValidatorAccumulatedCommission get accumulated => $_getN(1);
   @$pb.TagNumber(2)
-  set accumulated($57.ValidatorAccumulatedCommission v) { setField(2, v); }
+  set accumulated($65.ValidatorAccumulatedCommission v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasAccumulated() => $_has(1);
   @$pb.TagNumber(2)
   void clearAccumulated() => clearField(2);
   @$pb.TagNumber(2)
-  $57.ValidatorAccumulatedCommission ensureAccumulated() => $_ensure(1);
+  $65.ValidatorAccumulatedCommission ensureAccumulated() => $_ensure(1);
 }
 
 /// ValidatorHistoricalRewardsRecord is used for import / export via genesis
@@ -223,7 +223,7 @@ class ValidatorHistoricalRewardsRecord extends $pb.GeneratedMessage {
   factory ValidatorHistoricalRewardsRecord({
     $core.String? validatorAddress,
     $fixnum.Int64? period,
-    $57.ValidatorHistoricalRewards? rewards,
+    $65.ValidatorHistoricalRewards? rewards,
   }) {
     final $result = create();
     if (validatorAddress != null) {
@@ -244,7 +244,7 @@ class ValidatorHistoricalRewardsRecord extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorHistoricalRewardsRecord', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'validatorAddress')
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'period', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$57.ValidatorHistoricalRewards>(3, _omitFieldNames ? '' : 'rewards', subBuilder: $57.ValidatorHistoricalRewards.create)
+    ..aOM<$65.ValidatorHistoricalRewards>(3, _omitFieldNames ? '' : 'rewards', subBuilder: $65.ValidatorHistoricalRewards.create)
     ..hasRequiredFields = false
   ;
 
@@ -291,22 +291,22 @@ class ValidatorHistoricalRewardsRecord extends $pb.GeneratedMessage {
 
   /// rewards defines the historical rewards of a validator.
   @$pb.TagNumber(3)
-  $57.ValidatorHistoricalRewards get rewards => $_getN(2);
+  $65.ValidatorHistoricalRewards get rewards => $_getN(2);
   @$pb.TagNumber(3)
-  set rewards($57.ValidatorHistoricalRewards v) { setField(3, v); }
+  set rewards($65.ValidatorHistoricalRewards v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasRewards() => $_has(2);
   @$pb.TagNumber(3)
   void clearRewards() => clearField(3);
   @$pb.TagNumber(3)
-  $57.ValidatorHistoricalRewards ensureRewards() => $_ensure(2);
+  $65.ValidatorHistoricalRewards ensureRewards() => $_ensure(2);
 }
 
 /// ValidatorCurrentRewardsRecord is used for import / export via genesis json.
 class ValidatorCurrentRewardsRecord extends $pb.GeneratedMessage {
   factory ValidatorCurrentRewardsRecord({
     $core.String? validatorAddress,
-    $57.ValidatorCurrentRewards? rewards,
+    $65.ValidatorCurrentRewards? rewards,
   }) {
     final $result = create();
     if (validatorAddress != null) {
@@ -323,7 +323,7 @@ class ValidatorCurrentRewardsRecord extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidatorCurrentRewardsRecord', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'validatorAddress')
-    ..aOM<$57.ValidatorCurrentRewards>(2, _omitFieldNames ? '' : 'rewards', subBuilder: $57.ValidatorCurrentRewards.create)
+    ..aOM<$65.ValidatorCurrentRewards>(2, _omitFieldNames ? '' : 'rewards', subBuilder: $65.ValidatorCurrentRewards.create)
     ..hasRequiredFields = false
   ;
 
@@ -360,15 +360,15 @@ class ValidatorCurrentRewardsRecord extends $pb.GeneratedMessage {
 
   /// rewards defines the current rewards of a validator.
   @$pb.TagNumber(2)
-  $57.ValidatorCurrentRewards get rewards => $_getN(1);
+  $65.ValidatorCurrentRewards get rewards => $_getN(1);
   @$pb.TagNumber(2)
-  set rewards($57.ValidatorCurrentRewards v) { setField(2, v); }
+  set rewards($65.ValidatorCurrentRewards v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRewards() => $_has(1);
   @$pb.TagNumber(2)
   void clearRewards() => clearField(2);
   @$pb.TagNumber(2)
-  $57.ValidatorCurrentRewards ensureRewards() => $_ensure(1);
+  $65.ValidatorCurrentRewards ensureRewards() => $_ensure(1);
 }
 
 /// DelegatorStartingInfoRecord used for import / export via genesis json.
@@ -376,7 +376,7 @@ class DelegatorStartingInfoRecord extends $pb.GeneratedMessage {
   factory DelegatorStartingInfoRecord({
     $core.String? delegatorAddress,
     $core.String? validatorAddress,
-    $57.DelegatorStartingInfo? startingInfo,
+    $65.DelegatorStartingInfo? startingInfo,
   }) {
     final $result = create();
     if (delegatorAddress != null) {
@@ -397,7 +397,7 @@ class DelegatorStartingInfoRecord extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DelegatorStartingInfoRecord', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'delegatorAddress')
     ..aOS(2, _omitFieldNames ? '' : 'validatorAddress')
-    ..aOM<$57.DelegatorStartingInfo>(3, _omitFieldNames ? '' : 'startingInfo', subBuilder: $57.DelegatorStartingInfo.create)
+    ..aOM<$65.DelegatorStartingInfo>(3, _omitFieldNames ? '' : 'startingInfo', subBuilder: $65.DelegatorStartingInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -444,15 +444,15 @@ class DelegatorStartingInfoRecord extends $pb.GeneratedMessage {
 
   /// starting_info defines the starting info of a delegator.
   @$pb.TagNumber(3)
-  $57.DelegatorStartingInfo get startingInfo => $_getN(2);
+  $65.DelegatorStartingInfo get startingInfo => $_getN(2);
   @$pb.TagNumber(3)
-  set startingInfo($57.DelegatorStartingInfo v) { setField(3, v); }
+  set startingInfo($65.DelegatorStartingInfo v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStartingInfo() => $_has(2);
   @$pb.TagNumber(3)
   void clearStartingInfo() => clearField(3);
   @$pb.TagNumber(3)
-  $57.DelegatorStartingInfo ensureStartingInfo() => $_ensure(2);
+  $65.DelegatorStartingInfo ensureStartingInfo() => $_ensure(2);
 }
 
 /// ValidatorSlashEventRecord is used for import / export via genesis json.
@@ -461,7 +461,7 @@ class ValidatorSlashEventRecord extends $pb.GeneratedMessage {
     $core.String? validatorAddress,
     $fixnum.Int64? height,
     $fixnum.Int64? period,
-    $57.ValidatorSlashEvent? validatorSlashEvent,
+    $65.ValidatorSlashEvent? validatorSlashEvent,
   }) {
     final $result = create();
     if (validatorAddress != null) {
@@ -486,7 +486,7 @@ class ValidatorSlashEventRecord extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'validatorAddress')
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'height', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'period', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$57.ValidatorSlashEvent>(4, _omitFieldNames ? '' : 'validatorSlashEvent', subBuilder: $57.ValidatorSlashEvent.create)
+    ..aOM<$65.ValidatorSlashEvent>(4, _omitFieldNames ? '' : 'validatorSlashEvent', subBuilder: $65.ValidatorSlashEvent.create)
     ..hasRequiredFields = false
   ;
 
@@ -521,7 +521,7 @@ class ValidatorSlashEventRecord extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearValidatorAddress() => clearField(1);
 
-  /// height defines the block height at which the slash event occured.
+  /// height defines the block height at which the slash event occurred.
   @$pb.TagNumber(2)
   $fixnum.Int64 get height => $_getI64(1);
   @$pb.TagNumber(2)
@@ -543,22 +543,22 @@ class ValidatorSlashEventRecord extends $pb.GeneratedMessage {
 
   /// validator_slash_event describes the slash event.
   @$pb.TagNumber(4)
-  $57.ValidatorSlashEvent get validatorSlashEvent => $_getN(3);
+  $65.ValidatorSlashEvent get validatorSlashEvent => $_getN(3);
   @$pb.TagNumber(4)
-  set validatorSlashEvent($57.ValidatorSlashEvent v) { setField(4, v); }
+  set validatorSlashEvent($65.ValidatorSlashEvent v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasValidatorSlashEvent() => $_has(3);
   @$pb.TagNumber(4)
   void clearValidatorSlashEvent() => clearField(4);
   @$pb.TagNumber(4)
-  $57.ValidatorSlashEvent ensureValidatorSlashEvent() => $_ensure(3);
+  $65.ValidatorSlashEvent ensureValidatorSlashEvent() => $_ensure(3);
 }
 
 /// GenesisState defines the distribution module's genesis state.
 class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState({
-    $57.Params? params,
-    $57.FeePool? feePool,
+    $65.Params? params,
+    $65.FeePool? feePool,
     $core.Iterable<DelegatorWithdrawInfo>? delegatorWithdrawInfos,
     $core.String? previousProposer,
     $core.Iterable<ValidatorOutstandingRewardsRecord>? outstandingRewards,
@@ -606,8 +606,8 @@ class GenesisState extends $pb.GeneratedMessage {
   factory GenesisState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenesisState', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.distribution.v1beta1'), createEmptyInstance: create)
-    ..aOM<$57.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $57.Params.create)
-    ..aOM<$57.FeePool>(2, _omitFieldNames ? '' : 'feePool', subBuilder: $57.FeePool.create)
+    ..aOM<$65.Params>(1, _omitFieldNames ? '' : 'params', subBuilder: $65.Params.create)
+    ..aOM<$65.FeePool>(2, _omitFieldNames ? '' : 'feePool', subBuilder: $65.FeePool.create)
     ..pc<DelegatorWithdrawInfo>(3, _omitFieldNames ? '' : 'delegatorWithdrawInfos', $pb.PbFieldType.PM, subBuilder: DelegatorWithdrawInfo.create)
     ..aOS(4, _omitFieldNames ? '' : 'previousProposer')
     ..pc<ValidatorOutstandingRewardsRecord>(5, _omitFieldNames ? '' : 'outstandingRewards', $pb.PbFieldType.PM, subBuilder: ValidatorOutstandingRewardsRecord.create)
@@ -640,29 +640,29 @@ class GenesisState extends $pb.GeneratedMessage {
   static GenesisState getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GenesisState>(create);
   static GenesisState? _defaultInstance;
 
-  /// params defines all the paramaters of the module.
+  /// params defines all the parameters of the module.
   @$pb.TagNumber(1)
-  $57.Params get params => $_getN(0);
+  $65.Params get params => $_getN(0);
   @$pb.TagNumber(1)
-  set params($57.Params v) { setField(1, v); }
+  set params($65.Params v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParams() => $_has(0);
   @$pb.TagNumber(1)
   void clearParams() => clearField(1);
   @$pb.TagNumber(1)
-  $57.Params ensureParams() => $_ensure(0);
+  $65.Params ensureParams() => $_ensure(0);
 
   /// fee_pool defines the fee pool at genesis.
   @$pb.TagNumber(2)
-  $57.FeePool get feePool => $_getN(1);
+  $65.FeePool get feePool => $_getN(1);
   @$pb.TagNumber(2)
-  set feePool($57.FeePool v) { setField(2, v); }
+  set feePool($65.FeePool v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasFeePool() => $_has(1);
   @$pb.TagNumber(2)
   void clearFeePool() => clearField(2);
   @$pb.TagNumber(2)
-  $57.FeePool ensureFeePool() => $_ensure(1);
+  $65.FeePool ensureFeePool() => $_ensure(1);
 
   /// fee_pool defines the delegator withdraw infos at genesis.
   @$pb.TagNumber(3)
@@ -682,7 +682,7 @@ class GenesisState extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.List<ValidatorOutstandingRewardsRecord> get outstandingRewards => $_getList(4);
 
-  /// fee_pool defines the accumulated commisions of all validators at genesis.
+  /// fee_pool defines the accumulated commissions of all validators at genesis.
   @$pb.TagNumber(6)
   $core.List<ValidatorAccumulatedCommissionRecord> get validatorAccumulatedCommissions => $_getList(5);
 

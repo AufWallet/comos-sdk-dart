@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/any.pb.dart' as $36;
-import 'authz.pb.dart' as $41;
+import '../../../google/protobuf/any.pb.dart' as $43;
+import 'authz.pb.dart' as $48;
 
 /// MsgGrant is a request type for Grant method. It declares authorization to the grantee
 /// on behalf of the granter with the provided expiration time.
@@ -22,7 +22,7 @@ class MsgGrant extends $pb.GeneratedMessage {
   factory MsgGrant({
     $core.String? granter,
     $core.String? grantee,
-    $41.Grant? grant,
+    $48.Grant? grant,
   }) {
     final $result = create();
     if (granter != null) {
@@ -43,7 +43,7 @@ class MsgGrant extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgGrant', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'granter')
     ..aOS(2, _omitFieldNames ? '' : 'grantee')
-    ..aOM<$41.Grant>(3, _omitFieldNames ? '' : 'grant', subBuilder: $41.Grant.create)
+    ..aOM<$48.Grant>(3, _omitFieldNames ? '' : 'grant', subBuilder: $48.Grant.create)
     ..hasRequiredFields = false
   ;
 
@@ -87,15 +87,15 @@ class MsgGrant extends $pb.GeneratedMessage {
   void clearGrantee() => clearField(2);
 
   @$pb.TagNumber(3)
-  $41.Grant get grant => $_getN(2);
+  $48.Grant get grant => $_getN(2);
   @$pb.TagNumber(3)
-  set grant($41.Grant v) { setField(3, v); }
+  set grant($48.Grant v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasGrant() => $_has(2);
   @$pb.TagNumber(3)
   void clearGrant() => clearField(3);
   @$pb.TagNumber(3)
-  $41.Grant ensureGrant() => $_ensure(2);
+  $48.Grant ensureGrant() => $_ensure(2);
 }
 
 /// MsgExecResponse defines the Msg/MsgExecResponse response type.
@@ -149,7 +149,7 @@ class MsgExecResponse extends $pb.GeneratedMessage {
 class MsgExec extends $pb.GeneratedMessage {
   factory MsgExec({
     $core.String? grantee,
-    $core.Iterable<$36.Any>? msgs,
+    $core.Iterable<$43.Any>? msgs,
   }) {
     final $result = create();
     if (grantee != null) {
@@ -166,7 +166,7 @@ class MsgExec extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MsgExec', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.authz.v1beta1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'grantee')
-    ..pc<$36.Any>(2, _omitFieldNames ? '' : 'msgs', $pb.PbFieldType.PM, subBuilder: $36.Any.create)
+    ..pc<$43.Any>(2, _omitFieldNames ? '' : 'msgs', $pb.PbFieldType.PM, subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -200,11 +200,11 @@ class MsgExec extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearGrantee() => clearField(1);
 
-  /// Authorization Msg requests to execute. Each msg must implement Authorization interface
+  /// Execute Msg.
   /// The x/authz will try to find a grant matching (msg.signers[0], grantee, MsgTypeURL(msg))
   /// triple and validate it.
   @$pb.TagNumber(2)
-  $core.List<$36.Any> get msgs => $_getList(1);
+  $core.List<$43.Any> get msgs => $_getList(1);
 }
 
 /// MsgGrantResponse defines the Msg/MsgGrant response type.

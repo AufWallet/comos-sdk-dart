@@ -15,16 +15,16 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tx.pb.dart' as $15;
+import 'tx.pb.dart' as $19;
 
 export 'tx.pb.dart';
 
 @$pb.GrpcServiceName('cosmos.evidence.v1beta1.Msg')
 class MsgClient extends $grpc.Client {
-  static final _$submitEvidence = $grpc.ClientMethod<$15.MsgSubmitEvidence, $15.MsgSubmitEvidenceResponse>(
+  static final _$submitEvidence = $grpc.ClientMethod<$19.MsgSubmitEvidence, $19.MsgSubmitEvidenceResponse>(
       '/cosmos.evidence.v1beta1.Msg/SubmitEvidence',
-      ($15.MsgSubmitEvidence value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $15.MsgSubmitEvidenceResponse.fromBuffer(value));
+      ($19.MsgSubmitEvidence value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $19.MsgSubmitEvidenceResponse.fromBuffer(value));
 
   MsgClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class MsgClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$15.MsgSubmitEvidenceResponse> submitEvidence($15.MsgSubmitEvidence request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$19.MsgSubmitEvidenceResponse> submitEvidence($19.MsgSubmitEvidence request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$submitEvidence, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class MsgServiceBase extends $grpc.Service {
   $core.String get $name => 'cosmos.evidence.v1beta1.Msg';
 
   MsgServiceBase() {
-    $addMethod($grpc.ServiceMethod<$15.MsgSubmitEvidence, $15.MsgSubmitEvidenceResponse>(
+    $addMethod($grpc.ServiceMethod<$19.MsgSubmitEvidence, $19.MsgSubmitEvidenceResponse>(
         'SubmitEvidence',
         submitEvidence_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $15.MsgSubmitEvidence.fromBuffer(value),
-        ($15.MsgSubmitEvidenceResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $19.MsgSubmitEvidence.fromBuffer(value),
+        ($19.MsgSubmitEvidenceResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$15.MsgSubmitEvidenceResponse> submitEvidence_Pre($grpc.ServiceCall call, $async.Future<$15.MsgSubmitEvidence> request) async {
+  $async.Future<$19.MsgSubmitEvidenceResponse> submitEvidence_Pre($grpc.ServiceCall call, $async.Future<$19.MsgSubmitEvidence> request) async {
     return submitEvidence(call, await request);
   }
 
-  $async.Future<$15.MsgSubmitEvidenceResponse> submitEvidence($grpc.ServiceCall call, $15.MsgSubmitEvidence request);
+  $async.Future<$19.MsgSubmitEvidenceResponse> submitEvidence($grpc.ServiceCall call, $19.MsgSubmitEvidence request);
 }

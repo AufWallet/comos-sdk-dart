@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/any.pb.dart' as $36;
-import '../../../../tendermint/abci/types.pb.dart' as $6;
+import '../../../../google/protobuf/any.pb.dart' as $43;
+import '../../../../tendermint/abci/types.pb.dart' as $8;
 
 /// TxResponse defines a structure containing relevant tx data and metadata. The
 /// tags are stringified and the log is JSON decoded.
@@ -31,9 +31,9 @@ class TxResponse extends $pb.GeneratedMessage {
     $core.String? info,
     $fixnum.Int64? gasWanted,
     $fixnum.Int64? gasUsed,
-    $36.Any? tx,
+    $43.Any? tx,
     $core.String? timestamp,
-    $core.Iterable<$6.Event>? events,
+    $core.Iterable<$8.Event>? events,
   }) {
     final $result = create();
     if (height != null) {
@@ -92,9 +92,9 @@ class TxResponse extends $pb.GeneratedMessage {
     ..aOS(8, _omitFieldNames ? '' : 'info')
     ..aInt64(9, _omitFieldNames ? '' : 'gasWanted')
     ..aInt64(10, _omitFieldNames ? '' : 'gasUsed')
-    ..aOM<$36.Any>(11, _omitFieldNames ? '' : 'tx', subBuilder: $36.Any.create)
+    ..aOM<$43.Any>(11, _omitFieldNames ? '' : 'tx', subBuilder: $43.Any.create)
     ..aOS(12, _omitFieldNames ? '' : 'timestamp')
-    ..pc<$6.Event>(13, _omitFieldNames ? '' : 'events', $pb.PbFieldType.PM, subBuilder: $6.Event.create)
+    ..pc<$8.Event>(13, _omitFieldNames ? '' : 'events', $pb.PbFieldType.PM, subBuilder: $8.Event.create)
     ..hasRequiredFields = false
   ;
 
@@ -216,15 +216,15 @@ class TxResponse extends $pb.GeneratedMessage {
 
   /// The request transaction bytes.
   @$pb.TagNumber(11)
-  $36.Any get tx => $_getN(10);
+  $43.Any get tx => $_getN(10);
   @$pb.TagNumber(11)
-  set tx($36.Any v) { setField(11, v); }
+  set tx($43.Any v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasTx() => $_has(10);
   @$pb.TagNumber(11)
   void clearTx() => clearField(11);
   @$pb.TagNumber(11)
-  $36.Any ensureTx() => $_ensure(10);
+  $43.Any ensureTx() => $_ensure(10);
 
   /// Time of the previous block. For heights > 1, it's the weighted median of
   /// the timestamps of the valid votes in the block.LastCommit. For height == 1,
@@ -245,7 +245,7 @@ class TxResponse extends $pb.GeneratedMessage {
   ///
   ///  Since: cosmos-sdk 0.42.11, 0.44.5, 0.45
   @$pb.TagNumber(13)
-  $core.List<$6.Event> get events => $_getList(12);
+  $core.List<$8.Event> get events => $_getList(12);
 }
 
 /// ABCIMessageLog defines a structure containing an indexed tx ABCI message log.
@@ -522,8 +522,8 @@ class Result extends $pb.GeneratedMessage {
   @$core.Deprecated('This field is deprecated.')
     $core.List<$core.int>? data,
     $core.String? log,
-    $core.Iterable<$6.Event>? events,
-    $core.Iterable<$36.Any>? msgResponses,
+    $core.Iterable<$8.Event>? events,
+    $core.Iterable<$43.Any>? msgResponses,
   }) {
     final $result = create();
     if (data != null) {
@@ -548,8 +548,8 @@ class Result extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Result', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.abci.v1beta1'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
     ..aOS(2, _omitFieldNames ? '' : 'log')
-    ..pc<$6.Event>(3, _omitFieldNames ? '' : 'events', $pb.PbFieldType.PM, subBuilder: $6.Event.create)
-    ..pc<$36.Any>(4, _omitFieldNames ? '' : 'msgResponses', $pb.PbFieldType.PM, subBuilder: $36.Any.create)
+    ..pc<$8.Event>(3, _omitFieldNames ? '' : 'events', $pb.PbFieldType.PM, subBuilder: $8.Event.create)
+    ..pc<$43.Any>(4, _omitFieldNames ? '' : 'msgResponses', $pb.PbFieldType.PM, subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -604,13 +604,13 @@ class Result extends $pb.GeneratedMessage {
   /// Events contains a slice of Event objects that were emitted during message
   /// or handler execution.
   @$pb.TagNumber(3)
-  $core.List<$6.Event> get events => $_getList(2);
+  $core.List<$8.Event> get events => $_getList(2);
 
   ///  msg_responses contains the Msg handler responses type packed in Anys.
   ///
   ///  Since: cosmos-sdk 0.46
   @$pb.TagNumber(4)
-  $core.List<$36.Any> get msgResponses => $_getList(3);
+  $core.List<$43.Any> get msgResponses => $_getList(3);
 }
 
 /// SimulationResponse defines the response generated when a transaction is
@@ -755,7 +755,7 @@ class TxMsgData extends $pb.GeneratedMessage {
   factory TxMsgData({
   @$core.Deprecated('This field is deprecated.')
     $core.Iterable<MsgData>? data,
-    $core.Iterable<$36.Any>? msgResponses,
+    $core.Iterable<$43.Any>? msgResponses,
   }) {
     final $result = create();
     if (data != null) {
@@ -773,7 +773,7 @@ class TxMsgData extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TxMsgData', package: const $pb.PackageName(_omitMessageNames ? '' : 'cosmos.base.abci.v1beta1'), createEmptyInstance: create)
     ..pc<MsgData>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.PM, subBuilder: MsgData.create)
-    ..pc<$36.Any>(2, _omitFieldNames ? '' : 'msgResponses', $pb.PbFieldType.PM, subBuilder: $36.Any.create)
+    ..pc<$43.Any>(2, _omitFieldNames ? '' : 'msgResponses', $pb.PbFieldType.PM, subBuilder: $43.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -807,7 +807,7 @@ class TxMsgData extends $pb.GeneratedMessage {
   ///
   ///  Since: cosmos-sdk 0.46
   @$pb.TagNumber(2)
-  $core.List<$36.Any> get msgResponses => $_getList(1);
+  $core.List<$43.Any> get msgResponses => $_getList(1);
 }
 
 /// SearchTxsResult defines a structure for querying txs pageable
